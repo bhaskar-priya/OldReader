@@ -166,7 +166,7 @@ namespace DataModel
 				if (m_isUnread != value)
 				{
 #if OLD_READER_WP7
-				NotifyPropertyChanging("isUnread");
+					NotifyPropertyChanging("isUnread");
 #else
 					NotifyPropertyChanging();
 #endif

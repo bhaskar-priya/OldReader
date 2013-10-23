@@ -10,9 +10,6 @@ namespace DataStore
 {
 	class IconManager
 	{
-		static int req = 0;
-		static int done = 0;
-
 		private String m_szHost;
 
 		public delegate void IconAvailable(String szPath);

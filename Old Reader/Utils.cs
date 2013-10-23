@@ -294,6 +294,9 @@ namespace Old_Reader_Utils
 		public static String keepUnread = "keepUnread";
 		public static String feedShare = "feedShare";
 		public static String feedSave = "feedSave";
+		public static String feedSwipeNext = "feedSwipeNext";
+		public static String feedSwipePrev = "feedSwipePrev";
+		public static String remotingErrorEvent = "remotingErrorEvent";
 	}
 
 	public class Utils

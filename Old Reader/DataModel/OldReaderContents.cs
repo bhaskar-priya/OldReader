@@ -110,6 +110,7 @@ namespace DataModel
 		{
 			if (initializationErrorHandler != null)
 			{
+				Analytics.GAnalytics.trackRemotingErrorEvent(szErrorMessage);
 				initializationErrorHandler(szErrorMessage);
 			}
 		}

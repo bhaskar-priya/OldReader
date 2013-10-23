@@ -144,10 +144,12 @@ namespace Old_Reader
 				int nNewIdx = nCurIdx;
 				if (e.HorizontalVelocity < 0)
 				{
+					Analytics.GAnalytics.trackFeedSwipe(true);
 					nNewIdx++;
 				}
 				else if (e.HorizontalVelocity > 0)
 				{
+					Analytics.GAnalytics.trackFeedSwipe(false);
 					nNewIdx--;
 				}
 
@@ -201,6 +203,8 @@ namespace Old_Reader
 			shareLinkTask.Message = "";
 
 			shareLinkTask.Show();
+
+			Analytics.GAnalytics.trackFeedShare();
 		}
 
 		private void ApplicationBarKeepUnread_Click(object sender, EventArgs e)

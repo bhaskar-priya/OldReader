@@ -16,32 +16,38 @@ namespace Analytics
 
 		public static void trackAppBarMenuItems(String eventName, int value)
 		{
-			GoogleAnalytics.Tracker tracker = GoogleAnalytics.EasyTracker.GetTracker();
-			tracker.SendEvent(OldReaderTrackingConsts.appBarMenuItem, eventName, eventName, value);
+			GoogleAnalytics.EasyTracker.GetTracker().SendEvent(OldReaderTrackingConsts.appBarMenuItem, eventName, eventName, value);
 		}
 
 		public static void trackOldReaderEvent(String eventName, int value)
 		{
-			GoogleAnalytics.Tracker tracker = GoogleAnalytics.EasyTracker.GetTracker();
-			tracker.SendEvent(OldReaderTrackingConsts.oldReaderEvent, eventName, eventName, value);
+			GoogleAnalytics.EasyTracker.GetTracker().SendEvent(OldReaderTrackingConsts.oldReaderEvent, eventName, eventName, value);
 		}
 
 		public static void trackKeepUnread()
 		{
-			GoogleAnalytics.Tracker tracker = GoogleAnalytics.EasyTracker.GetTracker();
-			tracker.SendEvent(OldReaderTrackingConsts.oldReaderEvent, OldReaderTrackingConsts.keepUnread, OldReaderTrackingConsts.keepUnread, 0);
+			GoogleAnalytics.EasyTracker.GetTracker().SendEvent(OldReaderTrackingConsts.oldReaderEvent, OldReaderTrackingConsts.keepUnread, OldReaderTrackingConsts.keepUnread, 0);
 		}
 
 		public static void trackFeedShare()
 		{
-			GoogleAnalytics.Tracker tracker = GoogleAnalytics.EasyTracker.GetTracker();
-			tracker.SendEvent(OldReaderTrackingConsts.oldReaderEvent, OldReaderTrackingConsts.feedShare, OldReaderTrackingConsts.feedShare, 0);
+			GoogleAnalytics.EasyTracker.GetTracker().SendEvent(OldReaderTrackingConsts.oldReaderEvent, OldReaderTrackingConsts.feedShare, OldReaderTrackingConsts.feedShare, 0);
 		}
 
 		public static void trackFeedSave(bool bFromList)
 		{
-			GoogleAnalytics.Tracker tracker = GoogleAnalytics.EasyTracker.GetTracker();
-			tracker.SendEvent(OldReaderTrackingConsts.oldReaderEvent, OldReaderTrackingConsts.feedSave, OldReaderTrackingConsts.feedSave, bFromList ? 1 : 0);
+			GoogleAnalytics.EasyTracker.GetTracker().SendEvent(OldReaderTrackingConsts.oldReaderEvent, OldReaderTrackingConsts.feedSave, OldReaderTrackingConsts.feedSave, bFromList ? 1 : 0);
+		}
+
+		public static void trackFeedSwipe(bool bNext)
+		{
+			String swipeVal = bNext ? OldReaderTrackingConsts.feedSwipeNext : OldReaderTrackingConsts.feedSwipePrev;
+			GoogleAnalytics.EasyTracker.GetTracker().SendEvent(OldReaderTrackingConsts.oldReaderEvent, swipeVal, swipeVal, 0);
+		}
+
+		public static void trackRemotingErrorEvent(String error)
+		{
+			GoogleAnalytics.EasyTracker.GetTracker().SendEvent(OldReaderTrackingConsts.remotingErrorEvent, error, error, 0);
 		}
 	}
 }
