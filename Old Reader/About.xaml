@@ -65,6 +65,7 @@
 					<TextBlock Text="{Binding Path=LocalizedResources.strAboutText, Source={StaticResource LocalizedStrings}}" TextWrapping="Wrap" />
 					<TextBlock Text="" />
 					<Button Name="btnSendFeedback" Content="{Binding Path=LocalizedResources.strSendFeedbackBtnText, Source={StaticResource LocalizedStrings}}" Click="btnSendFeedback_Click" />
+					<Button Name="btnRateApp" Content="{Binding Path=LocalizedResources.strRateApp, Source={StaticResource LocalizedStrings}}" Click="btnRateApp_Click" />
 					<TextBlock Text="" />
 					<TextBlock Text="Credits" />
 					<TextBlock Text="{Binding Path=LocalizedResources.strCredits, Source={StaticResource LocalizedStrings}}" TextWrapping="Wrap" />

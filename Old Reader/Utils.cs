@@ -161,7 +161,7 @@ namespace Old_Reader_Utils
 						retVal.SetSource(sourceFile);
 					}
 				}
-				catch (Exception exp)
+				catch
 				{
 					retVal = null;
 				}

@@ -345,6 +345,7 @@ namespace Old_Reader
 			if (m_nBackBtnCount < 2)
 			{
 				ToastPrompt toast = new ToastPrompt();
+				toast.Completed += toast_Completed;
 				toast.Title = AppNs.Resources.AppResources.strPressBackToExitTitle;
 				toast.Message = AppNs.Resources.AppResources.strPressBackToExit;
 				toast.Show();
@@ -352,9 +353,25 @@ namespace Old_Reader
 			}
 		}
 
+		void toast_Completed(object sender, PopUpEventArgs<string, PopUpResult> e)
+		{
+			if (e.PopUpResult == PopUpResult.Cancelled || e.PopUpResult == PopUpResult.UserDismissed || e.PopUpResult == PopUpResult.Ok)
+			{
+				// user messed with the toast
+				// Remove the counter
+				m_nBackBtnCount = 0;
+			}
+		}
+
 		private void ApplicationBarAddIconButton_Click(object sender, EventArgs e)
 		{
 			NavigationService.Navigate(new Uri("/AddSubscription.xaml?tagId=" + DataModel.Tag.AllItems.id, UriKind.Relative));
+		}
+
+		private void mainPanorama_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		{
+			// we have change os page
+			m_nBackBtnCount = 0;
 		}
 	}
 }

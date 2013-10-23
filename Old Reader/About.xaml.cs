@@ -31,5 +31,11 @@ namespace Old_Reader
 			};
 			task.Show();
 		}
+
+		private void btnRateApp_Click(object sender, RoutedEventArgs e)
+		{
+			MarketplaceReviewTask rateTask = new MarketplaceReviewTask();
+			rateTask.Show();
+		}
 	}
 }

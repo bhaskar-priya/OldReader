@@ -50,6 +50,7 @@
 		<ProgressBar Name="progressBar" Visibility="Collapsed" IsIndeterminate="True" VerticalAlignment="Top" />
 
 		<controls:Panorama HorizontalAlignment="Left" Name="mainPanorama"
+						   SelectionChanged="mainPanorama_SelectionChanged"
 						Title="{Binding Path=LocalizedResources.AppTitle, Source={StaticResource LocalizedStrings}}">
 			<controls:Panorama.TitleTemplate>
 				<DataTemplate>

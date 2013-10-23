@@ -96,7 +96,7 @@ namespace DataStore
 				}
 				iconAvailableHandler(szIconPath);
 			}
-			catch (Exception exp)
+			catch
 			{
 			}
 		}
