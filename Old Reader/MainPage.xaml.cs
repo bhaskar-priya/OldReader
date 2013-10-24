@@ -128,11 +128,6 @@ namespace Old_Reader
 			(ApplicationBar.MenuItems[0] as ApplicationBarMenuItem).Text = AppNs.Resources.AppResources.strSettingsMenu;
 			(ApplicationBar.MenuItems[1] as ApplicationBarMenuItem).Text = AppNs.Resources.AppResources.strStatusMenu;
 			(ApplicationBar.MenuItems[2] as ApplicationBarMenuItem).Text = AppNs.Resources.AppResources.strAboutMenu;
-
-#if DEBUG
-			AppNs.App.userSettings[OldReaderConsts.EMail] = "bhaskar.priya@gmail.com";
-			AppNs.App.userSettings[OldReaderConsts.Password] = "random12!";
-#endif
 		}
 
 		private bool bLoginComplete = false;
