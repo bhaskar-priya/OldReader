@@ -10,6 +10,7 @@ using Microsoft.Phone.Shell;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Collections.ObjectModel;
+using Coding4Fun.Toolkit.Controls;
 
 using AppNs =
 #if OLD_READER_WP7
@@ -171,13 +172,6 @@ namespace Old_Reader
 				// see if the display objects have to be items or subscription list
 				if (CurTag.Subscriptions == null)
 				{
-					// get the feeds for the current tag
-					//ObservableCollection<DataModel.FeedItem> tmpItems = new ObservableCollection<DataModel.FeedItem>();
-					//foreach (DataModel.FeedItem curFeedItem in AppNs.App.Contents.FeedItems.Where(f => f.tags.Contains(CurTag) && f.isUnread))
-					//{
-					//	tmpItems.Add(curFeedItem);
-					//}
-					//FeedItems = tmpItems;
 					MessageBox.Show("Should never have happened");
 				}
 
@@ -193,21 +187,53 @@ namespace Old_Reader
 			}
 		}
 
-		private void feedList_SelectionChanged(object sender, SelectionChangedEventArgs e)
-		{
-			//if (feedList.SelectedIndex >= 0)
-			//{
-			//	foreach (var f in FeedItems)
-			//	{
-			//		AppNs.App.FeedItems.Add(f);
-			//	}
-			//	NavigationService.Navigate(new Uri("/FeedView.xaml?selIdx=" + feedList.SelectedIndex, UriKind.Relative));
-			//}
-		}
-
 		private void ApplicationBarAddIconButton_Click(object sender, EventArgs e)
 		{
 			NavigationService.Navigate(new Uri("/AddSubscription.xaml?tagId=" + CurTag.id, UriKind.Relative));
+		}
+
+		private DataModel.Subscription unsubFeed = null;
+
+		private void menuUnsubscribe_Click(object sender, RoutedEventArgs e)
+		{
+			if (sender is MenuItem)
+			{
+				unsubFeed = (sender as MenuItem).DataContext as DataModel.Subscription;
+				if (unsubFeed != null)
+				{
+					String szPrompt = String.Format(AppNs.Resources.AppResources.strConfirmUnsubscribe, unsubFeed.title);
+					if (MessageBox.Show(szPrompt, "", MessageBoxButton.OKCancel) == MessageBoxResult.OK)
+					{
+						WS.Remoting rm = new WS.Remoting(UnsubscribeComplete);
+						rm.unsubscribe(unsubFeed.id);
+						StartJob();
+					}
+				}
+			}
+		}
+
+		private void UnsubscribeComplete(String szResponse)
+		{
+			Dispatcher.BeginInvoke(() =>
+				{
+					JobComplete();
+					if (szResponse == "OK")
+					{
+						// refresh the feedlist
+						CurTag.Subscriptions.Remove(unsubFeed);
+						CurTag.unreadCount -= unsubFeed.unreadCount;
+						DataModel.Tag.AllItems.unreadCount -= unsubFeed.unreadCount;
+					}
+					else
+					{
+						ToastPrompt toast = new ToastPrompt();
+						toast.Title = AppNs.Resources.AppResources.strErrorTitle;
+						toast.Message = String.Format(AppNs.Resources.AppResources.strUnsubscribeFailed, unsubFeed.title);
+						toast.Show();
+					}
+					unsubFeed = null;
+				}
+			);
 		}
 	}
 }

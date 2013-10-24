@@ -186,6 +186,14 @@ namespace DataModel
 			}
 		}
 
+		public OldReaderContents.ObtectTypes objType
+		{
+			get
+			{
+				return OldReaderContents.ObtectTypes.kFeedObj;
+			}
+		}
+
 		public static ObservableCollection<Subscription> CreateFromResponse(String szResponse, ObservableCollection<Tag> tags)
 		{
 			ObservableCollection<Subscription > subscriptions = new ObservableCollection<Subscription>();

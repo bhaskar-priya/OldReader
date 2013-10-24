@@ -81,6 +81,11 @@
 				<ListBox.ItemTemplate>
 					<DataTemplate>
 						<Grid>
+							<toolkit:ContextMenuService.ContextMenu>
+								<toolkit:ContextMenu Name="ctxMenu">
+									<toolkit:MenuItem Name="menuUnsubscribe" Header="{Binding Path=LocalizedResources.strMenuUnsubscribe, Source={StaticResource LocalizedStrings}}" Click="menuUnsubscribe_Click"/>
+								</toolkit:ContextMenu>
+							</toolkit:ContextMenuService.ContextMenu>
 							<Grid.ColumnDefinitions>
 								<ColumnDefinition Width="auto" />
 								<ColumnDefinition Width="*" />
@@ -106,28 +111,6 @@
 					</DataTemplate>
 				</ListBox.ItemTemplate>
 			</ListBox>
-			<!--<ListBox Name="feedList" ItemsSource="{Binding FeedItems}"
-					Width="auto" SelectionChanged="feedList_SelectionChanged"
-					 toolkit:TurnstileFeatherEffect.FeatheringIndex="2"
-					Visibility="{Binding FeedItems, Converter={StaticResource  VisibilityConverter}}">
-				<ListBox.ItemContainerStyle>
-					<Style TargetType="ListBoxItem">
-						<Setter Property="HorizontalAlignment" Value="Stretch" />
-						<Setter Property="HorizontalContentAlignment" Value="Stretch" />
-					</Style>
-				</ListBox.ItemContainerStyle>
-				<ListBox.ItemTemplate>
-					<DataTemplate>
-						<StackPanel>
-							<TextBlock Text="{Binding title}" Style="{StaticResource PhoneTextLargeStyle}" />
-							<TextBlock Text="{Binding tagTitle}" Style="{StaticResource PhoneTextAccentStyle}" />
-							<TextBlock Text="{Binding author}" Style="{StaticResource PhoneTextAccentStyle}" Visibility="{Binding author, Converter={StaticResource VisibilityConverter}}" />
-							<TextBlock Text="{Binding href}" Style="{StaticResource PhoneTextAccentStyle}" TextTrimming="WordEllipsis" TextWrapping="NoWrap" />
-							<Rectangle Fill="Gray" Height="1" HorizontalAlignment="Stretch" />
-						</StackPanel>
-					</DataTemplate>
-				</ListBox.ItemTemplate>
-			</ListBox>-->
 		</Grid>
     </Grid>
 	<phone:PhoneApplicationPage.ApplicationBar>

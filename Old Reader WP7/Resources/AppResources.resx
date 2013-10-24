@@ -262,4 +262,16 @@ To report bugs and feedback please click the following button.</value>
   <data name="strVersionStr" xml:space="preserve">
     <value>version</value>
   </data>
+  <data name="strConfirmUnsubscribe" xml:space="preserve">
+    <value>Are you sure you want to unsubscribe from {0}?</value>
+  </data>
+  <data name="strMenuMove" xml:space="preserve">
+    <value>move</value>
+  </data>
+  <data name="strMenuUnsubscribe" xml:space="preserve">
+    <value>unsubscribe</value>
+  </data>
+  <data name="strUnsubscribeFailed" xml:space="preserve">
+    <value>failed to unsubscribe from {0}!</value>
+  </data>
 </root>

@@ -228,5 +228,13 @@ namespace WS
 
 			Post(szAPIEndPoint + "subscription/edit", szPostData);
 		}
+
+		public void unsubscribe(String feedId)
+		{
+			String szPostData = "";
+			szPostData = String.Format("ac=unsubscribe&s={0}", feedId);
+
+			Post(szAPIEndPoint + "subscription/edit", szPostData);
+		}
 	}
 }

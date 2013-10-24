@@ -143,6 +143,15 @@ namespace Old_Reader.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to unsubscribe from {0}?.
+        /// </summary>
+        public static string strConfirmUnsubscribe {
+            get {
+                return ResourceManager.GetString("strConfirmUnsubscribe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Trevor /u/alexandertrevor for UI improvements.
         /// </summary>
         public static string strCredits {
@@ -292,6 +301,24 @@ namespace Old_Reader.Resources {
         public static string strMarkAllRead {
             get {
                 return ResourceManager.GetString("strMarkAllRead", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to move.
+        /// </summary>
+        public static string strMenuMove {
+            get {
+                return ResourceManager.GetString("strMenuMove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to unsubscribe.
+        /// </summary>
+        public static string strMenuUnsubscribe {
+            get {
+                return ResourceManager.GetString("strMenuUnsubscribe", resourceCulture);
             }
         }
         
@@ -490,6 +517,15 @@ namespace Old_Reader.Resources {
         public static string strTimeStrUnknown {
             get {
                 return ResourceManager.GetString("strTimeStrUnknown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to failed to unsubscribe from {0}!.
+        /// </summary>
+        public static string strUnsubscribeFailed {
+            get {
+                return ResourceManager.GetString("strUnsubscribeFailed", resourceCulture);
             }
         }
         

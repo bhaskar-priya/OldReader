@@ -46,6 +46,7 @@
 			<local:FeedListIconConvertor x:Key="FeedListIconConvertor" />
 			<local:FilePathToImageConverter x:Key="FilePathToImageConverter" />
 			<local:TimeToHumanStrConverter x:Key="TimeToHumanStrConverter" />
+			<local:DispObjCtxMenuConverter x:Key="DispObjCtxMenuConverter" />
 		</Grid.Resources>
 		<ProgressBar Name="progressBar" Visibility="Collapsed" IsIndeterminate="True" VerticalAlignment="Top" />
 
@@ -94,6 +95,12 @@
 						<ListBox.ItemTemplate>
 							<DataTemplate>
 								<Grid>
+									<toolkit:ContextMenuService.ContextMenu>
+										<toolkit:ContextMenu Name="ctxMenu"
+															 IsEnabled="{Binding objType, Converter={StaticResource DispObjCtxMenuConverter}}">
+											<toolkit:MenuItem Name="menuUnsubscribe" Header="{Binding Path=LocalizedResources.strMenuUnsubscribe, Source={StaticResource LocalizedStrings}}" Click="menuUnsubscribe_Click"/>
+										</toolkit:ContextMenu>
+									</toolkit:ContextMenuService.ContextMenu>
 									<Grid.ColumnDefinitions>
 										<ColumnDefinition Width="auto" />
 										<ColumnDefinition Width="*" />

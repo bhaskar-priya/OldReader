@@ -97,6 +97,14 @@ namespace DataModel
 			return title;
 		}
 
+		public OldReaderContents.ObtectTypes objType
+		{
+			get
+			{
+				return OldReaderContents.ObtectTypes.kTagObj;
+			}
+		}
+
 		public static ObservableCollection<Tag> CreateFromResponse(String szResponse)
 		{
 			ObservableCollection<Tag> tags = new ObservableCollection<Tag>();

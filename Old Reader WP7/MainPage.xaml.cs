@@ -373,5 +373,52 @@ namespace Old_Reader
 			// we have change os page
 			m_nBackBtnCount = 0;
 		}
+
+		private DataModel.Subscription unsubFeed = null;
+
+		private void menuUnsubscribe_Click(object sender, RoutedEventArgs e)
+		{
+			if (sender is MenuItem)
+			{
+				unsubFeed = (sender as MenuItem).DataContext as DataModel.Subscription;
+				if (unsubFeed != null)
+				{
+					String szPrompt = String.Format(AppNs.Resources.AppResources.strConfirmUnsubscribe, unsubFeed.title);
+					if (MessageBox.Show(szPrompt, "", MessageBoxButton.OKCancel) == MessageBoxResult.OK)
+					{
+						WS.Remoting rm = new WS.Remoting(UnsubscribeComplete);
+						rm.unsubscribe(unsubFeed.id);
+						StartJob();
+					}
+				}
+			}
+		}
+
+		private void UnsubscribeComplete(String szResponse)
+		{
+			Dispatcher.BeginInvoke(() =>
+			{
+				JobComplete();
+				if (szResponse == "OK")
+				{
+					// refresh the feedlist
+					Contents.Subscriptions.Remove(unsubFeed);
+					DataModel.Tag.AllItems.unreadCount -= unsubFeed.unreadCount;
+
+					DataModel.OldReaderContents tmpContent = Contents;
+					Contents = null;
+					Contents = tmpContent;
+				}
+				else
+				{
+					ToastPrompt toast = new ToastPrompt();
+					toast.Title = AppNs.Resources.AppResources.strErrorTitle;
+					toast.Message = String.Format(AppNs.Resources.AppResources.strUnsubscribeFailed, unsubFeed.title);
+					toast.Show();
+				}
+				unsubFeed = null;
+			}
+			);
+		}
 	}
 }

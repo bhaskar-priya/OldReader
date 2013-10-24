@@ -43,6 +43,28 @@ namespace Old_Reader_Utils
 		}
 	}
 
+	public class DispObjCtxMenuConverter : IValueConverter
+	{
+		public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+		{
+			// just in case
+			if (value == null)
+			{
+				return false;
+			}
+
+			DataModel.OldReaderContents.ObtectTypes objType = (DataModel.OldReaderContents.ObtectTypes)value;
+			bool bEnabled = objType == DataModel.OldReaderContents.ObtectTypes.kFeedObj;
+			return bEnabled;
+		}
+
+		// had to be implemented
+		public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+		{
+			throw new NotImplementedException();
+		}
+	}
+
 	public class InvertingVisibilityConverter : IValueConverter
 	{
 		public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)

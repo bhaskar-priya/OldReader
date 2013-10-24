@@ -36,7 +36,12 @@ namespace Old_Reader
 			this.DataContext = this;
 
 			(ApplicationBar.Buttons[0] as ApplicationBarIconButton).Text = AppNs.Resources.AppResources.strDoneAppBarButton;
+			(ApplicationBar.Buttons[1] as ApplicationBarIconButton).Text = AppNs.Resources.AppResources.strSyncButton;
+
 			feedDisplay.NavigateToString(AppNs.Resources.AppResources.strSyncBrowserPrompt);
+
+			(ApplicationBar.Buttons[0] as ApplicationBarIconButton).IsEnabled = false;
+			(ApplicationBar.Buttons[1] as ApplicationBarIconButton).IsEnabled = false;
 		}
 
 		public ObservableCollection<Tag> Tags
@@ -63,13 +68,32 @@ namespace Old_Reader
 			}
 		}
 
+		private String getFeedUrl()
+		{
+			String szUrl = txtFeedUrl.Text.Trim();
+			if (String.IsNullOrEmpty(szUrl))
+			{
+				return "";
+			}
+
+			if (szUrl.IndexOf("http://") != 0)
+			{
+				szUrl = "http://" + szUrl;
+			}
+			return szUrl;
+		}
+
 		private void ApplicationBarDone_Click(object sender, EventArgs e)
 		{
-			Analytics.GAnalytics.trackOldReaderEvent(OldReaderTrackingConsts.addFeed, 0);
+			String szUrl = getFeedUrl();
+			if (!String.IsNullOrEmpty(szUrl))
+			{
+				Analytics.GAnalytics.trackOldReaderEvent(OldReaderTrackingConsts.addFeed, 0);
 
-			WS.Remoting rm = new WS.Remoting(AddFeedComplete);
-			rm.addSubscription(txtFeedUrl.Text);
-			StartJob();
+				WS.Remoting rm = new WS.Remoting(AddFeedComplete);
+				rm.addSubscription(txtFeedUrl.Text);
+				StartJob();
+			}
 		}
 
 		private void AddFeedComplete(String szResponse)
@@ -78,8 +102,15 @@ namespace Old_Reader
 				{
 					JobComplete();
 					// get the added feed id out
-					JObject obj = JObject.Parse(szResponse);
-					String szStreamId = (String)obj["streamId"];
+					String szStreamId = "";
+					try
+					{
+						JObject obj = JObject.Parse(szResponse);
+						szStreamId = (String)obj["streamId"];
+					}
+					catch
+					{
+					}
 					if (!String.IsNullOrEmpty(szStreamId))
 					{
 						// see if we need to add this to a folder
@@ -140,13 +171,11 @@ namespace Old_Reader
 		{
 			try
 			{
-				String szUrl = txtFeedUrl.Text;
-				if (szUrl.IndexOf("http://") != 0)
+				String szUrl = getFeedUrl();
+				if (!String.IsNullOrEmpty(szUrl))
 				{
-					szUrl = "http://" + szUrl;
+					feedDisplay.Navigate(new Uri(szUrl));
 				}
-				txtFeedUrl.Text = szUrl;
-				feedDisplay.Navigate(new Uri(szUrl));
 			}
 			catch
 			{
@@ -155,11 +184,24 @@ namespace Old_Reader
 
 		private void txtFeedUrl_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
 		{
+			String szUrl = getFeedUrl();
+
 			if (e.Key == System.Windows.Input.Key.Enter)
 			{
-				feedDisplay.Navigate(new Uri(txtFeedUrl.Text));
-				this.Focus();
+				if (!String.IsNullOrEmpty(szUrl))
+				{
+					feedDisplay.Navigate(new Uri(szUrl));
+					this.Focus();
+				}
 			}
+		}
+
+		private void txtFeedUrl_KeyUp(object sender, System.Windows.Input.KeyEventArgs e)
+		{
+			String szUrl = getFeedUrl();
+
+			(ApplicationBar.Buttons[0] as ApplicationBarIconButton).IsEnabled = !String.IsNullOrEmpty(szUrl);
+			(ApplicationBar.Buttons[1] as ApplicationBarIconButton).IsEnabled = !String.IsNullOrEmpty(szUrl);
 		}
 	}
 }

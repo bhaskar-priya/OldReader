@@ -67,7 +67,8 @@
 				<StackPanel Grid.Row="0">
 					<TextBlock Text="{Binding Path=LocalizedResources.strFeedUrl, Source={StaticResource LocalizedStrings}}"
 						   toolkit:TurnstileFeatherEffect.FeatheringIndex="2"/>
-					<TextBox Name="txtFeedUrl" InputScope="Url" toolkit:TurnstileFeatherEffect.FeatheringIndex="2" KeyDown="txtFeedUrl_KeyDown"/>
+					<TextBox Name="txtFeedUrl" InputScope="Url" toolkit:TurnstileFeatherEffect.FeatheringIndex="2"
+							 KeyDown="txtFeedUrl_KeyDown" KeyUp="txtFeedUrl_KeyUp"/>
 					<TextBlock Text="{Binding Path=LocalizedResources.strTargetFolder, Source={StaticResource LocalizedStrings}}"
 						   toolkit:TurnstileFeatherEffect.FeatheringIndex="3"/>
 					<toolkit:ListPicker Name="ctlTagList" ItemsSource="{Binding Tags}"
