@@ -224,7 +224,14 @@ namespace Old_Reader
 				Contents = null;
 				Contents = tmpContent;
 				refreshLocalFeeds();
+
+				if (AppNs.App.RefreshContents)
+				{
+					AppNs.App.RefreshContents = false;
+					RefreshContent();
+				}
 			}
+			
 		}
 
 		private void refreshLocalFeeds()
@@ -272,6 +279,11 @@ namespace Old_Reader
 		}
 
 		private void ApplicationBarRefreshButton_Click(object sender, EventArgs e)
+		{
+			RefreshContent();
+		}
+
+		private void RefreshContent()
 		{
 			if (mainPanorama.SelectedItem == liveSubsPanaromaItem)
 			{
@@ -365,6 +377,7 @@ namespace Old_Reader
 
 		private void ApplicationBarAddIconButton_Click(object sender, EventArgs e)
 		{
+			AppNs.App.RefreshContents = false;
 			NavigationService.Navigate(new Uri("/AddSubscription.xaml?tagId=" + DataModel.Tag.AllItems.id, UriKind.Relative));
 		}
 
@@ -389,6 +402,7 @@ namespace Old_Reader
 						WS.Remoting rm = new WS.Remoting(UnsubscribeComplete);
 						rm.unsubscribe(unsubFeed.id);
 						StartJob();
+						Analytics.GAnalytics.trackUnsubscribe();
 					}
 				}
 			}
@@ -419,6 +433,19 @@ namespace Old_Reader
 				unsubFeed = null;
 			}
 			);
+		}
+
+		private void menuMove_Click(object sender, RoutedEventArgs e)
+		{
+			if (sender is MenuItem)
+			{
+				var curFeed = (sender as MenuItem).DataContext as DataModel.Subscription;
+				if (curFeed != null)
+				{
+					AppNs.App.RefreshContents = false;
+					NavigationService.Navigate(new Uri("/MoveSubscription.xaml?feedId=" + curFeed.id, UriKind.Relative));
+				}
+			}
 		}
 	}
 }

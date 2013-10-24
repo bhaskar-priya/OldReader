@@ -97,8 +97,9 @@
 								<Grid>
 									<toolkit:ContextMenuService.ContextMenu>
 										<toolkit:ContextMenu Name="ctxMenu"
-															 IsEnabled="{Binding objType, Converter={StaticResource DispObjCtxMenuConverter}}">
+															 IsEnabled="{Binding Content, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource DispObjCtxMenuConverter}}">
 											<toolkit:MenuItem Name="menuUnsubscribe" Header="{Binding Path=LocalizedResources.strMenuUnsubscribe, Source={StaticResource LocalizedStrings}}" Click="menuUnsubscribe_Click"/>
+											<toolkit:MenuItem Name="menuMove" Header="{Binding Path=LocalizedResources.strMenuMove, Source={StaticResource LocalizedStrings}}" Click="menuMove_Click"/>
 										</toolkit:ContextMenu>
 									</toolkit:ContextMenuService.ContextMenu>
 									<Grid.ColumnDefinitions>

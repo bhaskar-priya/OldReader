@@ -277,6 +277,15 @@ To report bugs and feedback please click the following button.</value>
   <data name="strMenuUnsubscribe" xml:space="preserve">
     <value>unsubscribe</value>
   </data>
+  <data name="strMoveFrom" xml:space="preserve">
+    <value>move from</value>
+  </data>
+  <data name="strMoveSubscriptionPage" xml:space="preserve">
+    <value>move feed</value>
+  </data>
+  <data name="strMoveTo" xml:space="preserve">
+    <value>move to</value>
+  </data>
   <data name="strUnsubscribeFailed" xml:space="preserve">
     <value>failed to unsubscribe from {0}!</value>
   </data>

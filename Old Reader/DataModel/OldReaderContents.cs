@@ -26,13 +26,6 @@ namespace DataModel
 			kGettingUnreadItems
 		};
 
-		public enum ObtectTypes
-		{
-			kTagObj,
-			kFeedObj,
-			kFeedItemObj
-		};
-
 		public delegate void InitializationCompleteHandler(OldReaderContents contents);
 		private InitializationCompleteHandler initializationCompleteHandler = null;
 

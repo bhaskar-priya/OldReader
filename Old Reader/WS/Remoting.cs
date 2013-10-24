@@ -217,7 +217,7 @@ namespace WS
 		public void moveSubscriptionToFolder(String feedId, String folderId)
 		{
 			String szPostData = "";
-			if (!String.IsNullOrEmpty(folderId))
+			if (!String.IsNullOrEmpty(folderId) && folderId!=DataModel.Tag.AllItems.id)
 			{
 				szPostData = String.Format("ac=edit&s={0}&a={1}", feedId, folderId);
 			}

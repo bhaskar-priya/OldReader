@@ -177,6 +177,12 @@ namespace Old_Reader
 
 				NotifyPropertyChanged("itemCount");
 			}
+
+			if (AppNs.App.RefreshContents && movedFeed!=null)
+			{
+				// remove the moved feed from the list
+				CurTag.Subscriptions.Remove(movedFeed);
+			}
 		}
 
 		private void subscriptionList_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -207,6 +213,7 @@ namespace Old_Reader
 						WS.Remoting rm = new WS.Remoting(UnsubscribeComplete);
 						rm.unsubscribe(unsubFeed.id);
 						StartJob();
+						Analytics.GAnalytics.trackUnsubscribe();
 					}
 				}
 			}
@@ -234,6 +241,22 @@ namespace Old_Reader
 					unsubFeed = null;
 				}
 			);
+		}
+
+		DataModel.Subscription movedFeed = null;
+
+		private void menuMove_Click(object sender, RoutedEventArgs e)
+		{
+			if (sender is MenuItem)
+			{
+				var curFeed = (sender as MenuItem).DataContext as DataModel.Subscription;
+				if (curFeed != null)
+				{
+					movedFeed = curFeed;
+					AppNs.App.RefreshContents = false;
+					NavigationService.Navigate(new Uri("/MoveSubscription.xaml?feedId=" + curFeed.id, UriKind.Relative));
+				}
+			}
 		}
 	}
 }

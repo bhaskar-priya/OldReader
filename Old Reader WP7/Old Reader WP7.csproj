@@ -152,6 +152,10 @@
       <Link>LoginPage.xaml.cs</Link>
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="..\Old Reader\MoveSubscription.xaml.cs">
+      <Link>MoveSubscription.xaml.cs</Link>
+      <DependentUpon>MoveSubscription.xaml</DependentUpon>
+    </Compile>
     <Compile Include="..\Old Reader\TagView.xaml.cs">
       <Link>TagView.xaml.cs</Link>
       <DependentUpon>TagView.xaml</DependentUpon>
@@ -208,6 +212,11 @@
     </Page>
     <Page Include="..\Old Reader\LoginPage.xaml">
       <Link>LoginPage.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\Old Reader\MoveSubscription.xaml">
+      <Link>MoveSubscription.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

@@ -73,5 +73,21 @@ namespace Analytics
 #endif
 			GoogleAnalytics.EasyTracker.GetTracker().SendEvent(OldReaderTrackingConsts.remotingErrorEvent, error, error, 0);
 		}
+
+		public static void trackUnsubscribe()
+		{
+#if DEBUG
+			return;
+#endif
+			GoogleAnalytics.EasyTracker.GetTracker().SendEvent(OldReaderTrackingConsts.oldReaderEvent, OldReaderTrackingConsts.feedUnsubscribe, OldReaderTrackingConsts.feedUnsubscribe, 0);
+		}
+
+		public static void trackSubMove()
+		{
+#if DEBUG
+			return;
+#endif
+			GoogleAnalytics.EasyTracker.GetTracker().SendEvent(OldReaderTrackingConsts.oldReaderEvent, OldReaderTrackingConsts.feedMoved, OldReaderTrackingConsts.feedMoved, 0);
+		}
 	}
 }

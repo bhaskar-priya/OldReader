@@ -53,9 +53,11 @@ namespace Old_Reader_Utils
 				return false;
 			}
 
-			DataModel.OldReaderContents.ObtectTypes objType = (DataModel.OldReaderContents.ObtectTypes)value;
-			bool bEnabled = objType == DataModel.OldReaderContents.ObtectTypes.kFeedObj;
-			return bEnabled;
+			if (value is DataModel.Subscription)
+			{
+				return true;
+			}
+			return false;
 		}
 
 		// had to be implemented
@@ -319,6 +321,8 @@ namespace Old_Reader_Utils
 		public static String feedSwipeNext = "feedSwipeNext";
 		public static String feedSwipePrev = "feedSwipePrev";
 		public static String remotingErrorEvent = "remotingErrorEvent";
+		public static String feedUnsubscribe = "feedUnsubscribe";
+		public static String feedMoved = "feedMoved";
 	}
 
 	public class Utils

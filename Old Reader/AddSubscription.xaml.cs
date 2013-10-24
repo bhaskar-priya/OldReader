@@ -113,6 +113,7 @@ namespace Old_Reader
 					}
 					if (!String.IsNullOrEmpty(szStreamId))
 					{
+						AppNs.App.RefreshContents = true;
 						// see if we need to add this to a folder
 						if (ctlTagList.SelectedItem != DataModel.Tag.AllItems)
 						{

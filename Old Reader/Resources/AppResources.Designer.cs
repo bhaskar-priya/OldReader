@@ -323,6 +323,33 @@ namespace Old_Reader.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to move from.
+        /// </summary>
+        public static string strMoveFrom {
+            get {
+                return ResourceManager.GetString("strMoveFrom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to move feed.
+        /// </summary>
+        public static string strMoveSubscriptionPage {
+            get {
+                return ResourceManager.GetString("strMoveSubscriptionPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to move to.
+        /// </summary>
+        public static string strMoveTo {
+            get {
+                return ResourceManager.GetString("strMoveTo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to There are no unread items here. Hurray!.
         /// </summary>
         public static string strNoUnreadItems {

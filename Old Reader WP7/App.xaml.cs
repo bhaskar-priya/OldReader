@@ -245,5 +245,6 @@ namespace Old_Reader_WP7
 			}
 		}
 
+		public static bool RefreshContents { get; set; }
 	}
 }

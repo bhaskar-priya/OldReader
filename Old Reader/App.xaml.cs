@@ -332,5 +332,6 @@ namespace Old_Reader
 			}
 		}
 
+		public static bool RefreshContents { get; set; }
 	}
 }
