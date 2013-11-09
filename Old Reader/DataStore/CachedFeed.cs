@@ -141,7 +141,7 @@ namespace DataStore
 		public static void markAllReadForSubscription(String szBubId)
 		{
 			foreach (var cachedFeed in App.ReaderDB.CachedFeeds.Where(
-				cf => cf.Unread == true && String.CompareOrdinal(cf.StreamId, szBubId) == 0))
+				cf => cf.Unread == true && cf.StreamId == szBubId))
 			{
 				cachedFeed.Unread = false;
 			}
