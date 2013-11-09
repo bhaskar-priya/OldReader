@@ -58,7 +58,6 @@ namespace Old_Reader
 					moreItemCount.SelectedIndex = (AppNs.App.AdditionalDownloadCount - 5) / 5;
 					txtUserName.Text = AppNs.App.UserEMail;
 					txtPasswordBox.Password = AppNs.App.UserPassword;
-					
 				}
 				catch
 				{

@@ -139,7 +139,8 @@
     <Compile Include="TagView.xaml.cs">
       <DependentUpon>TagView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TemplateSelector.cs" />
+    <Compile Include="Utilities\AnimationHelper.cs" />
+    <Compile Include="Utilities\ValueConverters.cs" />
     <Compile Include="Utils.cs" />
     <Compile Include="WS\Remoting.cs" />
   </ItemGroup>
@@ -234,6 +235,8 @@
     <Content Include="Toolkit.Content\favs.removefrom.png" />
     <Content Include="Toolkit.Content\folder.png" />
     <Content Include="Toolkit.Content\fullscreen.expand.png" />
+    <Content Include="Toolkit.Content\heart.png" />
+    <Content Include="Toolkit.Content\heart2.empty.png" />
     <Content Include="Toolkit.Content\send.message.png" />
     <Content Include="Toolkit.Content\share.png" />
     <Content Include="Toolkit.Content\sync.png" />

@@ -108,8 +108,9 @@ namespace Old_Reader
 						JObject obj = JObject.Parse(szResponse);
 						szStreamId = (String)obj["streamId"];
 					}
-					catch
+					catch(Exception exp)
 					{
+						Analytics.GAnalytics.sendException(exp.Message, false);
 					}
 					if (!String.IsNullOrEmpty(szStreamId))
 					{
@@ -178,8 +179,9 @@ namespace Old_Reader
 					feedDisplay.Navigate(new Uri(szUrl));
 				}
 			}
-			catch
+			catch (Exception exp)
 			{
+				Analytics.GAnalytics.sendException(exp.Message, false);
 			}
 		}
 

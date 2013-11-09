@@ -96,8 +96,9 @@ namespace DataStore
 				}
 				iconAvailableHandler(szIconPath);
 			}
-			catch
+			catch (Exception exp)
 			{
+				Analytics.GAnalytics.sendException(exp.Message, false);
 			}
 		}
 	}

@@ -276,6 +276,17 @@ namespace Old_Reader
 
 		private void markAllReadComplete(String szResponse)
 		{
+			if (CurSubscription != null)
+			{
+				DataStore.CachedFeed.markAllReadForSubscription(CurSubscription.id);
+			}
+			else if (FeedItems != null)
+			{
+				// no subscription still we have items.
+				// it must be all items
+				DataStore.CachedFeed.markAllRead();
+			}
+
 			Dispatcher.BeginInvoke(() =>
 			{
 				JobComplete();
@@ -289,7 +300,6 @@ namespace Old_Reader
 				// reduce the unread count
 				if (CurSubscription != null)
 				{
-					DataStore.CachedFeed.markAllReadForSubscription(CurSubscription.id);
 					int curCount = CurSubscription.unreadCount;
 					// mark all items unread
 					// adjust the count
@@ -308,7 +318,6 @@ namespace Old_Reader
 				{
 					// no subscription still we have items.
 					// it must be all items
-					DataStore.CachedFeed.markAllRead();
 					foreach (var curSub in AppNs.App.Contents.Subscriptions)
 					{
 						curSub.unreadCount = 0;

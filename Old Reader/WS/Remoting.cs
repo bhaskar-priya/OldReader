@@ -95,6 +95,7 @@ namespace WS
 			}
 			catch (Exception exp)
 			{
+				Analytics.GAnalytics.sendException(exp.Message, false);
 				if (remotingErrorHandler != null)
 				{
 					remotingErrorHandler(exp.Message);

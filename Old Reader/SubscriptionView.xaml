@@ -14,7 +14,7 @@
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="True"
 	toolkit:TiltEffect.IsTiltEnabled="False"
-	xmlns:local="clr-namespace:Old_Reader_Utils">
+	xmlns:local="clr-namespace:Utilities">
 
 	<toolkit:TransitionService.NavigationInTransition>
 		<toolkit:NavigationInTransition>

@@ -60,8 +60,9 @@ namespace DataStore
 					dbUpdater.Execute();
 				}
 			}
-			catch
+			catch (Exception exp)
 			{
+				Analytics.GAnalytics.sendException(exp.Message, false);
 			}
         }
 

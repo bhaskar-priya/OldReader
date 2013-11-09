@@ -131,7 +131,7 @@ namespace DataStore
 
 		public static void markAllRead()
 		{
-			foreach(var cachedFeed in App.ReaderDB.CachedFeeds)
+			foreach (var cachedFeed in App.ReaderDB.CachedFeeds.Where(cf => cf.Unread == true))
 			{
 				cachedFeed.Unread = false;
 			}
@@ -140,12 +140,10 @@ namespace DataStore
 
 		public static void markAllReadForSubscription(String szBubId)
 		{
-			foreach (var cachedFeed in App.ReaderDB.CachedFeeds)
+			foreach (var cachedFeed in App.ReaderDB.CachedFeeds.Where(
+				cf => cf.Unread == true && String.CompareOrdinal(cf.StreamId, szBubId) == 0))
 			{
-				if (cachedFeed.Unread == true && String.CompareOrdinal(cachedFeed.StreamId, szBubId) == 0)
-				{
-					cachedFeed.Unread = false;
-				}
+				cachedFeed.Unread = false;
 			}
 			App.ReaderDB.SubmitChanges();
 		}

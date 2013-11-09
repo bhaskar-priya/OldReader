@@ -15,7 +15,7 @@
     SupportedOrientations="Portrait" Orientation="Portrait"
     shell:SystemTray.IsVisible="True"
 	toolkit:TiltEffect.IsTiltEnabled="True"
-	xmlns:local="clr-namespace:Old_Reader_Utils">
+	xmlns:local="clr-namespace:Utilities">
 
 	<toolkit:TransitionService.NavigationInTransition>
 		<toolkit:NavigationInTransition>

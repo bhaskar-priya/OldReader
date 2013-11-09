@@ -57,6 +57,22 @@ namespace Analytics
 			GoogleAnalytics.EasyTracker.GetTracker().SendEvent(OldReaderTrackingConsts.oldReaderEvent, OldReaderTrackingConsts.feedSave, OldReaderTrackingConsts.feedSave, bFromList ? 1 : 0);
 		}
 
+		public static void trackFeedOpenInIE()
+		{
+#if DEBUG
+			return;
+#endif
+			GoogleAnalytics.EasyTracker.GetTracker().SendEvent(OldReaderTrackingConsts.oldReaderEvent, OldReaderTrackingConsts.feedOpenedInIE, OldReaderTrackingConsts.feedSave, 0);
+		}
+
+		public static void trackFeedEmailed()
+		{
+#if DEBUG
+			return;
+#endif
+			GoogleAnalytics.EasyTracker.GetTracker().SendEvent(OldReaderTrackingConsts.oldReaderEvent, OldReaderTrackingConsts.feedEMailed, OldReaderTrackingConsts.feedSave, 0);
+		}
+
 		public static void trackFeedSwipe(bool bNext)
 		{
 #if DEBUG
@@ -88,6 +104,14 @@ namespace Analytics
 			return;
 #endif
 			GoogleAnalytics.EasyTracker.GetTracker().SendEvent(OldReaderTrackingConsts.oldReaderEvent, OldReaderTrackingConsts.feedMoved, OldReaderTrackingConsts.feedMoved, 0);
+		}
+
+		public static void sendException(String szDescr, bool bIsFatal)
+		{
+#if DEBUG
+			return;
+#endif
+			GoogleAnalytics.EasyTracker.GetTracker().SendException(szDescr, bIsFatal);
 		}
 	}
 }

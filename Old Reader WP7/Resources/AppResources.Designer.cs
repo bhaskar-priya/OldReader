@@ -134,6 +134,15 @@ namespace Old_Reader_WP7.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to additional items to download when downloading old items.
+        /// </summary>
+        public static string strAdditionalDownloadCount {
+            get {
+                return ResourceManager.GetString("strAdditionalDownloadCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Are you sure you want to unsubscribe from {0}?.
         /// </summary>
         public static string strConfirmUnsubscribe {
@@ -175,6 +184,15 @@ namespace Old_Reader_WP7.Resources {
         public static string strEMail {
             get {
                 return ResourceManager.GetString("strEMail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to email....
+        /// </summary>
+        public static string strEMailMenuItem {
+            get {
+                return ResourceManager.GetString("strEMailMenuItem", resourceCulture);
             }
         }
         
@@ -346,6 +364,15 @@ namespace Old_Reader_WP7.Resources {
         public static string strNoUnreadItems {
             get {
                 return ResourceManager.GetString("strNoUnreadItems", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to open in ie....
+        /// </summary>
+        public static string strOpenInIE {
+            get {
+                return ResourceManager.GetString("strOpenInIE", resourceCulture);
             }
         }
         

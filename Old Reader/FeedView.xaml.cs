@@ -65,6 +65,9 @@ namespace Old_Reader
 			(ApplicationBar.Buttons[1] as ApplicationBarIconButton).Text = AppNs.Resources.AppResources.strViewFull;
 			(ApplicationBar.Buttons[2] as ApplicationBarIconButton).Text = AppNs.Resources.AppResources.strShare;
 			(ApplicationBar.Buttons[3] as ApplicationBarIconButton).Text = AppNs.Resources.AppResources.strSaveLocal;
+
+			(ApplicationBar.MenuItems[0] as ApplicationBarMenuItem).Text = AppNs.Resources.AppResources.strOpenInIE;
+			(ApplicationBar.MenuItems[1] as ApplicationBarMenuItem).Text = AppNs.Resources.AppResources.strEMailMenuItem;
 		}
 
 		private DataModel.FeedItem m_feedItem;
@@ -96,14 +99,15 @@ namespace Old_Reader
 			// change the app bar icon
 			String iconUri = "";
 			String btnText = "";
+
+			iconUri = Utilities.FeedListIconConvertor.getIconString(m_feedItem.id);
+
 			if(!DataStore.CachedFeed.isStarred(m_feedItem.id))
 			{
-				iconUri = "/Toolkit.Content/favs.addto.png";
 				btnText = AppNs.Resources.AppResources.strSaveLocal;
 			}
 			else
 			{
-				iconUri = "/Toolkit.Content/favs.removefrom.png";
 				btnText = AppNs.Resources.AppResources.strRemoveLocal;
 			}
 
@@ -117,7 +121,6 @@ namespace Old_Reader
 		protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
 		{
 			base.OnNavigatedTo(e);
-			Analytics.GAnalytics.trackPageView("FeedView");
 
 			if (nCurIdx == -1)
 			{
@@ -164,6 +167,7 @@ namespace Old_Reader
 
 		void showFeedItem(int nIdx)
 		{
+			Analytics.GAnalytics.trackPageView("FeedView");
 			curFeed = AppNs.App.FeedItems[nIdx];
 			contentDisplay.NavigateToString(ConvertExtendedASCII(curFeed.summary));
 
@@ -222,6 +226,23 @@ namespace Old_Reader
 			Analytics.GAnalytics.trackFeedSave(false);
 			DataStore.CachedFeed.toggleStarred(curFeed.id);
 			handleAppBarButton();
+		}
+
+		private void ApplicationBarOpenInIEMenuItem_Click(object sender, EventArgs e)
+		{
+			Analytics.GAnalytics.trackFeedOpenInIE();
+			WebBrowserTask webBrowserTask = new WebBrowserTask();
+			webBrowserTask.Uri = new Uri(curFeed.href);
+			webBrowserTask.Show();
+		}
+
+		private void ApplicationBarEMailMenuItem_Click(object sender, EventArgs e)
+		{
+			Analytics.GAnalytics.trackFeedEmailed();
+			EmailComposeTask email = new EmailComposeTask();
+			email.Subject = curFeed.title;
+			email.Body = curFeed.href;
+			email.Show();
 		}
 	}
 }

@@ -289,4 +289,13 @@ To report bugs and feedback please click the following button.</value>
   <data name="strUnsubscribeFailed" xml:space="preserve">
     <value>failed to unsubscribe from {0}!</value>
   </data>
+  <data name="strAdditionalDownloadCount" xml:space="preserve">
+    <value>additional items to download when downloading old items</value>
+  </data>
+  <data name="strEMailMenuItem" xml:space="preserve">
+    <value>email...</value>
+  </data>
+  <data name="strOpenInIE" xml:space="preserve">
+    <value>open in ie...</value>
+  </data>
 </root>
