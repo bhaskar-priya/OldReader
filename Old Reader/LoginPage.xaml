@@ -63,7 +63,7 @@
 					<TextBlock Text="{Binding Path=LocalizedResources.strPassword, Source={StaticResource LocalizedStrings}}" />
 					<PasswordBox Name="txtPasswordBox" />
 					<TextBlock Text="{Binding Path=LocalizedResources.steLoginExplanation, Source={StaticResource LocalizedStrings}}" TextWrapping="Wrap" Style="{StaticResource PhoneTextSubtleStyle}" />
-					<CheckBox Name="chkShowReadItem" Content="Show read items" />
+					<CheckBox Name="chkShowReadItem" Content="{Binding Path=LocalizedResources.strShowReadItems, Source={StaticResource LocalizedStrings}}" />
 					<TextBlock Text="{Binding Path=LocalizedResources.strAdditionalDownloadCount, Source={StaticResource LocalizedStrings}}" TextWrapping="Wrap" />
 					<toolkit:ListPicker Name="moreItemCount"
 										FullModeItemTemplate="{StaticResource PickerFullModeProviderItemTemplate}">

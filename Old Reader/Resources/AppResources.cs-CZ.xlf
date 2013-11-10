@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="cs-CZ" original="AppResources.resx" tool-id="MultilingualAppToolkit" product-name="Old Reader" product-version="4.4.0" build-num="0">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="2.1.1100.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="Resx">
+        <trans-unit id="Resx/ResourceFlowDirection" translate="yes" xml:space="preserve">
+          <source>LeftToRight</source>
+          <target state="translated">LeftToRight</target>
+        </trans-unit>
+        <trans-unit id="Resx/ResourceLanguage" translate="yes" xml:space="preserve">
+          <source>en-US</source>
+          <target state="translated">cs-CZ</target>
+        </trans-unit>
+        <trans-unit id="Resx/AppTitle" translate="no" xml:space="preserve">
+          <source>Old Reader</source>
+          <target state="signed-off">Old Reader</target>
+        </trans-unit>
+        <trans-unit id="Resx/steLoginExplanation" translate="yes" xml:space="preserve">
+          <source>Please make sure that you have set password in the settings page of The Old Reader. As of now this is the only way to access the data.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Přesvědčte se, zda jste nastavili heslo v nastavení stránce The Old čtenáře. Nyní to je jediný způsob, jak získat přístup k datům.</target>
+        </trans-unit>
+        <trans-unit id="Resx/strAboutText" translate="yes" xml:space="preserve">
+          <source>This is a Windows Phone client for "The Old Reader".
+To report bugs and feedback please click the following button.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Toto je klient Windows Phone pro "The Old Reader".
+Hlášení chyb a zpětné vazby klikněte prosím na následující tlačítko.</target>
+        </trans-unit>
+        <trans-unit id="Resx/strAboutTitle" translate="yes" xml:space="preserve">
+          <source>about</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">O produktu</target>
+        </trans-unit>
+        <trans-unit id="Resx/strEMail" translate="yes" xml:space="preserve">
+          <source>registered email</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">registrovaný e-mail</target>
+        </trans-unit>
+        <trans-unit id="Resx/strGoToSettings" translate="yes" xml:space="preserve">
+          <source>go to settings and setup the e-mail address and password for The Old Reader</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Přejděte na nastavení a nastavit e-mailovou adresu a heslo pro The Old Reader</target>
+        </trans-unit>
+        <trans-unit id="Resx/strLoginPage" translate="yes" xml:space="preserve">
+          <source>credentials</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Pověření</target>
+        </trans-unit>
+        <trans-unit id="Resx/strNoUnreadItems" translate="yes" xml:space="preserve">
+          <source>There are no unread items here. Hurray!</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Neexistují zde žádné nepřečtené položky. Hurá!</target>
+        </trans-unit>
+        <trans-unit id="Resx/strPassword" translate="yes" xml:space="preserve">
+          <source>password</source>
+          <target state="translated" state-qualifier="tm-suggestion">heslo</target>
+        </trans-unit>
+        <trans-unit id="Resx/strSendFeedbackBtnText" translate="yes" xml:space="preserve">
+          <source>send feedback...</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Váš názor</target>
+        </trans-unit>
+        <trans-unit id="Resx/strSubscriptions" translate="yes" xml:space="preserve">
+          <source>Subscriptions</source>
+          <target state="translated" state-qualifier="tm-suggestion">Odběry</target>
+        </trans-unit>
+        <trans-unit id="Resx/strGettingSubscriptionList" translate="yes" xml:space="preserve">
+          <source>Getting Subscriptions</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Získání předplatného</target>
+        </trans-unit>
+        <trans-unit id="Resx/strGettingTagList" translate="yes" xml:space="preserve">
+          <source>Getting Tags</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Získání značky</target>
+        </trans-unit>
+        <trans-unit id="Resx/strGettingUnreadCount" translate="yes" xml:space="preserve">
+          <source>Getting Unread Count</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Načítání počet nepřečtených položek</target>
+        </trans-unit>
+        <trans-unit id="Resx/strGettingUnreadItems" translate="yes" xml:space="preserve">
+          <source>Getting Unread Items</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Získání nepřečtených položek</target>
+        </trans-unit>
+        <trans-unit id="Resx/strKeepUnread" translate="yes" xml:space="preserve">
+          <source>keep unread</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">zachovat nepřečtené</target>
+        </trans-unit>
+        <trans-unit id="Resx/strMarkAllRead" translate="yes" xml:space="preserve">
+          <source>mark all read</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Označit vše jako přečtené</target>
+        </trans-unit>
+        <trans-unit id="Resx/strShare" translate="yes" xml:space="preserve">
+          <source>share</source>
+          <target state="translated" state-qualifier="tm-suggestion">sdílet</target>
+        </trans-unit>
+        <trans-unit id="Resx/strViewFull" translate="yes" xml:space="preserve">
+          <source>view full</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">pohled plný</target>
+        </trans-unit>
+        <trans-unit id="Resx/strLocal" translate="yes" xml:space="preserve">
+          <source>Saved</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Uloženo:</target>
+        </trans-unit>
+        <trans-unit id="Resx/strSaveLocal" translate="yes" xml:space="preserve">
+          <source>save for later</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Uložit pro pozdější použití</target>
+        </trans-unit>
+        <trans-unit id="Resx/strRemoveLocal" translate="yes" xml:space="preserve">
+          <source>remove saved</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">odstranit uložené</target>
+        </trans-unit>
+        <trans-unit id="Resx/strAboutMenu" translate="yes" xml:space="preserve">
+          <source>about...</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">O produktu</target>
+        </trans-unit>
+        <trans-unit id="Resx/strRefreshAppButton" translate="yes" xml:space="preserve">
+          <source>refresh</source>
+          <target state="translated" state-qualifier="tm-suggestion">aktualizovat</target>
+        </trans-unit>
+        <trans-unit id="Resx/strSettingsMenu" translate="yes" xml:space="preserve">
+          <source>settings...</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Nastavení</target>
+        </trans-unit>
+        <trans-unit id="Resx/strStatusMenu" translate="yes" xml:space="preserve">
+          <source>old reader status...</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">staré čtenář stav...</target>
+        </trans-unit>
+        <trans-unit id="Resx/strDoneAppBarButton" translate="yes" xml:space="preserve">
+          <source>ok</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">OK</target>
+        </trans-unit>
+        <trans-unit id="Resx/strPressBackToExit" translate="yes" xml:space="preserve">
+          <source>press back once more to exit</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">stiskněte zpět jednou více na výstupu</target>
+        </trans-unit>
+        <trans-unit id="Resx/strPressBackToExitTitle" translate="yes" xml:space="preserve">
+          <source>sure?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Jistě?</target>
+        </trans-unit>
+        <trans-unit id="Resx/strCredits" translate="yes" xml:space="preserve">
+          <source>Trevor /u/alexandertrevor for UI improvements</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Trevor/u/alexandertrevor pro vylepšení uživatelského rozhraní</target>
+        </trans-unit>
+        <trans-unit id="Resx/strAddSubscription" translate="yes" xml:space="preserve">
+          <source>add feed</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Přidat informační kanál</target>
+        </trans-unit>
+        <trans-unit id="Resx/strFeedUrl" translate="yes" xml:space="preserve">
+          <source>feed URL</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Adresa URL inf. kanálu</target>
+        </trans-unit>
+        <trans-unit id="Resx/strTargetFolder" translate="yes" xml:space="preserve">
+          <source>target Folder</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Cílová složka:</target>
+        </trans-unit>
+        <trans-unit id="Resx/strFeeadAddError" translate="yes" xml:space="preserve">
+          <source>could not add the feed.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">nelze přidat informační kanál.</target>
+        </trans-unit>
+        <trans-unit id="Resx/strFeedMoveError" translate="yes" xml:space="preserve">
+          <source>successfully added the feed but could not move to the selected folder.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">úspěšně přidal, ale nelze přesunout do vybrané složky.</target>
+        </trans-unit>
+        <trans-unit id="Resx/strAddFeed" translate="yes" xml:space="preserve">
+          <source>add Feed</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Přidat informační kanál</target>
+        </trans-unit>
+        <trans-unit id="Resx/strSyncBrowserPrompt" translate="yes" xml:space="preserve">
+          <source><bpt id="1">&lt;b&gt;</bpt>Enter the Feed URL and press sync to preview the feed contents<ept id="1">&lt;/b&gt;</ept></source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion"><bpt id="1">%%amp;lt;b%%amp;gt;</bpt>Enter Feed URL a stiskněte synchronizace posuvu obsah<ept id="1">%%amp;lt;/b%%amp;gt;</ept></target>
+        </trans-unit>
+        <trans-unit id="Resx/strSyncButton" translate="yes" xml:space="preserve">
+          <source>sync</source>
+          <target state="translated" state-qualifier="tm-suggestion">synchronizovat</target>
+        </trans-unit>
+        <trans-unit id="Resx/strErrorTitle" translate="yes" xml:space="preserve">
+          <source>error!</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">chyba</target>
+        </trans-unit>
+        <trans-unit id="Resx/strTimeStrDays" translate="yes" xml:space="preserve">
+          <source>{0} day(s) ago</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion"> před {0} dny</target>
+        </trans-unit>
+        <trans-unit id="Resx/strTimeStrHours" translate="yes" xml:space="preserve">
+          <source>{0} hour(s) ago</source>
+          <target state="translated" state-qualifier="tm-suggestion">před {0} hodinami</target>
+        </trans-unit>
+        <trans-unit id="Resx/strTimeStrNow" translate="yes" xml:space="preserve">
+          <source>Now</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">nyní</target>
+        </trans-unit>
+        <trans-unit id="Resx/strTimeStrUnknown" translate="yes" xml:space="preserve">
+          <source>Unknown</source>
+          <target state="translated" state-qualifier="tm-suggestion">Neznámý</target>
+        </trans-unit>
+        <trans-unit id="Resx/strDownloadOlder" translate="yes" xml:space="preserve">
+          <source>download older</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ke stažení starší</target>
+        </trans-unit>
+        <trans-unit id="Resx/strShowAllPosts" translate="yes" xml:space="preserve">
+          <source>show all posts</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Zobrazit všechny příspěvky</target>
+        </trans-unit>
+        <trans-unit id="Resx/strShowUnreadOnly" translate="yes" xml:space="preserve">
+          <source>show only unread</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Zobrazit pouze nepřečtené</target>
+        </trans-unit>
+        <trans-unit id="Resx/strVersionStr" translate="yes" xml:space="preserve">
+          <source>version</source>
+          <target state="translated" state-qualifier="tm-suggestion">verze</target>
+        </trans-unit>
+        <trans-unit id="Resx/strRateApp" translate="yes" xml:space="preserve">
+          <source>rate app</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">rychlost aplikace</target>
+        </trans-unit>
+        <trans-unit id="Resx/strConfirmUnsubscribe" translate="yes" xml:space="preserve">
+          <source>Are you sure you want to unsubscribe from {0}?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Jste si jisti, že chcete odhlásit z {0}?</target>
+        </trans-unit>
+        <trans-unit id="Resx/strMenuMove" translate="yes" xml:space="preserve">
+          <source>move</source>
+          <target state="translated" state-qualifier="tm-suggestion">přesunout</target>
+        </trans-unit>
+        <trans-unit id="Resx/strMenuUnsubscribe" translate="yes" xml:space="preserve">
+          <source>unsubscribe</source>
+          <target state="translated" state-qualifier="tm-suggestion">odhlásit odběr</target>
+        </trans-unit>
+        <trans-unit id="Resx/strMoveFrom" translate="yes" xml:space="preserve">
+          <source>move from</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Přesunout z</target>
+        </trans-unit>
+        <trans-unit id="Resx/strMoveSubscriptionPage" translate="yes" xml:space="preserve">
+          <source>move feed</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Přesunutí kanálu</target>
+        </trans-unit>
+        <trans-unit id="Resx/strMoveTo" translate="yes" xml:space="preserve">
+          <source>move to</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Přesunout do</target>
+        </trans-unit>
+        <trans-unit id="Resx/strUnsubscribeFailed" translate="yes" xml:space="preserve">
+          <source>failed to unsubscribe from {0}!</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nepodařilo se odhlásit od {0}!</target>
+        </trans-unit>
+        <trans-unit id="Resx/strAdditionalDownloadCount" translate="yes" xml:space="preserve">
+          <source>additional items to download when downloading old items</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Další položky ke stažení při stahování starých položek</target>
+        </trans-unit>
+        <trans-unit id="Resx/strEMailMenuItem" translate="yes" xml:space="preserve">
+          <source>email...</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">e-mail</target>
+        </trans-unit>
+        <trans-unit id="Resx/strOpenInIE" translate="yes" xml:space="preserve">
+          <source>open in ie...</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Otevřete v ie...</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strShowReadItems" xml:space="preserve">
+          <source>Show read items</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ukázat číst položky</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

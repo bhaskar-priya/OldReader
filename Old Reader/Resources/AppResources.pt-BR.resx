@@ -121,184 +121,184 @@
     <value>LeftToRight</value>
   </data>
   <data name="ResourceLanguage" xml:space="preserve">
-    <value>en-US</value>
+    <value>pt-BR</value>
+  </data>
+  <data name="steLoginExplanation" xml:space="preserve">
+    <value>Por favor, certifique-se que você tiver definido a senha na página de configurações do leitor velho. A partir de agora, esta é a única maneira de acessar os dados.</value>
+  </data>
+  <data name="strAboutText" xml:space="preserve">
+    <value>Este é um cliente de Windows Phone para "The Old Reader".
+Para relatar bugs e feedback, por favor, clique no botão seguinte.</value>
+  </data>
+  <data name="strAboutTitle" xml:space="preserve">
+    <value>Sobre</value>
+  </data>
+  <data name="strEMail" xml:space="preserve">
+    <value>e-mail registrado</value>
+  </data>
+  <data name="strGoToSettings" xml:space="preserve">
+    <value>Vá para configurações e configurar o endereço de email e a senha para o leitor velho</value>
+  </data>
+  <data name="strLoginPage" xml:space="preserve">
+    <value>credenciais</value>
+  </data>
+  <data name="strNoUnreadItems" xml:space="preserve">
+    <value>Não há nenhum itens não lidos aqui. Viva!</value>
+  </data>
+  <data name="strPassword" xml:space="preserve">
+    <value>senha</value>
+  </data>
+  <data name="strSendFeedbackBtnText" xml:space="preserve">
+    <value>Enviar Comentários</value>
+  </data>
+  <data name="strSubscriptions" xml:space="preserve">
+    <value>Inscrições</value>
+  </data>
+  <data name="strGettingSubscriptionList" xml:space="preserve">
+    <value>Recebendo inscrições</value>
+  </data>
+  <data name="strGettingTagList" xml:space="preserve">
+    <value>Ficando Tags</value>
+  </data>
+  <data name="strGettingUnreadCount" xml:space="preserve">
+    <value>A contagem não lida</value>
+  </data>
+  <data name="strGettingUnreadItems" xml:space="preserve">
+    <value>Obtenção de itens não lidos</value>
+  </data>
+  <data name="strKeepUnread" xml:space="preserve">
+    <value>manter não lidas</value>
+  </data>
+  <data name="strMarkAllRead" xml:space="preserve">
+    <value>Marcar todas como lidas</value>
+  </data>
+  <data name="strShare" xml:space="preserve">
+    <value>compartilhar</value>
+  </data>
+  <data name="strViewFull" xml:space="preserve">
+    <value>Exibição - completa</value>
+  </data>
+  <data name="strLocal" xml:space="preserve">
+    <value>Salvo</value>
+  </data>
+  <data name="strSaveLocal" xml:space="preserve">
+    <value>Salvar para Mais Tarde</value>
+  </data>
+  <data name="strRemoveLocal" xml:space="preserve">
+    <value>remover salva</value>
+  </data>
+  <data name="strAboutMenu" xml:space="preserve">
+    <value>Sobre</value>
+  </data>
+  <data name="strRefreshAppButton" xml:space="preserve">
+    <value>atualizar</value>
+  </data>
+  <data name="strSettingsMenu" xml:space="preserve">
+    <value>Configurações</value>
+  </data>
+  <data name="strStatusMenu" xml:space="preserve">
+    <value>estatuto de leitor velho...</value>
+  </data>
+  <data name="strDoneAppBarButton" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="strPressBackToExit" xml:space="preserve">
+    <value>Pressione voltar uma vez mais para sair</value>
+  </data>
+  <data name="strPressBackToExitTitle" xml:space="preserve">
+    <value>Tem certeza?</value>
+  </data>
+  <data name="strCredits" xml:space="preserve">
+    <value>Trevor/u/alexandertrevor para melhorias na interface</value>
+  </data>
+  <data name="strAddSubscription" xml:space="preserve">
+    <value>Adicionar feed</value>
+  </data>
+  <data name="strFeedUrl" xml:space="preserve">
+    <value>URL do feed</value>
+  </data>
+  <data name="strTargetFolder" xml:space="preserve">
+    <value>Pasta de Destino</value>
+  </data>
+  <data name="strFeeadAddError" xml:space="preserve">
+    <value>Não foi possível adicionar o feed.</value>
+  </data>
+  <data name="strFeedMoveError" xml:space="preserve">
+    <value>a alimentação foi adicionado com sucesso, mas não podia mover para a pasta selecionada.</value>
+  </data>
+  <data name="strAddFeed" xml:space="preserve">
+    <value>Adicionar feed</value>
+  </data>
+  <data name="strSyncBrowserPrompt" xml:space="preserve">
+    <value>&lt;b&gt;Enter a sincronização Feed URL e pressione para visualizar o conteúdo de alimentação&lt;/b&gt;</value>
+  </data>
+  <data name="strSyncButton" xml:space="preserve">
+    <value>sincronizar</value>
+  </data>
+  <data name="strErrorTitle" xml:space="preserve">
+    <value>erro</value>
+  </data>
+  <data name="strTimeStrDays" xml:space="preserve">
+    <value> {0} dia(s) atrás</value>
+  </data>
+  <data name="strTimeStrHours" xml:space="preserve">
+    <value>{0} hora(s) atrás</value>
+  </data>
+  <data name="strTimeStrNow" xml:space="preserve">
+    <value>AGORA</value>
+  </data>
+  <data name="strTimeStrUnknown" xml:space="preserve">
+    <value>Desconhecido</value>
+  </data>
+  <data name="strDownloadOlder" xml:space="preserve">
+    <value>Download mais velhos</value>
+  </data>
+  <data name="strShowAllPosts" xml:space="preserve">
+    <value>Mostrar todas as mensagens</value>
+  </data>
+  <data name="strShowUnreadOnly" xml:space="preserve">
+    <value>Mostrar apenas não lidas</value>
+  </data>
+  <data name="strVersionStr" xml:space="preserve">
+    <value>versão</value>
+  </data>
+  <data name="strRateApp" xml:space="preserve">
+    <value>taxa app</value>
+  </data>
+  <data name="strConfirmUnsubscribe" xml:space="preserve">
+    <value>Tem certeza que deseja cancelar sua incri {0}?</value>
+  </data>
+  <data name="strMenuMove" xml:space="preserve">
+    <value>mover</value>
+  </data>
+  <data name="strMenuUnsubscribe" xml:space="preserve">
+    <value>cancelar assinatura</value>
+  </data>
+  <data name="strMoveFrom" xml:space="preserve">
+    <value>Mover de</value>
+  </data>
+  <data name="strMoveSubscriptionPage" xml:space="preserve">
+    <value>mudar a alimentação</value>
+  </data>
+  <data name="strMoveTo" xml:space="preserve">
+    <value>Mover para</value>
+  </data>
+  <data name="strUnsubscribeFailed" xml:space="preserve">
+    <value>Falha ao cancelar a inscrição de {0}!</value>
+  </data>
+  <data name="strAdditionalDownloadCount" xml:space="preserve">
+    <value>itens adicionais para baixar quando baixar itens antigos</value>
+  </data>
+  <data name="strEMailMenuItem" xml:space="preserve">
+    <value>email</value>
+  </data>
+  <data name="strOpenInIE" xml:space="preserve">
+    <value>Abra no ie...</value>
   </data>
   <data name="AppTitle" xml:space="preserve">
     <value>Old Reader</value>
   </data>
-  <data name="steLoginExplanation" xml:space="preserve">
-    <value>Please make sure that you have set password in the settings page of The Old Reader. As of now this is the only way to access the data.</value>
-  </data>
-  <data name="strAboutText" xml:space="preserve">
-    <value>This is a Windows Phone client for "The Old Reader".
-To report bugs and feedback please click the following button.</value>
-  </data>
-  <data name="strAboutTitle" xml:space="preserve">
-    <value>about</value>
-  </data>
-  <data name="strEMail" xml:space="preserve">
-    <value>registered email</value>
-  </data>
-  <data name="strGoToSettings" xml:space="preserve">
-    <value>go to settings and setup the e-mail address and password for The Old Reader</value>
-  </data>
-  <data name="strLoginPage" xml:space="preserve">
-    <value>credentials</value>
-  </data>
-  <data name="strNoUnreadItems" xml:space="preserve">
-    <value>There are no unread items here. Hurray!</value>
-  </data>
-  <data name="strPassword" xml:space="preserve">
-    <value>password</value>
-  </data>
-  <data name="strSendFeedbackBtnText" xml:space="preserve">
-    <value>send feedback...</value>
-  </data>
-  <data name="strSubscriptions" xml:space="preserve">
-    <value>Subscriptions</value>
-  </data>
-  <data name="strGettingSubscriptionList" xml:space="preserve">
-    <value>Getting Subscriptions</value>
-  </data>
-  <data name="strGettingTagList" xml:space="preserve">
-    <value>Getting Tags</value>
-  </data>
-  <data name="strGettingUnreadCount" xml:space="preserve">
-    <value>Getting Unread Count</value>
-  </data>
-  <data name="strGettingUnreadItems" xml:space="preserve">
-    <value>Getting Unread Items</value>
-  </data>
-  <data name="strKeepUnread" xml:space="preserve">
-    <value>keep unread</value>
-  </data>
-  <data name="strMarkAllRead" xml:space="preserve">
-    <value>mark all read</value>
-  </data>
-  <data name="strShare" xml:space="preserve">
-    <value>share</value>
-  </data>
-  <data name="strViewFull" xml:space="preserve">
-    <value>view full</value>
-  </data>
-  <data name="strLocal" xml:space="preserve">
-    <value>Saved</value>
-  </data>
-  <data name="strSaveLocal" xml:space="preserve">
-    <value>save for later</value>
-  </data>
-  <data name="strRemoveLocal" xml:space="preserve">
-    <value>remove saved</value>
-  </data>
-  <data name="strAboutMenu" xml:space="preserve">
-    <value>about...</value>
-  </data>
-  <data name="strRefreshAppButton" xml:space="preserve">
-    <value>refresh</value>
-  </data>
-  <data name="strSettingsMenu" xml:space="preserve">
-    <value>settings...</value>
-  </data>
-  <data name="strStatusMenu" xml:space="preserve">
-    <value>old reader status...</value>
-  </data>
-  <data name="strDoneAppBarButton" xml:space="preserve">
-    <value>ok</value>
-  </data>
-  <data name="strPressBackToExit" xml:space="preserve">
-    <value>press back once more to exit</value>
-  </data>
-  <data name="strPressBackToExitTitle" xml:space="preserve">
-    <value>sure?</value>
-  </data>
-  <data name="strCredits" xml:space="preserve">
-    <value>Trevor /u/alexandertrevor for UI improvements</value>
-  </data>
-  <data name="strAddSubscription" xml:space="preserve">
-    <value>add feed</value>
-  </data>
-  <data name="strFeedUrl" xml:space="preserve">
-    <value>feed URL</value>
-  </data>
-  <data name="strTargetFolder" xml:space="preserve">
-    <value>target Folder</value>
-  </data>
-  <data name="strFeeadAddError" xml:space="preserve">
-    <value>could not add the feed.</value>
-  </data>
-  <data name="strFeedMoveError" xml:space="preserve">
-    <value>successfully added the feed but could not move to the selected folder.</value>
-  </data>
-  <data name="strAddFeed" xml:space="preserve">
-    <value>add Feed</value>
-  </data>
-  <data name="strSyncBrowserPrompt" xml:space="preserve">
-    <value>&lt;b&gt;Enter the Feed URL and press sync to preview the feed contents&lt;/b&gt;</value>
-  </data>
-  <data name="strSyncButton" xml:space="preserve">
-    <value>sync</value>
-  </data>
-  <data name="strErrorTitle" xml:space="preserve">
-    <value>error!</value>
-  </data>
-  <data name="strTimeStrDays" xml:space="preserve">
-    <value>{0} day(s) ago</value>
-  </data>
-  <data name="strTimeStrHours" xml:space="preserve">
-    <value>{0} hour(s) ago</value>
-  </data>
-  <data name="strTimeStrNow" xml:space="preserve">
-    <value>Now</value>
-  </data>
-  <data name="strTimeStrUnknown" xml:space="preserve">
-    <value>Unknown</value>
-  </data>
-  <data name="strDownloadOlder" xml:space="preserve">
-    <value>download older</value>
-  </data>
-  <data name="strShowAllPosts" xml:space="preserve">
-    <value>show all posts</value>
-  </data>
-  <data name="strShowUnreadOnly" xml:space="preserve">
-    <value>show only unread</value>
-  </data>
-  <data name="strVersionStr" xml:space="preserve">
-    <value>version</value>
-  </data>
-  <data name="strRateApp" xml:space="preserve">
-    <value>rate app</value>
-  </data>
-  <data name="strConfirmUnsubscribe" xml:space="preserve">
-    <value>Are you sure you want to unsubscribe from {0}?</value>
-  </data>
-  <data name="strMenuMove" xml:space="preserve">
-    <value>move</value>
-  </data>
-  <data name="strMenuUnsubscribe" xml:space="preserve">
-    <value>unsubscribe</value>
-  </data>
-  <data name="strMoveFrom" xml:space="preserve">
-    <value>move from</value>
-  </data>
-  <data name="strMoveSubscriptionPage" xml:space="preserve">
-    <value>move feed</value>
-  </data>
-  <data name="strMoveTo" xml:space="preserve">
-    <value>move to</value>
-  </data>
-  <data name="strUnsubscribeFailed" xml:space="preserve">
-    <value>failed to unsubscribe from {0}!</value>
-  </data>
-  <data name="strAdditionalDownloadCount" xml:space="preserve">
-    <value>additional items to download when downloading old items</value>
-  </data>
-  <data name="strEMailMenuItem" xml:space="preserve">
-    <value>email...</value>
-  </data>
-  <data name="strOpenInIE" xml:space="preserve">
-    <value>open in ie...</value>
-  </data>
   <data name="strShowReadItems" xml:space="preserve">
-    <value>Show read items</value>
+    <value>Mostrar itens de leitura</value>
   </data>
 </root>

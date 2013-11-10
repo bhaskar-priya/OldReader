@@ -88,7 +88,7 @@ namespace Old_Reader.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please make sure that you have set password in the settings page of Th Old Reader. As of now this is the only way to access the data..
+        ///   Looks up a localized string similar to Please make sure that you have set password in the settings page of The Old Reader. As of now this is the only way to access the data..
         /// </summary>
         public static string steLoginExplanation {
             get {
@@ -481,6 +481,15 @@ namespace Old_Reader.Resources {
         public static string strShowAllPosts {
             get {
                 return ResourceManager.GetString("strShowAllPosts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show read items.
+        /// </summary>
+        public static string strShowReadItems {
+            get {
+                return ResourceManager.GetString("strShowReadItems", resourceCulture);
             }
         }
         

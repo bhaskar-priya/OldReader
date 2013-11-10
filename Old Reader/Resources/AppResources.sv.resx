@@ -121,184 +121,184 @@
     <value>LeftToRight</value>
   </data>
   <data name="ResourceLanguage" xml:space="preserve">
-    <value>en-US</value>
-  </data>
-  <data name="AppTitle" xml:space="preserve">
-    <value>Old Reader</value>
+    <value>sv</value>
   </data>
   <data name="steLoginExplanation" xml:space="preserve">
-    <value>Please make sure that you have set password in the settings page of The Old Reader. As of now this is the only way to access the data.</value>
+    <value>Kontrollera att du har angett lösenordet i sidan på den gamla läsare. Från och med nu är detta det enda sättet att komma åt data.</value>
   </data>
   <data name="strAboutText" xml:space="preserve">
-    <value>This is a Windows Phone client for "The Old Reader".
-To report bugs and feedback please click the following button.</value>
+    <value>Detta är en Windows Phone-klient för "Gamla Reader".
+För att rapportera klicka buggar och feedback vänligen på följande.</value>
   </data>
   <data name="strAboutTitle" xml:space="preserve">
-    <value>about</value>
+    <value>om</value>
   </data>
   <data name="strEMail" xml:space="preserve">
-    <value>registered email</value>
+    <value>registrerat email</value>
   </data>
   <data name="strGoToSettings" xml:space="preserve">
-    <value>go to settings and setup the e-mail address and password for The Old Reader</value>
+    <value>gå till inställningar och ställa in e-postadress och lösenord för gamla Reader</value>
   </data>
   <data name="strLoginPage" xml:space="preserve">
-    <value>credentials</value>
+    <value>referenser</value>
   </data>
   <data name="strNoUnreadItems" xml:space="preserve">
-    <value>There are no unread items here. Hurray!</value>
+    <value>Det finns inga olästa objekt här. Hurra!</value>
   </data>
   <data name="strPassword" xml:space="preserve">
-    <value>password</value>
+    <value>lösenord</value>
   </data>
   <data name="strSendFeedbackBtnText" xml:space="preserve">
-    <value>send feedback...</value>
+    <value>Skicka feedback...</value>
   </data>
   <data name="strSubscriptions" xml:space="preserve">
-    <value>Subscriptions</value>
+    <value>Abonnemang</value>
   </data>
   <data name="strGettingSubscriptionList" xml:space="preserve">
-    <value>Getting Subscriptions</value>
+    <value>Att få abonnemang</value>
   </data>
   <data name="strGettingTagList" xml:space="preserve">
-    <value>Getting Tags</value>
+    <value>Att få Taggar</value>
   </data>
   <data name="strGettingUnreadCount" xml:space="preserve">
-    <value>Getting Unread Count</value>
+    <value>Att få olästa Count</value>
   </data>
   <data name="strGettingUnreadItems" xml:space="preserve">
-    <value>Getting Unread Items</value>
+    <value>Att få olästa objekt</value>
   </data>
   <data name="strKeepUnread" xml:space="preserve">
-    <value>keep unread</value>
+    <value>hålla olästa</value>
   </data>
   <data name="strMarkAllRead" xml:space="preserve">
-    <value>mark all read</value>
+    <value>Markera alla som läst</value>
   </data>
   <data name="strShare" xml:space="preserve">
-    <value>share</value>
+    <value>Dela</value>
   </data>
   <data name="strViewFull" xml:space="preserve">
-    <value>view full</value>
+    <value>Visa full</value>
   </data>
   <data name="strLocal" xml:space="preserve">
-    <value>Saved</value>
+    <value>Sparade</value>
   </data>
   <data name="strSaveLocal" xml:space="preserve">
-    <value>save for later</value>
+    <value>Spara för senare</value>
   </data>
   <data name="strRemoveLocal" xml:space="preserve">
-    <value>remove saved</value>
+    <value>ta bort sparade</value>
   </data>
   <data name="strAboutMenu" xml:space="preserve">
-    <value>about...</value>
+    <value>om...</value>
   </data>
   <data name="strRefreshAppButton" xml:space="preserve">
-    <value>refresh</value>
+    <value>uppdatera</value>
   </data>
   <data name="strSettingsMenu" xml:space="preserve">
-    <value>settings...</value>
+    <value>inställningar...</value>
   </data>
   <data name="strStatusMenu" xml:space="preserve">
-    <value>old reader status...</value>
+    <value>gamla kortläsarens status...</value>
   </data>
   <data name="strDoneAppBarButton" xml:space="preserve">
-    <value>ok</value>
+    <value>Okej</value>
   </data>
   <data name="strPressBackToExit" xml:space="preserve">
-    <value>press back once more to exit</value>
+    <value>Tryck på tillbaka en gång mer att avsluta</value>
   </data>
   <data name="strPressBackToExitTitle" xml:space="preserve">
-    <value>sure?</value>
+    <value>säker?</value>
   </data>
   <data name="strCredits" xml:space="preserve">
-    <value>Trevor /u/alexandertrevor for UI improvements</value>
+    <value>Trevor/u/alexandertrevor för UI förbättringar</value>
   </data>
   <data name="strAddSubscription" xml:space="preserve">
-    <value>add feed</value>
+    <value>Lägg till feed</value>
   </data>
   <data name="strFeedUrl" xml:space="preserve">
-    <value>feed URL</value>
+    <value>utfodring URL</value>
   </data>
   <data name="strTargetFolder" xml:space="preserve">
-    <value>target Folder</value>
+    <value>målet mapp</value>
   </data>
   <data name="strFeeadAddError" xml:space="preserve">
-    <value>could not add the feed.</value>
+    <value>kunde inte lägga foder.</value>
   </data>
   <data name="strFeedMoveError" xml:space="preserve">
-    <value>successfully added the feed but could not move to the selected folder.</value>
+    <value>lagts på foder men kunde inte flytta till den valda mappen.</value>
   </data>
   <data name="strAddFeed" xml:space="preserve">
-    <value>add Feed</value>
+    <value>Lägg till Feed</value>
   </data>
   <data name="strSyncBrowserPrompt" xml:space="preserve">
-    <value>&lt;b&gt;Enter the Feed URL and press sync to preview the feed contents&lt;/b&gt;</value>
+    <value>&lt;b&gt;RETUR Feed URL och tryck på sync att förhandsgranska den utfodring innehållen&lt;/b&gt;</value>
   </data>
   <data name="strSyncButton" xml:space="preserve">
-    <value>sync</value>
+    <value>Sync</value>
   </data>
   <data name="strErrorTitle" xml:space="preserve">
-    <value>error!</value>
+    <value>fel!</value>
   </data>
   <data name="strTimeStrDays" xml:space="preserve">
-    <value>{0} day(s) ago</value>
+    <value>{0} dag(ar) sedan</value>
   </data>
   <data name="strTimeStrHours" xml:space="preserve">
-    <value>{0} hour(s) ago</value>
+    <value>{0} timmar sedan</value>
   </data>
   <data name="strTimeStrNow" xml:space="preserve">
-    <value>Now</value>
+    <value>Nu</value>
   </data>
   <data name="strTimeStrUnknown" xml:space="preserve">
-    <value>Unknown</value>
+    <value>Okänd</value>
   </data>
   <data name="strDownloadOlder" xml:space="preserve">
-    <value>download older</value>
+    <value>Ladda ner äldre</value>
   </data>
   <data name="strShowAllPosts" xml:space="preserve">
-    <value>show all posts</value>
+    <value>Visa alla inlägg</value>
   </data>
   <data name="strShowUnreadOnly" xml:space="preserve">
-    <value>show only unread</value>
+    <value>Visa endast olästa</value>
   </data>
   <data name="strVersionStr" xml:space="preserve">
     <value>version</value>
   </data>
   <data name="strRateApp" xml:space="preserve">
-    <value>rate app</value>
+    <value>kurs app</value>
   </data>
   <data name="strConfirmUnsubscribe" xml:space="preserve">
-    <value>Are you sure you want to unsubscribe from {0}?</value>
+    <value>Är du säker på att du vill avbeställa {0}?</value>
   </data>
   <data name="strMenuMove" xml:space="preserve">
-    <value>move</value>
+    <value>flytta</value>
   </data>
   <data name="strMenuUnsubscribe" xml:space="preserve">
-    <value>unsubscribe</value>
+    <value>Avsluta prenumeration</value>
   </data>
   <data name="strMoveFrom" xml:space="preserve">
-    <value>move from</value>
+    <value>flytta från</value>
   </data>
   <data name="strMoveSubscriptionPage" xml:space="preserve">
-    <value>move feed</value>
+    <value>flytta foder</value>
   </data>
   <data name="strMoveTo" xml:space="preserve">
-    <value>move to</value>
+    <value>flytta till</value>
   </data>
   <data name="strUnsubscribeFailed" xml:space="preserve">
-    <value>failed to unsubscribe from {0}!</value>
+    <value>Det gick inte att avregistrera dig från {0}!</value>
   </data>
   <data name="strAdditionalDownloadCount" xml:space="preserve">
-    <value>additional items to download when downloading old items</value>
+    <value>ytterligare artiklar att ladda ner när du hämtar gamla objekt</value>
   </data>
   <data name="strEMailMenuItem" xml:space="preserve">
-    <value>email...</value>
+    <value>e-post...</value>
   </data>
   <data name="strOpenInIE" xml:space="preserve">
-    <value>open in ie...</value>
+    <value>Öppna i ie...</value>
+  </data>
+  <data name="AppTitle" xml:space="preserve">
+    <value>Old Reader</value>
   </data>
   <data name="strShowReadItems" xml:space="preserve">
-    <value>Show read items</value>
+    <value>Visa Läs objekt</value>
   </data>
 </root>

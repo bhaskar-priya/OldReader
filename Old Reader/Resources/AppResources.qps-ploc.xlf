@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="qps-ploc" original="AppResources.resx" tool-id="MultilingualAppToolkit" product-name="Old Reader" product-version="4.4.0" build-num="0">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="2.1.1100.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="Resx">
+        <trans-unit id="Resx/ResourceFlowDirection" translate="yes" xml:space="preserve">
+          <source>LeftToRight</source>
+          <target state="translated">LeftToRight</target>
+        </trans-unit>
+        <trans-unit id="Resx/ResourceLanguage" translate="yes" xml:space="preserve">
+          <source>en-US</source>
+          <target state="translated">qps-ploc</target>
+        </trans-unit>
+        <trans-unit id="Resx/AppTitle" translate="yes" xml:space="preserve">
+          <source>Old Reader</source>
+          <target state="new">Old Reader</target>
+        </trans-unit>
+        <trans-unit id="Resx/steLoginExplanation" translate="yes" xml:space="preserve">
+          <source>Please make sure that you have set password in the settings page of The Old Reader. As of now this is the only way to access the data.</source>
+          <target state="new">Please make sure that you have set password in the settings page of The Old Reader. As of now this is the only way to access the data.</target>
+        </trans-unit>
+        <trans-unit id="Resx/strAboutText" translate="yes" xml:space="preserve">
+          <source>This is a Windows Phone client for "The Old Reader".
+To report bugs and feedback please click the following button.</source>
+          <target state="new">This is a Windows Phone client for "The Old Reader".
+To report bugs and feedback please click the following button.</target>
+        </trans-unit>
+        <trans-unit id="Resx/strAboutTitle" translate="yes" xml:space="preserve">
+          <source>about</source>
+          <target state="new">about</target>
+        </trans-unit>
+        <trans-unit id="Resx/strEMail" translate="yes" xml:space="preserve">
+          <source>registered email</source>
+          <target state="new">registered email</target>
+        </trans-unit>
+        <trans-unit id="Resx/strGoToSettings" translate="yes" xml:space="preserve">
+          <source>go to settings and setup the e-mail address and password for The Old Reader</source>
+          <target state="new">go to settings and setup the e-mail address and password for The Old Reader</target>
+        </trans-unit>
+        <trans-unit id="Resx/strLoginPage" translate="yes" xml:space="preserve">
+          <source>credentials</source>
+          <target state="new">credentials</target>
+        </trans-unit>
+        <trans-unit id="Resx/strNoUnreadItems" translate="yes" xml:space="preserve">
+          <source>There are no unread items here. Hurray!</source>
+          <target state="new">There are no unread items here. Hurray!</target>
+        </trans-unit>
+        <trans-unit id="Resx/strPassword" translate="yes" xml:space="preserve">
+          <source>password</source>
+          <target state="new">password</target>
+        </trans-unit>
+        <trans-unit id="Resx/strSendFeedbackBtnText" translate="yes" xml:space="preserve">
+          <source>send feedback...</source>
+          <target state="new">send feedback...</target>
+        </trans-unit>
+        <trans-unit id="Resx/strSubscriptions" translate="yes" xml:space="preserve">
+          <source>Subscriptions</source>
+          <target state="new">Subscriptions</target>
+        </trans-unit>
+        <trans-unit id="Resx/strGettingSubscriptionList" translate="yes" xml:space="preserve">
+          <source>Getting Subscriptions</source>
+          <target state="new">Getting Subscriptions</target>
+        </trans-unit>
+        <trans-unit id="Resx/strGettingTagList" translate="yes" xml:space="preserve">
+          <source>Getting Tags</source>
+          <target state="new">Getting Tags</target>
+        </trans-unit>
+        <trans-unit id="Resx/strGettingUnreadCount" translate="yes" xml:space="preserve">
+          <source>Getting Unread Count</source>
+          <target state="new">Getting Unread Count</target>
+        </trans-unit>
+        <trans-unit id="Resx/strGettingUnreadItems" translate="yes" xml:space="preserve">
+          <source>Getting Unread Items</source>
+          <target state="new">Getting Unread Items</target>
+        </trans-unit>
+        <trans-unit id="Resx/strKeepUnread" translate="yes" xml:space="preserve">
+          <source>keep unread</source>
+          <target state="new">keep unread</target>
+        </trans-unit>
+        <trans-unit id="Resx/strMarkAllRead" translate="yes" xml:space="preserve">
+          <source>mark all read</source>
+          <target state="new">mark all read</target>
+        </trans-unit>
+        <trans-unit id="Resx/strShare" translate="yes" xml:space="preserve">
+          <source>share</source>
+          <target state="new">share</target>
+        </trans-unit>
+        <trans-unit id="Resx/strViewFull" translate="yes" xml:space="preserve">
+          <source>view full</source>
+          <target state="new">view full</target>
+        </trans-unit>
+        <trans-unit id="Resx/strLocal" translate="yes" xml:space="preserve">
+          <source>Saved</source>
+          <target state="new">Saved</target>
+        </trans-unit>
+        <trans-unit id="Resx/strSaveLocal" translate="yes" xml:space="preserve">
+          <source>save for later</source>
+          <target state="new">save for later</target>
+        </trans-unit>
+        <trans-unit id="Resx/strRemoveLocal" translate="yes" xml:space="preserve">
+          <source>remove saved</source>
+          <target state="new">remove saved</target>
+        </trans-unit>
+        <trans-unit id="Resx/strAboutMenu" translate="yes" xml:space="preserve">
+          <source>about...</source>
+          <target state="new">about...</target>
+        </trans-unit>
+        <trans-unit id="Resx/strRefreshAppButton" translate="yes" xml:space="preserve">
+          <source>refresh</source>
+          <target state="new">refresh</target>
+        </trans-unit>
+        <trans-unit id="Resx/strSettingsMenu" translate="yes" xml:space="preserve">
+          <source>settings...</source>
+          <target state="new">settings...</target>
+        </trans-unit>
+        <trans-unit id="Resx/strStatusMenu" translate="yes" xml:space="preserve">
+          <source>old reader status...</source>
+          <target state="new">old reader status...</target>
+        </trans-unit>
+        <trans-unit id="Resx/strDoneAppBarButton" translate="yes" xml:space="preserve">
+          <source>ok</source>
+          <target state="new">ok</target>
+        </trans-unit>
+        <trans-unit id="Resx/strPressBackToExit" translate="yes" xml:space="preserve">
+          <source>press back once more to exit</source>
+          <target state="new">press back once more to exit</target>
+        </trans-unit>
+        <trans-unit id="Resx/strPressBackToExitTitle" translate="yes" xml:space="preserve">
+          <source>sure?</source>
+          <target state="new">sure?</target>
+        </trans-unit>
+        <trans-unit id="Resx/strCredits" translate="yes" xml:space="preserve">
+          <source>Trevor /u/alexandertrevor for UI improvements</source>
+          <target state="new">Trevor /u/alexandertrevor for UI improvements</target>
+        </trans-unit>
+        <trans-unit id="Resx/strAddSubscription" translate="yes" xml:space="preserve">
+          <source>add feed</source>
+          <target state="new">add feed</target>
+        </trans-unit>
+        <trans-unit id="Resx/strFeedUrl" translate="yes" xml:space="preserve">
+          <source>feed URL</source>
+          <target state="new">feed URL</target>
+        </trans-unit>
+        <trans-unit id="Resx/strTargetFolder" translate="yes" xml:space="preserve">
+          <source>target Folder</source>
+          <target state="new">target Folder</target>
+        </trans-unit>
+        <trans-unit id="Resx/strFeeadAddError" translate="yes" xml:space="preserve">
+          <source>could not add the feed.</source>
+          <target state="new">could not add the feed.</target>
+        </trans-unit>
+        <trans-unit id="Resx/strFeedMoveError" translate="yes" xml:space="preserve">
+          <source>successfully added the feed but could not move to the selected folder.</source>
+          <target state="new">successfully added the feed but could not move to the selected folder.</target>
+        </trans-unit>
+        <trans-unit id="Resx/strAddFeed" translate="yes" xml:space="preserve">
+          <source>add Feed</source>
+          <target state="new">add Feed</target>
+        </trans-unit>
+        <trans-unit id="Resx/strSyncBrowserPrompt" translate="yes" xml:space="preserve">
+          <source><bpt id="1">&lt;b&gt;</bpt>Enter the Feed URL and press sync to preview the feed contents<ept id="1">&lt;/b&gt;</ept></source>
+          <target state="new"><bpt id="1">&lt;b&gt;</bpt>Enter the Feed URL and press sync to preview the feed contents<ept id="1">&lt;/b&gt;</ept></target>
+        </trans-unit>
+        <trans-unit id="Resx/strSyncButton" translate="yes" xml:space="preserve">
+          <source>sync</source>
+          <target state="new">sync</target>
+        </trans-unit>
+        <trans-unit id="Resx/strErrorTitle" translate="yes" xml:space="preserve">
+          <source>error!</source>
+          <target state="new">error!</target>
+        </trans-unit>
+        <trans-unit id="Resx/strTimeStrDays" translate="yes" xml:space="preserve">
+          <source>{0} day(s) ago</source>
+          <target state="new">{0} day(s) ago</target>
+        </trans-unit>
+        <trans-unit id="Resx/strTimeStrHours" translate="yes" xml:space="preserve">
+          <source>{0} hour(s) ago</source>
+          <target state="new">{0} hour(s) ago</target>
+        </trans-unit>
+        <trans-unit id="Resx/strTimeStrNow" translate="yes" xml:space="preserve">
+          <source>Now</source>
+          <target state="new">Now</target>
+        </trans-unit>
+        <trans-unit id="Resx/strTimeStrUnknown" translate="yes" xml:space="preserve">
+          <source>Unknown</source>
+          <target state="new">Unknown</target>
+        </trans-unit>
+        <trans-unit id="Resx/strDownloadOlder" translate="yes" xml:space="preserve">
+          <source>download older</source>
+          <target state="new">download older</target>
+        </trans-unit>
+        <trans-unit id="Resx/strShowAllPosts" translate="yes" xml:space="preserve">
+          <source>show all posts</source>
+          <target state="new">show all posts</target>
+        </trans-unit>
+        <trans-unit id="Resx/strShowUnreadOnly" translate="yes" xml:space="preserve">
+          <source>show only unread</source>
+          <target state="new">show only unread</target>
+        </trans-unit>
+        <trans-unit id="Resx/strVersionStr" translate="yes" xml:space="preserve">
+          <source>version</source>
+          <target state="new">version</target>
+        </trans-unit>
+        <trans-unit id="Resx/strRateApp" translate="yes" xml:space="preserve">
+          <source>rate app</source>
+          <target state="new">rate app</target>
+        </trans-unit>
+        <trans-unit id="Resx/strConfirmUnsubscribe" translate="yes" xml:space="preserve">
+          <source>Are you sure you want to unsubscribe from {0}?</source>
+          <target state="new">Are you sure you want to unsubscribe from {0}?</target>
+        </trans-unit>
+        <trans-unit id="Resx/strMenuMove" translate="yes" xml:space="preserve">
+          <source>move</source>
+          <target state="new">move</target>
+        </trans-unit>
+        <trans-unit id="Resx/strMenuUnsubscribe" translate="yes" xml:space="preserve">
+          <source>unsubscribe</source>
+          <target state="new">unsubscribe</target>
+        </trans-unit>
+        <trans-unit id="Resx/strMoveFrom" translate="yes" xml:space="preserve">
+          <source>move from</source>
+          <target state="new">move from</target>
+        </trans-unit>
+        <trans-unit id="Resx/strMoveSubscriptionPage" translate="yes" xml:space="preserve">
+          <source>move feed</source>
+          <target state="new">move feed</target>
+        </trans-unit>
+        <trans-unit id="Resx/strMoveTo" translate="yes" xml:space="preserve">
+          <source>move to</source>
+          <target state="new">move to</target>
+        </trans-unit>
+        <trans-unit id="Resx/strUnsubscribeFailed" translate="yes" xml:space="preserve">
+          <source>failed to unsubscribe from {0}!</source>
+          <target state="new">failed to unsubscribe from {0}!</target>
+        </trans-unit>
+        <trans-unit id="Resx/strAdditionalDownloadCount" translate="yes" xml:space="preserve">
+          <source>additional items to download when downloading old items</source>
+          <target state="new">additional items to download when downloading old items</target>
+        </trans-unit>
+        <trans-unit id="Resx/strEMailMenuItem" translate="yes" xml:space="preserve">
+          <source>email...</source>
+          <target state="new">email...</target>
+        </trans-unit>
+        <trans-unit id="Resx/strOpenInIE" translate="yes" xml:space="preserve">
+          <source>open in ie...</source>
+          <target state="new">open in ie...</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strShowReadItems" xml:space="preserve">
+          <source>Show read items</source>
+          <target state="new">Show read items</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
