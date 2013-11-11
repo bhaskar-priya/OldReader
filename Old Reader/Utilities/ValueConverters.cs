@@ -166,8 +166,6 @@ namespace Utilities
 		{
 			if (value == null)
 			{
-				int a = 0;
-				a++;
 				return null;
 			}
 			if (value is DataModel.Subscription)
