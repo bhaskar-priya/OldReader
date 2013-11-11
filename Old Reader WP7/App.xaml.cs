@@ -8,6 +8,8 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 #if !OLD_READER_WP7
 using Old_Reader.Resources;
+#else
+using Old_Reader_WP7.Resources;
 #endif
 using System.Collections.Generic;
 using System.Linq;
@@ -241,6 +243,26 @@ namespace Old_Reader_WP7
 			set
 			{
 				userSettings[Old_Reader_Utils.OldReaderConsts.additionalDownloadCount] = value;
+				userSettings.Save();
+			}
+		}
+
+		public static int RetentionDays
+		{
+			get
+			{
+				try
+				{
+					return (int)userSettings[Old_Reader_Utils.OldReaderConsts.retentionDaysCount];
+				}
+				catch
+				{
+					return Old_Reader_Utils.Utils.DaysToString[AppResources.strDuration3Months];
+				}
+			}
+			set
+			{
+				userSettings[Old_Reader_Utils.OldReaderConsts.retentionDaysCount] = value;
 				userSettings.Save();
 			}
 		}

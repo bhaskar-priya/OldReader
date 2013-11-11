@@ -49,6 +49,7 @@ namespace Old_Reader_Utils
 		public static string continuation = "continuation";
 		public static string showReadItems = "showReadItems";
 		public static string additionalDownloadCount = "additionalDownloadCount";
+		public static string retentionDaysCount = "retentionDaysCount";
 	}
 
 	public class OldReaderTrackingConsts
@@ -145,6 +146,28 @@ namespace Old_Reader_Utils
 				return true;
 			}
 			return false;
+		}
+
+		private static Dictionary<String, int> daysToString = null;
+
+		public static Dictionary<String, int> DaysToString
+		{
+			get
+			{
+				if (daysToString == null)
+				{
+					daysToString = new Dictionary<string, int>();
+					daysToString[AppNs.Resources.AppResources.strDuration1Day] = 1;
+					daysToString[AppNs.Resources.AppResources.strDuration1Week] = 7;
+					daysToString[AppNs.Resources.AppResources.strDuration15Days] = 15;
+					daysToString[AppNs.Resources.AppResources.strDuration1Month] = 30;
+					daysToString[AppNs.Resources.AppResources.strDuration2Months] = 60;
+					daysToString[AppNs.Resources.AppResources.strDuration3Months] = 90;
+					daysToString[AppNs.Resources.AppResources.strDuration6Months] = 180;
+					daysToString[AppNs.Resources.AppResources.strDuration1Year] = 365;
+				}
+				return daysToString;
+			}
 		}
 	}
 }

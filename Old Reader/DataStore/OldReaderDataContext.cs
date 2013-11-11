@@ -5,12 +5,19 @@ using System.Text;
 using System.Data.Linq;
 using Microsoft.Phone.Data.Linq;
 
+using AppNs =
+#if OLD_READER_WP7
+Old_Reader_WP7;
+#else
+ Old_Reader;
+#endif
+
 namespace DataStore
 {
 	public class OldReaderDataContext : DataContext
 	{
 		// Specify the connection String as a static, used in main page and app.xaml.
-        public static String DBConnectionString = "Data Source=isostore:/OldReader.sdf";
+		public static String DBConnectionString = "Data Source=isostore:/OldReader.sdf; max database size=512";
         
         // Pass the connection String to the base class.
 		public OldReaderDataContext(String connectionString)
@@ -26,6 +33,8 @@ namespace DataStore
 
 			DatabaseSchemaUpdater dbUpdater = this.CreateDatabaseSchemaUpdater();
 			int dbVersion = dbUpdater.DatabaseSchemaVersion;
+
+			cleanDatabase();
 
 			try
 			{
@@ -65,6 +74,23 @@ namespace DataStore
 				Analytics.GAnalytics.sendException(exp.Message, false);
 			}
         }
+
+		public void cleanDatabase()
+		{
+			DateTime threshHoldTime = DateTime.Now.AddDays(0 - AppNs.App.RetentionDays);
+			// delete all items which are more than two month old but save the starred items
+			var oldItems = from c in CachedFeeds
+						   where
+							   c.publishedTime < threshHoldTime &&
+							   c.Starred == false &&
+							   c.Unread == false
+						   select c;
+			foreach (var oldItem in oldItems)
+			{
+				CachedFeeds.DeleteOnSubmit(oldItem);
+			}
+			SubmitChanges();
+		}
 
 		public Table<CachedFeed> CachedFeeds;
 		public Table<ContinuationId> ContinuationIds;

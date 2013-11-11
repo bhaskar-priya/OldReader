@@ -252,6 +252,42 @@ Rapor için hatalar ve geri besleme lütfen aşağıdaki düğmeyi tıklatın.</
           <source>Show read items</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Okuma öğeleri göster</target>
         </trans-unit>
+        <trans-unit translate="yes" id="Resx/strDuration15Days" xml:space="preserve">
+          <source>15 days</source>
+          <target state="new">15 days</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strDuration1Day" xml:space="preserve">
+          <source>one day</source>
+          <target state="new">one day</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strDuration6Months" xml:space="preserve">
+          <source>six months</source>
+          <target state="new">six months</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strDurationDescr" xml:space="preserve">
+          <source>days to keep the old feed cached on your device. more days mean more storage</source>
+          <target state="new">days to keep the old feed cached on your device. more days mean more storage</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strDuration3Months" xml:space="preserve">
+          <source>three months</source>
+          <target state="new">three months</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strDuration2Months" xml:space="preserve">
+          <source>two months</source>
+          <target state="new">two months</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strDuration1Year" xml:space="preserve">
+          <source>one year</source>
+          <target state="new">one year</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strDuration1Week" xml:space="preserve">
+          <source>one week</source>
+          <target state="new">one week</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strDuration1Month" xml:space="preserve">
+          <source>one month</source>
+          <target state="new">one month</target>
+        </trans-unit>
       </group>
     </body>
   </file>

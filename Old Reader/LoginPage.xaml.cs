@@ -36,6 +36,7 @@ namespace Old_Reader
 			AppNs.App.UserPassword = txtPasswordBox.Password;
 			AppNs.App.AdditionalDownloadCount = moreItemCount.SelectedIndex * 5 + 5;
 			AppNs.App.ShowRead = (bool)chkShowReadItem.IsChecked;
+			AppNs.App.RetentionDays = Old_Reader_Utils.Utils.DaysToString[timeToKeepOldItems.SelectedItem.ToString()];
 
 			NavigationService.GoBack();
 		}
@@ -64,6 +65,30 @@ namespace Old_Reader
 					// there is nothing saved in here
 					moreItemCount.SelectedIndex = 4;
 				}
+			}
+
+			if (timeToKeepOldItems.Items.Count == 0)
+			{
+				foreach (var a in Utils.DaysToString)
+				{
+					timeToKeepOldItems.Items.Add(a.Key);
+				}
+
+				int nDaysCount = AppNs.App.RetentionDays;
+				int nSelIdx = 0;
+				foreach (var a in Utils.DaysToString)
+				{
+					if (a.Value == nDaysCount)
+					{
+						break;
+					}
+					else
+					{
+						nSelIdx++;
+					}
+				}
+
+				timeToKeepOldItems.SelectedIndex = nSelIdx;
 			}
 		}
 	}

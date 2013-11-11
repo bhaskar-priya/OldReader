@@ -127,9 +127,6 @@ namespace DataModel
 
 		private void IconAvailable(String szPath)
 		{
-			int a = 0;
-			a++;
-
 			iconUrl = String.Format(@"isostore:/{0}", szPath.Replace(@"\", "/"));
 		}
 

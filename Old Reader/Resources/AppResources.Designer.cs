@@ -188,6 +188,87 @@ namespace Old_Reader.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 15 days.
+        /// </summary>
+        public static string strDuration15Days {
+            get {
+                return ResourceManager.GetString("strDuration15Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to one day.
+        /// </summary>
+        public static string strDuration1Day {
+            get {
+                return ResourceManager.GetString("strDuration1Day", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to one month.
+        /// </summary>
+        public static string strDuration1Month {
+            get {
+                return ResourceManager.GetString("strDuration1Month", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to one week.
+        /// </summary>
+        public static string strDuration1Week {
+            get {
+                return ResourceManager.GetString("strDuration1Week", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to one year.
+        /// </summary>
+        public static string strDuration1Year {
+            get {
+                return ResourceManager.GetString("strDuration1Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to two months.
+        /// </summary>
+        public static string strDuration2Months {
+            get {
+                return ResourceManager.GetString("strDuration2Months", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to three months.
+        /// </summary>
+        public static string strDuration3Months {
+            get {
+                return ResourceManager.GetString("strDuration3Months", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to six months.
+        /// </summary>
+        public static string strDuration6Months {
+            get {
+                return ResourceManager.GetString("strDuration6Months", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to days to keep the old feed cached on your device. more days mean more storage.
+        /// </summary>
+        public static string strDurationDescr {
+            get {
+                return ResourceManager.GetString("strDurationDescr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to registered email.
         /// </summary>
         public static string strEMail {

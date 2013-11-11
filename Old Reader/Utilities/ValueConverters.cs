@@ -164,6 +164,12 @@ namespace Utilities
 
 		public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
 		{
+			if (value == null)
+			{
+				int a = 0;
+				a++;
+				return null;
+			}
 			if (value is DataModel.Subscription)
 			{
 				value = (value as DataModel.Subscription).iconUrl;

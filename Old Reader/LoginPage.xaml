@@ -68,6 +68,10 @@
 					<toolkit:ListPicker Name="moreItemCount"
 										FullModeItemTemplate="{StaticResource PickerFullModeProviderItemTemplate}">
 					</toolkit:ListPicker>
+					<TextBlock Text="{Binding Path=LocalizedResources.strDurationDescr, Source={StaticResource LocalizedStrings}}" TextWrapping="Wrap" />
+					<toolkit:ListPicker Name="timeToKeepOldItems"
+										FullModeItemTemplate="{StaticResource PickerFullModeProviderItemTemplate}">
+					</toolkit:ListPicker>
 				</StackPanel>
 			</ScrollViewer>
 		</Grid>
