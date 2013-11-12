@@ -301,4 +301,31 @@ Zgłosić błędy i proszę kliknąć poniższy przycisk.</value>
   <data name="strShowReadItems" xml:space="preserve">
     <value>Pokaż odczytywać elementy</value>
   </data>
+  <data name="strDuration15Days" xml:space="preserve">
+    <value>15 dni</value>
+  </data>
+  <data name="strDuration1Day" xml:space="preserve">
+    <value>Jeden dzień</value>
+  </data>
+  <data name="strDuration6Months" xml:space="preserve">
+    <value>Sześć miesięcy</value>
+  </data>
+  <data name="strDurationDescr" xml:space="preserve">
+    <value>dni, aby zachować stary kanał buforowane na urządzeniu. więcej dni oznacza więcej pamięci</value>
+  </data>
+  <data name="strDuration3Months" xml:space="preserve">
+    <value>Trzy miesiące</value>
+  </data>
+  <data name="strDuration2Months" xml:space="preserve">
+    <value>Dwa miesiące</value>
+  </data>
+  <data name="strDuration1Year" xml:space="preserve">
+    <value>Jeden rok</value>
+  </data>
+  <data name="strDuration1Week" xml:space="preserve">
+    <value>Jeden tydzień</value>
+  </data>
+  <data name="strDuration1Month" xml:space="preserve">
+    <value>Jeden miesiąc</value>
+  </data>
 </root>

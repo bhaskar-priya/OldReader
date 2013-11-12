@@ -301,4 +301,31 @@ Rapor için hatalar ve geri besleme lütfen aşağıdaki düğmeyi tıklatın.</
   <data name="strShowReadItems" xml:space="preserve">
     <value>Okuma öğeleri göster</value>
   </data>
+  <data name="strDuration15Days" xml:space="preserve">
+    <value>15 Gün</value>
+  </data>
+  <data name="strDuration1Day" xml:space="preserve">
+    <value>Bir gün</value>
+  </data>
+  <data name="strDuration6Months" xml:space="preserve">
+    <value>Altı ay</value>
+  </data>
+  <data name="strDurationDescr" xml:space="preserve">
+    <value>Cihazınızda önbelleğe alınan eski yem tutulacağı gün sayısı. gün daha fazla depolama demek istiyorsun.</value>
+  </data>
+  <data name="strDuration3Months" xml:space="preserve">
+    <value>Üç Ay</value>
+  </data>
+  <data name="strDuration2Months" xml:space="preserve">
+    <value>İki Ay</value>
+  </data>
+  <data name="strDuration1Year" xml:space="preserve">
+    <value>Bir yıl</value>
+  </data>
+  <data name="strDuration1Week" xml:space="preserve">
+    <value>Bir hafta</value>
+  </data>
+  <data name="strDuration1Month" xml:space="preserve">
+    <value>Bir ay</value>
+  </data>
 </root>

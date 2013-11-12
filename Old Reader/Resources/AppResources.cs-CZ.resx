@@ -298,4 +298,31 @@ Hlášení chyb a zpětné vazby klikněte prosím na následující tlačítko.
   <data name="strShowReadItems" xml:space="preserve">
     <value>Ukázat číst položky</value>
   </data>
+  <data name="strDuration15Days" xml:space="preserve">
+    <value>15 dnů</value>
+  </data>
+  <data name="strDuration1Day" xml:space="preserve">
+    <value>Jeden den</value>
+  </data>
+  <data name="strDuration6Months" xml:space="preserve">
+    <value>Šest měsíců</value>
+  </data>
+  <data name="strDurationDescr" xml:space="preserve">
+    <value>dní starý kanál mezipaměti na vašem zařízení. další dny znamenají více úložiště</value>
+  </data>
+  <data name="strDuration3Months" xml:space="preserve">
+    <value>Tři měsíce</value>
+  </data>
+  <data name="strDuration2Months" xml:space="preserve">
+    <value>Dva měsíce</value>
+  </data>
+  <data name="strDuration1Year" xml:space="preserve">
+    <value>Jeden rok</value>
+  </data>
+  <data name="strDuration1Week" xml:space="preserve">
+    <value>Jeden týden</value>
+  </data>
+  <data name="strDuration1Month" xml:space="preserve">
+    <value>Jeden měsíc</value>
+  </data>
 </root>

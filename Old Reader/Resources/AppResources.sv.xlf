@@ -254,39 +254,39 @@ För att rapportera klicka buggar och feedback vänligen på följande.</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/strDuration15Days" xml:space="preserve">
           <source>15 days</source>
-          <target state="new">15 days</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">15 dagar</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/strDuration1Day" xml:space="preserve">
           <source>one day</source>
-          <target state="new">one day</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">en dag</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/strDuration6Months" xml:space="preserve">
           <source>six months</source>
-          <target state="new">six months</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">sex månader</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/strDurationDescr" xml:space="preserve">
           <source>days to keep the old feed cached on your device. more days mean more storage</source>
-          <target state="new">days to keep the old feed cached on your device. more days mean more storage</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">dagar att hålla gamla fodret cachelagrat på enheten. mer dagar menar mer lagringsutrymme</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/strDuration3Months" xml:space="preserve">
           <source>three months</source>
-          <target state="new">three months</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">tre månader</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/strDuration2Months" xml:space="preserve">
           <source>two months</source>
-          <target state="new">two months</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">två månader</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/strDuration1Year" xml:space="preserve">
           <source>one year</source>
-          <target state="new">one year</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ett år</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/strDuration1Week" xml:space="preserve">
           <source>one week</source>
-          <target state="new">one week</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">en vecka</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/strDuration1Month" xml:space="preserve">
           <source>one month</source>
-          <target state="new">one month</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">en månad</target>
         </trans-unit>
       </group>
     </body>

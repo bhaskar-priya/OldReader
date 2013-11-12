@@ -301,4 +301,31 @@ Als u wilt rapporteren bugs en aanmerkingen alstublieft klik op de volgende knop
   <data name="strShowReadItems" xml:space="preserve">
     <value>Lees items weergeven</value>
   </data>
+  <data name="strDuration15Days" xml:space="preserve">
+    <value>15 dagen</value>
+  </data>
+  <data name="strDuration1Day" xml:space="preserve">
+    <value>een dag</value>
+  </data>
+  <data name="strDuration6Months" xml:space="preserve">
+    <value>zes maanden</value>
+  </data>
+  <data name="strDurationDescr" xml:space="preserve">
+    <value>dagen om te houden van de oude feed in de cache op uw apparaat. meer dagen betekenen meer opslagruimte</value>
+  </data>
+  <data name="strDuration3Months" xml:space="preserve">
+    <value>drie maanden</value>
+  </data>
+  <data name="strDuration2Months" xml:space="preserve">
+    <value>twee maanden</value>
+  </data>
+  <data name="strDuration1Year" xml:space="preserve">
+    <value>één jaar</value>
+  </data>
+  <data name="strDuration1Week" xml:space="preserve">
+    <value>één week</value>
+  </data>
+  <data name="strDuration1Month" xml:space="preserve">
+    <value>één maand</value>
+  </data>
 </root>

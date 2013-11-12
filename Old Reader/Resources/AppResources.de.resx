@@ -298,4 +298,31 @@ Zum Bericht klicken Bugs und Feedback bitte folgenden.</value>
   <data name="strShowReadItems" xml:space="preserve">
     <value>Lesen Sie Artikel anzeigen</value>
   </data>
+  <data name="strDuration15Days" xml:space="preserve">
+    <value>15 Tage</value>
+  </data>
+  <data name="strDuration1Day" xml:space="preserve">
+    <value>eines Tages</value>
+  </data>
+  <data name="strDuration6Months" xml:space="preserve">
+    <value>sechs Monate</value>
+  </data>
+  <data name="strDurationDescr" xml:space="preserve">
+    <value>Tage den alten Feed Cache auf Ihrem Gerät zu halten. weitere Tage bedeuten mehr Speicher</value>
+  </data>
+  <data name="strDuration3Months" xml:space="preserve">
+    <value>drei Monate</value>
+  </data>
+  <data name="strDuration2Months" xml:space="preserve">
+    <value>zwei Monate</value>
+  </data>
+  <data name="strDuration1Year" xml:space="preserve">
+    <value>ein Jahr</value>
+  </data>
+  <data name="strDuration1Week" xml:space="preserve">
+    <value>eine Woche</value>
+  </data>
+  <data name="strDuration1Month" xml:space="preserve">
+    <value>einen Monat</value>
+  </data>
 </root>

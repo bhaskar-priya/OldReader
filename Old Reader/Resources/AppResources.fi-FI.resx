@@ -298,4 +298,31 @@ Ilmoita viat ja palaute klikkaa seuraavaa painiketta.</value>
   <data name="strShowReadItems" xml:space="preserve">
     <value>Näytä lukea kohteita</value>
   </data>
+  <data name="strDuration15Days" xml:space="preserve">
+    <value>15 päivää</value>
+  </data>
+  <data name="strDuration1Day" xml:space="preserve">
+    <value>Päivä</value>
+  </data>
+  <data name="strDuration6Months" xml:space="preserve">
+    <value>Puoli vuotta</value>
+  </data>
+  <data name="strDurationDescr" xml:space="preserve">
+    <value>päivää pitää vanhan rehun tallentaa laitteen välimuistiin. päivä tarkoittaa lisää tallennustilaa</value>
+  </data>
+  <data name="strDuration3Months" xml:space="preserve">
+    <value>kolmen kuukauden</value>
+  </data>
+  <data name="strDuration2Months" xml:space="preserve">
+    <value>Kahden kuukauden</value>
+  </data>
+  <data name="strDuration1Year" xml:space="preserve">
+    <value>Vuosi</value>
+  </data>
+  <data name="strDuration1Week" xml:space="preserve">
+    <value>Viikko</value>
+  </data>
+  <data name="strDuration1Month" xml:space="preserve">
+    <value>Kuukausi</value>
+  </data>
 </root>

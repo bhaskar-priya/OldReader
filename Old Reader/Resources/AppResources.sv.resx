@@ -301,4 +301,31 @@ För att rapportera klicka buggar och feedback vänligen på följande.</value>
   <data name="strShowReadItems" xml:space="preserve">
     <value>Visa Läs objekt</value>
   </data>
+  <data name="strDuration15Days" xml:space="preserve">
+    <value>15 dagar</value>
+  </data>
+  <data name="strDuration1Day" xml:space="preserve">
+    <value>en dag</value>
+  </data>
+  <data name="strDuration6Months" xml:space="preserve">
+    <value>sex månader</value>
+  </data>
+  <data name="strDurationDescr" xml:space="preserve">
+    <value>dagar att hålla gamla fodret cachelagrat på enheten. mer dagar menar mer lagringsutrymme</value>
+  </data>
+  <data name="strDuration3Months" xml:space="preserve">
+    <value>tre månader</value>
+  </data>
+  <data name="strDuration2Months" xml:space="preserve">
+    <value>två månader</value>
+  </data>
+  <data name="strDuration1Year" xml:space="preserve">
+    <value>ett år</value>
+  </data>
+  <data name="strDuration1Week" xml:space="preserve">
+    <value>en vecka</value>
+  </data>
+  <data name="strDuration1Month" xml:space="preserve">
+    <value>en månad</value>
+  </data>
 </root>

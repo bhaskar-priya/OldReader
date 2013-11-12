@@ -15,7 +15,7 @@
     <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
     <SilverlightApplication>true</SilverlightApplication>
-    <SupportedCultures>cs-CZ;da-DK;de;es;fi-FI;fr;it;nl;pl-PL;pt-BR;qps-ploc;ru-RU;sv;tr-TR</SupportedCultures>
+    <SupportedCultures>cs-CZ;da-DK;de;es;fi-FI;fr;id-ID;it;nl;pl-PL;pt-BR;qps-ploc;ru-RU;sv;tr-TR</SupportedCultures>
     <XapOutputs>true</XapOutputs>
     <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
     <XapFilename>Old_Reader_$(Configuration)_$(Platform).xap</XapFilename>
@@ -280,6 +280,12 @@
       <DependentUpon>AppResources.fr.xlf</DependentUpon>
       <culture>fr</culture>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AppResources.id-ID.resx">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.id-ID.xlf</DependentUpon>
+      <culture>id-ID</culture>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\AppResources.it.resx">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -381,6 +387,10 @@
     <XliffResource Include="Resources\AppResources.fr.xlf">
       <Generator>XliffResxGenerator</Generator>
       <LastGenOutput>AppResources.fr.resx</LastGenOutput>
+    </XliffResource>
+    <XliffResource Include="Resources\AppResources.id-ID.xlf">
+      <Generator>XliffResxGenerator</Generator>
+      <LastGenOutput>AppResources.id-ID.resx</LastGenOutput>
     </XliffResource>
     <XliffResource Include="Resources\AppResources.it.xlf">
       <Generator>XliffResxGenerator</Generator>

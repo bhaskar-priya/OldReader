@@ -298,4 +298,31 @@ Pour signaler bugs et commentaires s'il vous plaît cliquez sur le bouton suivan
   <data name="strShowReadItems" xml:space="preserve">
     <value>Afficher les éléments de lecture</value>
   </data>
+  <data name="strDuration15Days" xml:space="preserve">
+    <value>15 jours</value>
+  </data>
+  <data name="strDuration1Day" xml:space="preserve">
+    <value>un jour</value>
+  </data>
+  <data name="strDuration6Months" xml:space="preserve">
+    <value>six mois</value>
+  </data>
+  <data name="strDurationDescr" xml:space="preserve">
+    <value>jours pendant lesquels le vieux flux mis en cache sur votre appareil. jours plus : plus de stockage</value>
+  </data>
+  <data name="strDuration3Months" xml:space="preserve">
+    <value>trois mois</value>
+  </data>
+  <data name="strDuration2Months" xml:space="preserve">
+    <value>deux mois</value>
+  </data>
+  <data name="strDuration1Year" xml:space="preserve">
+    <value>un an</value>
+  </data>
+  <data name="strDuration1Week" xml:space="preserve">
+    <value>une semaine</value>
+  </data>
+  <data name="strDuration1Month" xml:space="preserve">
+    <value>un mois</value>
+  </data>
 </root>

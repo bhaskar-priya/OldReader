@@ -298,4 +298,31 @@ Per segnalare bug e feedback cliccate sul seguente pulsante.</value>
   <data name="strShowReadItems" xml:space="preserve">
     <value>Visualizza leggere gli elementi</value>
   </data>
+  <data name="strDuration15Days" xml:space="preserve">
+    <value>15 giorni</value>
+  </data>
+  <data name="strDuration1Day" xml:space="preserve">
+    <value>un giorno</value>
+  </data>
+  <data name="strDuration6Months" xml:space="preserve">
+    <value>Sei mesi</value>
+  </data>
+  <data name="strDurationDescr" xml:space="preserve">
+    <value>giorni per mantenere il vecchio feed memorizzato sul dispositivo. più giorni significano più spazio di archiviazione</value>
+  </data>
+  <data name="strDuration3Months" xml:space="preserve">
+    <value>tre mesi</value>
+  </data>
+  <data name="strDuration2Months" xml:space="preserve">
+    <value>due mesi</value>
+  </data>
+  <data name="strDuration1Year" xml:space="preserve">
+    <value>un anno</value>
+  </data>
+  <data name="strDuration1Week" xml:space="preserve">
+    <value>una settimana</value>
+  </data>
+  <data name="strDuration1Month" xml:space="preserve">
+    <value>un mese</value>
+  </data>
 </root>

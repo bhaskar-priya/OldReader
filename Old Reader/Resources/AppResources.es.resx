@@ -301,4 +301,31 @@ Para reportar bugs y comentarios haga clic el botón siguiente.</value>
   <data name="strShowReadItems" xml:space="preserve">
     <value>Mostrar los artículos leídos</value>
   </data>
+  <data name="strDuration15Days" xml:space="preserve">
+    <value>15 días</value>
+  </data>
+  <data name="strDuration1Day" xml:space="preserve">
+    <value>un día</value>
+  </data>
+  <data name="strDuration6Months" xml:space="preserve">
+    <value>seis meses</value>
+  </data>
+  <data name="strDurationDescr" xml:space="preserve">
+    <value>días para mantener la vieja alimenta en caché en su dispositivo. más días significa más espacio de almacenamiento</value>
+  </data>
+  <data name="strDuration3Months" xml:space="preserve">
+    <value>tres meses</value>
+  </data>
+  <data name="strDuration2Months" xml:space="preserve">
+    <value>dos meses</value>
+  </data>
+  <data name="strDuration1Year" xml:space="preserve">
+    <value>un año</value>
+  </data>
+  <data name="strDuration1Week" xml:space="preserve">
+    <value>una semana</value>
+  </data>
+  <data name="strDuration1Month" xml:space="preserve">
+    <value>un mes</value>
+  </data>
 </root>

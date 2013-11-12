@@ -301,4 +301,31 @@
   <data name="strShowReadItems" xml:space="preserve">
     <value>Показать элементы читать</value>
   </data>
+  <data name="strDuration15Days" xml:space="preserve">
+    <value>15 дней</value>
+  </data>
+  <data name="strDuration1Day" xml:space="preserve">
+    <value>один день</value>
+  </data>
+  <data name="strDuration6Months" xml:space="preserve">
+    <value>Полугодие</value>
+  </data>
+  <data name="strDurationDescr" xml:space="preserve">
+    <value>дней, чтобы сохранить старый корм, кэшированных на вашем устройстве. больше дней означает больше хранения</value>
+  </data>
+  <data name="strDuration3Months" xml:space="preserve">
+    <value>три месяца</value>
+  </data>
+  <data name="strDuration2Months" xml:space="preserve">
+    <value>два месяца</value>
+  </data>
+  <data name="strDuration1Year" xml:space="preserve">
+    <value>Один год</value>
+  </data>
+  <data name="strDuration1Week" xml:space="preserve">
+    <value>одну неделю</value>
+  </data>
+  <data name="strDuration1Month" xml:space="preserve">
+    <value>один месяц</value>
+  </data>
 </root>

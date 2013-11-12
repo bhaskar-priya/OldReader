@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
-  <file datatype="xml" source-language="en-US" target-language="nl" original="AppResources.resx" tool-id="MultilingualAppToolkit" product-name="Old Reader" product-version="4.4.0" build-num="0">
+  <file datatype="xml" source-language="en-US" target-language="id-ID" original="AppResources.resx" tool-id="MultilingualAppToolkit" product-name="Old Reader" product-version="4.4.0" build-num="0">
     <header>
       <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="2.1.1100.0" tool-company="Microsoft" />
     </header>
@@ -12,7 +12,7 @@
         </trans-unit>
         <trans-unit id="Resx/ResourceLanguage" translate="yes" xml:space="preserve">
           <source>en-US</source>
-          <target state="translated">nl</target>
+          <target state="translated">id-ID</target>
         </trans-unit>
         <trans-unit id="Resx/AppTitle" translate="yes" xml:space="preserve">
           <source>Old Reader</source>
@@ -20,273 +20,273 @@
         </trans-unit>
         <trans-unit id="Resx/steLoginExplanation" translate="yes" xml:space="preserve">
           <source>Please make sure that you have set password in the settings page of The Old Reader. As of now this is the only way to access the data.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Gelieve ervoor te zorgen dat u op de instellingspagina van de oude lezer wachtwoord hebt ingesteld. Vanaf nu is dit de enige manier om toegang tot de gegevens.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pastikan bahwa Anda telah mengatur sandi di laman setelan The Old Reader. Sekarang ini adalah satu-satunya cara untuk mengakses data.</target>
         </trans-unit>
         <trans-unit id="Resx/strAboutText" translate="yes" xml:space="preserve">
           <source>This is a Windows Phone client for "The Old Reader".
 To report bugs and feedback please click the following button.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dit is een Windows Phone client voor "De oude Reader".
-Als u wilt rapporteren bugs en aanmerkingen alstublieft klik op de volgende knop.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ini adalah klien Windows Phone untuk "Reader tua".
+Untuk melaporkan bug dan umpan balik silakan klik tombol berikut.</target>
         </trans-unit>
         <trans-unit id="Resx/strAboutTitle" translate="yes" xml:space="preserve">
           <source>about</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">over</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Tentang</target>
         </trans-unit>
         <trans-unit id="Resx/strEMail" translate="yes" xml:space="preserve">
           <source>registered email</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">geregistreerde e-mailadres</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">email yang terdaftar</target>
         </trans-unit>
         <trans-unit id="Resx/strGoToSettings" translate="yes" xml:space="preserve">
           <source>go to settings and setup the e-mail address and password for The Old Reader</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ga naar instellingen en instellen van de e-mailadres en wachtwoord voor de oude lezer</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">pergi ke pengaturan dan setup alamat e-mail dan sandi untuk The Old Reader</target>
         </trans-unit>
         <trans-unit id="Resx/strLoginPage" translate="yes" xml:space="preserve">
           <source>credentials</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">referenties</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Kredensial</target>
         </trans-unit>
         <trans-unit id="Resx/strNoUnreadItems" translate="yes" xml:space="preserve">
           <source>There are no unread items here. Hurray!</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Er zijn geen ongelezen items hier. Hoera!</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ada tidak ada item yang belum dibaca di sini. Hore!</target>
         </trans-unit>
         <trans-unit id="Resx/strPassword" translate="yes" xml:space="preserve">
           <source>password</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">wachtwoord</target>
+          <target state="translated" state-qualifier="tm-suggestion">sandi</target>
         </trans-unit>
         <trans-unit id="Resx/strSendFeedbackBtnText" translate="yes" xml:space="preserve">
           <source>send feedback...</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Stuur feedback...</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Kirim saran</target>
         </trans-unit>
         <trans-unit id="Resx/strSubscriptions" translate="yes" xml:space="preserve">
           <source>Subscriptions</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Abonnementen</target>
+          <target state="translated" state-qualifier="tm-suggestion">Langganan</target>
         </trans-unit>
         <trans-unit id="Resx/strGettingSubscriptionList" translate="yes" xml:space="preserve">
           <source>Getting Subscriptions</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Krijgen van abonnementen</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mendapatkan langganan</target>
         </trans-unit>
         <trans-unit id="Resx/strGettingTagList" translate="yes" xml:space="preserve">
           <source>Getting Tags</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Krijgen van Tags</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mendapatkan Tag</target>
         </trans-unit>
         <trans-unit id="Resx/strGettingUnreadCount" translate="yes" xml:space="preserve">
           <source>Getting Unread Count</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Krijgen ongelezen telling</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Persiapan Unread Count</target>
         </trans-unit>
         <trans-unit id="Resx/strGettingUnreadItems" translate="yes" xml:space="preserve">
           <source>Getting Unread Items</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Krijgen ongelezen Items</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mendapatkan item yang belum dibaca</target>
         </trans-unit>
         <trans-unit id="Resx/strKeepUnread" translate="yes" xml:space="preserve">
           <source>keep unread</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Houd ongelezen</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">tetap belum dibaca</target>
         </trans-unit>
         <trans-unit id="Resx/strMarkAllRead" translate="yes" xml:space="preserve">
           <source>mark all read</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mark alle lezen</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Tandai semua sudah dibaca</target>
         </trans-unit>
         <trans-unit id="Resx/strShare" translate="yes" xml:space="preserve">
           <source>share</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Delen</target>
+          <target state="translated" state-qualifier="tm-suggestion">bagi</target>
         </trans-unit>
         <trans-unit id="Resx/strViewFull" translate="yes" xml:space="preserve">
           <source>view full</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">volledige bekijken</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tampilan penuh</target>
         </trans-unit>
         <trans-unit id="Resx/strLocal" translate="yes" xml:space="preserve">
           <source>Saved</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Opgeslagen</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Disimpan:</target>
         </trans-unit>
         <trans-unit id="Resx/strSaveLocal" translate="yes" xml:space="preserve">
           <source>save for later</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">opslaan voor later</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Simpan Untuk Nanti</target>
         </trans-unit>
         <trans-unit id="Resx/strRemoveLocal" translate="yes" xml:space="preserve">
           <source>remove saved</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">opgeslagen verwijderen</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">menghapus disimpan</target>
         </trans-unit>
         <trans-unit id="Resx/strAboutMenu" translate="yes" xml:space="preserve">
           <source>about...</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">over...</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Tentang</target>
         </trans-unit>
         <trans-unit id="Resx/strRefreshAppButton" translate="yes" xml:space="preserve">
           <source>refresh</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">vernieuwen</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Segarkan</target>
         </trans-unit>
         <trans-unit id="Resx/strSettingsMenu" translate="yes" xml:space="preserve">
           <source>settings...</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Instellingen...</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Setelan</target>
         </trans-unit>
         <trans-unit id="Resx/strStatusMenu" translate="yes" xml:space="preserve">
           <source>old reader status...</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">de status van oude lezer...</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">lama pembaca status...</target>
         </trans-unit>
         <trans-unit id="Resx/strDoneAppBarButton" translate="yes" xml:space="preserve">
           <source>ok</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">OK</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">OK</target>
         </trans-unit>
         <trans-unit id="Resx/strPressBackToExit" translate="yes" xml:space="preserve">
           <source>press back once more to exit</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Druk één keer terug meer om af te sluiten</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tekan kembali sekali lagi untuk keluar</target>
         </trans-unit>
         <trans-unit id="Resx/strPressBackToExitTitle" translate="yes" xml:space="preserve">
           <source>sure?</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">zeker?</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">yakin?</target>
         </trans-unit>
         <trans-unit id="Resx/strCredits" translate="yes" xml:space="preserve">
           <source>Trevor /u/alexandertrevor for UI improvements</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Trevor/u/alexandertrevor voor verbeteringen in de Gebruikersinterface</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Trevor/u/alexandertrevor untuk UI perbaikan</target>
         </trans-unit>
         <trans-unit id="Resx/strAddSubscription" translate="yes" xml:space="preserve">
           <source>add feed</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">feed toevoegen</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Tambahkan Feed</target>
         </trans-unit>
         <trans-unit id="Resx/strFeedUrl" translate="yes" xml:space="preserve">
           <source>feed URL</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Voer URL</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Umpan URL</target>
         </trans-unit>
         <trans-unit id="Resx/strTargetFolder" translate="yes" xml:space="preserve">
           <source>target Folder</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">doel map</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Folder Target</target>
         </trans-unit>
         <trans-unit id="Resx/strFeeadAddError" translate="yes" xml:space="preserve">
           <source>could not add the feed.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">kan niet toevoegen van de feed.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">tidak dapat menambahkan feed.</target>
         </trans-unit>
         <trans-unit id="Resx/strFeedMoveError" translate="yes" xml:space="preserve">
           <source>successfully added the feed but could not move to the selected folder.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">toegevoegd op de feed, maar kan niet verplaatsen naar de geselecteerde map.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">berhasil menambahkan feed tapi tidak bisa bergerak ke folder yang dipilih.</target>
         </trans-unit>
         <trans-unit id="Resx/strAddFeed" translate="yes" xml:space="preserve">
           <source>add Feed</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Feed toevoegen</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Tambahkan Feed</target>
         </trans-unit>
         <trans-unit id="Resx/strSyncBrowserPrompt" translate="yes" xml:space="preserve">
           <source><bpt id="1">&lt;b&gt;</bpt>Enter the Feed URL and press sync to preview the feed contents<ept id="1">&lt;/b&gt;</ept></source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion"><bpt id="1">%%amp;lt;b%%amp;gt;</bpt>De sync Feed URL en druk op Enter om een voorbeeld van de voerinhoud<ept id="1">%%amp;lt;/b%%amp;gt;</ept></target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion"><bpt id="1">%%amp;lt;b%%amp;gt;</bpt>Sync Feed URL dan tekan Enter untuk melihat pratinjau isi feed<ept id="1">%%amp;lt;/b%%amp;gt;</ept></target>
         </trans-unit>
         <trans-unit id="Resx/strSyncButton" translate="yes" xml:space="preserve">
           <source>sync</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sync</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Sinkronisasi</target>
         </trans-unit>
         <trans-unit id="Resx/strErrorTitle" translate="yes" xml:space="preserve">
           <source>error!</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">fout!</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">kesalahan</target>
         </trans-unit>
         <trans-unit id="Resx/strTimeStrDays" translate="yes" xml:space="preserve">
           <source>{0} day(s) ago</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">{0} dagen geleden</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">{0} hari yang lalu</target>
         </trans-unit>
         <trans-unit id="Resx/strTimeStrHours" translate="yes" xml:space="preserve">
           <source>{0} hour(s) ago</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">{0} uren(n) geleden</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">{0} jam yang lalu</target>
         </trans-unit>
         <trans-unit id="Resx/strTimeStrNow" translate="yes" xml:space="preserve">
           <source>Now</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nu</target>
+          <target state="translated" state-qualifier="tm-suggestion">sekarang</target>
         </trans-unit>
         <trans-unit id="Resx/strTimeStrUnknown" translate="yes" xml:space="preserve">
           <source>Unknown</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Onbekend</target>
+          <target state="translated" state-qualifier="tm-suggestion">Tidak dikenal</target>
         </trans-unit>
         <trans-unit id="Resx/strDownloadOlder" translate="yes" xml:space="preserve">
           <source>download older</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">oudere downloaden</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Download remaja</target>
         </trans-unit>
         <trans-unit id="Resx/strShowAllPosts" translate="yes" xml:space="preserve">
           <source>show all posts</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Toon alle berichten</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tampilkan semua posting</target>
         </trans-unit>
         <trans-unit id="Resx/strShowUnreadOnly" translate="yes" xml:space="preserve">
           <source>show only unread</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Toon alleen ongelezen</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tampilkan hanya belum dibaca</target>
         </trans-unit>
         <trans-unit id="Resx/strVersionStr" translate="yes" xml:space="preserve">
           <source>version</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Versie</target>
+          <target state="translated" state-qualifier="tm-suggestion">versi</target>
         </trans-unit>
         <trans-unit id="Resx/strRateApp" translate="yes" xml:space="preserve">
           <source>rate app</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">tarief app</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">tingkat app</target>
         </trans-unit>
         <trans-unit id="Resx/strConfirmUnsubscribe" translate="yes" xml:space="preserve">
           <source>Are you sure you want to unsubscribe from {0}?</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Weet u zeker dat u wilt afmelden {0}?</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Apakah Anda yakin mau berhenti langganan dari {0}?</target>
         </trans-unit>
         <trans-unit id="Resx/strMenuMove" translate="yes" xml:space="preserve">
           <source>move</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">verplaatsen</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Pindah</target>
         </trans-unit>
         <trans-unit id="Resx/strMenuUnsubscribe" translate="yes" xml:space="preserve">
           <source>unsubscribe</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">abonnement opzeggen</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Berhenti berlangganan</target>
         </trans-unit>
         <trans-unit id="Resx/strMoveFrom" translate="yes" xml:space="preserve">
           <source>move from</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">verplaatsen van</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Pindahkan dari</target>
         </trans-unit>
         <trans-unit id="Resx/strMoveSubscriptionPage" translate="yes" xml:space="preserve">
           <source>move feed</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">verplaatsen van diervoeders</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">memindahkan feed</target>
         </trans-unit>
         <trans-unit id="Resx/strMoveTo" translate="yes" xml:space="preserve">
           <source>move to</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">verplaatsen naar</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Pindahkan ke</target>
         </trans-unit>
         <trans-unit id="Resx/strUnsubscribeFailed" translate="yes" xml:space="preserve">
           <source>failed to unsubscribe from {0}!</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">mislukt om een abonnement op {0}!</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">gagal untuk berhenti berlangganan dari {0}!</target>
         </trans-unit>
         <trans-unit id="Resx/strAdditionalDownloadCount" translate="yes" xml:space="preserve">
           <source>additional items to download when downloading old items</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">extra items te downloaden bij het downloaden van oude items</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">item tambahan untuk men-download saat men-download item lama</target>
         </trans-unit>
         <trans-unit id="Resx/strEMailMenuItem" translate="yes" xml:space="preserve">
           <source>email...</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">E-mail...</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">email</target>
         </trans-unit>
         <trans-unit id="Resx/strOpenInIE" translate="yes" xml:space="preserve">
           <source>open in ie...</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Open in ie...</target>
-        </trans-unit>
-        <trans-unit translate="yes" id="Resx/strShowReadItems" xml:space="preserve">
-          <source>Show read items</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Lees items weergeven</target>
-        </trans-unit>
-        <trans-unit translate="yes" id="Resx/strDuration15Days" xml:space="preserve">
-          <source>15 days</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">15 dagen</target>
-        </trans-unit>
-        <trans-unit translate="yes" id="Resx/strDuration1Day" xml:space="preserve">
-          <source>one day</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">een dag</target>
-        </trans-unit>
-        <trans-unit translate="yes" id="Resx/strDuration6Months" xml:space="preserve">
-          <source>six months</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">zes maanden</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">membuka di ie...</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/strDurationDescr" xml:space="preserve">
           <source>days to keep the old feed cached on your device. more days mean more storage</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">dagen om te houden van de oude feed in de cache op uw apparaat. meer dagen betekenen meer opslagruimte</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">hari untuk menyimpan feed tua cache pada perangkat Anda. hari berarti penyimpanan lebih</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strDuration6Months" xml:space="preserve">
+          <source>six months</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Enam bulan</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/strDuration3Months" xml:space="preserve">
           <source>three months</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">drie maanden</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">tiga bulan</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/strDuration2Months" xml:space="preserve">
           <source>two months</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">twee maanden</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">dua bulan</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/strDuration1Year" xml:space="preserve">
           <source>one year</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">één jaar</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Satu tahun</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/strDuration1Week" xml:space="preserve">
           <source>one week</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">één week</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Satu minggu</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/strDuration1Month" xml:space="preserve">
           <source>one month</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">één maand</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Satu bulan</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strDuration1Day" xml:space="preserve">
+          <source>one day</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Satu hari</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strDuration15Days" xml:space="preserve">
+          <source>15 days</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">15 Hari</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strShowReadItems" xml:space="preserve">
+          <source>Show read items</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tampilkan membaca item</target>
         </trans-unit>
       </group>
     </body>

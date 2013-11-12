@@ -121,208 +121,211 @@
     <value>LeftToRight</value>
   </data>
   <data name="ResourceLanguage" xml:space="preserve">
-    <value>da-DK</value>
+    <value>id-ID</value>
+  </data>
+  <data name="AppTitle" xml:space="preserve">
+    <value>Old Reader</value>
   </data>
   <data name="steLoginExplanation" xml:space="preserve">
-    <value>Kontroller, at du har indstillet adgangskode på indstillingssiden i den gamle læser. Allerede nu er dette den eneste måde at få adgang til data.</value>
+    <value>Pastikan bahwa Anda telah mengatur sandi di laman setelan The Old Reader. Sekarang ini adalah satu-satunya cara untuk mengakses data.</value>
   </data>
   <data name="strAboutText" xml:space="preserve">
-    <value>Dette er en Windows Phone klient for "Den gamle læser".
-For at rapportere klikke fejl og feedback skal du på følgende knappen.</value>
+    <value>Ini adalah klien Windows Phone untuk "Reader tua".
+Untuk melaporkan bug dan umpan balik silakan klik tombol berikut.</value>
   </data>
   <data name="strAboutTitle" xml:space="preserve">
-    <value>Om</value>
+    <value>Tentang</value>
   </data>
   <data name="strEMail" xml:space="preserve">
-    <value>registreret e-mail</value>
+    <value>email yang terdaftar</value>
   </data>
   <data name="strGoToSettings" xml:space="preserve">
-    <value>gå til indstillinger og setup den e-mail-adresse og adgangskode til den gamle læser</value>
+    <value>pergi ke pengaturan dan setup alamat e-mail dan sandi untuk The Old Reader</value>
   </data>
   <data name="strLoginPage" xml:space="preserve">
-    <value>legitimationsoplysninger</value>
+    <value>Kredensial</value>
   </data>
   <data name="strNoUnreadItems" xml:space="preserve">
-    <value>Der er ingen ulæste elementer her. Hurra!</value>
+    <value>Ada tidak ada item yang belum dibaca di sini. Hore!</value>
   </data>
   <data name="strPassword" xml:space="preserve">
-    <value>adgangskode</value>
+    <value>sandi</value>
   </data>
   <data name="strSendFeedbackBtnText" xml:space="preserve">
-    <value>Send feedback</value>
+    <value>Kirim saran</value>
   </data>
   <data name="strSubscriptions" xml:space="preserve">
-    <value>Abonnementer</value>
+    <value>Langganan</value>
   </data>
   <data name="strGettingSubscriptionList" xml:space="preserve">
-    <value>At få abonnementer</value>
+    <value>Mendapatkan langganan</value>
   </data>
   <data name="strGettingTagList" xml:space="preserve">
-    <value>At Tags</value>
+    <value>Mendapatkan Tag</value>
   </data>
   <data name="strGettingUnreadCount" xml:space="preserve">
-    <value>At få ulæste</value>
+    <value>Persiapan Unread Count</value>
   </data>
   <data name="strGettingUnreadItems" xml:space="preserve">
-    <value>At få ulæste emner</value>
+    <value>Mendapatkan item yang belum dibaca</value>
   </data>
   <data name="strKeepUnread" xml:space="preserve">
-    <value>holde ulæste</value>
+    <value>tetap belum dibaca</value>
   </data>
   <data name="strMarkAllRead" xml:space="preserve">
-    <value>Markér alle som læst</value>
+    <value>Tandai semua sudah dibaca</value>
   </data>
   <data name="strShare" xml:space="preserve">
-    <value>Del</value>
+    <value>bagi</value>
   </data>
   <data name="strViewFull" xml:space="preserve">
-    <value>Se fuld</value>
+    <value>Tampilan penuh</value>
   </data>
   <data name="strLocal" xml:space="preserve">
-    <value>Gemt:</value>
+    <value>Disimpan:</value>
   </data>
   <data name="strSaveLocal" xml:space="preserve">
-    <value>Gem til senere</value>
+    <value>Simpan Untuk Nanti</value>
   </data>
   <data name="strRemoveLocal" xml:space="preserve">
-    <value>Fjern gemte</value>
+    <value>menghapus disimpan</value>
   </data>
   <data name="strAboutMenu" xml:space="preserve">
-    <value>Om</value>
+    <value>Tentang</value>
   </data>
   <data name="strRefreshAppButton" xml:space="preserve">
-    <value>Opdater</value>
+    <value>Segarkan</value>
   </data>
   <data name="strSettingsMenu" xml:space="preserve">
-    <value>Indstillinger</value>
+    <value>Setelan</value>
   </data>
   <data name="strStatusMenu" xml:space="preserve">
-    <value>gamle læser status...</value>
+    <value>lama pembaca status...</value>
   </data>
   <data name="strDoneAppBarButton" xml:space="preserve">
     <value>OK</value>
   </data>
   <data name="strPressBackToExit" xml:space="preserve">
-    <value>Tryk tilbage en gang mere for at afslutte</value>
+    <value>Tekan kembali sekali lagi untuk keluar</value>
   </data>
   <data name="strPressBackToExitTitle" xml:space="preserve">
-    <value>Naturligvis.</value>
+    <value>yakin?</value>
   </data>
   <data name="strCredits" xml:space="preserve">
-    <value>Trevor/u/alexandertrevor for UI forbedringer</value>
+    <value>Trevor/u/alexandertrevor untuk UI perbaikan</value>
   </data>
   <data name="strAddSubscription" xml:space="preserve">
-    <value>Tilføj feed</value>
+    <value>Tambahkan Feed</value>
   </data>
   <data name="strFeedUrl" xml:space="preserve">
-    <value>URL-adresse til kilde</value>
+    <value>Umpan URL</value>
   </data>
   <data name="strTargetFolder" xml:space="preserve">
-    <value>Destinationsmappe</value>
+    <value>Folder Target</value>
   </data>
   <data name="strFeeadAddError" xml:space="preserve">
-    <value>kunne ikke tilføje feedet.</value>
+    <value>tidak dapat menambahkan feed.</value>
   </data>
   <data name="strFeedMoveError" xml:space="preserve">
-    <value>tilføjet foderet, men kunne ikke flyttes til den valgte mappe.</value>
+    <value>berhasil menambahkan feed tapi tidak bisa bergerak ke folder yang dipilih.</value>
   </data>
   <data name="strAddFeed" xml:space="preserve">
-    <value>Tilføj feed</value>
+    <value>Tambahkan Feed</value>
   </data>
   <data name="strSyncBrowserPrompt" xml:space="preserve">
-    <value>&lt;b&gt;Indtast den Feedwebadresse, og tryk på sync hen til forpremiere de feed indhold&lt;/b&gt;</value>
+    <value>&lt;b&gt;Sync Feed URL dan tekan Enter untuk melihat pratinjau isi feed&lt;/b&gt;</value>
   </data>
   <data name="strSyncButton" xml:space="preserve">
-    <value>Synkroniser</value>
+    <value>Sinkronisasi</value>
   </data>
   <data name="strErrorTitle" xml:space="preserve">
-    <value>fejl</value>
+    <value>kesalahan</value>
   </data>
   <data name="strTimeStrDays" xml:space="preserve">
-    <value>{0} dag(e) siden</value>
+    <value>{0} hari yang lalu</value>
   </data>
   <data name="strTimeStrHours" xml:space="preserve">
-    <value>{0} time(r) siden</value>
+    <value>{0} jam yang lalu</value>
   </data>
   <data name="strTimeStrNow" xml:space="preserve">
-    <value>Nu</value>
+    <value>sekarang</value>
   </data>
   <data name="strTimeStrUnknown" xml:space="preserve">
-    <value>Ukendt</value>
+    <value>Tidak dikenal</value>
   </data>
   <data name="strDownloadOlder" xml:space="preserve">
-    <value>Download ældre</value>
+    <value>Download remaja</value>
   </data>
   <data name="strShowAllPosts" xml:space="preserve">
-    <value>Vis alle indlæg</value>
+    <value>Tampilkan semua posting</value>
   </data>
   <data name="strShowUnreadOnly" xml:space="preserve">
-    <value>Vis kun ulæste</value>
+    <value>Tampilkan hanya belum dibaca</value>
   </data>
   <data name="strVersionStr" xml:space="preserve">
-    <value>version</value>
+    <value>versi</value>
   </data>
   <data name="strRateApp" xml:space="preserve">
-    <value>sats app</value>
+    <value>tingkat app</value>
   </data>
   <data name="strConfirmUnsubscribe" xml:space="preserve">
-    <value>Er du sikker på du vil afmelde dig fra {0}?</value>
+    <value>Apakah Anda yakin mau berhenti langganan dari {0}?</value>
   </data>
   <data name="strMenuMove" xml:space="preserve">
-    <value>Flyt</value>
+    <value>Pindah</value>
   </data>
   <data name="strMenuUnsubscribe" xml:space="preserve">
-    <value>Ophæv abonnement</value>
+    <value>Berhenti berlangganan</value>
   </data>
   <data name="strMoveFrom" xml:space="preserve">
-    <value>Flyt fra</value>
+    <value>Pindahkan dari</value>
   </data>
   <data name="strMoveSubscriptionPage" xml:space="preserve">
-    <value>flytte foder</value>
+    <value>memindahkan feed</value>
   </data>
   <data name="strMoveTo" xml:space="preserve">
-    <value>Flyt til</value>
+    <value>Pindahkan ke</value>
   </data>
   <data name="strUnsubscribeFailed" xml:space="preserve">
-    <value>undladt at afmelde {0}!</value>
+    <value>gagal untuk berhenti berlangganan dari {0}!</value>
   </data>
   <data name="strAdditionalDownloadCount" xml:space="preserve">
-    <value>yderligere elementer at hente når du henter gamle emner</value>
+    <value>item tambahan untuk men-download saat men-download item lama</value>
   </data>
   <data name="strEMailMenuItem" xml:space="preserve">
-    <value>E-mail</value>
+    <value>email</value>
   </data>
   <data name="strOpenInIE" xml:space="preserve">
-    <value>Åbn i ie...</value>
-  </data>
-  <data name="strShowReadItems" xml:space="preserve">
-    <value>Vis læse elementer</value>
-  </data>
-  <data name="strDuration15Days" xml:space="preserve">
-    <value>15 dage</value>
-  </data>
-  <data name="strDuration1Day" xml:space="preserve">
-    <value>En dag</value>
-  </data>
-  <data name="strDuration6Months" xml:space="preserve">
-    <value>Seks måneder</value>
+    <value>membuka di ie...</value>
   </data>
   <data name="strDurationDescr" xml:space="preserve">
-    <value>dage til at holde de gamle foder cachelagret på din enhed. flere dage betyde mere lagerplads</value>
+    <value>hari untuk menyimpan feed tua cache pada perangkat Anda. hari berarti penyimpanan lebih</value>
+  </data>
+  <data name="strDuration6Months" xml:space="preserve">
+    <value>Enam bulan</value>
   </data>
   <data name="strDuration3Months" xml:space="preserve">
-    <value>Tre måneder</value>
+    <value>tiga bulan</value>
   </data>
   <data name="strDuration2Months" xml:space="preserve">
-    <value>To måneder</value>
+    <value>dua bulan</value>
   </data>
   <data name="strDuration1Year" xml:space="preserve">
-    <value>Et år</value>
+    <value>Satu tahun</value>
   </data>
   <data name="strDuration1Week" xml:space="preserve">
-    <value>En uge</value>
+    <value>Satu minggu</value>
   </data>
   <data name="strDuration1Month" xml:space="preserve">
-    <value>En måned</value>
+    <value>Satu bulan</value>
+  </data>
+  <data name="strDuration1Day" xml:space="preserve">
+    <value>Satu hari</value>
+  </data>
+  <data name="strDuration15Days" xml:space="preserve">
+    <value>15 Hari</value>
+  </data>
+  <data name="strShowReadItems" xml:space="preserve">
+    <value>Tampilkan membaca item</value>
   </data>
 </root>
