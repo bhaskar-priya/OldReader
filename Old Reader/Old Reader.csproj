@@ -112,6 +112,9 @@
     <Compile Include="DataStore\ContinuationId.cs" />
     <Compile Include="DataStore\IconManager.cs" />
     <Compile Include="DataStore\OldReaderDataContext.cs" />
+    <Compile Include="DebugInfoPopup.xaml.cs">
+      <DependentUpon>DebugInfoPopup.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FeedView.xaml.cs">
       <DependentUpon>FeedView.xaml</DependentUpon>
     </Compile>
@@ -158,6 +161,10 @@
     <Page Include="AddSubscription.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DebugInfoPopup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="FeedView.xaml">
       <SubType>Designer</SubType>
