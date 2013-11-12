@@ -121,211 +121,208 @@
     <value>LeftToRight</value>
   </data>
   <data name="ResourceLanguage" xml:space="preserve">
-    <value>en-US</value>
-  </data>
-  <data name="AppTitle" xml:space="preserve">
-    <value>Old Reader</value>
+    <value>da-DK</value>
   </data>
   <data name="steLoginExplanation" xml:space="preserve">
-    <value>Please make sure that you have set password in the settings page of The Old Reader. As of now this is the only way to access the data.</value>
+    <value>Kontroller, at du har indstillet adgangskode på indstillingssiden i den gamle læser. Allerede nu er dette den eneste måde at få adgang til data.</value>
   </data>
   <data name="strAboutText" xml:space="preserve">
-    <value>This is a Windows Phone client for "The Old Reader".
-To report bugs and feedback please click the following button.</value>
+    <value>Dette er en Windows Phone klient for "Den gamle læser".
+For at rapportere klikke fejl og feedback skal du på følgende knappen.</value>
   </data>
   <data name="strAboutTitle" xml:space="preserve">
-    <value>about</value>
+    <value>Om</value>
   </data>
   <data name="strEMail" xml:space="preserve">
-    <value>registered email</value>
+    <value>registreret e-mail</value>
   </data>
   <data name="strGoToSettings" xml:space="preserve">
-    <value>go to settings and setup the e-mail address and password for The Old Reader</value>
+    <value>gå til indstillinger og setup den e-mail-adresse og adgangskode til den gamle læser</value>
   </data>
   <data name="strLoginPage" xml:space="preserve">
-    <value>credentials</value>
+    <value>legitimationsoplysninger</value>
   </data>
   <data name="strNoUnreadItems" xml:space="preserve">
-    <value>There are no unread items here. Hurray!</value>
+    <value>Der er ingen ulæste elementer her. Hurra!</value>
   </data>
   <data name="strPassword" xml:space="preserve">
-    <value>password</value>
+    <value>adgangskode</value>
   </data>
   <data name="strSendFeedbackBtnText" xml:space="preserve">
-    <value>send feedback...</value>
+    <value>Send feedback</value>
   </data>
   <data name="strSubscriptions" xml:space="preserve">
-    <value>Subscriptions</value>
+    <value>Abonnementer</value>
   </data>
   <data name="strGettingSubscriptionList" xml:space="preserve">
-    <value>Getting Subscriptions</value>
+    <value>At få abonnementer</value>
   </data>
   <data name="strGettingTagList" xml:space="preserve">
-    <value>Getting Tags</value>
+    <value>At Tags</value>
   </data>
   <data name="strGettingUnreadCount" xml:space="preserve">
-    <value>Getting Unread Count</value>
+    <value>At få ulæste</value>
   </data>
   <data name="strGettingUnreadItems" xml:space="preserve">
-    <value>Getting Unread Items</value>
+    <value>At få ulæste emner</value>
   </data>
   <data name="strKeepUnread" xml:space="preserve">
-    <value>keep unread</value>
+    <value>holde ulæste</value>
   </data>
   <data name="strMarkAllRead" xml:space="preserve">
-    <value>mark all read</value>
+    <value>Markér alle som læst</value>
   </data>
   <data name="strShare" xml:space="preserve">
-    <value>share</value>
+    <value>Del</value>
   </data>
   <data name="strViewFull" xml:space="preserve">
-    <value>view full</value>
+    <value>Se fuld</value>
   </data>
   <data name="strLocal" xml:space="preserve">
-    <value>Saved</value>
+    <value>Gemt:</value>
   </data>
   <data name="strSaveLocal" xml:space="preserve">
-    <value>save for later</value>
+    <value>Gem til senere</value>
   </data>
   <data name="strRemoveLocal" xml:space="preserve">
-    <value>remove saved</value>
+    <value>Fjern gemte</value>
   </data>
   <data name="strAboutMenu" xml:space="preserve">
-    <value>about...</value>
+    <value>Om</value>
   </data>
   <data name="strRefreshAppButton" xml:space="preserve">
-    <value>refresh</value>
+    <value>Opdater</value>
   </data>
   <data name="strSettingsMenu" xml:space="preserve">
-    <value>settings...</value>
+    <value>Indstillinger</value>
   </data>
   <data name="strStatusMenu" xml:space="preserve">
-    <value>old reader status...</value>
+    <value>gamle læser status...</value>
   </data>
   <data name="strDoneAppBarButton" xml:space="preserve">
-    <value>ok</value>
+    <value>OK</value>
   </data>
   <data name="strPressBackToExit" xml:space="preserve">
-    <value>press back once more to exit</value>
+    <value>Tryk tilbage en gang mere for at afslutte</value>
   </data>
   <data name="strPressBackToExitTitle" xml:space="preserve">
-    <value>sure?</value>
+    <value>Naturligvis.</value>
   </data>
   <data name="strCredits" xml:space="preserve">
-    <value>Trevor /u/alexandertrevor for UI improvements</value>
+    <value>Trevor/u/alexandertrevor for UI forbedringer</value>
   </data>
   <data name="strAddSubscription" xml:space="preserve">
-    <value>add feed</value>
+    <value>Tilføj feed</value>
   </data>
   <data name="strFeedUrl" xml:space="preserve">
-    <value>feed URL</value>
+    <value>URL-adresse til kilde</value>
   </data>
   <data name="strTargetFolder" xml:space="preserve">
-    <value>target Folder</value>
+    <value>Destinationsmappe</value>
   </data>
   <data name="strFeeadAddError" xml:space="preserve">
-    <value>could not add the feed.</value>
+    <value>kunne ikke tilføje feedet.</value>
   </data>
   <data name="strFeedMoveError" xml:space="preserve">
-    <value>successfully added the feed but could not move to the selected folder.</value>
+    <value>tilføjet foderet, men kunne ikke flyttes til den valgte mappe.</value>
   </data>
   <data name="strAddFeed" xml:space="preserve">
-    <value>add Feed</value>
+    <value>Tilføj feed</value>
   </data>
   <data name="strSyncBrowserPrompt" xml:space="preserve">
-    <value>&lt;b&gt;Enter the Feed URL and press sync to preview the feed contents&lt;/b&gt;</value>
+    <value>&lt;b&gt;Indtast den Feedwebadresse, og tryk på sync hen til forpremiere de feed indhold&lt;/b&gt;</value>
   </data>
   <data name="strSyncButton" xml:space="preserve">
-    <value>sync</value>
+    <value>Synkroniser</value>
   </data>
   <data name="strErrorTitle" xml:space="preserve">
-    <value>error!</value>
+    <value>fejl</value>
   </data>
   <data name="strTimeStrDays" xml:space="preserve">
-    <value>{0} day(s) ago</value>
+    <value>{0} dag(e) siden</value>
   </data>
   <data name="strTimeStrHours" xml:space="preserve">
-    <value>{0} hour(s) ago</value>
+    <value>{0} time(r) siden</value>
   </data>
   <data name="strTimeStrNow" xml:space="preserve">
-    <value>Now</value>
+    <value>Nu</value>
   </data>
   <data name="strTimeStrUnknown" xml:space="preserve">
-    <value>Unknown</value>
+    <value>Ukendt</value>
   </data>
   <data name="strDownloadOlder" xml:space="preserve">
-    <value>download older</value>
+    <value>Download ældre</value>
   </data>
   <data name="strShowAllPosts" xml:space="preserve">
-    <value>show all posts</value>
+    <value>Vis alle indlæg</value>
   </data>
   <data name="strShowUnreadOnly" xml:space="preserve">
-    <value>show only unread</value>
+    <value>Vis kun ulæste</value>
   </data>
   <data name="strVersionStr" xml:space="preserve">
     <value>version</value>
   </data>
   <data name="strRateApp" xml:space="preserve">
-    <value>rate app</value>
+    <value>sats app</value>
   </data>
   <data name="strConfirmUnsubscribe" xml:space="preserve">
-    <value>Are you sure you want to unsubscribe from {0}?</value>
+    <value>Er du sikker på du vil afmelde dig fra {0}?</value>
   </data>
   <data name="strMenuMove" xml:space="preserve">
-    <value>move</value>
+    <value>Flyt</value>
   </data>
   <data name="strMenuUnsubscribe" xml:space="preserve">
-    <value>unsubscribe</value>
+    <value>Ophæv abonnement</value>
   </data>
   <data name="strMoveFrom" xml:space="preserve">
-    <value>move from</value>
+    <value>Flyt fra</value>
   </data>
   <data name="strMoveSubscriptionPage" xml:space="preserve">
-    <value>move feed</value>
+    <value>flytte foder</value>
   </data>
   <data name="strMoveTo" xml:space="preserve">
-    <value>move to</value>
+    <value>Flyt til</value>
   </data>
   <data name="strUnsubscribeFailed" xml:space="preserve">
-    <value>failed to unsubscribe from {0}!</value>
+    <value>undladt at afmelde {0}!</value>
   </data>
   <data name="strAdditionalDownloadCount" xml:space="preserve">
-    <value>additional items to download when downloading old items</value>
+    <value>yderligere elementer at hente når du henter gamle emner</value>
   </data>
   <data name="strEMailMenuItem" xml:space="preserve">
-    <value>email...</value>
+    <value>E-mail</value>
   </data>
   <data name="strOpenInIE" xml:space="preserve">
-    <value>open in ie...</value>
+    <value>Åbn i ie...</value>
   </data>
   <data name="strShowReadItems" xml:space="preserve">
-    <value>Show read items</value>
+    <value>Vis læse elementer</value>
   </data>
   <data name="strDuration15Days" xml:space="preserve">
-    <value>15 days</value>
+    <value>15 dage</value>
   </data>
   <data name="strDuration1Day" xml:space="preserve">
-    <value>one day</value>
-  </data>
-  <data name="strDuration1Month" xml:space="preserve">
-    <value>one month</value>
-  </data>
-  <data name="strDuration1Week" xml:space="preserve">
-    <value>one week</value>
-  </data>
-  <data name="strDuration1Year" xml:space="preserve">
-    <value>one year</value>
-  </data>
-  <data name="strDuration2Months" xml:space="preserve">
-    <value>two months</value>
-  </data>
-  <data name="strDuration3Months" xml:space="preserve">
-    <value>three months</value>
+    <value>En dag</value>
   </data>
   <data name="strDuration6Months" xml:space="preserve">
-    <value>six months</value>
+    <value>Seks måneder</value>
   </data>
   <data name="strDurationDescr" xml:space="preserve">
-    <value>days to keep the old feed cached on your device. more days mean more storage</value>
+    <value>dage til at holde de gamle foder cachelagret på din enhed. flere dage betyde mere lagerplads</value>
+  </data>
+  <data name="strDuration3Months" xml:space="preserve">
+    <value>Tre måneder</value>
+  </data>
+  <data name="strDuration2Months" xml:space="preserve">
+    <value>To måneder</value>
+  </data>
+  <data name="strDuration1Year" xml:space="preserve">
+    <value>Et år</value>
+  </data>
+  <data name="strDuration1Week" xml:space="preserve">
+    <value>En uge</value>
+  </data>
+  <data name="strDuration1Month" xml:space="preserve">
+    <value>En måned</value>
   </data>
 </root>

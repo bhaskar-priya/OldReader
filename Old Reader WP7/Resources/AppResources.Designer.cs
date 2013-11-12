@@ -88,7 +88,7 @@ namespace Old_Reader_WP7.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please make sure that you have set password in the settings page of Th Old Reader. As of now this is the only way to access the data..
+        ///   Looks up a localized string similar to Please make sure that you have set password in the settings page of The Old Reader. As of now this is the only way to access the data..
         /// </summary>
         public static string steLoginExplanation {
             get {
@@ -125,7 +125,7 @@ namespace Old_Reader_WP7.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to add feed.
+        ///   Looks up a localized string similar to add Feed.
         /// </summary>
         public static string strAddFeed {
             get {
@@ -139,6 +139,15 @@ namespace Old_Reader_WP7.Resources {
         public static string strAdditionalDownloadCount {
             get {
                 return ResourceManager.GetString("strAdditionalDownloadCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to add feed.
+        /// </summary>
+        public static string strAddSubscription {
+            get {
+                return ResourceManager.GetString("strAddSubscription", resourceCulture);
             }
         }
         
@@ -481,6 +490,15 @@ namespace Old_Reader_WP7.Resources {
         public static string strPressBackToExitTitle {
             get {
                 return ResourceManager.GetString("strPressBackToExitTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to rate app.
+        /// </summary>
+        public static string strRateApp {
+            get {
+                return ResourceManager.GetString("strRateApp", resourceCulture);
             }
         }
         

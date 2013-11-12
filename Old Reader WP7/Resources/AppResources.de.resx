@@ -121,211 +121,208 @@
     <value>LeftToRight</value>
   </data>
   <data name="ResourceLanguage" xml:space="preserve">
-    <value>en-US</value>
-  </data>
-  <data name="AppTitle" xml:space="preserve">
-    <value>Old Reader</value>
+    <value>de</value>
   </data>
   <data name="steLoginExplanation" xml:space="preserve">
-    <value>Please make sure that you have set password in the settings page of The Old Reader. As of now this is the only way to access the data.</value>
+    <value>Bitte achten Sie darauf, dass Sie auf der Einstellungsseite der alte Reader Kennwort festgelegt haben. Ab sofort ist dies die einzige Möglichkeit auf die Daten zugreifen.</value>
   </data>
   <data name="strAboutText" xml:space="preserve">
-    <value>This is a Windows Phone client for "The Old Reader".
-To report bugs and feedback please click the following button.</value>
+    <value>Dies ist ein Windows Phone Client für "Der alte Reader".
+Zum Bericht klicken Bugs und Feedback bitte folgenden.</value>
   </data>
   <data name="strAboutTitle" xml:space="preserve">
-    <value>about</value>
+    <value>über</value>
   </data>
   <data name="strEMail" xml:space="preserve">
-    <value>registered email</value>
+    <value>registrierte e-Mail</value>
   </data>
   <data name="strGoToSettings" xml:space="preserve">
-    <value>go to settings and setup the e-mail address and password for The Old Reader</value>
+    <value>gehen Sie zu Einstellungen und setup der E-mail-Adresse und das Kennwort für die alte Reader</value>
   </data>
   <data name="strLoginPage" xml:space="preserve">
-    <value>credentials</value>
+    <value>Anmeldeinformationen</value>
   </data>
   <data name="strNoUnreadItems" xml:space="preserve">
-    <value>There are no unread items here. Hurray!</value>
+    <value>Es gibt hier keine ungelesenen Elemente. Hurra!</value>
   </data>
   <data name="strPassword" xml:space="preserve">
-    <value>password</value>
+    <value>Passwort</value>
   </data>
   <data name="strSendFeedbackBtnText" xml:space="preserve">
-    <value>send feedback...</value>
+    <value>Senden Sie Ihr Feedback...</value>
   </data>
   <data name="strSubscriptions" xml:space="preserve">
-    <value>Subscriptions</value>
+    <value>Abonnements</value>
   </data>
   <data name="strGettingSubscriptionList" xml:space="preserve">
-    <value>Getting Subscriptions</value>
+    <value>Erste Abonnements</value>
   </data>
   <data name="strGettingTagList" xml:space="preserve">
-    <value>Getting Tags</value>
+    <value>Immer Tags</value>
   </data>
   <data name="strGettingUnreadCount" xml:space="preserve">
-    <value>Getting Unread Count</value>
+    <value>Erste ungelesenen</value>
   </data>
   <data name="strGettingUnreadItems" xml:space="preserve">
-    <value>Getting Unread Items</value>
+    <value>Erste ungelesene Elemente</value>
   </data>
   <data name="strKeepUnread" xml:space="preserve">
-    <value>keep unread</value>
+    <value>halten Sie ungelesen</value>
   </data>
   <data name="strMarkAllRead" xml:space="preserve">
-    <value>mark all read</value>
+    <value>Mark alle lesen</value>
   </data>
   <data name="strShare" xml:space="preserve">
-    <value>share</value>
+    <value>Freigeben</value>
   </data>
   <data name="strViewFull" xml:space="preserve">
-    <value>view full</value>
+    <value>vollständige Ansicht</value>
   </data>
   <data name="strLocal" xml:space="preserve">
-    <value>Saved</value>
+    <value>Gespeichert</value>
   </data>
   <data name="strSaveLocal" xml:space="preserve">
-    <value>save for later</value>
+    <value>für später speichern</value>
   </data>
   <data name="strRemoveLocal" xml:space="preserve">
-    <value>remove saved</value>
+    <value>Entferne gespeicherte</value>
   </data>
   <data name="strAboutMenu" xml:space="preserve">
-    <value>about...</value>
+    <value>über...</value>
   </data>
   <data name="strRefreshAppButton" xml:space="preserve">
-    <value>refresh</value>
+    <value>Aktualisieren</value>
   </data>
   <data name="strSettingsMenu" xml:space="preserve">
-    <value>settings...</value>
+    <value>Einstellungen...</value>
   </data>
   <data name="strStatusMenu" xml:space="preserve">
-    <value>old reader status...</value>
+    <value>alte Leser-Status...</value>
   </data>
   <data name="strDoneAppBarButton" xml:space="preserve">
-    <value>ok</value>
+    <value>Okay</value>
   </data>
   <data name="strPressBackToExit" xml:space="preserve">
-    <value>press back once more to exit</value>
+    <value>Drücken Sie wieder einmal mehr zu beenden</value>
   </data>
   <data name="strPressBackToExitTitle" xml:space="preserve">
-    <value>sure?</value>
+    <value>sicher?</value>
   </data>
   <data name="strCredits" xml:space="preserve">
-    <value>Trevor /u/alexandertrevor for UI improvements</value>
+    <value>Trevor/u/Alexandertrevor für Verbesserungen der Benutzeroberfläche</value>
   </data>
   <data name="strAddSubscription" xml:space="preserve">
-    <value>add feed</value>
+    <value>Feed hinzufügen</value>
   </data>
   <data name="strFeedUrl" xml:space="preserve">
-    <value>feed URL</value>
+    <value>Feed-URL</value>
   </data>
   <data name="strTargetFolder" xml:space="preserve">
-    <value>target Folder</value>
+    <value>Zielordner</value>
   </data>
   <data name="strFeeadAddError" xml:space="preserve">
-    <value>could not add the feed.</value>
+    <value>das Futter konnte nicht hinzugefügt werden.</value>
   </data>
   <data name="strFeedMoveError" xml:space="preserve">
-    <value>successfully added the feed but could not move to the selected folder.</value>
+    <value>erfolgreich den Feed hinzugefügt, aber konnte nicht in den ausgewählten Ordner verschieben.</value>
   </data>
   <data name="strAddFeed" xml:space="preserve">
-    <value>add Feed</value>
+    <value>Feed hinzufügen</value>
   </data>
   <data name="strSyncBrowserPrompt" xml:space="preserve">
-    <value>&lt;b&gt;Enter the Feed URL and press sync to preview the feed contents&lt;/b&gt;</value>
+    <value>&lt;b&gt;Geben Sie die Feed-URL und Presse-Sync zu Vorschau die feed-Inhalte&lt;/b&gt;</value>
   </data>
   <data name="strSyncButton" xml:space="preserve">
-    <value>sync</value>
+    <value>Sync</value>
   </data>
   <data name="strErrorTitle" xml:space="preserve">
-    <value>error!</value>
+    <value>Fehler!</value>
   </data>
   <data name="strTimeStrDays" xml:space="preserve">
-    <value>{0} day(s) ago</value>
+    <value>vor {0} Tag(en)</value>
   </data>
   <data name="strTimeStrHours" xml:space="preserve">
-    <value>{0} hour(s) ago</value>
+    <value>vor {0} Stunde(n)</value>
   </data>
   <data name="strTimeStrNow" xml:space="preserve">
-    <value>Now</value>
+    <value>Jetzt</value>
   </data>
   <data name="strTimeStrUnknown" xml:space="preserve">
-    <value>Unknown</value>
+    <value>Unbekannt</value>
   </data>
   <data name="strDownloadOlder" xml:space="preserve">
-    <value>download older</value>
+    <value>Download ältere</value>
   </data>
   <data name="strShowAllPosts" xml:space="preserve">
-    <value>show all posts</value>
+    <value>alle Beiträge anzeigen</value>
   </data>
   <data name="strShowUnreadOnly" xml:space="preserve">
-    <value>show only unread</value>
+    <value>Zeige nur ungelesene</value>
   </data>
   <data name="strVersionStr" xml:space="preserve">
-    <value>version</value>
+    <value>Version</value>
   </data>
   <data name="strRateApp" xml:space="preserve">
-    <value>rate app</value>
+    <value>Preise app</value>
   </data>
   <data name="strConfirmUnsubscribe" xml:space="preserve">
-    <value>Are you sure you want to unsubscribe from {0}?</value>
+    <value>Sind Sie sicher, dass Sie von {0} abmelden möchten?</value>
   </data>
   <data name="strMenuMove" xml:space="preserve">
-    <value>move</value>
+    <value>Verschieben</value>
   </data>
   <data name="strMenuUnsubscribe" xml:space="preserve">
-    <value>unsubscribe</value>
+    <value>Abmelden</value>
   </data>
   <data name="strMoveFrom" xml:space="preserve">
-    <value>move from</value>
+    <value>Verschieben von</value>
   </data>
   <data name="strMoveSubscriptionPage" xml:space="preserve">
-    <value>move feed</value>
+    <value>Feed zu verschieben</value>
   </data>
   <data name="strMoveTo" xml:space="preserve">
-    <value>move to</value>
+    <value>Verschieben Sie auf</value>
   </data>
   <data name="strUnsubscribeFailed" xml:space="preserve">
-    <value>failed to unsubscribe from {0}!</value>
+    <value>Fehler beim abbestellen {0}!</value>
   </data>
   <data name="strAdditionalDownloadCount" xml:space="preserve">
-    <value>additional items to download when downloading old items</value>
+    <value>zusätzliche Elemente zum download, wenn Sie alte Elemente herunterladen</value>
   </data>
   <data name="strEMailMenuItem" xml:space="preserve">
-    <value>email...</value>
+    <value>E-Mail...</value>
   </data>
   <data name="strOpenInIE" xml:space="preserve">
-    <value>open in ie...</value>
+    <value>Öffnen Sie in ie...</value>
   </data>
   <data name="strShowReadItems" xml:space="preserve">
-    <value>Show read items</value>
+    <value>Lesen Sie Artikel anzeigen</value>
   </data>
   <data name="strDuration15Days" xml:space="preserve">
-    <value>15 days</value>
+    <value>15 Tage</value>
   </data>
   <data name="strDuration1Day" xml:space="preserve">
-    <value>one day</value>
-  </data>
-  <data name="strDuration1Month" xml:space="preserve">
-    <value>one month</value>
-  </data>
-  <data name="strDuration1Week" xml:space="preserve">
-    <value>one week</value>
-  </data>
-  <data name="strDuration1Year" xml:space="preserve">
-    <value>one year</value>
-  </data>
-  <data name="strDuration2Months" xml:space="preserve">
-    <value>two months</value>
-  </data>
-  <data name="strDuration3Months" xml:space="preserve">
-    <value>three months</value>
+    <value>eines Tages</value>
   </data>
   <data name="strDuration6Months" xml:space="preserve">
-    <value>six months</value>
+    <value>sechs Monate</value>
   </data>
   <data name="strDurationDescr" xml:space="preserve">
-    <value>days to keep the old feed cached on your device. more days mean more storage</value>
+    <value>Tage den alten Feed Cache auf Ihrem Gerät zu halten. weitere Tage bedeuten mehr Speicher</value>
+  </data>
+  <data name="strDuration3Months" xml:space="preserve">
+    <value>drei Monate</value>
+  </data>
+  <data name="strDuration2Months" xml:space="preserve">
+    <value>zwei Monate</value>
+  </data>
+  <data name="strDuration1Year" xml:space="preserve">
+    <value>ein Jahr</value>
+  </data>
+  <data name="strDuration1Week" xml:space="preserve">
+    <value>eine Woche</value>
+  </data>
+  <data name="strDuration1Month" xml:space="preserve">
+    <value>einen Monat</value>
   </data>
 </root>
