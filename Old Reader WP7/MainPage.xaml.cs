@@ -214,10 +214,6 @@ namespace Old_Reader
 					StarredFeeds = new ObservableCollection<DataModel.FeedItem>();
 					refreshLocalFeeds();
 				}
-				if (!TryLoggingIn())
-				{
-					txtHelpText.Visibility = Visibility.Visible;
-				}
 			}
 			else
 			{
@@ -232,7 +228,11 @@ namespace Old_Reader
 					RefreshContent();
 				}
 			}
-			
+
+			if (!bLoginComplete && !TryLoggingIn())
+			{
+				txtHelpText.Visibility = Visibility.Visible;
+			}
 		}
 
 		private void refreshLocalFeeds()
