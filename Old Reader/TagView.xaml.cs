@@ -11,6 +11,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Collections.ObjectModel;
 using Coding4Fun.Toolkit.Controls;
+using Old_Reader_Utils;
 
 using AppNs =
 #if OLD_READER_WP7
@@ -244,6 +245,7 @@ namespace Old_Reader
 		}
 
 		DataModel.Subscription movedFeed = null;
+		private DestinationTagChooser destinationSelector;
 
 		private void menuMove_Click(object sender, RoutedEventArgs e)
 		{
@@ -254,9 +256,56 @@ namespace Old_Reader
 				{
 					movedFeed = curFeed;
 					AppNs.App.RefreshContents = false;
-					NavigationService.Navigate(new Uri("/MoveSubscription.xaml?feedId=" + curFeed.id, UriKind.Relative));
+					destinationSelector = new DestinationTagChooser(this);
+					destinationSelector.CurItem = curFeed;
+					destinationSelector.Tags = AppNs.App.Contents.Tags;
+					destinationSelector.SelectedTag = curFeed.categories != null ? curFeed.categories[0] : DataModel.Tag.AllItems;
+					destinationSelector.Done += destinationSelector_Done;
+					destinationSelector.show();
 				}
 			}
+		}
+
+		protected override void OnBackKeyPress(CancelEventArgs e)
+		{
+			if (destinationSelector != null)
+			{
+				if (destinationSelector.IsOpen)
+				{
+					destinationSelector.Close();
+					e.Cancel = true;
+				}
+			}
+		}
+
+		void destinationSelector_Done(object sender, DestinationChooserDoneEvent e)
+		{
+			if (sender is DestinationTagChooser)
+			{
+				DestinationTagChooser chooser = sender as DestinationTagChooser;
+				StartJob();
+				WS.Remoting rm = new WS.Remoting(MoveComplete);
+				rm.moveSubscriptionToFolder(chooser.CurItem.id, chooser.SelectedTag.id);
+			}
+		}
+
+		private void MoveComplete(String szResponse)
+		{
+			Dispatcher.BeginInvoke(() =>
+			{
+				JobComplete();
+				if (szResponse.ToUpper() != "OK")
+				{
+					MessageBox.Show(AppNs.Resources.AppResources.strFeedMoveError);
+				}
+				else
+				{
+					Analytics.GAnalytics.trackSubMove();
+					AppNs.App.RefreshContents = true;
+					// successfully completed the move
+					CurTag.Subscriptions.Remove(movedFeed);
+				}
+			});
 		}
 	}
 }

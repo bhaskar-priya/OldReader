@@ -115,6 +115,7 @@
     <Compile Include="DebugInfoPopup.xaml.cs">
       <DependentUpon>DebugInfoPopup.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DestinationTagChooser.cs" />
     <Compile Include="FeedView.xaml.cs">
       <DependentUpon>FeedView.xaml</DependentUpon>
     </Compile>

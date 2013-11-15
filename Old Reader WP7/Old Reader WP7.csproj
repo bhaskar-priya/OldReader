@@ -139,6 +139,9 @@
     <Compile Include="..\Old Reader\DataStore\OldReaderDataContext.cs">
       <Link>DataStore\OldReaderDataContext.cs</Link>
     </Compile>
+    <Compile Include="..\Old Reader\DestinationTagChooser.cs">
+      <Link>DestinationTagChooser.cs</Link>
+    </Compile>
     <Compile Include="..\Old Reader\FeedView.xaml.cs">
       <Link>FeedView.xaml.cs</Link>
       <DependentUpon>FeedView.xaml</DependentUpon>

@@ -214,10 +214,6 @@ namespace Old_Reader
 					StarredFeeds = new ObservableCollection<DataModel.FeedItem>();
 					refreshLocalFeeds();
 				}
-				if (!TryLoggingIn())
-				{
-					txtHelpText.Visibility = Visibility.Visible;
-				}
 			}
 			else
 			{
@@ -232,7 +228,11 @@ namespace Old_Reader
 					RefreshContent();
 				}
 			}
-			
+
+			if (!bLoginComplete && !TryLoggingIn())
+			{
+				txtHelpText.Visibility = Visibility.Visible;
+			}
 		}
 
 		private void refreshLocalFeeds()
@@ -435,6 +435,9 @@ namespace Old_Reader
 			);
 		}
 
+		DataModel.Subscription movedFeed = null;
+		private DestinationTagChooser destinationSelector;
+
 		private void menuMove_Click(object sender, RoutedEventArgs e)
 		{
 			if (sender is MenuItem)
@@ -442,10 +445,44 @@ namespace Old_Reader
 				var curFeed = (sender as MenuItem).DataContext as DataModel.Subscription;
 				if (curFeed != null)
 				{
-					AppNs.App.RefreshContents = false;
-					NavigationService.Navigate(new Uri("/MoveSubscription.xaml?feedId=" + curFeed.id, UriKind.Relative));
+					movedFeed = curFeed;
+					destinationSelector = new DestinationTagChooser(this);
+					destinationSelector.CurItem = curFeed;
+					destinationSelector.Tags = App.Contents.Tags;
+					destinationSelector.SelectedTag = curFeed.categories != null ? curFeed.categories[0] : DataModel.Tag.AllItems;
+					destinationSelector.Done += destinationSelector_Done;
+					destinationSelector.show();
 				}
 			}
+		}
+
+		void destinationSelector_Done(object sender, DestinationChooserDoneEvent e)
+		{
+			if (sender is DestinationTagChooser)
+			{
+				DestinationTagChooser chooser = sender as DestinationTagChooser;
+				StartJob();
+				WS.Remoting rm = new WS.Remoting(MoveComplete);
+				rm.moveSubscriptionToFolder(chooser.CurItem.id, chooser.SelectedTag.id);
+			}
+		}
+
+		private void MoveComplete(String szResponse)
+		{
+			Dispatcher.BeginInvoke(() =>
+				{
+					JobComplete();
+					if (szResponse.ToUpper() != "OK")
+					{
+						MessageBox.Show(AppNs.Resources.AppResources.strFeedMoveError);
+					}
+					else
+					{
+						Analytics.GAnalytics.trackSubMove();
+						Contents.DisplayObjects.Remove(movedFeed);
+						RefreshContent();
+					}
+				});
 		}
 	}
 }

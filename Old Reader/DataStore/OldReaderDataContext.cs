@@ -77,19 +77,23 @@ namespace DataStore
 
 		public void cleanDatabase()
 		{
-			DateTime threshHoldTime = DateTime.Now.AddDays(0 - AppNs.App.RetentionDays);
-			// delete all items which are more than two month old but save the starred items
-			var oldItems = from c in CachedFeeds
-						   where
-							   c.publishedTime < threshHoldTime &&
-							   c.Starred == false &&
-							   c.Unread == false
-						   select c;
-			foreach (var oldItem in oldItems)
+			try
 			{
-				CachedFeeds.DeleteOnSubmit(oldItem);
+				DateTime threshHoldTime = DateTime.Now.AddDays(0 - AppNs.App.RetentionDays);
+				// delete all items which are more than two month old but save the starred items
+				var oldItems = from c in CachedFeeds
+							   where
+								   c.publishedTime < threshHoldTime &&
+								   c.Starred == false &&
+								   c.Unread == false
+							   select c;
+				foreach (var oldItem in oldItems)
+				{
+					CachedFeeds.DeleteOnSubmit(oldItem);
+				}
+				SubmitChanges();
 			}
-			SubmitChanges();
+			catch { }
 		}
 
 		public Table<CachedFeed> CachedFeeds;
