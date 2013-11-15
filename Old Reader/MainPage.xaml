@@ -37,18 +37,20 @@
 			</toolkit:NavigationOutTransition.Forward>
 		</toolkit:NavigationOutTransition>
 	</toolkit:TransitionService.NavigationOutTransition>
+
+	<shell:SystemTray.ProgressIndicator>
+		<shell:ProgressIndicator x:Name="trayProgress" IsIndeterminate="True" IsVisible="False" Text=""/>
+	</shell:SystemTray.ProgressIndicator>
 	
 	<!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
 		<Grid.Resources>
-			<local:IntegerInvertingVisibilityConverter x:Key="IntegerInvertingVisibilityConverter" />
 			<local:FeedTemplateSelector x:Key="FeedTemplateSelector" />
 			<local:FeedListIconConvertor x:Key="FeedListIconConvertor" />
 			<local:FilePathToImageConverter x:Key="FilePathToImageConverter" />
 			<local:TimeToHumanStrConverter x:Key="TimeToHumanStrConverter" />
 			<local:DispObjCtxMenuConverter x:Key="DispObjCtxMenuConverter" />
 		</Grid.Resources>
-		<ProgressBar Name="progressBar" Visibility="Collapsed" IsIndeterminate="True" VerticalAlignment="Top" />
 
 		<controls:Panorama HorizontalAlignment="Left" Name="mainPanorama"
 						   SelectionChanged="mainPanorama_SelectionChanged"
@@ -71,12 +73,6 @@
 				<Grid x:Name="ContentPanel" Grid.Row="1">
 					<TextBlock Name="txtHelpText"
 							   Text="{Binding Path=LocalizedResources.strGoToSettings, Source={StaticResource LocalizedStrings}}"
-							   TextWrapping="Wrap"
-							   VerticalAlignment="Center"
-							   HorizontalAlignment="Center"
-							   TextAlignment="Center"
-							   Visibility="Collapsed" />
-					<TextBlock Name="txtProgressState"
 							   TextWrapping="Wrap"
 							   VerticalAlignment="Center"
 							   HorizontalAlignment="Center"

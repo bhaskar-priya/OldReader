@@ -19,7 +19,10 @@ namespace DataModel
 		{
 			if (PropertyChanged != null)
 			{
-				PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+				System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
+					{
+						PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+					});
 			}
 		}
 
@@ -34,7 +37,10 @@ namespace DataModel
 		{
 			if (PropertyChanging != null)
 			{
-				PropertyChanging(this, new PropertyChangingEventArgs(propertyName));
+				System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
+					{
+						PropertyChanging(this, new PropertyChangingEventArgs(propertyName));
+					});
 			}
 		}
 		#endregion

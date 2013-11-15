@@ -49,7 +49,6 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-			<ProgressBar Name="progressBar" Visibility="Collapsed" IsIndeterminate="True" VerticalAlignment="Top" />
 			<StackPanel Orientation="Horizontal" toolkit:TurnstileFeatherEffect.FeatheringIndex="0">
 				<Image Source="Resources/oldreader-icon.png"
 							   Width="20" Height="20"

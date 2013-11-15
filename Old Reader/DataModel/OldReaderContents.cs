@@ -49,6 +49,14 @@ namespace DataModel
 
 		public OldReaderContents()
 		{
+			String szTagData = DataStore.CacheManager.TagData;
+			String szSubData = DataStore.CacheManager.SubscriptionData;
+			if (!String.IsNullOrEmpty(szTagData) && !String.IsNullOrEmpty(szSubData))
+			{
+				Tags = DataModel.Tag.CreateFromResponse(szTagData);
+				Tags.Add(Tag.AllItems);
+				Subscriptions = Subscription.CreateFromResponse(szSubData, Tags);
+			}
 		}
 
 		public void AddFeeds(List<FeedItem> newFeedItems)
@@ -185,15 +193,18 @@ namespace DataModel
 			{
 				ObservableCollection<Object> dispObjects = new ObservableCollection<object>();
 
-				// add the all objects
-				foreach (Subscription subObj in Subscriptions.Where(s => s.categories == null || s.categories.Count == 0))
+				if (Subscriptions != null && Tags != null)
 				{
-					dispObjects.Add(subObj);
-				}
+					// add the all objects
+					foreach (Subscription subObj in Subscriptions.Where(s => s.categories == null || s.categories.Count == 0))
+					{
+						dispObjects.Add(subObj);
+					}
 
-				foreach (var tagObj in Tags)
-				{
-					dispObjects.Add(tagObj);
+					foreach (var tagObj in Tags)
+					{
+						dispObjects.Add(tagObj);
+					}
 				}
 
 				return dispObjects;

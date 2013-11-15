@@ -34,14 +34,17 @@
 			</toolkit:NavigationOutTransition.Forward>
 		</toolkit:NavigationOutTransition>
 	</toolkit:TransitionService.NavigationOutTransition>
+
+	<shell:SystemTray.ProgressIndicator>
+		<shell:ProgressIndicator x:Name="trayProgress" IsIndeterminate="True" IsVisible="False" Text=""/>
+	</shell:SystemTray.ProgressIndicator>
 	
-    <!--LayoutRoot is the root grid where all page content is placed-->
+	<!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-		<ProgressBar Name="progressBar" Visibility="Collapsed" IsIndeterminate="True" VerticalAlignment="Top" />
 		<!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
 			<StackPanel Orientation="Horizontal" toolkit:TurnstileFeatherEffect.FeatheringIndex="0">

@@ -201,6 +201,24 @@ namespace WS
 			Post(szAPIEndPoint + "edit-tag", szPostData);
 		}
 
+		public void markFeedItemsRead(List<String> szItemIds, bool bRead)
+		{
+			if (szItemIds != null && szItemIds.Count > 0)
+			{
+				StringBuilder sb = new StringBuilder();
+				sb.AppendFormat("{0}=user/-/state/com.google/read", bRead ? "a" : "r");
+
+				foreach (String curItemId in szItemIds)
+				{
+					sb.AppendFormat("&i={0}", curItemId);
+				}
+
+				String szPostData = sb.ToString();
+
+				Post(szAPIEndPoint + "edit-tag", szPostData);
+			}
+		}
+
 		public void markAllItemsAsRead(String szFeedId)
 		{
 			String szPostData = String.Format("s={0}", szFeedId);

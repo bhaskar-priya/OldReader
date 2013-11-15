@@ -61,7 +61,7 @@ namespace Old_Reader
 		private void StartJob()
 		{
 			m_JobsPending++;
-			progressBar.Visibility = System.Windows.Visibility.Visible;
+			trayProgress.IsVisible = m_JobsPending != 0;
 			(ApplicationBar.Buttons[0] as ApplicationBarIconButton).IsEnabled = false;
 			(ApplicationBar.Buttons[1] as ApplicationBarIconButton).IsEnabled = false;
 		}
@@ -72,7 +72,7 @@ namespace Old_Reader
 			m_JobsPending = m_JobsPending < 0 ? 0 : m_JobsPending;
 			if (m_JobsPending == 0)
 			{
-				progressBar.Visibility = System.Windows.Visibility.Collapsed;
+				trayProgress.IsVisible = m_JobsPending != 0;
 				(ApplicationBar.Buttons[0] as ApplicationBarIconButton).IsEnabled = true;
 				(ApplicationBar.Buttons[1] as ApplicationBarIconButton).IsEnabled = true;
 			}
@@ -263,14 +263,13 @@ namespace Old_Reader
 		private void ApplicationBarMarkRead_Click(object sender, EventArgs e)
 		{
 			WS.Remoting rm = new WS.Remoting(markAllReadComplete);
-			if (CurSubscription != null)
+
+			List<String> itemIds = new List<string>();
+			foreach (var curFeedItem in FeedItems)
 			{
-				rm.markAllItemsAsRead(CurSubscription.id);
+				itemIds.Add(curFeedItem.id);
 			}
-			else
-			{
-				rm.markAllItemsAsRead(DataModel.Tag.AllItems.id);
-			}
+			rm.markFeedItemsRead(itemIds, true);
 			StartJob();
 		}
 

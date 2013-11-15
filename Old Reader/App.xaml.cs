@@ -143,10 +143,6 @@ namespace Old_Reader
 
 			// Remove this handler since it is no longer needed
 			RootFrame.Navigated -= CompleteInitializePhoneApplication;
-
-#if DEBUG
-			CreatePopups(RootFrame);
-#endif
 		}
 
 		private void CheckForResetNavigation(object sender, NavigationEventArgs e)
@@ -230,42 +226,6 @@ namespace Old_Reader
 				throw;
 			}
 		}
-
-#if DEBUG
-		const string ControlNamePopups = "Popups";
-		bool popupsCreated;
-
-		private void CreatePopups(System.Windows.Controls.Frame frame)
-		{
-			if (!popupsCreated)
-			{
-				System.Windows.Controls.Page page = frame.Content as System.Windows.Controls.Page;
-
-				if (page != null)
-				{
-					System.Windows.Controls.Grid content = page.Content as System.Windows.Controls.Grid;
-
-					if (content != null)
-					{
-						System.Windows.Controls.Grid popups = content.FindName(ControlNamePopups) as System.Windows.Controls.Grid;
-
-						if (popups == null)
-						{
-							popups = new System.Windows.Controls.Grid { Name = ControlNamePopups };
-						}
-						else
-						{
-							popups.Children.Clear();
-						}
-						popups.Children.Add(new MemoryLeak.WP8.DebugInfoPopup());
-
-						content.Children.Add(popups);
-						popupsCreated = true;
-					}
-				}
-			}
-		}
-#endif
 
 		public static DataModel.OldReaderContents Contents
 		{

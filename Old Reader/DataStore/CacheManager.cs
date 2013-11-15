@@ -47,11 +47,16 @@ namespace DataStore
 
 		private static String ReadFile(String fileName)
 		{
-			IsolatedStorageFileStream iFs = ISF.OpenFile(fileName, System.IO.FileMode.Open);
-			byte[] bytes = new byte[iFs.Length];
-			iFs.Read(bytes, 0, (int)iFs.Length);
-			iFs.Close();
-			return System.Text.Encoding.UTF8.GetString(bytes, 0, bytes.Length);
+			try
+			{
+				IsolatedStorageFileStream iFs = ISF.OpenFile(fileName, System.IO.FileMode.Open);
+				byte[] bytes = new byte[iFs.Length];
+				iFs.Read(bytes, 0, (int)iFs.Length);
+				iFs.Close();
+				return System.Text.Encoding.UTF8.GetString(bytes, 0, bytes.Length);
+			}
+			catch { }
+			return "";
 		}
 	}
 }

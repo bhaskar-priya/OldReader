@@ -138,8 +138,7 @@ namespace Old_Reader
 			Dictionary<String, String> loginDetails = Utils.toDictionary(szResponse, '\n', '=');
 			WS.Remoting.token = loginDetails[OldReaderConsts.Auth];
 
-			DataModel.OldReaderContents tmpContents = new DataModel.OldReaderContents();
-			tmpContents.Initialize(InitializationCompleteHandler, InitializationErrorHandler, InitializationStatusReceiver);
+			Contents.Initialize(InitializationCompleteHandler, InitializationErrorHandler, InitializationStatusReceiver);
 		}
 
 		private void InitializationCompleteHandler(DataModel.OldReaderContents contents)
@@ -151,7 +150,6 @@ namespace Old_Reader
 						StarredFeeds = new ObservableCollection<DataModel.FeedItem>();
 						refreshLocalFeeds();
 					}
-					txtProgressState.Visibility = System.Windows.Visibility.Collapsed;
 					Contents = contents;
 					JobComplete();
 				});
@@ -161,8 +159,7 @@ namespace Old_Reader
 		{
 			Dispatcher.BeginInvoke(() =>
 			{
-				txtProgressState.Visibility = System.Windows.Visibility.Visible;
-				txtProgressState.Text = Utils.getInitializationStateStr(curState);
+				trayProgress.Text = Utils.getInitializationStateStr(curState);
 			});
 		}
 
@@ -183,7 +180,9 @@ namespace Old_Reader
 		private void StartJob()
 		{
 			m_JobsPending++;
-			progressBar.Visibility = System.Windows.Visibility.Visible;
+
+			trayProgress.IsVisible = true;
+
 			(ApplicationBar.Buttons[0] as ApplicationBarIconButton).IsEnabled = false;
 			(ApplicationBar.Buttons[1] as ApplicationBarIconButton).IsEnabled = false;
 		}
@@ -194,7 +193,8 @@ namespace Old_Reader
 			m_JobsPending = m_JobsPending < 0 ? 0 : m_JobsPending;
 			if (m_JobsPending == 0)
 			{
-				progressBar.Visibility = System.Windows.Visibility.Collapsed;
+				trayProgress.IsVisible = false;
+				
 				(ApplicationBar.Buttons[0] as ApplicationBarIconButton).IsEnabled = true;
 				(ApplicationBar.Buttons[1] as ApplicationBarIconButton).IsEnabled = true;
 			}
@@ -208,6 +208,7 @@ namespace Old_Reader
 
 			if (Contents == null)
 			{
+				Contents = new DataModel.OldReaderContents();
 				if (!TryLoggingIn())
 				{
 					txtHelpText.Visibility = Visibility.Visible;
@@ -284,7 +285,6 @@ namespace Old_Reader
 			{
 				if (bLoginComplete)
 				{
-					Contents = null;
 					DataModel.OldReaderContents tmpContents = new DataModel.OldReaderContents();
 					tmpContents.Initialize(InitializationCompleteHandler, InitializationErrorHandler, InitializationStatusReceiver);
 					StartJob();

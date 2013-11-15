@@ -60,7 +60,7 @@ namespace Old_Reader
 		private void StartJob()
 		{
 			m_JobsPending++;
-			progressBar.Visibility = System.Windows.Visibility.Visible;
+			trayProgress.IsVisible = m_JobsPending != 0;
 		}
 
 		private void JobComplete()
@@ -69,7 +69,7 @@ namespace Old_Reader
 			m_JobsPending = m_JobsPending < 0 ? 0 : m_JobsPending;
 			if (m_JobsPending == 0)
 			{
-				progressBar.Visibility = System.Windows.Visibility.Collapsed;
+				trayProgress.IsVisible = m_JobsPending != 0;
 			}
 		}
 		

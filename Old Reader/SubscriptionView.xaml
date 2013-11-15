@@ -36,8 +36,12 @@
 			</toolkit:NavigationOutTransition.Forward>
 		</toolkit:NavigationOutTransition>
 	</toolkit:TransitionService.NavigationOutTransition>
-	
-    <!--LayoutRoot is the root grid where all page content is placed-->
+
+	<shell:SystemTray.ProgressIndicator>
+		<shell:ProgressIndicator x:Name="trayProgress" IsIndeterminate="True" IsVisible="False" Text=""/>
+	</shell:SystemTray.ProgressIndicator>
+
+	<!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
 		<Grid.Resources>
 			<local:IntegerInvertingVisibilityConverter x:Key="IntegerInvertingVisibilityConverter" />
@@ -53,7 +57,6 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-			<ProgressBar Name="progressBar" Visibility="Collapsed" IsIndeterminate="True" VerticalAlignment="Top" />
 			<StackPanel Orientation="Horizontal" toolkit:TurnstileFeatherEffect.FeatheringIndex="0">
 				<Image Source="Resources/oldreader-icon.png"
 							   Width="20" Height="20"
