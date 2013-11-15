@@ -124,20 +124,20 @@
     <value>fr</value>
   </data>
   <data name="steLoginExplanation" xml:space="preserve">
-    <value>S'il vous plaît assurez-vous que vous avez défini le mot de passe dans la page Paramètres de The Reader vieux. A partir de maintenant, il s'agit de la seule façon d'accéder aux données.</value>
+    <value>Veuillez vous assurez que vous avez défini le mot de passe dans la page Paramètres de "The Old Reader". I'l s'agit, pour le moment, de la seule façon d'accéder aux données.</value>
   </data>
   <data name="strAboutText" xml:space="preserve">
-    <value>Il s'agit d'un client Windows Phone pour « The Old Reader ».
-Pour signaler bugs et commentaires s'il vous plaît cliquez sur le bouton suivant.</value>
+    <value>Il s'agit d'un client Windows Phone pour "The Old Reader".
+Pour signaler bugs et commentaires cliquez sur le bouton suivant.</value>
   </data>
   <data name="strAboutTitle" xml:space="preserve">
-    <value>sur</value>
+    <value>à propos</value>
   </data>
   <data name="strEMail" xml:space="preserve">
-    <value>e-mail enregistrée</value>
+    <value>e-mail enregistré</value>
   </data>
   <data name="strGoToSettings" xml:space="preserve">
-    <value>allez dans paramètres et la configuration de l'adresse e-mail et le mot de passe pour The Reader vieux</value>
+    <value>Naviguez vers la page de paramètres pour configurer l'adresse e-mail et le mot de passe pour "The Old Reader"</value>
   </data>
   <data name="strLoginPage" xml:space="preserve">
     <value>informations d'identification</value>
@@ -170,16 +170,16 @@ Pour signaler bugs et commentaires s'il vous plaît cliquez sur le bouton suivan
     <value>garder non lus</value>
   </data>
   <data name="strMarkAllRead" xml:space="preserve">
-    <value>marque de tous les lire</value>
+    <value>marquer tout comme lu</value>
   </data>
   <data name="strShare" xml:space="preserve">
-    <value>Partager</value>
+    <value>partager</value>
   </data>
   <data name="strViewFull" xml:space="preserve">
     <value>vue complète</value>
   </data>
   <data name="strLocal" xml:space="preserve">
-    <value>Sauvé</value>
+    <value>Enregistré</value>
   </data>
   <data name="strSaveLocal" xml:space="preserve">
     <value>enregistrer pour plus tard</value>
@@ -188,22 +188,22 @@ Pour signaler bugs et commentaires s'il vous plaît cliquez sur le bouton suivan
     <value>supprimer sauvé</value>
   </data>
   <data name="strAboutMenu" xml:space="preserve">
-    <value>sur...</value>
+    <value>à propos...</value>
   </data>
   <data name="strRefreshAppButton" xml:space="preserve">
-    <value>actualisation</value>
+    <value>rafraîchir</value>
   </data>
   <data name="strSettingsMenu" xml:space="preserve">
-    <value>Paramètres...</value>
+    <value>paramètres...</value>
   </data>
   <data name="strStatusMenu" xml:space="preserve">
-    <value>ancien statut de lecteur...</value>
+    <value>status "old reader"...</value>
   </data>
   <data name="strDoneAppBarButton" xml:space="preserve">
-    <value>Bien</value>
+    <value>ok</value>
   </data>
   <data name="strPressBackToExit" xml:space="preserve">
-    <value>Appuyez sur back une fois plus pour quitter</value>
+    <value>Appuyez sur retour une fois de plus pour quitter</value>
   </data>
   <data name="strPressBackToExitTitle" xml:space="preserve">
     <value>certain ?</value>
@@ -218,31 +218,31 @@ Pour signaler bugs et commentaires s'il vous plaît cliquez sur le bouton suivan
     <value>URL du flux</value>
   </data>
   <data name="strTargetFolder" xml:space="preserve">
-    <value>cible de dossier</value>
+    <value>dossier cible</value>
   </data>
   <data name="strFeeadAddError" xml:space="preserve">
-    <value>pourrait pas ajouter le flux.</value>
+    <value>problème lors de l'ajout du flux</value>
   </data>
   <data name="strFeedMoveError" xml:space="preserve">
-    <value>ajouté avec succès l'alimentation mais impossible de déplacer vers le dossier sélectionné.</value>
+    <value>ajout réussi mais impossible de déplacer vers le dossier sélectionné.</value>
   </data>
   <data name="strAddFeed" xml:space="preserve">
     <value>Ajouter un flux</value>
   </data>
   <data name="strSyncBrowserPrompt" xml:space="preserve">
-    <value>&lt;b&gt;Entrer l'URL du flux et appuyez sur sync pour prévisualiser le contenu de flux&lt;/b&gt;</value>
+    <value>&lt;b&gt;Entrez l'URL du flux et appuyez sur synchroniser pour prévisualiser le contenu de flux&lt;/b&gt;</value>
   </data>
   <data name="strSyncButton" xml:space="preserve">
-    <value>Sync</value>
+    <value>synchroniser</value>
   </data>
   <data name="strErrorTitle" xml:space="preserve">
     <value>erreur !</value>
   </data>
   <data name="strTimeStrDays" xml:space="preserve">
-    <value>{0} jour (s) il ya</value>
+    <value>il ya {0} jour (s)</value>
   </data>
   <data name="strTimeStrHours" xml:space="preserve">
-    <value>{0} heure (s) il ya</value>
+    <value>il ya {0} heure (s)</value>
   </data>
   <data name="strTimeStrNow" xml:space="preserve">
     <value>Maintenant</value>
@@ -263,28 +263,28 @@ Pour signaler bugs et commentaires s'il vous plaît cliquez sur le bouton suivan
     <value>Version</value>
   </data>
   <data name="strRateApp" xml:space="preserve">
-    <value>taux app</value>
+    <value>noter l'app</value>
   </data>
   <data name="strConfirmUnsubscribe" xml:space="preserve">
     <value>Êtes-vous certain de que vouloir annuler l'abonnement à {0} ?</value>
   </data>
   <data name="strMenuMove" xml:space="preserve">
-    <value>déménagement</value>
+    <value>bouger</value>
   </data>
   <data name="strMenuUnsubscribe" xml:space="preserve">
     <value>se désabonner</value>
   </data>
   <data name="strMoveFrom" xml:space="preserve">
-    <value>passer de</value>
+    <value>déplacer de</value>
   </data>
   <data name="strMoveSubscriptionPage" xml:space="preserve">
-    <value>déplacer des aliments pour animaux</value>
+    <value>déplacer flux</value>
   </data>
   <data name="strMoveTo" xml:space="preserve">
     <value>déplacer vers</value>
   </data>
   <data name="strUnsubscribeFailed" xml:space="preserve">
-    <value>n'a pas pu annuler l'abonnement à {0} !</value>
+    <value>désabonnement de {0} impossible!</value>
   </data>
   <data name="strAdditionalDownloadCount" xml:space="preserve">
     <value>éléments supplémentaires à télécharger lors du téléchargement d'éléments anciens</value>
@@ -293,10 +293,10 @@ Pour signaler bugs et commentaires s'il vous plaît cliquez sur le bouton suivan
     <value>Messagerie...</value>
   </data>
   <data name="strOpenInIE" xml:space="preserve">
-    <value>Ouvrez dans ie...</value>
+    <value>Ouvrir dans ie...</value>
   </data>
   <data name="strShowReadItems" xml:space="preserve">
-    <value>Afficher les éléments de lecture</value>
+    <value>Afficher les éléments lus</value>
   </data>
   <data name="strDuration15Days" xml:space="preserve">
     <value>15 jours</value>
@@ -308,7 +308,7 @@ Pour signaler bugs et commentaires s'il vous plaît cliquez sur le bouton suivan
     <value>six mois</value>
   </data>
   <data name="strDurationDescr" xml:space="preserve">
-    <value>jours pendant lesquels le vieux flux mis en cache sur votre appareil. jours plus : plus de stockage</value>
+    <value>jours pendant lesquels l'ancien flux est gardé en cache sur votre appareil. plus de jours : plus de stockage nécessaire</value>
   </data>
   <data name="strDuration3Months" xml:space="preserve">
     <value>trois mois</value>
