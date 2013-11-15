@@ -209,6 +209,11 @@ namespace Old_Reader
 			if (Contents == null)
 			{
 				Contents = new DataModel.OldReaderContents();
+				if (Contents.Tags != null && Contents.Subscriptions != null)
+				{
+					StarredFeeds = new ObservableCollection<DataModel.FeedItem>();
+					refreshLocalFeeds();
+				}
 				if (!TryLoggingIn())
 				{
 					txtHelpText.Visibility = Visibility.Visible;
