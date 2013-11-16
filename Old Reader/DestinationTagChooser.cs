@@ -71,9 +71,7 @@ namespace Old_Reader_Utils
 
 			m_Popup = new Popup();
 			// create a border
-			Border border = new Border();
-			border.BorderBrush = (Brush)Application.Current.Resources["PhoneBackgroundBrush"];
-			border.BorderThickness = new Thickness(1);
+			Grid border = new Grid();
 			border.Background = (Brush)Application.Current.Resources["PhoneBackgroundBrush"];
 #if OLD_READER_WP7
 			border.Width = (AppNs.App.Current as AppNs.App).RootFrame.ActualWidth;
@@ -86,28 +84,29 @@ namespace Old_Reader_Utils
 			// build the selector
 			ScrollViewer scroller = new ScrollViewer();
 			
-			StackPanel skt_pnl_outter = new StackPanel();                             // stack panel 
-			skt_pnl_outter.Background = (Brush)Application.Current.Resources["PhoneBackgroundBrush"];
-			skt_pnl_outter.Orientation = System.Windows.Controls.Orientation.Vertical;
+			StackPanel stackPanel = new StackPanel();                             // stack panel 
+			stackPanel.Background = (Brush)Application.Current.Resources["PhoneBackgroundBrush"];
+			stackPanel.Orientation = System.Windows.Controls.Orientation.Vertical;
 
 			Brush foregroundBrush = (Brush)Application.Current.Resources["PhoneForegroundBrush"];
 			Brush accentBrush = (Brush)Application.Current.Resources["PhoneAccentBrush"];
 			foreach (var curItem in Tags)
 			{
-				TextBlock txtBlock = new TextBlock();
-				txtBlock.Text = curItem.ToString();
-				txtBlock.Tag = curItem;
-				txtBlock.TextAlignment = TextAlignment.Left;
-				txtBlock.FontSize = 43;
-				txtBlock.Margin = new Thickness(32, 21, 0, 20);
-				txtBlock.Foreground = curItem == SelectedTag ? accentBrush : foregroundBrush;
-				txtBlock.Tap += txtBlock_Tap;
-				Microsoft.Phone.Controls.TiltEffect.SetIsTiltEnabled(txtBlock, true);
-				skt_pnl_outter.Children.Add(txtBlock);
-			}
+				Button tagButton = new Button();
+				tagButton.Content = curItem.ToString();
+				tagButton.Tag = curItem;
+				tagButton.HorizontalContentAlignment = HorizontalAlignment.Left;
+				tagButton.FontSize = 43;
+				tagButton.Foreground = curItem == SelectedTag ? accentBrush : foregroundBrush;
+				tagButton.Tap += txtBlock_Tap;
+				tagButton.Width = border.Width;
+				tagButton.BorderThickness = new Thickness(0);
 
-			scroller.Content = skt_pnl_outter;
-			border.Child = scroller;
+				stackPanel.Children.Add(tagButton);
+			}
+			
+			scroller.Content = stackPanel;
+			border.Children.Add(scroller);
 
 			m_Popup.Child = border;
 			m_Popup.IsOpen = true;
@@ -115,9 +114,9 @@ namespace Old_Reader_Utils
 
 		void txtBlock_Tap(object sender, System.Windows.Input.GestureEventArgs e)
 		{
-			if (sender is TextBlock)
+			if (sender is Button)
 			{
-				SelectedTag = (DataModel.Tag)(sender as TextBlock).Tag;
+				SelectedTag = (DataModel.Tag)(sender as Button).Tag;
 				Close();
 				Done(this, new DestinationChooserDoneEvent(SelectedTag));
 			}

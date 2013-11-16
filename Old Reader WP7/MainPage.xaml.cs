@@ -167,11 +167,7 @@ namespace Old_Reader
 		{
 			Dispatcher.BeginInvoke(() =>
 				{
-					if (!bLoginComplete)
-					{
-						// login failed
-						JobComplete();
-					}
+					JobComplete();
 					MessageBox.Show(szErrorMessage);
 				});
 		}
