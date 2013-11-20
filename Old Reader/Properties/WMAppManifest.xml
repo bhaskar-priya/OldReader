@@ -18,7 +18,7 @@
     <Language code="sv" />
     <Language code="tr-TR" />
   </Languages>
-  <App xmlns="" ProductID="{1def4613-53f9-431b-ae61-c95b456b368c}" Title="Old Reader" RuntimeType="Silverlight" Version="4.4.0.0" Genre="apps.normal" Author="Bhaskar Priya" Description="Windows Phone client for &quot;The Old Reader&quot;" Publisher="Bhaskar Priya" PublisherID="{dde9a825-bfc6-40e6-b5b8-71d5b8bf016d}">
+  <App xmlns="" ProductID="{1def4613-53f9-431b-ae61-c95b456b368c}" Title="Old Reader" RuntimeType="Silverlight" Version="5.0.0.0" Genre="apps.normal" Author="Bhaskar Priya" Description="Windows Phone client for &quot;The Old Reader&quot;" Publisher="Bhaskar Priya" PublisherID="{dde9a825-bfc6-40e6-b5b8-71d5b8bf016d}">
     <IconPath IsRelative="true" IsResource="false">Resources\oldreader-icon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
