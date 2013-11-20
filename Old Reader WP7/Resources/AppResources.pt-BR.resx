@@ -208,9 +208,6 @@ Para relatar bugs e feedback, por favor, clique no botão a seguir.</value>
   <data name="strPressBackToExitTitle" xml:space="preserve">
     <value>tem certeza?</value>
   </data>
-  <data name="strCredits" xml:space="preserve">
-    <value>Trevor /u/alexandertrevor por melhorias na interface</value>
-  </data>
   <data name="strAddSubscription" xml:space="preserve">
     <value>adicionar feed</value>
   </data>

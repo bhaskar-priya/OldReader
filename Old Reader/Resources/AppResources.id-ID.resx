@@ -211,9 +211,6 @@ Untuk melaporkan bug dan saran silahkan klik tombol berikut.</value>
   <data name="strPressBackToExitTitle" xml:space="preserve">
     <value>yakin?</value>
   </data>
-  <data name="strCredits" xml:space="preserve">
-    <value>Trevor /u/alexandertrevor untuk perbaikan UI</value>
-  </data>
   <data name="strAddSubscription" xml:space="preserve">
     <value>tambah feed</value>
   </data>

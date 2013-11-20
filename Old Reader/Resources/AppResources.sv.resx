@@ -208,9 +208,6 @@ För att rapportera klicka buggar och feedback vänligen på följande.</value>
   <data name="strPressBackToExitTitle" xml:space="preserve">
     <value>säker?</value>
   </data>
-  <data name="strCredits" xml:space="preserve">
-    <value>Trevor/u/alexandertrevor för UI förbättringar</value>
-  </data>
   <data name="strAddSubscription" xml:space="preserve">
     <value>Lägg till feed</value>
   </data>

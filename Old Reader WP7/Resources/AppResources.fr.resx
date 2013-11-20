@@ -208,9 +208,6 @@ Pour signaler bugs et commentaires cliquez sur le bouton suivant.</value>
   <data name="strPressBackToExitTitle" xml:space="preserve">
     <value>certain ?</value>
   </data>
-  <data name="strCredits" xml:space="preserve">
-    <value>Trevor/u/alexandertrevor pour des améliorations de l'interface utilisateur</value>
-  </data>
   <data name="strAddSubscription" xml:space="preserve">
     <value>Ajouter un flux</value>
   </data>

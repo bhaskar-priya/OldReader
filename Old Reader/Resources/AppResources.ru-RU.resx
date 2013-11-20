@@ -208,9 +208,6 @@
   <data name="strPressBackToExitTitle" xml:space="preserve">
     <value>Конечно,</value>
   </data>
-  <data name="strCredits" xml:space="preserve">
-    <value>Тревор/u/alexandertrevor для улучшения пользовательского интерфейса</value>
-  </data>
   <data name="strAddSubscription" xml:space="preserve">
     <value>Добавить веб-канал</value>
   </data>

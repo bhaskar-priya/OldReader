@@ -208,9 +208,6 @@ Per segnalare bug e feedback cliccate sul seguente pulsante.</value>
   <data name="strPressBackToExitTitle" xml:space="preserve">
     <value>sicuro?</value>
   </data>
-  <data name="strCredits" xml:space="preserve">
-    <value>Trevor/u/alexandertrevor per miglioramenti dell'interfaccia utente</value>
-  </data>
   <data name="strAddSubscription" xml:space="preserve">
     <value>aggiungere feed</value>
   </data>

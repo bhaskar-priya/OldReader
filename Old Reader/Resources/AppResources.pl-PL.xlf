@@ -133,8 +133,14 @@ Zgłosić błędy i proszę kliknąć poniższy przycisk.</target>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Oczywiście,</target>
         </trans-unit>
         <trans-unit id="Resx/strCredits" translate="yes" xml:space="preserve">
-          <source>Trevor /u/alexandertrevor for UI improvements</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Trevor/u/alexandertrevor dla ulepszenia interfejsu użytkownika</target>
+          <source>Trevor /u/alexandertrevor for UI improvements
+/u/DatDoodKwan for French translation
+/u/diogenesl for pt-br translation
+/u/yudayyy for Bahasa Indonesia translation</source>
+          <target state="new" state-qualifier="mt-suggestion">Trevor /u/alexandertrevor for UI improvements
+/u/DatDoodKwan for French translation
+/u/diogenesl for pt-br translation
+/u/yudayyy for Bahasa Indonesia translation</target>
         </trans-unit>
         <trans-unit id="Resx/strAddSubscription" translate="yes" xml:space="preserve">
           <source>add feed</source>

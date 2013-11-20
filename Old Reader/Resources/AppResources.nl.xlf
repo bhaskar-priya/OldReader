@@ -133,8 +133,14 @@ Als u wilt rapporteren bugs en aanmerkingen alstublieft klik op de volgende knop
           <target state="needs-review-translation" state-qualifier="mt-suggestion">zeker?</target>
         </trans-unit>
         <trans-unit id="Resx/strCredits" translate="yes" xml:space="preserve">
-          <source>Trevor /u/alexandertrevor for UI improvements</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Trevor/u/alexandertrevor voor verbeteringen in de Gebruikersinterface</target>
+          <source>Trevor /u/alexandertrevor for UI improvements
+/u/DatDoodKwan for French translation
+/u/diogenesl for pt-br translation
+/u/yudayyy for Bahasa Indonesia translation</source>
+          <target state="new" state-qualifier="mt-suggestion">Trevor /u/alexandertrevor for UI improvements
+/u/DatDoodKwan for French translation
+/u/diogenesl for pt-br translation
+/u/yudayyy for Bahasa Indonesia translation</target>
         </trans-unit>
         <trans-unit id="Resx/strAddSubscription" translate="yes" xml:space="preserve">
           <source>add feed</source>

@@ -208,9 +208,6 @@ Zum Bericht klicken Bugs und Feedback bitte folgenden.</value>
   <data name="strPressBackToExitTitle" xml:space="preserve">
     <value>sicher?</value>
   </data>
-  <data name="strCredits" xml:space="preserve">
-    <value>Trevor/u/Alexandertrevor für Verbesserungen der Benutzeroberfläche</value>
-  </data>
   <data name="strAddSubscription" xml:space="preserve">
     <value>Feed hinzufügen</value>
   </data>

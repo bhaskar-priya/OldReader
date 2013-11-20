@@ -133,8 +133,14 @@ Untuk melaporkan bug dan saran silahkan klik tombol berikut.</target>
           <target state="signed-off" state-qualifier="mt-suggestion">yakin?</target>
         </trans-unit>
         <trans-unit id="Resx/strCredits" translate="yes" xml:space="preserve">
-          <source>Trevor /u/alexandertrevor for UI improvements</source>
-          <target state="signed-off">Trevor /u/alexandertrevor untuk perbaikan UI</target>
+          <source>Trevor /u/alexandertrevor for UI improvements
+/u/DatDoodKwan for French translation
+/u/diogenesl for pt-br translation
+/u/yudayyy for Bahasa Indonesia translation</source>
+          <target state="new">Trevor /u/alexandertrevor for UI improvements
+/u/DatDoodKwan for French translation
+/u/diogenesl for pt-br translation
+/u/yudayyy for Bahasa Indonesia translation</target>
         </trans-unit>
         <trans-unit id="Resx/strAddSubscription" translate="yes" xml:space="preserve">
           <source>add feed</source>

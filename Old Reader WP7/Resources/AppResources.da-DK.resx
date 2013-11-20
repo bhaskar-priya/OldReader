@@ -208,9 +208,6 @@ For at rapportere klikke fejl og feedback skal du på følgende knappen.</value>
   <data name="strPressBackToExitTitle" xml:space="preserve">
     <value>Naturligvis.</value>
   </data>
-  <data name="strCredits" xml:space="preserve">
-    <value>Trevor/u/alexandertrevor for UI forbedringer</value>
-  </data>
   <data name="strAddSubscription" xml:space="preserve">
     <value>Tilføj feed</value>
   </data>

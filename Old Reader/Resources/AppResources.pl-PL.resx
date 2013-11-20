@@ -208,9 +208,6 @@ Zgłosić błędy i proszę kliknąć poniższy przycisk.</value>
   <data name="strPressBackToExitTitle" xml:space="preserve">
     <value>Oczywiście,</value>
   </data>
-  <data name="strCredits" xml:space="preserve">
-    <value>Trevor/u/alexandertrevor dla ulepszenia interfejsu użytkownika</value>
-  </data>
   <data name="strAddSubscription" xml:space="preserve">
     <value>Dodaj źródło</value>
   </data>

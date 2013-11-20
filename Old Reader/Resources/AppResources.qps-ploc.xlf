@@ -133,8 +133,14 @@ To report bugs and feedback please click the following button.</target>
           <target state="new">sure?</target>
         </trans-unit>
         <trans-unit id="Resx/strCredits" translate="yes" xml:space="preserve">
-          <source>Trevor /u/alexandertrevor for UI improvements</source>
-          <target state="new">Trevor /u/alexandertrevor for UI improvements</target>
+          <source>Trevor /u/alexandertrevor for UI improvements
+/u/DatDoodKwan for French translation
+/u/diogenesl for pt-br translation
+/u/yudayyy for Bahasa Indonesia translation</source>
+          <target state="new">Trevor /u/alexandertrevor for UI improvements
+/u/DatDoodKwan for French translation
+/u/diogenesl for pt-br translation
+/u/yudayyy for Bahasa Indonesia translation</target>
         </trans-unit>
         <trans-unit id="Resx/strAddSubscription" translate="yes" xml:space="preserve">
           <source>add feed</source>

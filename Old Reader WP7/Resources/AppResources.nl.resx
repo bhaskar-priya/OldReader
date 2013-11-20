@@ -208,9 +208,6 @@ Als u wilt rapporteren bugs en aanmerkingen alstublieft klik op de volgende knop
   <data name="strPressBackToExitTitle" xml:space="preserve">
     <value>zeker?</value>
   </data>
-  <data name="strCredits" xml:space="preserve">
-    <value>Trevor/u/alexandertrevor voor verbeteringen in de Gebruikersinterface</value>
-  </data>
   <data name="strAddSubscription" xml:space="preserve">
     <value>feed toevoegen</value>
   </data>

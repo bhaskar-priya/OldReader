@@ -208,9 +208,6 @@ Ilmoita viat ja palaute klikkaa seuraavaa painiketta.</value>
   <data name="strPressBackToExitTitle" xml:space="preserve">
     <value>Totta kai.</value>
   </data>
-  <data name="strCredits" xml:space="preserve">
-    <value>Trevor/u/alexandertrevor Käyttöliittymän parannukset</value>
-  </data>
   <data name="strAddSubscription" xml:space="preserve">
     <value>Lisää syöte</value>
   </data>

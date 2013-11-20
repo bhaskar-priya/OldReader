@@ -208,9 +208,6 @@ Rapor için hatalar ve geri besleme lütfen aşağıdaki düğmeyi tıklatın.</
   <data name="strPressBackToExitTitle" xml:space="preserve">
     <value>emin misin?</value>
   </data>
-  <data name="strCredits" xml:space="preserve">
-    <value>Trevor/u/alexandertrevor kullanıcı Arabirimi geliştirmeleri için</value>
-  </data>
   <data name="strAddSubscription" xml:space="preserve">
     <value>Akış Ekle</value>
   </data>

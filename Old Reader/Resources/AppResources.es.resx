@@ -208,9 +208,6 @@ Para reportar bugs y comentarios haga clic el botón siguiente.</value>
   <data name="strPressBackToExitTitle" xml:space="preserve">
     <value>¿Estás seguro?</value>
   </data>
-  <data name="strCredits" xml:space="preserve">
-    <value>Trevor/u/alexandertrevor para mejoras de la interfaz de usuario</value>
-  </data>
   <data name="strAddSubscription" xml:space="preserve">
     <value>Añadir feed</value>
   </data>

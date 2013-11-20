@@ -208,9 +208,6 @@ Hlášení chyb a zpětné vazby klikněte prosím na následující tlačítko.
   <data name="strPressBackToExitTitle" xml:space="preserve">
     <value>Jistě?</value>
   </data>
-  <data name="strCredits" xml:space="preserve">
-    <value>Trevor/u/alexandertrevor pro vylepšení uživatelského rozhraní</value>
-  </data>
   <data name="strAddSubscription" xml:space="preserve">
     <value>Přidat informační kanál</value>
   </data>
