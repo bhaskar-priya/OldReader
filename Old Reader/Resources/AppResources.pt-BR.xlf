@@ -20,13 +20,13 @@
         </trans-unit>
         <trans-unit id="Resx/steLoginExplanation" translate="yes" xml:space="preserve">
           <source>Please make sure that you have set password in the settings page of The Old Reader. As of now this is the only way to access the data.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Por favor, certifique-se que você tiver definido a senha na página de configurações do leitor velho. A partir de agora, esta é a única maneira de acessar os dados.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Por favor, certifique-se que você definiu a senha na página de configurações do Old Reader. No momento, esta é a única maneira de acessar os dados.</target>
         </trans-unit>
         <trans-unit id="Resx/strAboutText" translate="yes" xml:space="preserve">
           <source>This is a Windows Phone client for "The Old Reader".
 To report bugs and feedback please click the following button.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Este é um cliente de Windows Phone para "The Old Reader".
-Para relatar bugs e feedback, por favor, clique no botão seguinte.</target>
+Para relatar bugs e feedback, por favor, clique no botão a seguir.</target>
         </trans-unit>
         <trans-unit id="Resx/strAboutTitle" translate="yes" xml:space="preserve">
           <source>about</source>
@@ -38,7 +38,7 @@ Para relatar bugs e feedback, por favor, clique no botão seguinte.</target>
         </trans-unit>
         <trans-unit id="Resx/strGoToSettings" translate="yes" xml:space="preserve">
           <source>go to settings and setup the e-mail address and password for The Old Reader</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vá para configurações e configurar o endereço de email e a senha para o leitor velho</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vá para configurações e configurar o endereço de email e a senha para The Old Reader</target>
         </trans-unit>
         <trans-unit id="Resx/strLoginPage" translate="yes" xml:space="preserve">
           <source>credentials</source>
@@ -46,7 +46,7 @@ Para relatar bugs e feedback, por favor, clique no botão seguinte.</target>
         </trans-unit>
         <trans-unit id="Resx/strNoUnreadItems" translate="yes" xml:space="preserve">
           <source>There are no unread items here. Hurray!</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Não há nenhum itens não lidos aqui. Viva!</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Não há nenhum item não lido aqui. Viva!</target>
         </trans-unit>
         <trans-unit id="Resx/strPassword" translate="yes" xml:space="preserve">
           <source>password</source>
@@ -62,27 +62,27 @@ Para relatar bugs e feedback, por favor, clique no botão seguinte.</target>
         </trans-unit>
         <trans-unit id="Resx/strGettingSubscriptionList" translate="yes" xml:space="preserve">
           <source>Getting Subscriptions</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Recebendo inscrições</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Recebendo Inscrições</target>
         </trans-unit>
         <trans-unit id="Resx/strGettingTagList" translate="yes" xml:space="preserve">
           <source>Getting Tags</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ficando Tags</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Recebendo Tags</target>
         </trans-unit>
         <trans-unit id="Resx/strGettingUnreadCount" translate="yes" xml:space="preserve">
           <source>Getting Unread Count</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">A contagem não lida</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Recebendo a contagem de não lidos</target>
         </trans-unit>
         <trans-unit id="Resx/strGettingUnreadItems" translate="yes" xml:space="preserve">
           <source>Getting Unread Items</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Obtenção de itens não lidos</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Recebendo itens não lidos</target>
         </trans-unit>
         <trans-unit id="Resx/strKeepUnread" translate="yes" xml:space="preserve">
           <source>keep unread</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">manter não lidas</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">manter não lidos</target>
         </trans-unit>
         <trans-unit id="Resx/strMarkAllRead" translate="yes" xml:space="preserve">
           <source>mark all read</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Marcar todas como lidas</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">marcar todos como lidas</target>
         </trans-unit>
         <trans-unit id="Resx/strShare" translate="yes" xml:space="preserve">
           <source>share</source>
@@ -90,7 +90,7 @@ Para relatar bugs e feedback, por favor, clique no botão seguinte.</target>
         </trans-unit>
         <trans-unit id="Resx/strViewFull" translate="yes" xml:space="preserve">
           <source>view full</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Exibição - completa</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">exibição completa</target>
         </trans-unit>
         <trans-unit id="Resx/strLocal" translate="yes" xml:space="preserve">
           <source>Saved</source>
@@ -98,15 +98,15 @@ Para relatar bugs e feedback, por favor, clique no botão seguinte.</target>
         </trans-unit>
         <trans-unit id="Resx/strSaveLocal" translate="yes" xml:space="preserve">
           <source>save for later</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Salvar para Mais Tarde</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">salvar para mais tarde</target>
         </trans-unit>
         <trans-unit id="Resx/strRemoveLocal" translate="yes" xml:space="preserve">
           <source>remove saved</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">remover salva</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">remover salvo</target>
         </trans-unit>
         <trans-unit id="Resx/strAboutMenu" translate="yes" xml:space="preserve">
           <source>about...</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Sobre</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">sobre...</target>
         </trans-unit>
         <trans-unit id="Resx/strRefreshAppButton" translate="yes" xml:space="preserve">
           <source>refresh</source>
@@ -114,31 +114,31 @@ Para relatar bugs e feedback, por favor, clique no botão seguinte.</target>
         </trans-unit>
         <trans-unit id="Resx/strSettingsMenu" translate="yes" xml:space="preserve">
           <source>settings...</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Configurações</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">configurações...</target>
         </trans-unit>
         <trans-unit id="Resx/strStatusMenu" translate="yes" xml:space="preserve">
           <source>old reader status...</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">estatuto de leitor velho...</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">status do Old Reader...</target>
         </trans-unit>
         <trans-unit id="Resx/strDoneAppBarButton" translate="yes" xml:space="preserve">
           <source>ok</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">OK</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">ok</target>
         </trans-unit>
         <trans-unit id="Resx/strPressBackToExit" translate="yes" xml:space="preserve">
           <source>press back once more to exit</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pressione voltar uma vez mais para sair</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">pressione voltar mais uma vez para sair</target>
         </trans-unit>
         <trans-unit id="Resx/strPressBackToExitTitle" translate="yes" xml:space="preserve">
           <source>sure?</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tem certeza?</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">tem certeza?</target>
         </trans-unit>
         <trans-unit id="Resx/strCredits" translate="yes" xml:space="preserve">
           <source>Trevor /u/alexandertrevor for UI improvements</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Trevor/u/alexandertrevor para melhorias na interface</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Trevor /u/alexandertrevor por melhorias na interface</target>
         </trans-unit>
         <trans-unit id="Resx/strAddSubscription" translate="yes" xml:space="preserve">
           <source>add feed</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Adicionar feed</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">adicionar feed</target>
         </trans-unit>
         <trans-unit id="Resx/strFeedUrl" translate="yes" xml:space="preserve">
           <source>feed URL</source>
@@ -146,7 +146,7 @@ Para relatar bugs e feedback, por favor, clique no botão seguinte.</target>
         </trans-unit>
         <trans-unit id="Resx/strTargetFolder" translate="yes" xml:space="preserve">
           <source>target Folder</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Pasta de Destino</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">pasta de Destino</target>
         </trans-unit>
         <trans-unit id="Resx/strFeeadAddError" translate="yes" xml:space="preserve">
           <source>could not add the feed.</source>
@@ -154,15 +154,15 @@ Para relatar bugs e feedback, por favor, clique no botão seguinte.</target>
         </trans-unit>
         <trans-unit id="Resx/strFeedMoveError" translate="yes" xml:space="preserve">
           <source>successfully added the feed but could not move to the selected folder.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">a alimentação foi adicionado com sucesso, mas não podia mover para a pasta selecionada.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">o feed foi adicionado com sucesso, porém, não foi possível mover para a pasta selecionada.</target>
         </trans-unit>
         <trans-unit id="Resx/strAddFeed" translate="yes" xml:space="preserve">
           <source>add Feed</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Adicionar feed</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">adicionar feed</target>
         </trans-unit>
         <trans-unit id="Resx/strSyncBrowserPrompt" translate="yes" xml:space="preserve">
           <source><bpt id="1">&lt;b&gt;</bpt>Enter the Feed URL and press sync to preview the feed contents<ept id="1">&lt;/b&gt;</ept></source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion"><bpt id="1">%%amp;lt;b%%amp;gt;</bpt>Enter a sincronização Feed URL e pressione para visualizar o conteúdo de alimentação<ept id="1">%%amp;lt;/b%%amp;gt;</ept></target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion"><bpt id="1">%%amp;lt;b%%amp;gt;</bpt>Adicione a URL do feed e pressione sincronizar para visualizar o conteúdo do feed<ept id="1">%%amp;lt;/b%%amp;gt;</ept></target>
         </trans-unit>
         <trans-unit id="Resx/strSyncButton" translate="yes" xml:space="preserve">
           <source>sync</source>
@@ -170,7 +170,7 @@ Para relatar bugs e feedback, por favor, clique no botão seguinte.</target>
         </trans-unit>
         <trans-unit id="Resx/strErrorTitle" translate="yes" xml:space="preserve">
           <source>error!</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">erro</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">erro!</target>
         </trans-unit>
         <trans-unit id="Resx/strTimeStrDays" translate="yes" xml:space="preserve">
           <source>{0} day(s) ago</source>
@@ -182,7 +182,7 @@ Para relatar bugs e feedback, por favor, clique no botão seguinte.</target>
         </trans-unit>
         <trans-unit id="Resx/strTimeStrNow" translate="yes" xml:space="preserve">
           <source>Now</source>
-          <target state="translated" state-qualifier="tm-suggestion">AGORA</target>
+          <target state="translated" state-qualifier="tm-suggestion">Agora</target>
         </trans-unit>
         <trans-unit id="Resx/strTimeStrUnknown" translate="yes" xml:space="preserve">
           <source>Unknown</source>
@@ -190,7 +190,7 @@ Para relatar bugs e feedback, por favor, clique no botão seguinte.</target>
         </trans-unit>
         <trans-unit id="Resx/strDownloadOlder" translate="yes" xml:space="preserve">
           <source>download older</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Download mais velhos</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Baixar mais velhos</target>
         </trans-unit>
         <trans-unit id="Resx/strShowAllPosts" translate="yes" xml:space="preserve">
           <source>show all posts</source>
@@ -198,7 +198,7 @@ Para relatar bugs e feedback, por favor, clique no botão seguinte.</target>
         </trans-unit>
         <trans-unit id="Resx/strShowUnreadOnly" translate="yes" xml:space="preserve">
           <source>show only unread</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mostrar apenas não lidas</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mostrar apenas não lidos</target>
         </trans-unit>
         <trans-unit id="Resx/strVersionStr" translate="yes" xml:space="preserve">
           <source>version</source>
@@ -206,11 +206,11 @@ Para relatar bugs e feedback, por favor, clique no botão seguinte.</target>
         </trans-unit>
         <trans-unit id="Resx/strRateApp" translate="yes" xml:space="preserve">
           <source>rate app</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">taxa app</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">avaliar aplicativo</target>
         </trans-unit>
         <trans-unit id="Resx/strConfirmUnsubscribe" translate="yes" xml:space="preserve">
           <source>Are you sure you want to unsubscribe from {0}?</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tem certeza que deseja cancelar sua incri {0}?</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tem certeza que deseja cancelar sua incrição de {0}?</target>
         </trans-unit>
         <trans-unit id="Resx/strMenuMove" translate="yes" xml:space="preserve">
           <source>move</source>
@@ -222,19 +222,19 @@ Para relatar bugs e feedback, por favor, clique no botão seguinte.</target>
         </trans-unit>
         <trans-unit id="Resx/strMoveFrom" translate="yes" xml:space="preserve">
           <source>move from</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Mover de</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">mover de</target>
         </trans-unit>
         <trans-unit id="Resx/strMoveSubscriptionPage" translate="yes" xml:space="preserve">
           <source>move feed</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">mudar a alimentação</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">mover o feed</target>
         </trans-unit>
         <trans-unit id="Resx/strMoveTo" translate="yes" xml:space="preserve">
           <source>move to</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Mover para</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">mover para</target>
         </trans-unit>
         <trans-unit id="Resx/strUnsubscribeFailed" translate="yes" xml:space="preserve">
           <source>failed to unsubscribe from {0}!</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Falha ao cancelar a inscrição de {0}!</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">falha ao cancelar a inscrição de {0}!</target>
         </trans-unit>
         <trans-unit id="Resx/strAdditionalDownloadCount" translate="yes" xml:space="preserve">
           <source>additional items to download when downloading old items</source>
@@ -242,11 +242,11 @@ Para relatar bugs e feedback, por favor, clique no botão seguinte.</target>
         </trans-unit>
         <trans-unit id="Resx/strEMailMenuItem" translate="yes" xml:space="preserve">
           <source>email...</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">email</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">email...</target>
         </trans-unit>
         <trans-unit id="Resx/strOpenInIE" translate="yes" xml:space="preserve">
           <source>open in ie...</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Abra no ie...</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">abra no IE...</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/strShowReadItems" xml:space="preserve">
           <source>Show read items</source>
@@ -254,39 +254,39 @@ Para relatar bugs e feedback, por favor, clique no botão seguinte.</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/strDuration15Days" xml:space="preserve">
           <source>15 days</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">15 Dias</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">15 dias</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/strDuration1Day" xml:space="preserve">
           <source>one day</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Um Dia</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Uum dia</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/strDuration6Months" xml:space="preserve">
           <source>six months</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Seis meses</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">seis meses</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/strDurationDescr" xml:space="preserve">
           <source>days to keep the old feed cached on your device. more days mean more storage</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">dias para manter o feed antigo armazenado em cache no seu dispositivo. dias mais significa mais capacidade de armazenamento</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">dias para manter o feed antigo armazenado em cache no seu dispositivo. Mais dias, significa mais espaço de armazenamento</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/strDuration3Months" xml:space="preserve">
           <source>three months</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Três meses</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">três meses</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/strDuration2Months" xml:space="preserve">
           <source>two months</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Dois Meses</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">dois Meses</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/strDuration1Year" xml:space="preserve">
           <source>one year</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Um ano</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">um ano</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/strDuration1Week" xml:space="preserve">
           <source>one week</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Uma Semana</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">uma Semana</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/strDuration1Month" xml:space="preserve">
           <source>one month</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Um mês</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">um mês</target>
         </trans-unit>
       </group>
     </body>

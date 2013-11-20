@@ -116,10 +116,12 @@
 									<TextBlock Text="{Binding title}"
 											   Grid.Column="1" Grid.Row="0"
 											   Style="{StaticResource PhoneTextLargeStyle}" />
-									<TextBlock Text="{Binding htmlUrl}"
+									<StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1">
+										<TextBlock Text=" " />
+										<TextBlock Text="{Binding htmlUrl}"
 											   TextAlignment="Left"
-											   Grid.Column="1" Grid.Row="1"
 											   Style="{StaticResource PhoneTextAccentStyle}" />
+									</StackPanel>
 								</Grid>
 							</DataTemplate>
 						</ListBox.ItemTemplate>

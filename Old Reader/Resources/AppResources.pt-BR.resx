@@ -124,11 +124,11 @@
     <value>pt-BR</value>
   </data>
   <data name="steLoginExplanation" xml:space="preserve">
-    <value>Por favor, certifique-se que você tiver definido a senha na página de configurações do leitor velho. A partir de agora, esta é a única maneira de acessar os dados.</value>
+    <value>Por favor, certifique-se que você definiu a senha na página de configurações do Old Reader. No momento, esta é a única maneira de acessar os dados.</value>
   </data>
   <data name="strAboutText" xml:space="preserve">
     <value>Este é um cliente de Windows Phone para "The Old Reader".
-Para relatar bugs e feedback, por favor, clique no botão seguinte.</value>
+Para relatar bugs e feedback, por favor, clique no botão a seguir.</value>
   </data>
   <data name="strAboutTitle" xml:space="preserve">
     <value>Sobre</value>
@@ -137,13 +137,13 @@ Para relatar bugs e feedback, por favor, clique no botão seguinte.</value>
     <value>e-mail registrado</value>
   </data>
   <data name="strGoToSettings" xml:space="preserve">
-    <value>Vá para configurações e configurar o endereço de email e a senha para o leitor velho</value>
+    <value>Vá para configurações e configurar o endereço de email e a senha para The Old Reader</value>
   </data>
   <data name="strLoginPage" xml:space="preserve">
     <value>credenciais</value>
   </data>
   <data name="strNoUnreadItems" xml:space="preserve">
-    <value>Não há nenhum itens não lidos aqui. Viva!</value>
+    <value>Não há nenhum item não lido aqui. Viva!</value>
   </data>
   <data name="strPassword" xml:space="preserve">
     <value>senha</value>
@@ -155,88 +155,88 @@ Para relatar bugs e feedback, por favor, clique no botão seguinte.</value>
     <value>Inscrições</value>
   </data>
   <data name="strGettingSubscriptionList" xml:space="preserve">
-    <value>Recebendo inscrições</value>
+    <value>Recebendo Inscrições</value>
   </data>
   <data name="strGettingTagList" xml:space="preserve">
-    <value>Ficando Tags</value>
+    <value>Recebendo Tags</value>
   </data>
   <data name="strGettingUnreadCount" xml:space="preserve">
-    <value>A contagem não lida</value>
+    <value>Recebendo a contagem de não lidos</value>
   </data>
   <data name="strGettingUnreadItems" xml:space="preserve">
-    <value>Obtenção de itens não lidos</value>
+    <value>Recebendo itens não lidos</value>
   </data>
   <data name="strKeepUnread" xml:space="preserve">
-    <value>manter não lidas</value>
+    <value>manter não lidos</value>
   </data>
   <data name="strMarkAllRead" xml:space="preserve">
-    <value>Marcar todas como lidas</value>
+    <value>marcar todos como lidas</value>
   </data>
   <data name="strShare" xml:space="preserve">
     <value>compartilhar</value>
   </data>
   <data name="strViewFull" xml:space="preserve">
-    <value>Exibição - completa</value>
+    <value>exibição completa</value>
   </data>
   <data name="strLocal" xml:space="preserve">
     <value>Salvo</value>
   </data>
   <data name="strSaveLocal" xml:space="preserve">
-    <value>Salvar para Mais Tarde</value>
+    <value>salvar para mais tarde</value>
   </data>
   <data name="strRemoveLocal" xml:space="preserve">
-    <value>remover salva</value>
+    <value>remover salvo</value>
   </data>
   <data name="strAboutMenu" xml:space="preserve">
-    <value>Sobre</value>
+    <value>sobre...</value>
   </data>
   <data name="strRefreshAppButton" xml:space="preserve">
     <value>atualizar</value>
   </data>
   <data name="strSettingsMenu" xml:space="preserve">
-    <value>Configurações</value>
+    <value>configurações...</value>
   </data>
   <data name="strStatusMenu" xml:space="preserve">
-    <value>estatuto de leitor velho...</value>
+    <value>status do Old Reader...</value>
   </data>
   <data name="strDoneAppBarButton" xml:space="preserve">
-    <value>OK</value>
+    <value>ok</value>
   </data>
   <data name="strPressBackToExit" xml:space="preserve">
-    <value>Pressione voltar uma vez mais para sair</value>
+    <value>pressione voltar mais uma vez para sair</value>
   </data>
   <data name="strPressBackToExitTitle" xml:space="preserve">
-    <value>Tem certeza?</value>
+    <value>tem certeza?</value>
   </data>
   <data name="strCredits" xml:space="preserve">
-    <value>Trevor/u/alexandertrevor para melhorias na interface</value>
+    <value>Trevor /u/alexandertrevor por melhorias na interface</value>
   </data>
   <data name="strAddSubscription" xml:space="preserve">
-    <value>Adicionar feed</value>
+    <value>adicionar feed</value>
   </data>
   <data name="strFeedUrl" xml:space="preserve">
     <value>URL do feed</value>
   </data>
   <data name="strTargetFolder" xml:space="preserve">
-    <value>Pasta de Destino</value>
+    <value>pasta de Destino</value>
   </data>
   <data name="strFeeadAddError" xml:space="preserve">
     <value>Não foi possível adicionar o feed.</value>
   </data>
   <data name="strFeedMoveError" xml:space="preserve">
-    <value>a alimentação foi adicionado com sucesso, mas não podia mover para a pasta selecionada.</value>
+    <value>o feed foi adicionado com sucesso, porém, não foi possível mover para a pasta selecionada.</value>
   </data>
   <data name="strAddFeed" xml:space="preserve">
-    <value>Adicionar feed</value>
+    <value>adicionar feed</value>
   </data>
   <data name="strSyncBrowserPrompt" xml:space="preserve">
-    <value>&lt;b&gt;Enter a sincronização Feed URL e pressione para visualizar o conteúdo de alimentação&lt;/b&gt;</value>
+    <value>&lt;b&gt;Adicione a URL do feed e pressione sincronizar para visualizar o conteúdo do feed&lt;/b&gt;</value>
   </data>
   <data name="strSyncButton" xml:space="preserve">
     <value>sincronizar</value>
   </data>
   <data name="strErrorTitle" xml:space="preserve">
-    <value>erro</value>
+    <value>erro!</value>
   </data>
   <data name="strTimeStrDays" xml:space="preserve">
     <value> {0} dia(s) atrás</value>
@@ -245,28 +245,28 @@ Para relatar bugs e feedback, por favor, clique no botão seguinte.</value>
     <value>{0} hora(s) atrás</value>
   </data>
   <data name="strTimeStrNow" xml:space="preserve">
-    <value>AGORA</value>
+    <value>Agora</value>
   </data>
   <data name="strTimeStrUnknown" xml:space="preserve">
     <value>Desconhecido</value>
   </data>
   <data name="strDownloadOlder" xml:space="preserve">
-    <value>Download mais velhos</value>
+    <value>Baixar mais velhos</value>
   </data>
   <data name="strShowAllPosts" xml:space="preserve">
     <value>Mostrar todas as mensagens</value>
   </data>
   <data name="strShowUnreadOnly" xml:space="preserve">
-    <value>Mostrar apenas não lidas</value>
+    <value>Mostrar apenas não lidos</value>
   </data>
   <data name="strVersionStr" xml:space="preserve">
     <value>versão</value>
   </data>
   <data name="strRateApp" xml:space="preserve">
-    <value>taxa app</value>
+    <value>avaliar aplicativo</value>
   </data>
   <data name="strConfirmUnsubscribe" xml:space="preserve">
-    <value>Tem certeza que deseja cancelar sua incri {0}?</value>
+    <value>Tem certeza que deseja cancelar sua incrição de {0}?</value>
   </data>
   <data name="strMenuMove" xml:space="preserve">
     <value>mover</value>
@@ -275,25 +275,25 @@ Para relatar bugs e feedback, por favor, clique no botão seguinte.</value>
     <value>cancelar assinatura</value>
   </data>
   <data name="strMoveFrom" xml:space="preserve">
-    <value>Mover de</value>
+    <value>mover de</value>
   </data>
   <data name="strMoveSubscriptionPage" xml:space="preserve">
-    <value>mudar a alimentação</value>
+    <value>mover o feed</value>
   </data>
   <data name="strMoveTo" xml:space="preserve">
-    <value>Mover para</value>
+    <value>mover para</value>
   </data>
   <data name="strUnsubscribeFailed" xml:space="preserve">
-    <value>Falha ao cancelar a inscrição de {0}!</value>
+    <value>falha ao cancelar a inscrição de {0}!</value>
   </data>
   <data name="strAdditionalDownloadCount" xml:space="preserve">
     <value>itens adicionais para baixar quando baixar itens antigos</value>
   </data>
   <data name="strEMailMenuItem" xml:space="preserve">
-    <value>email</value>
+    <value>email...</value>
   </data>
   <data name="strOpenInIE" xml:space="preserve">
-    <value>Abra no ie...</value>
+    <value>abra no IE...</value>
   </data>
   <data name="AppTitle" xml:space="preserve">
     <value>Old Reader</value>
@@ -302,30 +302,30 @@ Para relatar bugs e feedback, por favor, clique no botão seguinte.</value>
     <value>Mostrar itens de leitura</value>
   </data>
   <data name="strDuration15Days" xml:space="preserve">
-    <value>15 Dias</value>
+    <value>15 dias</value>
   </data>
   <data name="strDuration1Day" xml:space="preserve">
-    <value>Um Dia</value>
+    <value>Uum dia</value>
   </data>
   <data name="strDuration6Months" xml:space="preserve">
-    <value>Seis meses</value>
+    <value>seis meses</value>
   </data>
   <data name="strDurationDescr" xml:space="preserve">
-    <value>dias para manter o feed antigo armazenado em cache no seu dispositivo. dias mais significa mais capacidade de armazenamento</value>
+    <value>dias para manter o feed antigo armazenado em cache no seu dispositivo. Mais dias, significa mais espaço de armazenamento</value>
   </data>
   <data name="strDuration3Months" xml:space="preserve">
-    <value>Três meses</value>
+    <value>três meses</value>
   </data>
   <data name="strDuration2Months" xml:space="preserve">
-    <value>Dois Meses</value>
+    <value>dois Meses</value>
   </data>
   <data name="strDuration1Year" xml:space="preserve">
-    <value>Um ano</value>
+    <value>um ano</value>
   </data>
   <data name="strDuration1Week" xml:space="preserve">
-    <value>Uma Semana</value>
+    <value>uma Semana</value>
   </data>
   <data name="strDuration1Month" xml:space="preserve">
-    <value>Um mês</value>
+    <value>um mês</value>
   </data>
 </root>
