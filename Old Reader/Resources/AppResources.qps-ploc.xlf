@@ -274,6 +274,14 @@ To report bugs and feedback please click the following button.</target>
           <source>days to keep the old feed cached on your device. more days mean more storage</source>
           <target state="new">days to keep the old feed cached on your device. more days mean more storage</target>
         </trans-unit>
+        <trans-unit translate="yes" id="Resx/strUpdateAppMsgTitle" xml:space="preserve">
+          <source>Update Available!</source>
+          <target state="new">Update Available!</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strUpdateAppMsgBody" xml:space="preserve">
+          <source>An update for the application is available in the marketplace. Do you want to update now?</source>
+          <target state="new">An update for the application is available in the marketplace. Do you want to update now?</target>
+        </trans-unit>
         <trans-unit translate="yes" id="Resx/strDuration3Months" xml:space="preserve">
           <source>three months</source>
           <target state="new">three months</target>

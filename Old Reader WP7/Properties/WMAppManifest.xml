@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
-  <App xmlns="" ProductID="{7a4f4623-a960-487a-83dd-d33b875f4778}" Title="Old Reader" RuntimeType="Silverlight" Version="5.0.0.0" Genre="apps.normal" Author="Bhaskar Priya" Description="Windows Phone client for &quot;The Old Reader&quot;" Publisher="Bhaskar Priya">
+  <App xmlns="" ProductID="{1d949d51-76af-4a5d-acb8-57105c6f877a}" Title="Old Reader" RuntimeType="Silverlight" Version="5.0.0.0" Genre="apps.normal" Author="Bhaskar Priya" Description="Windows Phone client for &quot;The Old Reader&quot;" Publisher="Bhaskar Priya">
     <IconPath IsRelative="true" IsResource="false">oldreader-icon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_MEDIALIB" />

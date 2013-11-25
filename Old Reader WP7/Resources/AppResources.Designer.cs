@@ -161,7 +161,10 @@ namespace Old_Reader_WP7.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Trevor /u/alexandertrevor for UI improvements.
+        ///   Looks up a localized string similar to Trevor /u/alexandertrevor for UI improvements
+        ////u/DatDoodKwan for French translation
+        ////u/diogenesl for pt-br translation
+        ////u/yudayyy for Bahasa Indonesia translation.
         /// </summary>
         public static string strCredits {
             get {
@@ -670,6 +673,24 @@ namespace Old_Reader_WP7.Resources {
         public static string strUnsubscribeFailed {
             get {
                 return ResourceManager.GetString("strUnsubscribeFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An update for the application is available in the marketplace. Do you want to update now?.
+        /// </summary>
+        public static string strUpdateAppMsgBody {
+            get {
+                return ResourceManager.GetString("strUpdateAppMsgBody", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update Available!.
+        /// </summary>
+        public static string strUpdateAppMsgTitle {
+            get {
+                return ResourceManager.GetString("strUpdateAppMsgTitle", resourceCulture);
             }
         }
         

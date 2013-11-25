@@ -331,4 +331,10 @@ To report bugs and feedback please click the following button.</value>
   <data name="strDurationDescr" xml:space="preserve">
     <value>days to keep the old feed cached on your device. more days mean more storage</value>
   </data>
+  <data name="strUpdateAppMsgBody" xml:space="preserve">
+    <value>An update for the application is available in the marketplace. Do you want to update now?</value>
+  </data>
+  <data name="strUpdateAppMsgTitle" xml:space="preserve">
+    <value>Update Available!</value>
+  </data>
 </root>

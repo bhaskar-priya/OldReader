@@ -146,6 +146,8 @@
       <DependentUpon>TagView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Utilities\AnimationHelper.cs" />
+    <Compile Include="Utilities\ApplicationUpdateReminder.cs" />
+    <Compile Include="Utilities\AppSettings.cs" />
     <Compile Include="Utilities\ValueConverters.cs" />
     <Compile Include="Utils.cs" />
     <Compile Include="WS\Remoting.cs" />
@@ -349,6 +351,12 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Cimbalino.Phone.Toolkit">
+      <HintPath>..\packages\Cimbalino.Phone.Toolkit.3.2.1\lib\wp8\Cimbalino.Phone.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Cimbalino.Phone.Toolkit.Background">
+      <HintPath>..\packages\Cimbalino.Phone.Toolkit.Background.3.2.1\lib\wp8\Cimbalino.Phone.Toolkit.Background.dll</HintPath>
+    </Reference>
     <Reference Include="Coding4Fun.Toolkit.Controls">
       <HintPath>..\packages\Coding4Fun.Toolkit.Controls.2.0.7\lib\windowsphone8\Coding4Fun.Toolkit.Controls.dll</HintPath>
     </Reference>
@@ -370,6 +378,7 @@
     <Reference Include="System.Net.Http.Primitives">
       <HintPath>..\packages\Microsoft.Net.Http.2.1.10\lib\sl4-windowsphone71\System.Net.Http.Primitives.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Interactivity, Version=3.9.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
     <XliffResource Include="Resources\AppResources.cs-CZ.xlf">

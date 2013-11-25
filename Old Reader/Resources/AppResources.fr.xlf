@@ -274,6 +274,14 @@ Pour signaler bugs et commentaires cliquez sur le bouton suivant.</target>
           <source>days to keep the old feed cached on your device. more days mean more storage</source>
           <target state="translated">jours pendant lesquels l'ancien flux est gardé en cache sur votre appareil. plus de jours : plus de stockage nécessaire</target>
         </trans-unit>
+        <trans-unit translate="yes" id="Resx/strUpdateAppMsgTitle" xml:space="preserve">
+          <source>Update Available!</source>
+          <target state="new">Update Available!</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strUpdateAppMsgBody" xml:space="preserve">
+          <source>An update for the application is available in the marketplace. Do you want to update now?</source>
+          <target state="new">An update for the application is available in the marketplace. Do you want to update now?</target>
+        </trans-unit>
         <trans-unit translate="yes" id="Resx/strDuration3Months" xml:space="preserve">
           <source>three months</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">trois mois</target>

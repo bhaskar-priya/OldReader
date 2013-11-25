@@ -12,8 +12,7 @@ using Old_Reader.Resources;
 using Old_Reader_WP7.Resources;
 #endif
 using System.Collections.Generic;
-using System.Linq;
-using System.IO.IsolatedStorage;
+using Utilities;
 
 namespace Old_Reader
 {
@@ -61,8 +60,13 @@ namespace Old_Reader
 				// and consume battery power when the user is not using the phone.
 				PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
 			}
-
+			if (updateReminder.UpdateRejectedCount < 5)
+			{
+				updateReminder.ForceCheckForUpdates();
+			}
 		}
+
+		public Utilities.ApplicationUpdateReminder updateReminder = new Utilities.ApplicationUpdateReminder();
 
 		// Code to execute when the application is launching (eg, from Start)
 		// This code will not execute when the application is reactivated
@@ -252,25 +256,15 @@ namespace Old_Reader
 			}
 		}
 
-		public static IsolatedStorageSettings userSettings = IsolatedStorageSettings.ApplicationSettings;
-
 		public static String UserEMail
 		{
 			get
 			{
-				try
-				{
-					return (String)userSettings[Old_Reader_Utils.OldReaderConsts.EMail];
-				}
-				catch
-				{
-					return "";
-				}
+				return Utilities.AppSettings.Read<String>(Old_Reader_Utils.OldReaderConsts.EMail, "");
 			}
 			set
 			{
-				userSettings[Old_Reader_Utils.OldReaderConsts.EMail] = value;
-				userSettings.Save();
+				Utilities.AppSettings.Write(Old_Reader_Utils.OldReaderConsts.EMail, value);
 			}
 		}
 
@@ -278,19 +272,11 @@ namespace Old_Reader
 		{
 			get
 			{
-				try
-				{
-					return (String)userSettings[Old_Reader_Utils.OldReaderConsts.Password];
-				}
-				catch
-				{
-					return "";
-				}
+				return Utilities.AppSettings.Read<String>(Old_Reader_Utils.OldReaderConsts.Password, "");
 			}
 			set
 			{
-				userSettings[Old_Reader_Utils.OldReaderConsts.Password] = value;
-				userSettings.Save();
+				Utilities.AppSettings.Write(Old_Reader_Utils.OldReaderConsts.Password, value);
 			}
 		}
 
@@ -298,19 +284,11 @@ namespace Old_Reader
 		{
 			get
 			{
-				try
-				{
-					return (bool)userSettings[Old_Reader_Utils.OldReaderConsts.showReadItems];
-				}
-				catch
-				{
-					return false;
-				}
+				return Utilities.AppSettings.Read<bool>(Old_Reader_Utils.OldReaderConsts.showReadItems, false);
 			}
 			set
 			{
-				userSettings[Old_Reader_Utils.OldReaderConsts.showReadItems] = value;
-				userSettings.Save();
+				Utilities.AppSettings.Write(Old_Reader_Utils.OldReaderConsts.showReadItems, value);
 			}
 		}
 
@@ -318,19 +296,11 @@ namespace Old_Reader
 		{
 			get
 			{
-				try
-				{
-					return (int)userSettings[Old_Reader_Utils.OldReaderConsts.additionalDownloadCount];
-				}
-				catch
-				{
-					return 25;
-				}
+				return Utilities.AppSettings.Read<int>(Old_Reader_Utils.OldReaderConsts.additionalDownloadCount, 25);
 			}
 			set
 			{
-				userSettings[Old_Reader_Utils.OldReaderConsts.additionalDownloadCount] = value;
-				userSettings.Save();
+				Utilities.AppSettings.Write(Old_Reader_Utils.OldReaderConsts.additionalDownloadCount, value);
 			}
 		}
 
@@ -338,19 +308,12 @@ namespace Old_Reader
 		{
 			get
 			{
-				try
-				{
-					return (int)userSettings[Old_Reader_Utils.OldReaderConsts.retentionDaysCount];
-				}
-				catch
-				{
-					return Old_Reader_Utils.Utils.DaysToString[AppResources.strDuration3Months];
-				}
+				return Utilities.AppSettings.Read<int>(Old_Reader_Utils.OldReaderConsts.retentionDaysCount,
+					Old_Reader_Utils.Utils.DaysToString[AppResources.strDuration3Months]);
 			}
 			set
 			{
-				userSettings[Old_Reader_Utils.OldReaderConsts.retentionDaysCount] = value;
-				userSettings.Save();
+				Utilities.AppSettings.Write(Old_Reader_Utils.OldReaderConsts.retentionDaysCount, value);
 			}
 		}
 
