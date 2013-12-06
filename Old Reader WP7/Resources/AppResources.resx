@@ -337,4 +337,10 @@ To report bugs and feedback please click the following button.</value>
   <data name="strUpdateAppMsgTitle" xml:space="preserve">
     <value>Update Available!</value>
   </data>
+  <data name="strGettingStarredItems" xml:space="preserve">
+    <value>Getting starred items</value>
+  </data>
+  <data name="strStarredItemsLabel" xml:space="preserve">
+    <value>Starred</value>
+  </data>
 </root>

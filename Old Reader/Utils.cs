@@ -130,6 +130,8 @@ namespace Old_Reader_Utils
 					return AppNs.Resources.AppResources.strGettingUnreadCount;
 				case DataModel.OldReaderContents.TInitializationStates.kGettingUnreadItems:
 					return AppNs.Resources.AppResources.strGettingUnreadItems;
+				case DataModel.OldReaderContents.TInitializationStates.kGettingStarredItems:
+					return AppNs.Resources.AppResources.strGettingStarredItems;
 			}
 			return "";
 		}

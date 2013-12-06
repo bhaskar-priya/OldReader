@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
-  <file datatype="xml" source-language="en-US" target-language="fr" original="AppResources.resx" tool-id="MultilingualAppToolkit" product-name="Old Reader" product-version="5.0.0" build-num="0">
+  <file datatype="xml" source-language="en-US" target-language="fr" original="AppResources.resx" tool-id="MultilingualAppToolkit" product-name="Old Reader" product-version="5.1.0" build-num="0">
     <header>
       <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="2.1.1100.0" tool-company="Microsoft" />
     </header>
@@ -277,6 +277,14 @@ Pour signaler bugs et commentaires cliquez sur le bouton suivant.</target>
         <trans-unit translate="yes" id="Resx/strUpdateAppMsgTitle" xml:space="preserve">
           <source>Update Available!</source>
           <target state="new">Update Available!</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strGettingStarredItems" xml:space="preserve">
+          <source>Getting starred items</source>
+          <target state="new">Getting starred items</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strStarredItemsLabel" xml:space="preserve">
+          <source>Starred</source>
+          <target state="new">Starred</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/strUpdateAppMsgBody" xml:space="preserve">
           <source>An update for the application is available in the marketplace. Do you want to update now?</source>

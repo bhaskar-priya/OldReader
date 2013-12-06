@@ -326,6 +326,15 @@ namespace Old_Reader.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Getting starred items.
+        /// </summary>
+        public static string strGettingStarredItems {
+            get {
+                return ResourceManager.GetString("strGettingStarredItems", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Getting Subscriptions.
         /// </summary>
         public static string strGettingSubscriptionList {
@@ -583,6 +592,15 @@ namespace Old_Reader.Resources {
         public static string strShowUnreadOnly {
             get {
                 return ResourceManager.GetString("strShowUnreadOnly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Starred.
+        /// </summary>
+        public static string strStarredItemsLabel {
+            get {
+                return ResourceManager.GetString("strStarredItemsLabel", resourceCulture);
             }
         }
         

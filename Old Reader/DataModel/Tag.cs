@@ -104,7 +104,11 @@ namespace DataModel
 			JArray tagList = (JArray)obj[OldReaderConsts.tags];
 			foreach (JObject curObj in tagList)
 			{
-				tags.Add(new Tag() { id = (String)curObj[OldReaderConsts.id], title = "" });
+				Tag curTag=new Tag() { id = (String)curObj[OldReaderConsts.id], title = "" };
+				if (curTag.id != "user/-/state/com.google/starred")
+				{
+					tags.Add(curTag);
+				}
 			}
 			return tags;
 		}
@@ -113,6 +117,14 @@ namespace DataModel
 		{
 			id = "user/-/state/com.google/reading-list",
 			title = "All Items",
+			unreadCount = 0,
+			Subscriptions = null
+		};
+
+		public static Tag StarredItems = new Tag()
+		{
+			id = "user/-/state/com.google/starred",
+			title = "Starred",
 			unreadCount = 0,
 			Subscriptions = null
 		};

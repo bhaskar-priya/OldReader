@@ -23,7 +23,8 @@ namespace DataModel
 			kGettingTagList,
 			kGettingSubscription,
 			kGettingUnreadCount,
-			kGettingUnreadItems
+			kGettingUnreadItems,
+			kGettingStarredItems
 		};
 
 		public delegate void InitializationCompleteHandler(OldReaderContents contents);

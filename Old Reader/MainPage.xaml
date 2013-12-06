@@ -129,8 +129,57 @@
 			<controls:PanoramaItem Name="localContentPanaromaItem"
 								Header="{Binding Path=LocalizedResources.strLocal, Source={StaticResource LocalizedStrings}}" >
 				<ListBox Name="savedFeedsList"
-						 ItemsSource="{Binding StarredFeeds}"
+						 ItemsSource="{Binding LocalFeeds}"
 						 SelectionChanged="savedFeedsList_SelectionChanged"
+						 Width="auto">
+					<ListBox.ItemContainerStyle>
+						<Style TargetType="ListBoxItem">
+							<Setter Property="HorizontalAlignment" Value="Stretch" />
+							<Setter Property="HorizontalContentAlignment" Value="Stretch" />
+						</Style>
+					</ListBox.ItemContainerStyle>
+					<ListBox.ItemTemplate>
+						<DataTemplate>
+							<StackPanel>
+								<Grid>
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition Width="auto" />
+										<ColumnDefinition Width="*" />
+										<ColumnDefinition Width="auto" />
+									</Grid.ColumnDefinitions>
+									<Image Source="{Binding origin, Converter={StaticResource FilePathToImageConverter}}"
+										   Grid.Column="0"
+										   Width="20" Height="20" />
+									<StackPanel  Grid.Column="1">
+										<TextBlock Text="{Binding title}" Margin="5,0,0,5"
+												   Style="{Binding isUnread, Converter={StaticResource FeedTemplateSelector}}"/>
+										<TextBlock Text="{Binding publishedTime, Converter={StaticResource TimeToHumanStrConverter}}"
+												   TextAlignment="Left" Grid.Column="0" Margin="15,0,0,0"
+												   Style="{StaticResource PhoneTextSubtleStyle}" />
+									</StackPanel>
+									<Button Name="btnAddToFavorite" Grid.Column="2" BorderBrush="White" BorderThickness="1"
+											Click="btnAddToFavorite_Click"
+											Style="{StaticResource borderlessButton}"
+											Width="40" Height="40"
+											HorizontalAlignment="Center" VerticalAlignment="Center"
+											toolkit:TiltEffect.IsTiltEnabled="True" >
+										<StackPanel>
+											<Image Source="{Binding id, Converter={StaticResource FeedListIconConvertor}}"
+												   Width="38" Height="38" />
+										</StackPanel>
+									</Button>
+								</Grid>
+								<Rectangle Fill="Gray" Height="1" HorizontalAlignment="Stretch" />
+							</StackPanel>
+						</DataTemplate>
+					</ListBox.ItemTemplate>
+				</ListBox>
+			</controls:PanoramaItem>
+			<controls:PanoramaItem Name="starredItemsPanoramaItem"
+								   Header="{Binding Path=LocalizedResources.strStarredItemsLabel, Source={StaticResource LocalizedStrings}}" >
+				<ListBox Name="starredFeedsList"
+						 ItemsSource="{Binding StarredFeeds}"
+						 SelectionChanged="starredFeedsList_SelectionChanged"
 						 Width="auto">
 					<ListBox.ItemContainerStyle>
 						<Style TargetType="ListBoxItem">
