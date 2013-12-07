@@ -203,20 +203,7 @@ namespace WS
 
 		public void markFeedItemsRead(List<String> szItemIds, bool bRead)
 		{
-			if (szItemIds != null && szItemIds.Count > 0)
-			{
-				StringBuilder sb = new StringBuilder();
-				sb.AppendFormat("{0}=user/-/state/com.google/read", bRead ? "a" : "r");
-
-				foreach (String curItemId in szItemIds)
-				{
-					sb.AppendFormat("&i={0}", curItemId);
-				}
-
-				String szPostData = sb.ToString();
-
-				Post(szAPIEndPoint + "edit-tag", szPostData);
-			}
+			changeTagOfItems(DataModel.FeedItem.readItemTag, szItemIds, bRead);
 		}
 
 		public void markAllItemsAsRead(String szFeedId)
@@ -228,24 +215,32 @@ namespace WS
 
 		public void starItem(String szFeedId, bool bStar)
 		{
-			String szPostData = String.Format("{0}=user/-/state/com.google/starred&i={1}", bStar ? "a" : "r", szFeedId);
+			String szPostData = String.Format("{0}={2}&i={1}", bStar ? "a" : "r", szFeedId, DataModel.Tag.StarredItems.id);
 
 			Post(szAPIEndPoint + "edit-tag", szPostData);
 		}
 
 		public void starItems(List<String> szFeedIds, bool bStar)
 		{
-			StringBuilder sb = new StringBuilder();
-			sb.AppendFormat("{0}=user/-/state/com.google/starred", bStar ? "a" : "r");
+			changeTagOfItems(DataModel.Tag.StarredItems.id, szFeedIds, bStar);
+		}
 
-			foreach (String curItemId in szFeedIds)
+		private void changeTagOfItems(String szTagName, List<String> szFeedIds, bool bAdd)
+		{
+			if (szFeedIds != null && szFeedIds.Count > 0)
 			{
-				sb.AppendFormat("&i={0}", curItemId);
+				StringBuilder sb = new StringBuilder();
+				sb.AppendFormat("{0}={1}", bAdd ? "a" : "r", szTagName);
+
+				foreach (String curItemId in szFeedIds)
+				{
+					sb.AppendFormat("&i={0}", curItemId);
+				}
+
+				String szPostData = sb.ToString();
+
+				Post(szAPIEndPoint + "edit-tag", szPostData);
 			}
-
-			String szPostData = sb.ToString();
-
-			Post(szAPIEndPoint + "edit-tag", szPostData);
 		}
 
 		public void addSubscription(String szFeedUrl)

@@ -249,7 +249,6 @@ namespace Old_Reader
 					StarredFeeds.Add(curCachedFeedItem.toFeedItem());
 				}
 			});
-			
 		}
 
 		private void subscriptionList_SelectionChanged(object sender, SelectionChangedEventArgs e)
