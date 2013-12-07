@@ -106,7 +106,7 @@
 												   TextAlignment="Left" Grid.Column="0" Margin="15,0,0,0"
 												   Style="{StaticResource PhoneTextSubtleStyle}" />
 									</StackPanel>
-									<Button Name="btnAddToFavorite" Grid.Column="2" BorderBrush="White" BorderThickness="1"
+									<Button Name="btnAddToFavorite" Grid.Column="2" BorderBrush="White" BorderThickness="0"
 											Click="btnAddToFavorite_click"
 											HorizontalAlignment="Center" VerticalAlignment="Center"
 											toolkit:TiltEffect.IsTiltEnabled="True" >

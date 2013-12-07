@@ -284,7 +284,10 @@ namespace DataModel
 			}
 		}
 
-		public FeedItem(String p_Id, String p_Content, String p_Author, String p_href, String p_Title, bool p_Unread, DateTime p_PublishedTime)
+		public bool Starred { get; set; }
+
+		public FeedItem(String p_Id, String p_Content, String p_Author, String p_href, String p_Title,
+			bool p_Unread, DateTime p_PublishedTime, bool bStarred)
 		{
 			m_id = p_Id;
 			m_summary = p_Content;
@@ -293,6 +296,7 @@ namespace DataModel
 			m_title = p_Title;
 			m_isUnread = p_Unread;
 			m_PublishedTime = p_PublishedTime;
+			Starred = bStarred;
 		}
 
 		public static List<FeedItem> CreateFromResponse(String szResponse, out String continuationId)
@@ -315,7 +319,7 @@ namespace DataModel
 						(String)curFeedObj[OldReaderConsts.author],
 						(String)(((JArray)curFeedObj[OldReaderConsts.canonical])[0][OldReaderConsts.href]),
 						rx.Replace((String)curFeedObj[OldReaderConsts.title], new MatchEvaluator(ConvertEscapedText)),
-						true, DateTime.Now);
+						true, DateTime.Now, false);
 
 					String strPublished = (string)curFeedObj[OldReaderConsts.published];
 					String strCrawlTime = (String)curFeedObj[OldReaderConsts.crawlTimeMsec];
@@ -341,6 +345,10 @@ namespace DataModel
 						{
 							// this feed is already read
 							newFeedItem.isUnread = false;
+						}
+						if (curCatObj == DataModel.Tag.StarredItems.id)
+						{
+							newFeedItem.Starred = true;
 						}
 					}
 

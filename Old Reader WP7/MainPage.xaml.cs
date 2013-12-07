@@ -92,29 +92,6 @@ namespace Old_Reader
 			}
 		}
 
-		private ObservableCollection<DataModel.FeedItem> m_LocalFeeds;
-		public ObservableCollection<DataModel.FeedItem> LocalFeeds
-		{
-			get
-			{
-				return m_LocalFeeds;
-			}
-			set
-			{
-#if OLD_READER_WP7
-				NotifyPropertyChanging("LocalFeeds");
-#else
-				NotifyPropertyChanging();
-#endif
-				m_LocalFeeds = value;
-#if OLD_READER_WP7
-				NotifyPropertyChanged("LocalFeeds");
-#else
-				NotifyPropertyChanged();
-#endif
-			}
-		}
-
 		private ObservableCollection<DataModel.FeedItem> m_StarredFeeds;
 		public ObservableCollection<DataModel.FeedItem> StarredFeeds
 		{
@@ -169,12 +146,20 @@ namespace Old_Reader
 		{
 			Dispatcher.BeginInvoke(() =>
 				{
-					if (LocalFeeds == null || LocalFeeds.Count == 0)
-					{
-						LocalFeeds = new ObservableCollection<DataModel.FeedItem>();
-						refreshLocalFeeds();
-					}
 					GetStarredFeeds();
+					// all said and done
+					// migrate the starred items once
+					if (!AppNs.App.StarredMigrationDone)
+					{
+						AppNs.App.StarredMigrationDone = true;
+						var localFeedItems = from DataStore.CachedFeed curItem in App.ReaderDB.CachedFeeds where curItem.Starred == true select curItem;
+						List<string> strStarredItemIds = new List<string>();
+						foreach (var curCachedFeedItem in localFeedItems)
+						{
+							strStarredItemIds.Add(curCachedFeedItem.ID);
+						}
+						(new WS.Remoting()).starItems(strStarredItemIds, true);
+					}
 					Contents = contents;
 					JobComplete();
 				});
@@ -230,18 +215,13 @@ namespace Old_Reader
 			if (Contents == null)
 			{
 				Contents = new DataModel.OldReaderContents();
-				if (Contents.Tags != null && Contents.Subscriptions != null)
-				{
-					LocalFeeds = new ObservableCollection<DataModel.FeedItem>();
-					refreshLocalFeeds();
-				}
 			}
 			else
 			{
 				DataModel.OldReaderContents tmpContent = Contents;
 				Contents = null;
 				Contents = tmpContent;
-				refreshLocalFeeds();
+				refreshLocalStarredFeeds();
 
 				if (AppNs.App.RefreshContents)
 				{
@@ -256,15 +236,19 @@ namespace Old_Reader
 			}
 		}
 
-		private void refreshLocalFeeds()
+		private void refreshLocalStarredFeeds()
 		{
-			LocalFeeds = new ObservableCollection<DataModel.FeedItem>();
-			// get the local feeds from database
-			var localFeedItems = from DataStore.CachedFeed curItem in App.ReaderDB.CachedFeeds where curItem.Starred == true select curItem;
-			foreach (var curCachedFeedItem in localFeedItems)
+			Dispatcher.BeginInvoke(() =>
 			{
-				LocalFeeds.Add(curCachedFeedItem.toFeedItem());
-			}
+				JobComplete();
+				StarredFeeds = new ObservableCollection<DataModel.FeedItem>();
+				// get the local feeds from database
+				var localFeedItems = from DataStore.CachedFeed curItem in App.ReaderDB.CachedFeeds where curItem.Starred == true select curItem;
+				foreach (var curCachedFeedItem in localFeedItems)
+				{
+					StarredFeeds.Add(curCachedFeedItem.toFeedItem());
+				}
+			});
 		}
 
 		private void subscriptionList_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -287,17 +271,22 @@ namespace Old_Reader
 			}
 		}
 
-		private void savedFeedsList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		private void starredFeedsList_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
-			if (savedFeedsList.SelectedIndex >= 0)
+			if (starredFeedsList.SelectedIndex >= 0)
 			{
-				App.FeedItems = new List<DataModel.FeedItem>();
-				foreach (var curItem in LocalFeeds)
-				{
-					App.FeedItems.Add(curItem);
-				}
-				NavigationService.Navigate(new Uri(String.Format("/FeedView.xaml?selIdx={0}&live=false", savedFeedsList.SelectedIndex), UriKind.Relative));
+				OpenFeedViewForCustomList(StarredFeeds, starredFeedsList.SelectedIndex);
 			}
+		}
+
+		private void OpenFeedViewForCustomList(ObservableCollection<DataModel.FeedItem> customList, int selIndex)
+		{
+			App.FeedItems = new List<DataModel.FeedItem>();
+			foreach (var curItem in customList)
+			{
+				App.FeedItems.Add(curItem);
+			}
+			NavigationService.Navigate(new Uri(String.Format("/FeedView.xaml?selIdx={0}", selIndex), UriKind.Relative));
 		}
 
 		private void ApplicationBarRefreshButton_Click(object sender, EventArgs e)
@@ -323,10 +312,6 @@ namespace Old_Reader
 					}
 				}
 			}
-			else if (mainPanorama.SelectedItem == localContentPanaromaItem)
-			{
-				refreshLocalFeeds();
-			}
 			else if (mainPanorama.SelectedItem == starredItemsPanoramaItem)
 			{
 				GetStarredFeeds();
@@ -337,19 +322,29 @@ namespace Old_Reader
 		{
 			trayProgress.Text = Utils.getInitializationStateStr(DataModel.OldReaderContents.TInitializationStates.kGettingStarredItems);
 			StartJob();
-			WS.Remoting rm = new WS.Remoting(StarredComplete);
-			rm.getUnreadItemsForSubscription(DataModel.Tag.StarredItems.id, 10);
+			WS.Remoting rm = new WS.Remoting(StarredItemsComplete);
+			rm.getUnreadItemsForSubscription(DataModel.Tag.StarredItems.id, 100);
 		}
 
-		private void StarredComplete(String szResponse)
+		private void StarredItemsComplete(String szResponse)
 		{
 			String continuationId = "";
 			List<DataModel.FeedItem> newFeedItems = DataModel.FeedItem.CreateFromResponse(szResponse, out continuationId);
-			Dispatcher.BeginInvoke(() =>
+			foreach(var curFeed in newFeedItems)
 			{
-				JobComplete();
-				StarredFeeds = new ObservableCollection<DataModel.FeedItem>(newFeedItems);
-			});
+				DataStore.CachedFeed cachedFeed = App.ReaderDB.CachedFeeds.FirstOrDefault(cf => cf.ID == curFeed.id);
+				if (cachedFeed == null)
+				{
+					App.ReaderDB.CachedFeeds.InsertOnSubmit(DataStore.CachedFeed.fromFeedItem(curFeed));
+				}
+				else
+				{
+					cachedFeed.Starred = curFeed.Starred;
+				}
+			}
+			App.ReaderDB.SubmitChanges();
+
+			refreshLocalStarredFeeds();
 		}
 
 		private bool TryLoggingIn()

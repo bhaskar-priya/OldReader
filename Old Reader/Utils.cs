@@ -50,6 +50,7 @@ namespace Old_Reader_Utils
 		public static string showReadItems = "showReadItems";
 		public static string additionalDownloadCount = "additionalDownloadCount";
 		public static string retentionDaysCount = "retentionDaysCount";
+		public static string starredMigrationDone = "starredMigrationDone";
 	}
 
 	public class OldReaderTrackingConsts

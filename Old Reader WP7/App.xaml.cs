@@ -231,6 +231,18 @@ namespace Old_Reader_WP7
 			}
 		}
 
+		public static bool StarredMigrationDone
+		{
+			get
+			{
+				return Utilities.AppSettings.Read<bool>(Old_Reader_Utils.OldReaderConsts.starredMigrationDone, false);
+			}
+			set
+			{
+				Utilities.AppSettings.Write(Old_Reader_Utils.OldReaderConsts.starredMigrationDone, value);
+			}
+		}
+
 		public static bool RefreshContents { get; set; }
 	}
 }

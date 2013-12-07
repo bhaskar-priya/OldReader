@@ -226,6 +226,28 @@ namespace WS
 			Post(szAPIEndPoint + "mark-all-as-read", szPostData);
 		}
 
+		public void starItem(String szFeedId, bool bStar)
+		{
+			String szPostData = String.Format("{0}=user/-/state/com.google/starred&i={1}", bStar ? "a" : "r", szFeedId);
+
+			Post(szAPIEndPoint + "edit-tag", szPostData);
+		}
+
+		public void starItems(List<String> szFeedIds, bool bStar)
+		{
+			StringBuilder sb = new StringBuilder();
+			sb.AppendFormat("{0}=user/-/state/com.google/starred", bStar ? "a" : "r");
+
+			foreach (String curItemId in szFeedIds)
+			{
+				sb.AppendFormat("&i={0}", curItemId);
+			}
+
+			String szPostData = sb.ToString();
+
+			Post(szAPIEndPoint + "edit-tag", szPostData);
+		}
+
 		public void addSubscription(String szFeedUrl)
 		{
 			String szPostData = "";

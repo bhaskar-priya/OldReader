@@ -65,7 +65,7 @@ namespace DataStore
 				crawledtime = feedItem.publishedTime,
 				Unread = feedItem.isUnread,
 				dirty = false,
-				Starred = false
+				Starred = feedItem.Starred
 			};
 
 			if (feedItem.origin != null)
@@ -86,7 +86,8 @@ namespace DataStore
 
 		public DataModel.FeedItem toFeedItem()
 		{
-			DataModel.FeedItem newFeedItem = new DataModel.FeedItem(this.ID, this.Content, this.Author, this.href, this.Title, this.Unread, this.publishedTime);
+			DataModel.FeedItem newFeedItem = new DataModel.FeedItem(this.ID, this.Content, this.Author, this.href,
+				this.Title, this.Unread, this.publishedTime, this.Starred);
 
 			foreach (var curCat in Categories.Split('\n'))
 			{
@@ -116,6 +117,9 @@ namespace DataStore
 			{
 				cachedFeed.Starred = !cachedFeed.Starred;
 				App.ReaderDB.SubmitChanges();
+
+				WS.Remoting rm = new WS.Remoting();
+				rm.starItem(cachedFeed.ID, cachedFeed.Starred);
 			}
 		}
 

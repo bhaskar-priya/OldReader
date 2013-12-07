@@ -105,7 +105,7 @@ namespace DataModel
 			foreach (JObject curObj in tagList)
 			{
 				Tag curTag=new Tag() { id = (String)curObj[OldReaderConsts.id], title = "" };
-				if (curTag.id != "user/-/state/com.google/starred")
+				if (curTag.id != StarredItems.id)
 				{
 					tags.Add(curTag);
 				}
