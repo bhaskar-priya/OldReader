@@ -90,6 +90,23 @@ namespace Old_Reader_Utils
 			return outDictionary;
 		}
 
+		public static void SyncStarredItems()
+		{
+			// all said and done
+			// migrate the starred items once
+			if (!AppNs.App.StarredMigrationDone)
+			{
+				AppNs.App.StarredMigrationDone = true;
+				var localFeedItems = from DataStore.CachedFeed curItem in AppNs.App.ReaderDB.CachedFeeds where curItem.Starred == true select curItem;
+				List<string> strStarredItemIds = new List<string>();
+				foreach (var curCachedFeedItem in localFeedItems)
+				{
+					strStarredItemIds.Add(curCachedFeedItem.ID);
+				}
+				(new WS.Remoting()).starItems(strStarredItemIds, true);
+			}
+		}
+
 		public static int handleUnreadCounts(String szResponse,ObservableCollection<Subscription> subs,ObservableCollection<Tag> tags)
 		{
 			int nMax = 0;

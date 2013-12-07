@@ -147,19 +147,7 @@ namespace Old_Reader
 			Dispatcher.BeginInvoke(() =>
 				{
 					GetStarredFeeds();
-					// all said and done
-					// migrate the starred items once
-					if (!AppNs.App.StarredMigrationDone)
-					{
-						AppNs.App.StarredMigrationDone = true;
-						var localFeedItems = from DataStore.CachedFeed curItem in App.ReaderDB.CachedFeeds where curItem.Starred == true select curItem;
-						List<string> strStarredItemIds = new List<string>();
-						foreach (var curCachedFeedItem in localFeedItems)
-						{
-							strStarredItemIds.Add(curCachedFeedItem.ID);
-						}
-						(new WS.Remoting()).starItems(strStarredItemIds, true);
-					}
+					Utils.SyncStarredItems();
 					Contents = contents;
 					JobComplete();
 				});
@@ -215,13 +203,14 @@ namespace Old_Reader
 			if (Contents == null)
 			{
 				Contents = new DataModel.OldReaderContents();
+				RefreshLocalStarredFeeds();
 			}
 			else
 			{
 				DataModel.OldReaderContents tmpContent = Contents;
 				Contents = null;
 				Contents = tmpContent;
-				refreshLocalStarredFeeds();
+				RefreshLocalStarredFeeds();
 
 				if (AppNs.App.RefreshContents)
 				{
@@ -236,19 +225,15 @@ namespace Old_Reader
 			}
 		}
 
-		private void refreshLocalStarredFeeds()
+		private void RefreshLocalStarredFeeds()
 		{
-			Dispatcher.BeginInvoke(() =>
+			StarredFeeds = new ObservableCollection<DataModel.FeedItem>();
+			// get the local feeds from database
+			var localFeedItems = from DataStore.CachedFeed curItem in App.ReaderDB.CachedFeeds where curItem.Starred == true select curItem;
+			foreach (var curCachedFeedItem in localFeedItems)
 			{
-				JobComplete();
-				StarredFeeds = new ObservableCollection<DataModel.FeedItem>();
-				// get the local feeds from database
-				var localFeedItems = from DataStore.CachedFeed curItem in App.ReaderDB.CachedFeeds where curItem.Starred == true select curItem;
-				foreach (var curCachedFeedItem in localFeedItems)
-				{
-					StarredFeeds.Add(curCachedFeedItem.toFeedItem());
-				}
-			});
+				StarredFeeds.Add(curCachedFeedItem.toFeedItem());
+			}
 		}
 
 		private void subscriptionList_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -344,7 +329,11 @@ namespace Old_Reader
 			}
 			App.ReaderDB.SubmitChanges();
 
-			refreshLocalStarredFeeds();
+			Dispatcher.BeginInvoke(() =>
+			{
+				JobComplete();
+				RefreshLocalStarredFeeds();
+			});
 		}
 
 		private bool TryLoggingIn()
