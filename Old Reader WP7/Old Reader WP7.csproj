@@ -185,9 +185,6 @@
       <Link>TagView.xaml.cs</Link>
       <DependentUpon>TagView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="..\Old Reader\Utilities\ApplicationUpdateReminder.cs">
-      <Link>Utilities\ApplicationUpdateReminder.cs</Link>
-    </Compile>
     <Compile Include="..\Old Reader\Utilities\AppSettings.cs">
       <Link>Utilities\AppSettings.cs</Link>
     </Compile>
@@ -419,7 +416,6 @@
   </Target>
   -->
   <ProjectExtensions />
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.WindowsPhone.targets" Label="MultilingualAppToolkitForWindowsPhone" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
     <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />

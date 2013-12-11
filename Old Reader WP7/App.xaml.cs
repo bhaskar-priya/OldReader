@@ -57,13 +57,7 @@ namespace Old_Reader_WP7
 				// and consume battery power when the user is not using the phone.
 				PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
 			}
-			if (updateReminder.UpdateRejectedCount < 5)
-			{
-				updateReminder.ForceCheckForUpdates();
-			}
 		}
-
-		public Utilities.ApplicationUpdateReminder updateReminder = new Utilities.ApplicationUpdateReminder();
 
 		// Code to execute when the application is launching (eg, from Start)
 		// This code will not execute when the application is reactivated
