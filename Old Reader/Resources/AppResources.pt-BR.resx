@@ -139,9 +139,6 @@ Para relatar bugs e feedback, por favor, clique no botão a seguir.</value>
   <data name="strGoToSettings" xml:space="preserve">
     <value>Vá para configurações e configurar o endereço de email e a senha para The Old Reader</value>
   </data>
-  <data name="strLoginPage" xml:space="preserve">
-    <value>credenciais</value>
-  </data>
   <data name="strNoUnreadItems" xml:space="preserve">
     <value>Não há nenhum item não lido aqui. Viva!</value>
   </data>

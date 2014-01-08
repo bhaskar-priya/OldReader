@@ -40,9 +40,9 @@ Pour signaler bugs et commentaires cliquez sur le bouton suivant.</target>
           <source>go to settings and setup the e-mail address and password for The Old Reader</source>
           <target state="translated">Naviguez vers la page de paramètres pour configurer l'adresse e-mail et le mot de passe pour "The Old Reader"</target>
         </trans-unit>
-        <trans-unit id="Resx/strLoginPage" translate="yes" xml:space="preserve">
-          <source>credentials</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">informations d'identification</target>
+        <trans-unit translate="yes" id="Resx/strAppSettingsPage" xml:space="preserve">
+          <source>app settings</source>
+          <target state="new">app settings</target>
         </trans-unit>
         <trans-unit id="Resx/strNoUnreadItems" translate="yes" xml:space="preserve">
           <source>There are no unread items here. Hurray!</source>
@@ -285,6 +285,10 @@ Pour signaler bugs et commentaires cliquez sur le bouton suivant.</target>
         <trans-unit translate="yes" id="Resx/strStarredItemsLabel" xml:space="preserve">
           <source>Starred</source>
           <target state="new">Starred</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strAllItemsOnTop" xml:space="preserve">
+          <source>All Items on top</source>
+          <target state="new">All Items on top</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/strUpdateAppMsgBody" xml:space="preserve">
           <source>An update for the application is available in the marketplace. Do you want to update now?</source>

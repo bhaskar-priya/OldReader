@@ -243,6 +243,18 @@ namespace Old_Reader_WP7
 			}
 		}
 
+		public static bool AllItemsAtTop
+		{
+			get
+			{
+				return Utilities.AppSettings.Read<bool>(Old_Reader_Utils.OldReaderConsts.allItemsAtTop, false);
+			}
+			set
+			{
+				Utilities.AppSettings.Write(Old_Reader_Utils.OldReaderConsts.allItemsAtTop, value);
+			}
+		}
+
 		public static bool RefreshContents { get; set; }
 	}
 }

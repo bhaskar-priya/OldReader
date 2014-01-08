@@ -55,7 +55,14 @@ namespace DataModel
 			if (!String.IsNullOrEmpty(szTagData) && !String.IsNullOrEmpty(szSubData))
 			{
 				Tags = DataModel.Tag.CreateFromResponse(szTagData);
-				Tags.Add(Tag.AllItems);
+				if (App.AllItemsAtTop)
+				{
+					Tags.Insert(0, Tag.AllItems);
+				}
+				else
+				{
+					Tags.Add(Tag.AllItems);
+				}
 				Subscriptions = Subscription.CreateFromResponse(szSubData, Tags);
 			}
 		}
@@ -145,7 +152,14 @@ namespace DataModel
 
 			Tags = DataModel.Tag.CreateFromResponse(szResponse);
 
-			Tags.Add(Tag.AllItems);
+			if (App.AllItemsAtTop)
+			{
+				Tags.Insert(0, Tag.AllItems);
+			}
+			else
+			{
+				Tags.Add(Tag.AllItems);
+			}
 
 			Analytics.GAnalytics.trackOldReaderEvent(OldReaderTrackingConsts.tagListComplete, Tags.Count);
 

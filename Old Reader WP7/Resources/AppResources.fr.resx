@@ -139,9 +139,6 @@ Pour signaler bugs et commentaires cliquez sur le bouton suivant.</value>
   <data name="strGoToSettings" xml:space="preserve">
     <value>Naviguez vers la page de paramètres pour configurer l'adresse e-mail et le mot de passe pour "The Old Reader"</value>
   </data>
-  <data name="strLoginPage" xml:space="preserve">
-    <value>informations d'identification</value>
-  </data>
   <data name="strNoUnreadItems" xml:space="preserve">
     <value>Il n'y a pas d'éléments non lus ici. Hourra !</value>
   </data>

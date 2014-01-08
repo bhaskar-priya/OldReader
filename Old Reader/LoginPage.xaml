@@ -51,7 +51,7 @@
 				<TextBlock Text="{Binding Path=LocalizedResources.AppTitle, Source={StaticResource LocalizedStrings}}"
 					   Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0" />
 			</StackPanel>
-			<TextBlock Text="{Binding Path=LocalizedResources.strLoginPage, Source={StaticResource LocalizedStrings}}" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+			<TextBlock Text="{Binding Path=LocalizedResources.strAppSettingsPage, Source={StaticResource LocalizedStrings}}" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
@@ -64,6 +64,7 @@
 					<PasswordBox Name="txtPasswordBox" />
 					<TextBlock Text="{Binding Path=LocalizedResources.steLoginExplanation, Source={StaticResource LocalizedStrings}}" TextWrapping="Wrap" Style="{StaticResource PhoneTextSubtleStyle}" />
 					<CheckBox Name="chkShowReadItem" Content="{Binding Path=LocalizedResources.strShowReadItems, Source={StaticResource LocalizedStrings}}" />
+					<CheckBox Name="chkAllItemsOntop" Content="{Binding Path=LocalizedResources.strAllItemsOnTop, Source={StaticResource LocalizedStrings}}" />
 					<TextBlock Text="{Binding Path=LocalizedResources.strAdditionalDownloadCount, Source={StaticResource LocalizedStrings}}" TextWrapping="Wrap" />
 					<toolkit:ListPicker Name="moreItemCount"
 										FullModeItemTemplate="{StaticResource PickerFullModeProviderItemTemplate}">

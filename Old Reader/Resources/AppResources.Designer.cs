@@ -152,6 +152,24 @@ namespace Old_Reader.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to All Items on top.
+        /// </summary>
+        public static string strAllItemsOnTop {
+            get {
+                return ResourceManager.GetString("strAllItemsOnTop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to app settings.
+        /// </summary>
+        public static string strAppSettingsPage {
+            get {
+                return ResourceManager.GetString("strAppSettingsPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Are you sure you want to unsubscribe from {0}?.
         /// </summary>
         public static string strConfirmUnsubscribe {
@@ -394,15 +412,6 @@ namespace Old_Reader.Resources {
         public static string strLocal {
             get {
                 return ResourceManager.GetString("strLocal", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to credentials.
-        /// </summary>
-        public static string strLoginPage {
-            get {
-                return ResourceManager.GetString("strLoginPage", resourceCulture);
             }
         }
         

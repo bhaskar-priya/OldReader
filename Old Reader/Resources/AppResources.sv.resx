@@ -139,9 +139,6 @@ För att rapportera buggar och ge feedback, var god tryck på följande knapp.</
   <data name="strGoToSettings" xml:space="preserve">
     <value>gå till inställningar och ställ in e-postadress och lösenord för The Old Reader</value>
   </data>
-  <data name="strLoginPage" xml:space="preserve">
-    <value>uppgifter</value>
-  </data>
   <data name="strNoUnreadItems" xml:space="preserve">
     <value>Du har läst allt här. Hurra!</value>
   </data>

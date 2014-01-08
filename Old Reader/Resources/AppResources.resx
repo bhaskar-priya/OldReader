@@ -142,8 +142,8 @@ To report bugs and feedback please click the following button.</value>
   <data name="strGoToSettings" xml:space="preserve">
     <value>go to settings and setup the e-mail address and password for The Old Reader</value>
   </data>
-  <data name="strLoginPage" xml:space="preserve">
-    <value>credentials</value>
+  <data name="strAppSettingsPage" xml:space="preserve">
+    <value>app settings</value>
   </data>
   <data name="strNoUnreadItems" xml:space="preserve">
     <value>There are no unread items here. Hurray!</value>
@@ -342,5 +342,8 @@ To report bugs and feedback please click the following button.</value>
   </data>
   <data name="strStarredItemsLabel" xml:space="preserve">
     <value>Starred</value>
+  </data>
+  <data name="strAllItemsOnTop" xml:space="preserve">
+    <value>All Items on top</value>
   </data>
 </root>

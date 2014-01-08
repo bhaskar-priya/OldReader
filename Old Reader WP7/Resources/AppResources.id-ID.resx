@@ -142,9 +142,6 @@ Untuk melaporkan bug dan saran silahkan klik tombol berikut.</value>
   <data name="strGoToSettings" xml:space="preserve">
     <value>pergi ke pengaturan dan atur alamat e-mail dan kata sandi untuk The Old Reader</value>
   </data>
-  <data name="strLoginPage" xml:space="preserve">
-    <value>kredensial</value>
-  </data>
   <data name="strNoUnreadItems" xml:space="preserve">
     <value>Tidak ada item yang belum dibaca di sini. Hore!</value>
   </data>
