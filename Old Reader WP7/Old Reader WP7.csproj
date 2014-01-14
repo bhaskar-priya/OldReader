@@ -16,7 +16,7 @@
     <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
     <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
     <SilverlightApplication>true</SilverlightApplication>
-    <SupportedCultures>fr;id-ID;pt-BR;qps-ploc;sv</SupportedCultures>
+    <SupportedCultures>fr;hu-HU;id-ID;pt-BR;qps-ploc;sv</SupportedCultures>
     <XapOutputs>true</XapOutputs>
     <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
     <XapFilename>Old_Reader_WP7.xap</XapFilename>
@@ -354,6 +354,12 @@
       <DependentUpon>AppResources.fr.xlf</DependentUpon>
       <culture>fr</culture>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AppResources.hu-HU.resx">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.hu-HU.xlf</DependentUpon>
+      <culture>hu-HU</culture>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\AppResources.id-ID.resx">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -389,6 +395,10 @@
       <Generator>XliffResxGenerator</Generator>
       <LastGenOutput>AppResources.fr.resx</LastGenOutput>
     </XliffResource>
+    <XliffResource Include="Resources\AppResources.hu-HU.xlf">
+      <Generator>XliffResxGenerator</Generator>
+      <LastGenOutput>AppResources.hu-HU.resx</LastGenOutput>
+    </XliffResource>
     <XliffResource Include="Resources\AppResources.id-ID.xlf">
       <Generator>XliffResxGenerator</Generator>
       <LastGenOutput>AppResources.id-ID.resx</LastGenOutput>
@@ -417,6 +427,7 @@
   -->
   <ProjectExtensions />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.WindowsPhone.targets" Label="MultilingualAppToolkitForWindowsPhone" />
   <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
     <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
     <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />

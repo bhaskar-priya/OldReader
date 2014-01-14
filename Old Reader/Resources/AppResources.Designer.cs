@@ -182,7 +182,8 @@ namespace Old_Reader.Resources {
         ///   Looks up a localized string similar to Trevor /u/alexandertrevor for UI improvements
         ////u/DatDoodKwan for French translation
         ////u/diogenesl for pt-br translation
-        ////u/yudayyy for Bahasa Indonesia translation.
+        ////u/yudayyy for Bahasa Indonesia translation
+        ///Tur Ger for Hungarian.
         /// </summary>
         public static string strCredits {
             get {

@@ -3,6 +3,7 @@
   <DefaultLanguage xmlns="" code="en" />
   <Languages xmlns="">
     <Language code="fr" />
+    <Language code="hu-HU" />
     <Language code="id-ID" />
     <Language code="pt-BR" />
     <Language code="qps-ploc" />

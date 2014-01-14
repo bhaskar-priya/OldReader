@@ -322,12 +322,7 @@ För att rapportera buggar och ge feedback, var god tryck på följande knapp.</
   <data name="strDuration1Month" xml:space="preserve">
     <value>en månad</value>
   </data>
-  <data name="strCredits" xml:space="preserve">
-    <value>Trevor /u/alexandertrevor för interfaceförbättringar
-/u/DatDoodKwan för översättning till franska
-/u/diogenesl för översättning till pt-br
-/u/yudayyy för översättning till Bahasaindonesiska</value>
-  </data>
+  
   <data name="strUpdateAppMsgTitle" xml:space="preserve">
     <value>Uppdatering tillgänglig!</value>
   </data>

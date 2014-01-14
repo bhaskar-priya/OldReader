@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ResourceFlowDirection" xml:space="preserve">
+    <value>LeftToRight</value>
+  </data>
+  <data name="ResourceLanguage" xml:space="preserve">
+    <value>hu-HU</value>
+  </data>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<data name="AppTitle" xml:space="preserve"><value>Old Reader</value></data><data name="steLoginExplanation" xml:space="preserve"><value>Add meg a The Old Reader beállítások oldalán megadott jelszót! Ez az egyetlen lehetőség adataid elérésére.</value></data><data name="strAboutText" xml:space="preserve"><value>Ez egy kliens Windows Phone-ra a The Old Reader felhasználói számára.
+Hibák bejelentéséhez és visszajelzés küldéséhez koppints a gombra!</value></data><data name="strAboutTitle" xml:space="preserve"><value>leírás</value></data><data name="strEMail" xml:space="preserve"><value>regisztrált email</value></data><data name="strGoToSettings" xml:space="preserve"><value>Menj a beállításokhoz és állítsd be az email címed és jelszavad, a The Old Reader részére!</value></data><data name="strAppSettingsPage" xml:space="preserve"><value>alkalmazás beállítások</value></data><data name="strNoUnreadItems" xml:space="preserve"><value>Itt nincs olvasatlan elem. Hurrá!</value></data><data name="strPassword" xml:space="preserve"><value>jelszó</value></data><data name="strSendFeedbackBtnText" xml:space="preserve"><value>visszajelzés küldése...</value></data><data name="strSubscriptions" xml:space="preserve"><value>Feliratkozások</value></data><data name="strGettingSubscriptionList" xml:space="preserve"><value>Feliratkozások letöltése</value></data><data name="strGettingTagList" xml:space="preserve"><value>Címkék letöltése</value></data><data name="strGettingUnreadCount" xml:space="preserve"><value>Olvasatlan elemek számainak letöltése</value></data><data name="strGettingUnreadItems" xml:space="preserve"><value>Olvasatlan elemek letöltése</value></data><data name="strKeepUnread" xml:space="preserve"><value>maradjon olvasatlan</value></data><data name="strMarkAllRead" xml:space="preserve"><value>összes megjelölése olvasottként</value></data><data name="strShare" xml:space="preserve"><value>megosztás</value></data><data name="strViewFull" xml:space="preserve"><value>eredeti megtekintése</value></data><data name="strLocal" xml:space="preserve"><value>Mentve</value></data><data name="strSaveLocal" xml:space="preserve"><value>mentés későbbre</value></data><data name="strRemoveLocal" xml:space="preserve"><value>eltávolítás a mentettek közül</value></data><data name="strAboutMenu" xml:space="preserve"><value>leírás...</value></data><data name="strRefreshAppButton" xml:space="preserve"><value>frissítés</value></data><data name="strSettingsMenu" xml:space="preserve"><value>beállítások...</value></data><data name="strStatusMenu" xml:space="preserve"><value>szerver állapota...</value></data><data name="strDoneAppBarButton" xml:space="preserve"><value>rendben</value></data><data name="strPressBackToExit" xml:space="preserve"><value>Nyomj mégegyszer egy visszát, hogy kilépj!</value></data><data name="strPressBackToExitTitle" xml:space="preserve"><value>tényleg?</value></data><data name="strAddSubscription" xml:space="preserve"><value>feliratkozás hozzáadása</value></data><data name="strFeedUrl" xml:space="preserve"><value>feliratkozás címe</value></data><data name="strTargetFolder" xml:space="preserve"><value>célmappa</value></data><data name="strFeeadAddError" xml:space="preserve"><value>sikertelen a feliratkozás hozzáadása</value></data><data name="strFeedMoveError" xml:space="preserve"><value>feliratkozás sikeresen betöltve, de nem sikerült a kért célmappába helyezni</value></data><data name="strAddFeed" xml:space="preserve"><value>feliratkozás hozzáadása</value></data><data name="strSyncBrowserPrompt" xml:space="preserve"><value>&lt;b&gt;Írjad be a felirtkozás címét és koppints a szinkronizálás gombra, hogy láthasd a feliratkozás elemeit!&lt;/b&gt;</value></data><data name="strSyncButton" xml:space="preserve"><value>szinkronizálás</value></data><data name="strErrorTitle" xml:space="preserve"><value>hiba!</value></data><data name="strTimeStrDays" xml:space="preserve"><value>{0} nappal ezelőtt</value></data><data name="strTimeStrHours" xml:space="preserve"><value>{0} órával ezelőtt</value></data><data name="strTimeStrNow" xml:space="preserve"><value>Most</value></data><data name="strTimeStrUnknown" xml:space="preserve"><value>Ismeretlen</value></data><data name="strDownloadOlder" xml:space="preserve"><value>régebbi letöltése</value></data><data name="strShowAllPosts" xml:space="preserve"><value>összes elem mutatása</value></data><data name="strShowUnreadOnly" xml:space="preserve"><value>olvasatlan elem mutatása</value></data><data name="strVersionStr" xml:space="preserve"><value>verzió</value></data><data name="strRateApp" xml:space="preserve"><value>értékeld az alkalmazást</value></data><data name="strConfirmUnsubscribe" xml:space="preserve"><value>Tényleg le akarsz iratkozni erről feliratkozásról: {0}?</value></data><data name="strMenuMove" xml:space="preserve"><value>mozgatás</value></data><data name="strMenuUnsubscribe" xml:space="preserve"><value>leiratkozás</value></data><data name="strMoveFrom" xml:space="preserve"><value>mozgatás innen:</value></data><data name="strMoveSubscriptionPage" xml:space="preserve"><value>feliratkozás mozgatása</value></data><data name="strMoveTo" xml:space="preserve"><value>mozgatás ide:</value></data><data name="strUnsubscribeFailed" xml:space="preserve"><value>sikertelen a leiratkozás erről: {0}!</value></data><data name="strAdditionalDownloadCount" xml:space="preserve"><value>egyéb elemek letöltése a régebbi elemek letöltésekor</value></data><data name="strEMailMenuItem" xml:space="preserve"><value>email...</value></data><data name="strOpenInIE" xml:space="preserve"><value>megnyitás Internet Explorer-ben...</value></data><data name="strShowReadItems" xml:space="preserve"><value>olvasott elemek mutatása</value></data><data name="strDuration15Days" xml:space="preserve"><value>tizenöt nap</value></data><data name="strDuration1Day" xml:space="preserve"><value>egy nap</value></data><data name="strDuration1Month" xml:space="preserve"><value>egy hónap</value></data><data name="strDuration1Week" xml:space="preserve"><value>egy hét</value></data><data name="strDuration1Year" xml:space="preserve"><value>egy év</value></data><data name="strDuration2Months" xml:space="preserve"><value>két hónap</value></data><data name="strDuration3Months" xml:space="preserve"><value>három hónap</value></data><data name="strDuration6Months" xml:space="preserve"><value>hat hónap</value></data><data name="strDurationDescr" xml:space="preserve"><value>napig tartsa meg az elemeket az eszközön. Több nap több tárhelyet igényel.</value></data><data name="strUpdateAppMsgBody" xml:space="preserve"><value>Egy frissítés elérhető az Áruház-ban. Szeretnél most frissíteni?</value></data><data name="strUpdateAppMsgTitle" xml:space="preserve"><value>Frissítés elérhető!</value></data><data name="strGettingStarredItems" xml:space="preserve"><value>Csillagozott elemek letöltése</value></data><data name="strStarredItemsLabel" xml:space="preserve"><value>Csillagozott</value></data><data name="strAllItemsOnTop" xml:space="preserve"><value>minden elem felül</value></data></root>

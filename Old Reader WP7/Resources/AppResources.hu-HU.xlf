@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="hu-HU" original="AppResources.resx" tool-id="MultilingualAppToolkit" product-name="Old Reader WP7" product-version="5.2.0" build-num="0">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="2.1.2010.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="Resx">
+        <trans-unit translate="yes" id="Resx/ResourceFlowDirection" xml:space="preserve">
+          <source>LeftToRight</source>
+          <target state="translated">LeftToRight</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/ResourceLanguage" xml:space="preserve">
+          <source>en-US</source>
+          <target state="translated">hu-HU</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/AppTitle" xml:space="preserve">
+          <source>Old Reader</source>
+          <target state="final">Old Reader</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/steLoginExplanation" xml:space="preserve">
+          <source>Please make sure that you have set password in the settings page of The Old Reader. As of now this is the only way to access the data.</source>
+          <target state="translated">Add meg a The Old Reader beállítások oldalán megadott jelszót! Ez az egyetlen lehetőség adataid elérésére.</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strAboutText" xml:space="preserve">
+          <source>This is a Windows Phone client for "The Old Reader".
+To report bugs and feedback please click the following button.</source>
+          <target state="translated">Ez egy kliens Windows Phone-ra a The Old Reader felhasználói számára.
+Hibák bejelentéséhez és visszajelzés küldéséhez koppints a gombra!</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strAboutTitle" xml:space="preserve">
+          <source>about</source>
+          <target state="translated">leírás</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strEMail" xml:space="preserve">
+          <source>registered email</source>
+          <target state="translated">regisztrált email</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strGoToSettings" xml:space="preserve">
+          <source>go to settings and setup the e-mail address and password for The Old Reader</source>
+          <target state="translated">Menj a beállításokhoz és állítsd be az email címed és jelszavad, a The Old Reader részére!</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strAppSettingsPage" xml:space="preserve">
+          <source>app settings</source>
+          <target state="translated">alkalmazás beállítások</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strNoUnreadItems" xml:space="preserve">
+          <source>There are no unread items here. Hurray!</source>
+          <target state="translated">Itt nincs olvasatlan elem. Hurrá!</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strPassword" xml:space="preserve">
+          <source>password</source>
+          <target state="translated">jelszó</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strSendFeedbackBtnText" xml:space="preserve">
+          <source>send feedback...</source>
+          <target state="translated">visszajelzés küldése...</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strSubscriptions" xml:space="preserve">
+          <source>Subscriptions</source>
+          <target state="translated">Feliratkozások</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strGettingSubscriptionList" xml:space="preserve">
+          <source>Getting Subscriptions</source>
+          <target state="translated">Feliratkozások letöltése</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strGettingTagList" xml:space="preserve">
+          <source>Getting Tags</source>
+          <target state="translated">Címkék letöltése</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strGettingUnreadCount" xml:space="preserve">
+          <source>Getting Unread Count</source>
+          <target state="translated">Olvasatlan elemek számainak letöltése</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strGettingUnreadItems" xml:space="preserve">
+          <source>Getting Unread Items</source>
+          <target state="translated">Olvasatlan elemek letöltése</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strKeepUnread" xml:space="preserve">
+          <source>keep unread</source>
+          <target state="translated">maradjon olvasatlan</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strMarkAllRead" xml:space="preserve">
+          <source>mark all read</source>
+          <target state="translated">összes megjelölése olvasottként</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strShare" xml:space="preserve">
+          <source>share</source>
+          <target state="translated">megosztás</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strViewFull" xml:space="preserve">
+          <source>view full</source>
+          <target state="translated">eredeti megtekintése</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strLocal" xml:space="preserve">
+          <source>Saved</source>
+          <target state="translated">Mentve</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strSaveLocal" xml:space="preserve">
+          <source>save for later</source>
+          <target state="translated">mentés későbbre</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strRemoveLocal" xml:space="preserve">
+          <source>remove saved</source>
+          <target state="translated">eltávolítás a mentettek közül</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strAboutMenu" xml:space="preserve">
+          <source>about...</source>
+          <target state="translated">leírás...</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strRefreshAppButton" xml:space="preserve">
+          <source>refresh</source>
+          <target state="translated">frissítés</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strSettingsMenu" xml:space="preserve">
+          <source>settings...</source>
+          <target state="translated">beállítások...</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strStatusMenu" xml:space="preserve">
+          <source>old reader status...</source>
+          <target state="translated">szerver állapota...</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strDoneAppBarButton" xml:space="preserve">
+          <source>ok</source>
+          <target state="translated">rendben</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strPressBackToExit" xml:space="preserve">
+          <source>press back once more to exit</source>
+          <target state="translated">Nyomj mégegyszer egy visszát, hogy kilépj!</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strPressBackToExitTitle" xml:space="preserve">
+          <source>sure?</source>
+          <target state="translated">tényleg?</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strCredits" xml:space="preserve">
+          <source>Trevor /u/alexandertrevor for UI improvements
+/u/DatDoodKwan for French translation
+/u/diogenesl for pt-br translation
+/u/yudayyy for Bahasa Indonesia translation</source>
+          <target state="new">Trevor /u/alexandertrevor for UI improvements
+/u/DatDoodKwan for French translation
+/u/diogenesl for pt-br translation
+/u/yudayyy for Bahasa Indonesia translation</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strAddSubscription" xml:space="preserve">
+          <source>add feed</source>
+          <target state="translated">feliratkozás hozzáadása</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strFeedUrl" xml:space="preserve">
+          <source>feed URL</source>
+          <target state="translated">feliratkozás címe</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strTargetFolder" xml:space="preserve">
+          <source>target Folder</source>
+          <target state="translated">célmappa</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strFeeadAddError" xml:space="preserve">
+          <source>could not add the feed.</source>
+          <target state="translated">sikertelen a feliratkozás hozzáadása</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strFeedMoveError" xml:space="preserve">
+          <source>successfully added the feed but could not move to the selected folder.</source>
+          <target state="translated">feliratkozás sikeresen betöltve, de nem sikerült a kért célmappába helyezni</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strAddFeed" xml:space="preserve">
+          <source>add Feed</source>
+          <target state="translated">feliratkozás hozzáadása</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strSyncBrowserPrompt" xml:space="preserve">
+          <source><bpt id="1">&lt;b&gt;</bpt>Enter the Feed URL and press sync to preview the feed contents<ept id="1">&lt;/b&gt;</ept></source>
+          <target state="translated"><bpt id="1">&lt;b&gt;</bpt>Írjad be a felirtkozás címét és koppints a szinkronizálás gombra, hogy láthasd a feliratkozás elemeit!<ept id="1">&lt;/b&gt;</ept></target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strSyncButton" xml:space="preserve">
+          <source>sync</source>
+          <target state="translated">szinkronizálás</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strErrorTitle" xml:space="preserve">
+          <source>error!</source>
+          <target state="translated">hiba!</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strTimeStrDays" xml:space="preserve">
+          <source>{0} day(s) ago</source>
+          <target state="translated">{0} nappal ezelőtt</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strTimeStrHours" xml:space="preserve">
+          <source>{0} hour(s) ago</source>
+          <target state="translated">{0} órával ezelőtt</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strTimeStrNow" xml:space="preserve">
+          <source>Now</source>
+          <target state="translated">Most</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strTimeStrUnknown" xml:space="preserve">
+          <source>Unknown</source>
+          <target state="translated">Ismeretlen</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strDownloadOlder" xml:space="preserve">
+          <source>download older</source>
+          <target state="translated">régebbi letöltése</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strShowAllPosts" xml:space="preserve">
+          <source>show all posts</source>
+          <target state="translated">összes elem mutatása</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strShowUnreadOnly" xml:space="preserve">
+          <source>show only unread</source>
+          <target state="translated">olvasatlan elem mutatása</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strVersionStr" xml:space="preserve">
+          <source>version</source>
+          <target state="translated">verzió</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strRateApp" xml:space="preserve">
+          <source>rate app</source>
+          <target state="translated">értékeld az alkalmazást</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strConfirmUnsubscribe" xml:space="preserve">
+          <source>Are you sure you want to unsubscribe from {0}?</source>
+          <target state="translated">Tényleg le akarsz iratkozni erről feliratkozásról: {0}?</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strMenuMove" xml:space="preserve">
+          <source>move</source>
+          <target state="translated">mozgatás</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strMenuUnsubscribe" xml:space="preserve">
+          <source>unsubscribe</source>
+          <target state="translated">leiratkozás</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strMoveFrom" xml:space="preserve">
+          <source>move from</source>
+          <target state="translated">mozgatás innen:</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strMoveSubscriptionPage" xml:space="preserve">
+          <source>move feed</source>
+          <target state="translated">feliratkozás mozgatása</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strMoveTo" xml:space="preserve">
+          <source>move to</source>
+          <target state="translated">mozgatás ide:</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strUnsubscribeFailed" xml:space="preserve">
+          <source>failed to unsubscribe from {0}!</source>
+          <target state="translated">sikertelen a leiratkozás erről: {0}!</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strAdditionalDownloadCount" xml:space="preserve">
+          <source>additional items to download when downloading old items</source>
+          <target state="translated">egyéb elemek letöltése a régebbi elemek letöltésekor</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strEMailMenuItem" xml:space="preserve">
+          <source>email...</source>
+          <target state="translated">email...</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strOpenInIE" xml:space="preserve">
+          <source>open in ie...</source>
+          <target state="translated">megnyitás Internet Explorer-ben...</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strShowReadItems" xml:space="preserve">
+          <source>Show read items</source>
+          <target state="translated">olvasott elemek mutatása</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strDuration15Days" xml:space="preserve">
+          <source>15 days</source>
+          <target state="translated">tizenöt nap</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strDuration1Day" xml:space="preserve">
+          <source>one day</source>
+          <target state="translated">egy nap</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strDuration1Month" xml:space="preserve">
+          <source>one month</source>
+          <target state="translated">egy hónap</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strDuration1Week" xml:space="preserve">
+          <source>one week</source>
+          <target state="translated">egy hét</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strDuration1Year" xml:space="preserve">
+          <source>one year</source>
+          <target state="translated">egy év</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strDuration2Months" xml:space="preserve">
+          <source>two months</source>
+          <target state="translated">két hónap</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strDuration3Months" xml:space="preserve">
+          <source>three months</source>
+          <target state="translated">három hónap</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strDuration6Months" xml:space="preserve">
+          <source>six months</source>
+          <target state="translated">hat hónap</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strDurationDescr" xml:space="preserve">
+          <source>days to keep the old feed cached on your device. more days mean more storage</source>
+          <target state="translated">napig tartsa meg az elemeket az eszközön. Több nap több tárhelyet igényel.</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strUpdateAppMsgBody" xml:space="preserve">
+          <source>An update for the application is available in the marketplace. Do you want to update now?</source>
+          <target state="translated">Egy frissítés elérhető az Áruház-ban. Szeretnél most frissíteni?</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strUpdateAppMsgTitle" xml:space="preserve">
+          <source>Update Available!</source>
+          <target state="translated">Frissítés elérhető!</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strGettingStarredItems" xml:space="preserve">
+          <source>Getting starred items</source>
+          <target state="translated">Csillagozott elemek letöltése</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strStarredItemsLabel" xml:space="preserve">
+          <source>Starred</source>
+          <target state="translated">Csillagozott</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strAllItemsOnTop" xml:space="preserve">
+          <source>All Items on top</source>
+          <target state="translated">minden elem felül</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

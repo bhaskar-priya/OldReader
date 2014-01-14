@@ -2,7 +2,7 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
   <file datatype="xml" source-language="en-US" target-language="id-ID" original="AppResources.resx" tool-id="MultilingualAppToolkit" product-name="Old Reader" product-version="5.2.0" build-num="0">
     <header>
-      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="2.1.1100.0" tool-company="Microsoft" />
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="2.1.2010.0" tool-company="Microsoft" />
     </header>
     <body>
       <group id="Resx">
@@ -136,11 +136,13 @@ Untuk melaporkan bug dan saran silahkan klik tombol berikut.</target>
           <source>Trevor /u/alexandertrevor for UI improvements
 /u/DatDoodKwan for French translation
 /u/diogenesl for pt-br translation
-/u/yudayyy for Bahasa Indonesia translation</source>
+/u/yudayyy for Bahasa Indonesia translation
+Tur Ger for Hungarian</source>
           <target state="new">Trevor /u/alexandertrevor for UI improvements
 /u/DatDoodKwan for French translation
 /u/diogenesl for pt-br translation
-/u/yudayyy for Bahasa Indonesia translation</target>
+/u/yudayyy for Bahasa Indonesia translation
+Tur Ger for Hungarian</target>
         </trans-unit>
         <trans-unit id="Resx/strAddSubscription" translate="yes" xml:space="preserve">
           <source>add feed</source>
