@@ -352,8 +352,15 @@ namespace DataModel
 						}
 					}
 
-					String szOrigin = (String)((JObject)curFeedObj[OldReaderConsts.origin])[OldReaderConsts.streamId];
-					newFeedItem.origin = App.Contents.Subscriptions.FirstOrDefault(s => s.id == szOrigin);
+					try
+					{
+						String szOrigin = (String)((JObject)curFeedObj[OldReaderConsts.origin])[OldReaderConsts.streamId];
+						newFeedItem.origin = App.Contents.Subscriptions.FirstOrDefault(s => s.id == szOrigin);
+					}
+					catch (NullReferenceException)
+					{
+						newFeedItem.origin = null;
+					}
 
 					feedItems.Add(newFeedItem);
 				}
