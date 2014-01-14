@@ -72,6 +72,10 @@ namespace DataStore
 			{
 				cachced.StreamId = feedItem.origin.id;
 			}
+			else
+			{
+				cachced.StreamId = "";
+			}
 
 			if (feedItem.tags != null)
 			{
