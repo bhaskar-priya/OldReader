@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows;
 using System.IO.IsolatedStorage;
 using System.Windows.Media.Imaging;
+using Microsoft.Phone.Shell;
 
 using AppNs  =
 #if OLD_READER_WP7
@@ -56,6 +57,31 @@ namespace Old_Reader_Utils
 			return outDictionary;
 		}
 
+		public static void UpdateTileData()
+		{
+			foreach (var curTile in ShellTile.ActiveTiles)
+			{
+				try
+				{
+					IconicTileData iconicTileData = new IconicTileData();
+					iconicTileData.Count = Math.Min(Tag.AllItems.unreadCount, 99);
+					iconicTileData.IconImage = new Uri("/Resources/oldreader-icon.png", UriKind.Relative);
+					if (Tag.AllItems.unreadCount > 0)
+					{
+						iconicTileData.SmallIconImage = new Uri("/Resources/oldreader-icon-small.png", UriKind.Relative);
+					}
+					else
+					{
+						iconicTileData.SmallIconImage = iconicTileData.IconImage;
+					}
+					curTile.Update(iconicTileData);
+				}
+				catch
+				{
+				}
+			}
+		}
+
 		public static void SyncStarredItems()
 		{
 			// all said and done
@@ -99,6 +125,7 @@ namespace Old_Reader_Utils
 				}
 			}
 
+			UpdateTileData();
 			return nMax;
 		}
 

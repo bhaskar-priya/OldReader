@@ -439,6 +439,8 @@ namespace DataModel
 				origin.unreadCount--;
 				origin.unreadCount = origin.unreadCount < 0 ? 0 : origin.unreadCount;
 			}
+
+			Utils.UpdateTileData();
 		}
 
 		public void markUnRead()
@@ -461,6 +463,8 @@ namespace DataModel
 				WS.Remoting rm = new WS.Remoting();
 				rm.markFeedItemRead(id, false);
 			}
+
+			Utils.UpdateTileData();
 		}
 	}
 }
