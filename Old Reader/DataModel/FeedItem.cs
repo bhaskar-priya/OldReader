@@ -341,7 +341,7 @@ namespace DataModel
 							}
 							newFeedItem.tags.Add(newTag);
 						}
-						if (curCatObj == readItemTag)
+						if (curCatObj == Old_Reader_Utils.OldReaderConsts.readItemTag)
 						{
 							// this feed is already read
 							newFeedItem.isUnread = false;
@@ -462,7 +462,5 @@ namespace DataModel
 				rm.markFeedItemRead(id, false);
 			}
 		}
-
-		public const String readItemTag = "user/-/state/com.google/read";
 	}
 }

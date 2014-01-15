@@ -188,6 +188,18 @@ namespace Old_Reader_WP7
 			}
 		}
 
+		public static String AuthToken
+		{
+			get
+			{
+				return Utilities.AppSettings.Read<String>(Old_Reader_Utils.OldReaderConsts.AuthToken, "");
+			}
+			set
+			{
+				Utilities.AppSettings.Write(Old_Reader_Utils.OldReaderConsts.AuthToken, value);
+			}
+		}
+
 		public static bool ShowRead
 		{
 			get

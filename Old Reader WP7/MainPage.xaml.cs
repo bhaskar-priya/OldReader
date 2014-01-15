@@ -21,6 +21,8 @@ using System.Data.Linq;
 using System.Data.Linq.Mapping;
 using Coding4Fun.Toolkit.Controls;
 
+using Microsoft.Phone.Scheduler;
+
 using AppNs =
 #if OLD_READER_WP7
  Old_Reader_WP7;
@@ -131,13 +133,43 @@ namespace Old_Reader
 			(ApplicationBar.MenuItems[2] as ApplicationBarMenuItem).Text = AppNs.Resources.AppResources.strAboutMenu;
 		}
 
+		private PeriodicTask unreadCountTask;
+
 		private bool bLoginComplete = false;
 		private void LoginComplete(String szResponse)
 		{
 			bLoginComplete = true;
 			// split the output by \n and then by =
 			Dictionary<String, String> loginDetails = Utils.toDictionary(szResponse, '\n', '=');
-			WS.Remoting.token = loginDetails[OldReaderConsts.Auth];
+			App.AuthToken = loginDetails[OldReaderConsts.Auth];
+			WS.Remoting.token = App.AuthToken;
+
+			unreadCountTask=ScheduledActionService.Find(OldReaderConsts.unreadCountTask) as PeriodicTask;
+			if (unreadCountTask == null)
+			{
+				unreadCountTask = new PeriodicTask(OldReaderConsts.unreadCountTask);
+
+				if (unreadCountTask != null)
+				{
+					unreadCountTask.Description = "Fetch the unread feed count";
+					try
+					{
+						Dispatcher.BeginInvoke(() =>
+						{
+							ScheduledActionService.Add(unreadCountTask);
+							ScheduledActionService.LaunchForTest(OldReaderConsts.unreadCountTask, TimeSpan.FromSeconds(20));
+						});
+					}
+					catch (InvalidOperationException exp)
+					{
+						MessageBox.Show(exp.Message);
+					}
+				}
+			}
+			else
+			{
+				ScheduledActionService.LaunchForTest(OldReaderConsts.unreadCountTask, TimeSpan.FromSeconds(10));
+			}
 
 			Contents.Initialize(InitializationCompleteHandler, InitializationErrorHandler, InitializationStatusReceiver);
 		}

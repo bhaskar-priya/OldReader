@@ -95,7 +95,9 @@ namespace WS
 			}
 			catch (Exception exp)
 			{
+#if !BACK_AGENT
 				Analytics.GAnalytics.sendException(exp.Message, false);
+#endif
 				if (remotingErrorHandler != null)
 				{
 					remotingErrorHandler(exp.Message);
@@ -203,7 +205,7 @@ namespace WS
 
 		public void markFeedItemsRead(List<String> szItemIds, bool bRead)
 		{
-			changeTagOfItems(DataModel.FeedItem.readItemTag, szItemIds, bRead);
+			changeTagOfItems(Old_Reader_Utils.OldReaderConsts.readItemTag, szItemIds, bRead);
 		}
 
 		public void markAllItemsAsRead(String szFeedId)
@@ -215,14 +217,14 @@ namespace WS
 
 		public void starItem(String szFeedId, bool bStar)
 		{
-			String szPostData = String.Format("{0}={2}&i={1}", bStar ? "a" : "r", szFeedId, DataModel.Tag.StarredItems.id);
+			String szPostData = String.Format("{0}={2}&i={1}", bStar ? "a" : "r", szFeedId, Old_Reader_Utils.OldReaderConsts.starredItemId);
 
 			Post(szAPIEndPoint + "edit-tag", szPostData);
 		}
 
 		public void starItems(List<String> szFeedIds, bool bStar)
 		{
-			changeTagOfItems(DataModel.Tag.StarredItems.id, szFeedIds, bStar);
+			changeTagOfItems(Old_Reader_Utils.OldReaderConsts.starredItemId, szFeedIds, bStar);
 		}
 
 		private void changeTagOfItems(String szTagName, List<String> szFeedIds, bool bAdd)
@@ -253,7 +255,7 @@ namespace WS
 		public void moveSubscriptionToFolder(String feedId, String folderId)
 		{
 			String szPostData = "";
-			if (!String.IsNullOrEmpty(folderId) && folderId!=DataModel.Tag.AllItems.id)
+			if (!String.IsNullOrEmpty(folderId) && folderId != Old_Reader_Utils.OldReaderConsts.allItemsId)
 			{
 				szPostData = String.Format("ac=edit&s={0}&a={1}", feedId, folderId);
 			}

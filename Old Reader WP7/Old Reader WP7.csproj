@@ -188,6 +188,9 @@
     <Compile Include="..\Old Reader\Utilities\AppSettings.cs">
       <Link>Utilities\AppSettings.cs</Link>
     </Compile>
+    <Compile Include="..\Old Reader\Utilities\OldReaderConsts.cs">
+      <Link>Utilities\OldReaderConsts.cs</Link>
+    </Compile>
     <Compile Include="..\Old Reader\Utilities\ValueConverters.cs">
       <Link>Utilities\ValueConverters.cs</Link>
     </Compile>
@@ -415,6 +418,12 @@
       <Generator>XliffResxGenerator</Generator>
       <LastGenOutput>AppResources.sv.resx</LastGenOutput>
     </XliffResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OldReaderBackgroundAgent_WP7\OldReaderBackgroundAgent_WP7.csproj">
+      <Project>{AC60A12C-620E-473F-BCD7-2038417EBD55}</Project>
+      <Name>OldReaderBackgroundAgent_WP7</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />

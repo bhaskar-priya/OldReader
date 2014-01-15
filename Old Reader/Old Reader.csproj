@@ -148,6 +148,7 @@
     <Compile Include="Utilities\AnimationHelper.cs" />
     <Compile Include="Utilities\ApplicationUpdateReminder.cs" />
     <Compile Include="Utilities\AppSettings.cs" />
+    <Compile Include="Utilities\OldReaderConsts.cs" />
     <Compile Include="Utilities\ValueConverters.cs" />
     <Compile Include="Utils.cs" />
     <Compile Include="WS\Remoting.cs" />
@@ -230,6 +231,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="README_FIRST.txt" />
+    <Content Include="Resources\oldreader-icon-small.png" />
     <Content Include="Resources\oldreader-icon.png" />
     <Content Include="Resources\panoramaBackground.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
@@ -355,6 +357,12 @@
       <Generator>XliffResxGenerator</Generator>
       <LastGenOutput>AppResources.sv.resx</LastGenOutput>
     </XliffResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OldReaderBackgroundAgent\OldReaderBackgroundAgent.csproj">
+      <Project>{F0339BC3-67E8-4484-9905-F932865BC09F}</Project>
+      <Name>OldReaderBackgroundAgent</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />

@@ -2,15 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.IO.IsolatedStorage;
-
-using AppNs =
-#if OLD_READER_WP7
-Old_Reader_WP7;
-#else
- Old_Reader;
-#endif
 
 namespace Utilities
 {

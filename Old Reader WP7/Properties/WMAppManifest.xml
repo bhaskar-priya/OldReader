@@ -9,6 +9,9 @@
     </Capabilities>
     <Tasks>
       <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
+      <ExtendedTask Name="BackgroundTask">
+        <BackgroundServiceAgent Specifier="ScheduledTaskAgent" Name="OldReaderBackgroundAgent_WP7" Source="OldReaderBackgroundAgent_WP7" Type="OldReaderBackgroundAgent_WP7.ScheduledAgent" />
+      </ExtendedTask>
     </Tasks>
     <Tokens>
       <PrimaryToken TokenID="Old_Reader_WP7Token" TaskName="_default">

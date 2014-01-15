@@ -115,7 +115,7 @@ namespace DataModel
 
 		public static Tag AllItems = new Tag()
 		{
-			id = "user/-/state/com.google/reading-list",
+			id = Old_Reader_Utils.OldReaderConsts.allItemsId,
 			title = "All Items",
 			unreadCount = 0,
 			Subscriptions = null
@@ -123,7 +123,7 @@ namespace DataModel
 
 		public static Tag StarredItems = new Tag()
 		{
-			id = "user/-/state/com.google/starred",
+			id = Old_Reader_Utils.OldReaderConsts.starredItemId,
 			title = "Starred",
 			unreadCount = 0,
 			Subscriptions = null
