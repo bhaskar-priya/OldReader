@@ -69,6 +69,15 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="..\Old Reader\Resources\oldreader-icon-small.png">
+      <Link>Resources\oldreader-icon-small.png</Link>
+    </Content>
+    <Content Include="..\Old Reader\Resources\oldreader-icon.png">
+      <Link>Resources\oldreader-icon.png</Link>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
   <ProjectExtensions />

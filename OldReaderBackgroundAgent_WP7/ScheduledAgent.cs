@@ -96,7 +96,8 @@ namespace OldReaderBackgroundAgent_WP7
 		{
 			if (IsTargetedVersion)
 			{
-				Type iconicTileDataType = Type.GetType("Microsoft.Phone.Shell.IconicTileData, Microsoft.Phone");
+				// Get the new FlipTileData type.
+				Type flipTileDataType = Type.GetType("Microsoft.Phone.Shell.FlipTileData, Microsoft.Phone");
 
 				// Get the ShellTile type so we can call the new version of "Update" that takes the new Tile templates.
 				Type shellTileType = Type.GetType("Microsoft.Phone.Shell.ShellTile, Microsoft.Phone");
@@ -105,9 +106,22 @@ namespace OldReaderBackgroundAgent_WP7
 				{
 					try
 					{
-						var UpdateTileData = iconicTileDataType.GetConstructor(new Type[] { }).Invoke(null);
-						SetProperty(UpdateTileData, "Count", Math.Min(nUnreadCount, 99));
+						var UpdateTileData = flipTileDataType.GetConstructor(new Type[] { }).Invoke(null);
 
+						Uri NormalIcon = new Uri("/Resources/oldreader-icon.png", UriKind.Relative);
+						// Set the properties. 
+						SetProperty(UpdateTileData, "Title", "Old Reader");
+						SetProperty(UpdateTileData, "Count", Math.Min(nUnreadCount, 99));
+						SetProperty(UpdateTileData, "BackTitle", "Old Reader");
+						SetProperty(UpdateTileData, "BackContent", "Old Reader");
+						SetProperty(UpdateTileData, "SmallBackgroundImage", NormalIcon);
+						SetProperty(UpdateTileData, "BackgroundImage", NormalIcon);
+						SetProperty(UpdateTileData, "BackBackgroundImage", NormalIcon);
+						SetProperty(UpdateTileData, "WideBackgroundImage", NormalIcon);
+						SetProperty(UpdateTileData, "WideBackBackgroundImage", NormalIcon);
+						SetProperty(UpdateTileData, "WideBackContent", "Old Reader");
+
+						// Invoke the new version of ShellTile.Update.
 						shellTileType.GetMethod("Update").Invoke(curTile, new Object[] { UpdateTileData });
 					}
 					catch

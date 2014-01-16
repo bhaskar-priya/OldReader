@@ -57,12 +57,42 @@ namespace Old_Reader_Utils
 			return outDictionary;
 		}
 
+		private static void SetProperty(object instance, string name, object value)
+		{
+			var setMethod = instance.GetType().GetProperty(name).GetSetMethod();
+			setMethod.Invoke(instance, new object[] { value });
+		}
+
 		public static void UpdateTileData()
 		{
 			foreach (var curTile in ShellTile.ActiveTiles)
 			{
 				try
 				{
+#if OLD_READER_WP7
+					// Get the new FlipTileData type.
+					Type flipTileDataType = Type.GetType("Microsoft.Phone.Shell.FlipTileData, Microsoft.Phone");
+
+					// Get the ShellTile type so we can call the new version of "Update" that takes the new Tile templates.
+					Type shellTileType = Type.GetType("Microsoft.Phone.Shell.ShellTile, Microsoft.Phone");
+
+					var UpdateTileData = flipTileDataType.GetConstructor(new Type[] { }).Invoke(null);
+
+					Uri NormalIcon = new Uri("/Resources/oldreader-icon.png", UriKind.Relative);
+					// Set the properties. 
+					SetProperty(UpdateTileData, "Title", "Old Reader");
+					SetProperty(UpdateTileData, "Count", Math.Min(Tag.AllItems.unreadCount, 99));
+					SetProperty(UpdateTileData, "BackTitle", "Old Reader");
+					SetProperty(UpdateTileData, "SmallBackgroundImage", NormalIcon);
+					SetProperty(UpdateTileData, "BackgroundImage", NormalIcon);
+					SetProperty(UpdateTileData, "BackBackgroundImage", NormalIcon);
+					SetProperty(UpdateTileData, "WideBackgroundImage", NormalIcon);
+					SetProperty(UpdateTileData, "WideBackBackgroundImage", NormalIcon);
+					SetProperty(UpdateTileData, "WideBackContent", "Old Reader");
+
+					// Invoke the new version of ShellTile.Update.
+					shellTileType.GetMethod("Update").Invoke(curTile, new Object[] { UpdateTileData });
+#else
 					IconicTileData iconicTileData = new IconicTileData();
 					iconicTileData.Count = Math.Min(Tag.AllItems.unreadCount, 99);
 					iconicTileData.IconImage = new Uri("/Resources/oldreader-icon.png", UriKind.Relative);
@@ -75,6 +105,7 @@ namespace Old_Reader_Utils
 						iconicTileData.SmallIconImage = iconicTileData.IconImage;
 					}
 					curTile.Update(iconicTileData);
+#endif
 				}
 				catch
 				{

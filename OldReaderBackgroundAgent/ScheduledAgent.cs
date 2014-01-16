@@ -89,6 +89,7 @@ namespace OldReaderBackgroundAgent
 					{
 						iconicTileData.SmallIconImage = iconicTileData.IconImage;
 					}
+
 					curTile.Update(iconicTileData);
 				}
 				catch
