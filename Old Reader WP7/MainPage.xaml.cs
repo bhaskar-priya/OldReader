@@ -157,7 +157,7 @@ namespace Old_Reader
 						Dispatcher.BeginInvoke(() =>
 						{
 							ScheduledActionService.Add(unreadCountTask);
-							ScheduledActionService.LaunchForTest(OldReaderConsts.unreadCountTask, TimeSpan.FromSeconds(20));
+							//ScheduledActionService.LaunchForTest(OldReaderConsts.unreadCountTask, TimeSpan.FromSeconds(20));
 						});
 					}
 					catch (InvalidOperationException exp)
@@ -168,8 +168,10 @@ namespace Old_Reader
 			}
 			else
 			{
-				ScheduledActionService.LaunchForTest(OldReaderConsts.unreadCountTask, TimeSpan.FromSeconds(10));
+				//ScheduledActionService.LaunchForTest(OldReaderConsts.unreadCountTask, TimeSpan.FromSeconds(10));
 			}
+
+			Utils.ClearTileCount();
 
 			Contents.Initialize(InitializationCompleteHandler, InitializationErrorHandler, InitializationStatusReceiver);
 		}

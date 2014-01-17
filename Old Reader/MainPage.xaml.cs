@@ -171,6 +171,8 @@ namespace Old_Reader
 				//ScheduledActionService.LaunchForTest(OldReaderConsts.unreadCountTask, TimeSpan.FromSeconds(10));
 			}
 
+			Utils.ClearTileCount();
+
 			Contents.Initialize(InitializationCompleteHandler, InitializationErrorHandler, InitializationStatusReceiver);
 		}
 

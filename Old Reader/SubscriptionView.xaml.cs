@@ -326,7 +326,6 @@ namespace Old_Reader
 						curTag.unreadCount = 0;
 					}
 				}
-				Utils.UpdateTileData();
 			});
 		}
 

@@ -63,47 +63,54 @@ namespace Old_Reader_Utils
 			setMethod.Invoke(instance, new object[] { value });
 		}
 
-		public static void UpdateTileData()
+#if OLD_READER_WP7
+		private static Version TargetedVersion = new Version(7, 10, 8858);
+		public static bool IsTargetedVersion
+		{
+			get
+			{
+				return Environment.OSVersion.Version >= TargetedVersion;
+			}
+		}
+#endif
+
+		public static void ClearTileCount()
 		{
 			foreach (var curTile in ShellTile.ActiveTiles)
 			{
 				try
 				{
 #if OLD_READER_WP7
-					// Get the new FlipTileData type.
-					Type flipTileDataType = Type.GetType("Microsoft.Phone.Shell.FlipTileData, Microsoft.Phone");
+					if (IsTargetedVersion)
+					{
+						// Get the new FlipTileData type.
+						Type flipTileDataType = Type.GetType("Microsoft.Phone.Shell.FlipTileData, Microsoft.Phone");
 
-					// Get the ShellTile type so we can call the new version of "Update" that takes the new Tile templates.
-					Type shellTileType = Type.GetType("Microsoft.Phone.Shell.ShellTile, Microsoft.Phone");
+						// Get the ShellTile type so we can call the new version of "Update" that takes the new Tile templates.
+						Type shellTileType = Type.GetType("Microsoft.Phone.Shell.ShellTile, Microsoft.Phone");
 
-					var UpdateTileData = flipTileDataType.GetConstructor(new Type[] { }).Invoke(null);
+						var UpdateTileData = flipTileDataType.GetConstructor(new Type[] { }).Invoke(null);
 
-					Uri NormalIcon = new Uri("/Resources/oldreader-icon.png", UriKind.Relative);
-					// Set the properties. 
-					SetProperty(UpdateTileData, "Title", "Old Reader");
-					SetProperty(UpdateTileData, "Count", Math.Min(Tag.AllItems.unreadCount, 99));
-					SetProperty(UpdateTileData, "BackTitle", "Old Reader");
-					SetProperty(UpdateTileData, "SmallBackgroundImage", NormalIcon);
-					SetProperty(UpdateTileData, "BackgroundImage", NormalIcon);
-					SetProperty(UpdateTileData, "BackBackgroundImage", NormalIcon);
-					SetProperty(UpdateTileData, "WideBackgroundImage", NormalIcon);
-					SetProperty(UpdateTileData, "WideBackBackgroundImage", NormalIcon);
-					SetProperty(UpdateTileData, "WideBackContent", "Old Reader");
+						Uri NormalIcon = new Uri("/Resources/oldreader-icon.png", UriKind.Relative);
+						// Set the properties. 
+						SetProperty(UpdateTileData, "Title", "Old Reader");
+						SetProperty(UpdateTileData, "Count", 0);
+						SetProperty(UpdateTileData, "BackTitle", "Old Reader");
+						SetProperty(UpdateTileData, "SmallBackgroundImage", NormalIcon);
+						SetProperty(UpdateTileData, "BackgroundImage", NormalIcon);
+						SetProperty(UpdateTileData, "BackBackgroundImage", NormalIcon);
+						SetProperty(UpdateTileData, "WideBackgroundImage", NormalIcon);
+						SetProperty(UpdateTileData, "WideBackBackgroundImage", NormalIcon);
+						SetProperty(UpdateTileData, "WideBackContent", "Old Reader");
 
-					// Invoke the new version of ShellTile.Update.
-					shellTileType.GetMethod("Update").Invoke(curTile, new Object[] { UpdateTileData });
+						// Invoke the new version of ShellTile.Update.
+						shellTileType.GetMethod("Update").Invoke(curTile, new Object[] { UpdateTileData });
+					}
 #else
 					IconicTileData iconicTileData = new IconicTileData();
-					iconicTileData.Count = Math.Min(Tag.AllItems.unreadCount, 99);
+					iconicTileData.Count = 0;
 					iconicTileData.IconImage = new Uri("/Resources/oldreader-icon.png", UriKind.Relative);
-					if (Tag.AllItems.unreadCount > 0)
-					{
-						iconicTileData.SmallIconImage = new Uri("/Resources/oldreader-icon-small.png", UriKind.Relative);
-					}
-					else
-					{
-						iconicTileData.SmallIconImage = iconicTileData.IconImage;
-					}
+					iconicTileData.SmallIconImage = iconicTileData.IconImage;
 					curTile.Update(iconicTileData);
 #endif
 				}
@@ -156,7 +163,6 @@ namespace Old_Reader_Utils
 				}
 			}
 
-			UpdateTileData();
 			return nMax;
 		}
 
