@@ -1,26 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
-  <App xmlns="" ProductID="{1d949d51-76af-4a5d-acb8-57105c6f877a}" Title="Old Reader" RuntimeType="Silverlight" Version="5.2.0.0" Genre="apps.normal" Author="Bhaskar Priya" Description="Windows Phone client for &quot;The Old Reader&quot;" Publisher="Bhaskar Priya">
-    <IconPath IsRelative="true" IsResource="false">oldreader-icon.png</IconPath>
-    <Capabilities>
-      <Capability Name="ID_CAP_MEDIALIB" />
-      <Capability Name="ID_CAP_NETWORKING" />
-      <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
-    </Capabilities>
-    <Tasks>
-      <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
-      <ExtendedTask Name="BackgroundTask">
-        <BackgroundServiceAgent Specifier="ScheduledTaskAgent" Name="OldReaderBackgroundAgent_WP7" Source="OldReaderBackgroundAgent_WP7" Type="OldReaderBackgroundAgent_WP7.ScheduledAgent" />
-      </ExtendedTask>
-    </Tasks>
-    <Tokens>
-      <PrimaryToken TokenID="Old_Reader_WP7Token" TaskName="_default">
-        <TemplateType5>
-          <BackgroundImageURI IsRelative="true" IsResource="false">oldreader-icon.png</BackgroundImageURI>
-          <Count>0</Count>
-          <Title>Old_Reader_WP7</Title>
-        </TemplateType5>
-      </PrimaryToken>
-    </Tokens>
-  </App>
+	<App xmlns="" ProductID="{1d949d51-76af-4a5d-acb8-57105c6f877a}" Title="Old Reader" RuntimeType="Silverlight" Version="5.2.0.0" Genre="apps.normal" Author="Bhaskar Priya" Description="Windows Phone client for &quot;The Old Reader&quot;" Publisher="Bhaskar Priya">
+		<IconPath IsRelative="true" IsResource="false">oldreader-icon.png</IconPath>
+		<Capabilities>
+			<Capability Name="ID_CAP_MEDIALIB" />
+			<Capability Name="ID_CAP_NETWORKING" />
+			<Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+		</Capabilities>
+		<Tasks>
+			<DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
+			<ExtendedTask Name="BackgroundTask">
+				<BackgroundServiceAgent Specifier="ScheduledTaskAgent" Name="OldReaderBackgroundAgent_WP7" Source="OldReaderBackgroundAgent_WP7" Type="OldReaderBackgroundAgent_WP7.ScheduledAgent" />
+			</ExtendedTask>
+		</Tasks>
+		<Tokens>
+			<PrimaryToken TokenID="Old_Reader_WP7Token" TaskName="_default">
+				<TemplateType5>
+					<BackgroundImageURI IsRelative="true" IsResource="false">oldreader-icon.png</BackgroundImageURI>
+					<Count>0</Count>
+					<Title>Old_Reader_WP7</Title>
+				</TemplateType5>
+			</PrimaryToken>
+		</Tokens>
+		<Extensions>
+			<Extension ExtensionName="LockScreen_Notification_IconCount" ConsumerID="{111DFF24-AA15-4A96-8006-2BFF8122084F}" TaskID="_default" />
+		</Extensions>
+	</App>
 </Deployment>
