@@ -169,11 +169,14 @@ namespace Old_Reader
 		{
 			Analytics.GAnalytics.trackPageView("FeedView");
 			curFeed = AppNs.App.FeedItems[nIdx];
-			contentDisplay.NavigateToString(ConvertExtendedASCII(curFeed.summary));
-
-			if (bShowLiveFeed)
+			if (curFeed != null)
 			{
-				curFeed.markRead();
+				contentDisplay.NavigateToString(ConvertExtendedASCII(curFeed.summary));
+
+				if (bShowLiveFeed)
+				{
+					curFeed.markRead();
+				}
 			}
 		}
 

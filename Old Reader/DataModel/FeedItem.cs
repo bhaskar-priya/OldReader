@@ -372,11 +372,18 @@ namespace DataModel
 		{
 			if(m.Groups.Count>1)
 			{
+				try
+				{
 #if OLD_READER_WP7
-				return "" + Convert.ToChar(Convert.ToInt32(m.Groups[1].ToString(),16));
+					return "" + Convert.ToChar(Convert.ToInt32(m.Groups[1].ToString(),16));
 #else
-				return "" + char.ConvertFromUtf32(Convert.ToInt32(m.Groups[1].ToString(),16));
+					return "" + char.ConvertFromUtf32(Convert.ToInt32(m.Groups[1].ToString(), 16));
 #endif
+				}
+				catch
+				{
+					return m.Groups[1].ToString();
+				}
 			}
 			return "";
 		}
