@@ -140,29 +140,34 @@ namespace Old_Reader_Utils
 		public static int handleUnreadCounts(String szResponse,ObservableCollection<Subscription> subs,ObservableCollection<Tag> tags)
 		{
 			int nMax = 0;
-			JObject rootObj = JObject.Parse(szResponse);
-			nMax = int.Parse((String)rootObj[OldReaderConsts.max]);
-
-			foreach (JObject unreadCntObj in (JArray)rootObj[OldReaderConsts.unreadcounts])
+			try
 			{
-				String objId = (String)unreadCntObj[OldReaderConsts.id];
-				int unreadCount = int.Parse((String)unreadCntObj[OldReaderConsts.count]);
-				// check the tags and subs
-				Tag targetTag = tags.SingleOrDefault(t => t.id == objId);
-				if (targetTag != null)
+				JObject rootObj = JObject.Parse(szResponse);
+				nMax = int.Parse((String)rootObj[OldReaderConsts.max]);
+
+				foreach (JObject unreadCntObj in (JArray)rootObj[OldReaderConsts.unreadcounts])
 				{
-					targetTag.unreadCount = unreadCount;
-				}
-				else
-				{
-					Subscription targetSub = subs.SingleOrDefault(s => s.id == objId);
-					if (targetSub != null)
+					String objId = (String)unreadCntObj[OldReaderConsts.id];
+					int unreadCount = int.Parse((String)unreadCntObj[OldReaderConsts.count]);
+					// check the tags and subs
+					Tag targetTag = tags.SingleOrDefault(t => t.id == objId);
+					if (targetTag != null)
 					{
-						targetSub.unreadCount = unreadCount;
+						targetTag.unreadCount = unreadCount;
+					}
+					else
+					{
+						Subscription targetSub = subs.SingleOrDefault(s => s.id == objId);
+						if (targetSub != null)
+						{
+							targetSub.unreadCount = unreadCount;
+						}
 					}
 				}
 			}
-
+			catch
+			{
+			}
 			return nMax;
 		}
 

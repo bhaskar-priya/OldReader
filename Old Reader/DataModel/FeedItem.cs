@@ -303,68 +303,76 @@ namespace DataModel
 		{
 			List<FeedItem> feedItems = new List<FeedItem>();
 
-			JObject rootObj = JObject.Parse(szResponse);
-			Regex rx = new Regex(@"&#x([\d]+);");
-			Regex rxCyrillic = new Regex(@"\\u([0-9a-zA-Z]{4})");
-
-			continuationId = (String)rootObj[OldReaderConsts.continuation];
-
-			if (rootObj[OldReaderConsts.items] != null)
+			try
 			{
-				foreach (JObject curFeedObj in (JArray)rootObj[OldReaderConsts.items])
+				JObject rootObj = JObject.Parse(szResponse);
+				Regex rx = new Regex(@"&#x([\d]+);");
+				Regex rxCyrillic = new Regex(@"\\u([0-9a-zA-Z]{4})");
+
+				continuationId = (String)rootObj[OldReaderConsts.continuation];
+
+				if (rootObj[OldReaderConsts.items] != null)
 				{
-					FeedItem newFeedItem = new FeedItem(
-						getFeedID((string)curFeedObj[OldReaderConsts.id]),
-						rxCyrillic.Replace((String)(((JObject)curFeedObj[OldReaderConsts.summary])[OldReaderConsts.content]), new MatchEvaluator(ConvertEscapedText)),
-						(String)curFeedObj[OldReaderConsts.author],
-						(String)(((JArray)curFeedObj[OldReaderConsts.canonical])[0][OldReaderConsts.href]),
-						rx.Replace((String)curFeedObj[OldReaderConsts.title], new MatchEvaluator(ConvertEscapedText)),
-						true, DateTime.Now, false);
-
-					String strPublished = (string)curFeedObj[OldReaderConsts.published];
-					String strCrawlTime = (String)curFeedObj[OldReaderConsts.crawlTimeMsec];
-
-					int nPublished = int.Parse(strPublished);
-					int nCrawled = (int)(Int64.Parse(strCrawlTime) / 1000);
-					DateTime dtDateTime = new DateTime(1970,1,1,0,0,0,0);
-					newFeedItem.publishedTime = dtDateTime.AddSeconds(nCrawled>nPublished?nCrawled:nPublished).ToLocalTime();
-
-					JArray catArr = (JArray)curFeedObj[OldReaderConsts.categories];
-					foreach (String curCatObj in catArr)
+					foreach (JObject curFeedObj in (JArray)rootObj[OldReaderConsts.items])
 					{
-						Tag newTag = App.Contents.Tags.FirstOrDefault(t => t.id == curCatObj);
-						if (newTag != null)
+						FeedItem newFeedItem = new FeedItem(
+							getFeedID((string)curFeedObj[OldReaderConsts.id]),
+							rxCyrillic.Replace((String)(((JObject)curFeedObj[OldReaderConsts.summary])[OldReaderConsts.content]), new MatchEvaluator(ConvertEscapedText)),
+							(String)curFeedObj[OldReaderConsts.author],
+							(String)(((JArray)curFeedObj[OldReaderConsts.canonical])[0][OldReaderConsts.href]),
+							rx.Replace((String)curFeedObj[OldReaderConsts.title], new MatchEvaluator(ConvertEscapedText)),
+							true, DateTime.Now, false);
+
+						String strPublished = (string)curFeedObj[OldReaderConsts.published];
+						String strCrawlTime = (String)curFeedObj[OldReaderConsts.crawlTimeMsec];
+
+						int nPublished = int.Parse(strPublished);
+						int nCrawled = (int)(Int64.Parse(strCrawlTime) / 1000);
+						DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0);
+						newFeedItem.publishedTime = dtDateTime.AddSeconds(nCrawled > nPublished ? nCrawled : nPublished).ToLocalTime();
+
+						JArray catArr = (JArray)curFeedObj[OldReaderConsts.categories];
+						foreach (String curCatObj in catArr)
 						{
-							if (newFeedItem.tags == null)
+							Tag newTag = App.Contents.Tags.FirstOrDefault(t => t.id == curCatObj);
+							if (newTag != null)
 							{
-								newFeedItem.tags = new ObservableCollection<Tag>();
+								if (newFeedItem.tags == null)
+								{
+									newFeedItem.tags = new ObservableCollection<Tag>();
+								}
+								newFeedItem.tags.Add(newTag);
 							}
-							newFeedItem.tags.Add(newTag);
+							if (curCatObj == Old_Reader_Utils.OldReaderConsts.readItemTag)
+							{
+								// this feed is already read
+								newFeedItem.isUnread = false;
+							}
+							if (curCatObj == DataModel.Tag.StarredItems.id)
+							{
+								newFeedItem.Starred = true;
+							}
 						}
-						if (curCatObj == Old_Reader_Utils.OldReaderConsts.readItemTag)
-						{
-							// this feed is already read
-							newFeedItem.isUnread = false;
-						}
-						if (curCatObj == DataModel.Tag.StarredItems.id)
-						{
-							newFeedItem.Starred = true;
-						}
-					}
 
-					try
-					{
-						String szOrigin = (String)((JObject)curFeedObj[OldReaderConsts.origin])[OldReaderConsts.streamId];
-						newFeedItem.origin = App.Contents.Subscriptions.FirstOrDefault(s => s.id == szOrigin);
-					}
-					catch (NullReferenceException)
-					{
-						newFeedItem.origin = null;
-					}
+						try
+						{
+							String szOrigin = (String)((JObject)curFeedObj[OldReaderConsts.origin])[OldReaderConsts.streamId];
+							newFeedItem.origin = App.Contents.Subscriptions.FirstOrDefault(s => s.id == szOrigin);
+						}
+						catch (NullReferenceException)
+						{
+							newFeedItem.origin = null;
+						}
 
-					feedItems.Add(newFeedItem);
+						feedItems.Add(newFeedItem);
+					}
 				}
 			}
+			catch
+			{
+				continuationId = "";
+			}
+
 			return feedItems;
 		}
 

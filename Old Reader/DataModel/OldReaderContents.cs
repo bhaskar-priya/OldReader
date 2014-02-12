@@ -50,20 +50,26 @@ namespace DataModel
 
 		public OldReaderContents()
 		{
-			String szTagData = DataStore.CacheManager.TagData;
-			String szSubData = DataStore.CacheManager.SubscriptionData;
-			if (!String.IsNullOrEmpty(szTagData) && !String.IsNullOrEmpty(szSubData))
+			try
 			{
-				Tags = DataModel.Tag.CreateFromResponse(szTagData);
-				if (App.AllItemsAtTop)
+				String szTagData = DataStore.CacheManager.TagData;
+				String szSubData = DataStore.CacheManager.SubscriptionData;
+				if (!String.IsNullOrEmpty(szTagData) && !String.IsNullOrEmpty(szSubData))
 				{
-					Tags.Insert(0, Tag.AllItems);
+					Tags = DataModel.Tag.CreateFromResponse(szTagData);
+					if (App.AllItemsAtTop)
+					{
+						Tags.Insert(0, Tag.AllItems);
+					}
+					else
+					{
+						Tags.Add(Tag.AllItems);
+					}
+					Subscriptions = Subscription.CreateFromResponse(szSubData, Tags);
 				}
-				else
-				{
-					Tags.Add(Tag.AllItems);
-				}
-				Subscriptions = Subscription.CreateFromResponse(szSubData, Tags);
+			}
+			catch
+			{
 			}
 		}
 

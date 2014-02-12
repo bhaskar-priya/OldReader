@@ -100,15 +100,21 @@ namespace DataModel
 		public static ObservableCollection<Tag> CreateFromResponse(String szResponse)
 		{
 			ObservableCollection<Tag> tags = new ObservableCollection<Tag>();
-			JObject obj = JObject.Parse(szResponse);
-			JArray tagList = (JArray)obj[OldReaderConsts.tags];
-			foreach (JObject curObj in tagList)
+			try
 			{
-				Tag curTag=new Tag() { id = (String)curObj[OldReaderConsts.id], title = "" };
-				if (curTag.id != StarredItems.id)
+				JObject obj = JObject.Parse(szResponse);
+				JArray tagList = (JArray)obj[OldReaderConsts.tags];
+				foreach (JObject curObj in tagList)
 				{
-					tags.Add(curTag);
+					Tag curTag = new Tag() { id = (String)curObj[OldReaderConsts.id], title = "" };
+					if (curTag.id != StarredItems.id)
+					{
+						tags.Add(curTag);
+					}
 				}
+			}
+			catch
+			{
 			}
 			return tags;
 		}

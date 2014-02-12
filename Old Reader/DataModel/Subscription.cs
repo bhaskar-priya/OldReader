@@ -187,42 +187,53 @@ namespace DataModel
 		{
 			ObservableCollection<Subscription > subscriptions = new ObservableCollection<Subscription>();
 
-			JObject rootObj = JObject.Parse(szResponse);
-			JArray subscriptionList = (JArray)rootObj[OldReaderConsts.subscriptions];
-			foreach (JObject curObj in subscriptionList)
+			try
 			{
-				Subscription subObj = new Subscription()
+				JObject rootObj = JObject.Parse(szResponse);
+				JArray subscriptionList = (JArray)rootObj[OldReaderConsts.subscriptions];
+				foreach (JObject curObj in subscriptionList)
 				{
-					id = (String)curObj[OldReaderConsts.id],
-					title = (String)curObj[OldReaderConsts.title],
-					url = (String)curObj[OldReaderConsts.url],
-					htmlUrl = (String)curObj[OldReaderConsts.htmlUrl],
-					iconUrl = (String)curObj[OldReaderConsts.iconUrl]
-				};
-				subObj.resetIconPath();
-				// get the categories
-				JArray subCat = (JArray)curObj[OldReaderConsts.categories];
-				foreach(JObject curCat in subCat)
-				{
-					if (subObj.categories == null)
+					Subscription subObj = new Subscription()
 					{
-						subObj.categories = new ObservableCollection<Tag>();
-					}
-					Tag curTag = tags.Single(s => s.id == (String)curCat[OldReaderConsts.id]);
-					if (curTag != null)
+						id = (String)curObj[OldReaderConsts.id],
+						title = (String)curObj[OldReaderConsts.title],
+						url = (String)curObj[OldReaderConsts.url],
+						htmlUrl = (String)curObj[OldReaderConsts.htmlUrl],
+						iconUrl = (String)curObj[OldReaderConsts.iconUrl]
+					};
+					subObj.resetIconPath();
+					// get the categories
+					JArray subCat = (JArray)curObj[OldReaderConsts.categories];
+					foreach (JObject curCat in subCat)
 					{
-						subObj.categories.Add(curTag);
-						// add this subscription to the tag
-						if (curTag.Subscriptions == null)
+						if (subObj.categories == null)
 						{
-							curTag.Subscriptions = new ObservableCollection<Subscription>();
+							subObj.categories = new ObservableCollection<Tag>();
 						}
-						curTag.Subscriptions.Add(subObj);
-						curTag.title = (String)curCat[OldReaderConsts.label];
+						Tag curTag = null;
+						try
+						{
+							curTag = tags.Single(s => s.id == (String)curCat[OldReaderConsts.id]);
+						}
+						catch { }
+						if (curTag != null)
+						{
+							subObj.categories.Add(curTag);
+							// add this subscription to the tag
+							if (curTag.Subscriptions == null)
+							{
+								curTag.Subscriptions = new ObservableCollection<Subscription>();
+							}
+							curTag.Subscriptions.Add(subObj);
+							curTag.title = (String)curCat[OldReaderConsts.label];
+						}
 					}
-				}
 
-				subscriptions.Add(subObj);
+					subscriptions.Add(subObj);
+				}
+			}
+			catch
+			{
 			}
 
 			return subscriptions;
