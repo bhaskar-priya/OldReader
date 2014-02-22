@@ -347,4 +347,10 @@ Tur Ger for Hungarian</value>
   <data name="strAllItemsOnTop" xml:space="preserve">
     <value>All Items on top</value>
   </data>
+  <data name="strDarkMode" xml:space="preserve">
+    <value>dark mode</value>
+  </data>
+  <data name="strLightMode" xml:space="preserve">
+    <value>light mode</value>
+  </data>
 </root>

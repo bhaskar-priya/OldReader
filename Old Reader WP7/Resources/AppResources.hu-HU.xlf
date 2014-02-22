@@ -136,11 +136,13 @@ Hibák bejelentéséhez és visszajelzés küldéséhez koppints a gombra!</targ
           <source>Trevor /u/alexandertrevor for UI improvements
 /u/DatDoodKwan for French translation
 /u/diogenesl for pt-br translation
-/u/yudayyy for Bahasa Indonesia translation</source>
-          <target state="new">Trevor /u/alexandertrevor for UI improvements
-/u/DatDoodKwan for French translation
-/u/diogenesl for pt-br translation
-/u/yudayyy for Bahasa Indonesia translation</target>
+/u/yudayyy for Bahasa Indonesia translation
+Tur Ger for Hungarian</source>
+          <target state="translated">Trevor /u/alexandertrevor: felület
+/u/DatDoodKwan: francia fordítás
+/u/diogenesl: pt-br fordítás
+/u/yudayyy: indonéz fordítás
+Tur Ger: magyar fordítás</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/strAddSubscription" xml:space="preserve">
           <source>add feed</source>
@@ -313,6 +315,14 @@ Hibák bejelentéséhez és visszajelzés küldéséhez koppints a gombra!</targ
         <trans-unit translate="yes" id="Resx/strAllItemsOnTop" xml:space="preserve">
           <source>All Items on top</source>
           <target state="translated">minden elem felül</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strLightMode" xml:space="preserve">
+          <source>light mode</source>
+          <target state="new">light mode</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strDarkMode" xml:space="preserve">
+          <source>dark mode</source>
+          <target state="new">dark mode</target>
         </trans-unit>
       </group>
     </body>

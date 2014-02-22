@@ -136,11 +136,13 @@ För att rapportera buggar och ge feedback, var god tryck på följande knapp.</
           <source>Trevor /u/alexandertrevor for UI improvements
 /u/DatDoodKwan for French translation
 /u/diogenesl for pt-br translation
-/u/yudayyy for Bahasa Indonesia translation</source>
-          <target state="new" state-qualifier="mt-suggestion">Trevor /u/alexandertrevor för interfaceförbättringar
-/u/DatDoodKwan för översättning till franska
-/u/diogenesl för översättning till pt-br
-/u/yudayyy för översättning till Bahasaindonesiska</target>
+/u/yudayyy for Bahasa Indonesia translation
+Tur Ger for Hungarian</source>
+          <target state="new" state-qualifier="mt-suggestion">Trevor /u/alexandertrevor for UI improvements
+/u/DatDoodKwan for French translation
+/u/diogenesl for pt-br translation
+/u/yudayyy for Bahasa Indonesia translation
+Tur Ger for Hungarian</target>
         </trans-unit>
         <trans-unit id="Resx/strAddSubscription" translate="yes" xml:space="preserve">
           <source>add feed</source>
@@ -289,6 +291,14 @@ För att rapportera buggar och ge feedback, var god tryck på följande knapp.</
         <trans-unit translate="yes" id="Resx/strAllItemsOnTop" xml:space="preserve">
           <source>All Items on top</source>
           <target state="new">All Items on top</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strLightMode" xml:space="preserve">
+          <source>light mode</source>
+          <target state="new">light mode</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strDarkMode" xml:space="preserve">
+          <source>dark mode</source>
+          <target state="new">dark mode</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/strUpdateAppMsgBody" xml:space="preserve">
           <source>An update for the application is available in the marketplace. Do you want to update now?</source>

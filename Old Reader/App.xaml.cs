@@ -353,6 +353,18 @@ namespace Old_Reader
 			}
 		}
 
+		public static bool DarkMode
+		{
+			get
+			{
+				return Utilities.AppSettings.Read<bool>(Old_Reader_Utils.OldReaderConsts.darkMode, false);
+			}
+			set
+			{
+				Utilities.AppSettings.Write(Old_Reader_Utils.OldReaderConsts.darkMode, value);
+			}
+		}
+
 		public static bool RefreshContents { get; set; }
 	}
 }

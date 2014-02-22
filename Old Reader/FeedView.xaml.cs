@@ -68,6 +68,7 @@ namespace Old_Reader
 
 			(ApplicationBar.MenuItems[0] as ApplicationBarMenuItem).Text = AppNs.Resources.AppResources.strOpenInIE;
 			(ApplicationBar.MenuItems[1] as ApplicationBarMenuItem).Text = AppNs.Resources.AppResources.strEMailMenuItem;
+			(ApplicationBar.MenuItems[2] as ApplicationBarMenuItem).Text = AppNs.App.DarkMode?AppNs.Resources.AppResources.strLightMode:AppNs.Resources.AppResources.strDarkMode;
 		}
 
 		private DataModel.FeedItem m_feedItem;
@@ -165,13 +166,28 @@ namespace Old_Reader
 			}
 		}
 
+		String GetMarkup()
+		{
+			if (AppNs.App.DarkMode)
+			{
+				String szStart = "<body style=\"background-color:black; color:white\">";
+				String szEnd = "</body>";
+
+				return szStart + ConvertExtendedASCII(curFeed.summary) + szEnd;
+			}
+			else
+			{
+				return ConvertExtendedASCII(curFeed.summary);
+			}
+		}
+
 		void showFeedItem(int nIdx)
 		{
 			Analytics.GAnalytics.trackPageView("FeedView");
 			curFeed = AppNs.App.FeedItems[nIdx];
 			if (curFeed != null)
 			{
-				contentDisplay.NavigateToString(ConvertExtendedASCII(curFeed.summary));
+				contentDisplay.NavigateToString(GetMarkup());
 
 				if (bShowLiveFeed)
 				{
@@ -246,6 +262,13 @@ namespace Old_Reader
 			email.Subject = curFeed.title;
 			email.Body = curFeed.href;
 			email.Show();
+		}
+
+		private void ApplicationBarDarkModeMenuItem_Click(object sender, EventArgs e)
+		{
+			AppNs.App.DarkMode = !AppNs.App.DarkMode;
+			(ApplicationBar.MenuItems[2] as ApplicationBarMenuItem).Text = AppNs.App.DarkMode ? AppNs.Resources.AppResources.strLightMode : AppNs.Resources.AppResources.strDarkMode;
+			contentDisplay.NavigateToString(GetMarkup());
 		}
 	}
 }

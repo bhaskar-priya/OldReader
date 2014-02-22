@@ -136,11 +136,13 @@ Untuk melaporkan bug dan saran silahkan klik tombol berikut.</target>
           <source>Trevor /u/alexandertrevor for UI improvements
 /u/DatDoodKwan for French translation
 /u/diogenesl for pt-br translation
-/u/yudayyy for Bahasa Indonesia translation</source>
+/u/yudayyy for Bahasa Indonesia translation
+Tur Ger for Hungarian</source>
           <target state="new">Trevor /u/alexandertrevor for UI improvements
 /u/DatDoodKwan for French translation
 /u/diogenesl for pt-br translation
-/u/yudayyy for Bahasa Indonesia translation</target>
+/u/yudayyy for Bahasa Indonesia translation
+Tur Ger for Hungarian</target>
         </trans-unit>
         <trans-unit id="Resx/strAddSubscription" translate="yes" xml:space="preserve">
           <source>add feed</source>
@@ -269,6 +271,14 @@ Untuk melaporkan bug dan saran silahkan klik tombol berikut.</target>
         <trans-unit translate="yes" id="Resx/strAllItemsOnTop" xml:space="preserve">
           <source>All Items on top</source>
           <target state="new">All Items on top</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strLightMode" xml:space="preserve">
+          <source>light mode</source>
+          <target state="new">light mode</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strDarkMode" xml:space="preserve">
+          <source>dark mode</source>
+          <target state="new">dark mode</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/strGettingStarredItems" xml:space="preserve">
           <source>Getting starred items</source>

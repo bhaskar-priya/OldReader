@@ -316,6 +316,14 @@ Tur Ger: magyar fordítás</target>
           <source>All Items on top</source>
           <target state="translated">minden elem felül</target>
         </trans-unit>
+        <trans-unit translate="yes" id="Resx/strLightMode" xml:space="preserve">
+          <source>light mode</source>
+          <target state="new">light mode</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strDarkMode" xml:space="preserve">
+          <source>dark mode</source>
+          <target state="new">dark mode</target>
+        </trans-unit>
       </group>
     </body>
   </file>

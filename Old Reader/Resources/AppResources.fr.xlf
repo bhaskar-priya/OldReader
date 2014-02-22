@@ -292,6 +292,14 @@ Tur Ger for Hungarian</target>
           <source>All Items on top</source>
           <target state="new">All Items on top</target>
         </trans-unit>
+        <trans-unit translate="yes" id="Resx/strLightMode" xml:space="preserve">
+          <source>light mode</source>
+          <target state="translated">Mode éclairage</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/strDarkMode" xml:space="preserve">
+          <source>dark mode</source>
+          <target state="translated">mode sombre</target>
+        </trans-unit>
         <trans-unit translate="yes" id="Resx/strUpdateAppMsgBody" xml:space="preserve">
           <source>An update for the application is available in the marketplace. Do you want to update now?</source>
           <target state="new">An update for the application is available in the marketplace. Do you want to update now?</target>

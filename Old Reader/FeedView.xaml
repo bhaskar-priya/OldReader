@@ -53,7 +53,7 @@
 				<Image Source="Resources/oldreader-icon.png"
 							   Width="20" Height="20"
 							   VerticalAlignment="Bottom" Margin="0,0,0,0" />
-				<TextBlock Text="{Binding Path=LocalizedResources.AppTitle, Source={StaticResource LocalizedStrings}}"
+				<TextBlock Text="{Binding curFeed.origin.title}"
 					   Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0" />
 			</StackPanel>
         </StackPanel>
@@ -69,7 +69,7 @@
 					<toolkit:GestureListener Flick="GestureListener_Flick"/>
 				</toolkit:GestureService.GestureListener>
 				<TextBlock Text="{Binding curFeed.title}" Grid.Row="0" Style="{StaticResource PhoneTextLargeStyle}" TextWrapping="Wrap" />
-				<phone:WebBrowser Name="contentDisplay" Grid.Row="1" IsScriptEnabled="True" IsHitTestVisible="True" IsGeolocationEnabled="True" />
+				<phone:WebBrowser Name="contentDisplay" Grid.Row="1" IsScriptEnabled="True" IsHitTestVisible="True" IsGeolocationEnabled="True" BorderThickness="1" BorderBrush="White" />
 			</Grid>
 		</Grid>
     </Grid>
@@ -82,6 +82,7 @@
 			<shell:ApplicationBar.MenuItems>
 				<shell:ApplicationBarMenuItem Text="open in IE..." Click="ApplicationBarOpenInIEMenuItem_Click" />
 				<shell:ApplicationBarMenuItem Text="email..." Click="ApplicationBarEMailMenuItem_Click" />
+				<shell:ApplicationBarMenuItem Text="dark mode" Click="ApplicationBarDarkModeMenuItem_Click" />
 			</shell:ApplicationBar.MenuItems>
 		</shell:ApplicationBar>
 	</phone:PhoneApplicationPage.ApplicationBar>
