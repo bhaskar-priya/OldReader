@@ -61,14 +61,14 @@ namespace Old_Reader
 
 			this.DataContext = this;
 
-			(ApplicationBar.Buttons[0] as ApplicationBarIconButton).Text = AppNs.Resources.AppResources.strKeepUnread;
-			(ApplicationBar.Buttons[1] as ApplicationBarIconButton).Text = AppNs.Resources.AppResources.strViewFull;
-			(ApplicationBar.Buttons[2] as ApplicationBarIconButton).Text = AppNs.Resources.AppResources.strShare;
-			(ApplicationBar.Buttons[3] as ApplicationBarIconButton).Text = AppNs.Resources.AppResources.strSaveLocal;
+			(ApplicationBar.Buttons[0] as ApplicationBarIconButton).Text = AppNs.Resources.AppResources.strViewFull;
+			(ApplicationBar.Buttons[1] as ApplicationBarIconButton).Text = AppNs.Resources.AppResources.strShare;
+			(ApplicationBar.Buttons[2] as ApplicationBarIconButton).Text = AppNs.Resources.AppResources.strSaveLocal;
 
 			(ApplicationBar.MenuItems[0] as ApplicationBarMenuItem).Text = AppNs.Resources.AppResources.strOpenInIE;
-			(ApplicationBar.MenuItems[1] as ApplicationBarMenuItem).Text = AppNs.Resources.AppResources.strEMailMenuItem;
-			(ApplicationBar.MenuItems[2] as ApplicationBarMenuItem).Text = AppNs.App.DarkMode?AppNs.Resources.AppResources.strLightMode:AppNs.Resources.AppResources.strDarkMode;
+			(ApplicationBar.MenuItems[1] as ApplicationBarMenuItem).Text = AppNs.Resources.AppResources.strKeepUnread;
+			(ApplicationBar.MenuItems[2] as ApplicationBarMenuItem).Text = AppNs.Resources.AppResources.strEMailMenuItem;
+			(ApplicationBar.MenuItems[3] as ApplicationBarMenuItem).Text = AppNs.App.DarkMode?AppNs.Resources.AppResources.strLightMode:AppNs.Resources.AppResources.strDarkMode;
 		}
 
 		private DataModel.FeedItem m_feedItem;
@@ -112,8 +112,8 @@ namespace Old_Reader
 				btnText = AppNs.Resources.AppResources.strRemoveLocal;
 			}
 
-			(ApplicationBar.Buttons[3] as ApplicationBarIconButton).IconUri = new Uri(iconUri, UriKind.Relative);
-			(ApplicationBar.Buttons[3] as ApplicationBarIconButton).Text = btnText;
+			(ApplicationBar.Buttons[2] as ApplicationBarIconButton).IconUri = new Uri(iconUri, UriKind.Relative);
+			(ApplicationBar.Buttons[2] as ApplicationBarIconButton).Text = btnText;
 		}
 
 		private int nCurIdx = -1;

@@ -234,6 +234,7 @@
     <Content Include="Resources\oldreader-icon-small.png" />
     <Content Include="Resources\oldreader-icon.png" />
     <Content Include="Resources\panoramaBackground.png" />
+    <Content Include="Toolkit.Content\appbar.arrow.right.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Check.png" />

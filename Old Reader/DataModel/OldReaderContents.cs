@@ -100,6 +100,17 @@ namespace DataModel
 				{
 					src = App.ReaderDB.CachedFeeds.Where(cf => cf.StreamId == szFeedId && cf.Unread == true).OrderByDescending(cf => cf.publishedTime);
 				}
+				if (src.Count() == 0)
+				{
+					if (bShowRead)
+					{
+						src = App.ReaderDB.CachedFeeds.Where(cf => cf.Categories.Contains(szFeedId)).OrderByDescending(cf => cf.publishedTime);
+					}
+					else
+					{
+						src = App.ReaderDB.CachedFeeds.Where(cf => cf.Categories.Contains(szFeedId) && cf.Unread == true).OrderByDescending(cf => cf.publishedTime);
+					}
+				}
 			}
 			else
 			{

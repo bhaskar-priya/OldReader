@@ -75,13 +75,13 @@
     </Grid>
 	<phone:PhoneApplicationPage.ApplicationBar>
 		<shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-			<shell:ApplicationBarIconButton IconUri="/Toolkit.Content/ApplicationBar.Unread.png" Text="|keep unread|" Click="ApplicationBarKeepUnread_Click" />
 			<shell:ApplicationBarIconButton IconUri="/Toolkit.Content/fullscreen.expand.png" Text="|view full|" Click="ApplicationBarFullView_Click" />
 			<shell:ApplicationBarIconButton IconUri="/Toolkit.Content/share.png" Text="|share|" Click="ApplicationBarShare_Click" />
 			<shell:ApplicationBarIconButton IconUri="/Toolkit.Content/ApplicationBar.Save.png" Text="|save|" Click="ApplicationBarSaveButton_Click" />
 			<shell:ApplicationBar.MenuItems>
-				<shell:ApplicationBarMenuItem Text="open in IE..." Click="ApplicationBarOpenInIEMenuItem_Click" />
-				<shell:ApplicationBarMenuItem Text="email..." Click="ApplicationBarEMailMenuItem_Click" />
+				<shell:ApplicationBarMenuItem Text="|open in IE...|" Click="ApplicationBarOpenInIEMenuItem_Click" />
+				<shell:ApplicationBarMenuItem Text="|keep unread|" Click="ApplicationBarKeepUnread_Click" />
+				<shell:ApplicationBarMenuItem Text="|email...|" Click="ApplicationBarEMailMenuItem_Click" />
 				<shell:ApplicationBarMenuItem Text="dark mode" Click="ApplicationBarDarkModeMenuItem_Click" />
 			</shell:ApplicationBar.MenuItems>
 		</shell:ApplicationBar>

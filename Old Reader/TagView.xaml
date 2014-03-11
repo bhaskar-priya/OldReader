@@ -120,6 +120,7 @@
 	<phone:PhoneApplicationPage.ApplicationBar>
 		<shell:ApplicationBar IsVisible="True">
 			<shell:ApplicationBarIconButton IconUri="/Toolkit.Content/ApplicationBar.Add.png" Text="|add|" Click="ApplicationBarAddIconButton_Click" />
+			<shell:ApplicationBarIconButton IconUri="/Toolkit.Content/appbar.arrow.right.png" Text="|all items|" Click="ApplicationBarAllItemsButton_Click" />
 		</shell:ApplicationBar>
 	</phone:PhoneApplicationPage.ApplicationBar>
 </phone:PhoneApplicationPage>

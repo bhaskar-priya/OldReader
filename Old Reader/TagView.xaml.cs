@@ -81,6 +81,7 @@ namespace Old_Reader
 			this.DataContext = this;
 
 			(ApplicationBar.Buttons[0] as ApplicationBarIconButton).Text = AppNs.Resources.AppResources.strAddFeed;
+			(ApplicationBar.Buttons[1] as ApplicationBarIconButton).Text = DataModel.Tag.AllItems.title;
 		}
 
 		private DataModel.Tag m_CurTag;
@@ -105,29 +106,6 @@ namespace Old_Reader
 #endif
 			}
 		}
-
-//		private ObservableCollection<DataModel.FeedItem> m_feedItems;
-//		public ObservableCollection<DataModel.FeedItem> FeedItems
-//		{
-//			get
-//			{
-//				return m_feedItems;
-//			}
-//			set
-//			{
-//#if OLD_READER_WP7
-//				NotifyPropertyChanging("FeedItems");
-//#else
-//				NotifyPropertyChanging();
-//#endif
-//				m_feedItems = value;
-//#if OLD_READER_WP7
-//				NotifyPropertyChanged("FeedItems");
-//#else
-//				NotifyPropertyChanged();
-//#endif
-//			}
-//		}
 
 		public int itemCount
 		{
@@ -306,6 +284,11 @@ namespace Old_Reader
 					CurTag.Subscriptions.Remove(movedFeed);
 				}
 			});
+		}
+
+		private void ApplicationBarAllItemsButton_Click(object sender, EventArgs e)
+		{
+			NavigationService.Navigate(new Uri("/SubscriptionView.xaml?feedId=" + m_CurTag.id, UriKind.Relative));
 		}
 	}
 }

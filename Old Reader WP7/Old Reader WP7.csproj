@@ -285,6 +285,9 @@
     <Content Include="..\Old Reader\Resources\panoramaBackground.png">
       <Link>Resources\panoramaBackground.png</Link>
     </Content>
+    <Content Include="..\Old Reader\Toolkit.Content\appbar.arrow.right.png">
+      <Link>Toolkit.Content\appbar.arrow.right.png</Link>
+    </Content>
     <Content Include="..\Old Reader\Toolkit.Content\ApplicationBar.Add.png">
       <Link>Toolkit.Content\ApplicationBar.Add.png</Link>
     </Content>

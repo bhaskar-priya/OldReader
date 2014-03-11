@@ -92,28 +92,8 @@ namespace Old_Reader
 			FeedItems = new ObservableCollection<DataModel.FeedItem>();
 		}
 
-		private DataModel.Subscription m_Subscription;
-		public DataModel.Subscription CurSubscription
-		{
-			get
-			{
-				return m_Subscription;
-			}
-			set
-			{
-#if OLD_READER_WP7
-				NotifyPropertyChanging("CurSubscription");
-#else
-				NotifyPropertyChanging();
-#endif
-				m_Subscription = value;
-#if OLD_READER_WP7
-				NotifyPropertyChanged("CurSubscription");
-#else
-				NotifyPropertyChanged();
-#endif
-			}
-		}
+		private DataModel.Subscription m_curSub;
+		private DataModel.Tag m_CurTag;
 
 		private ObservableCollection<DataModel.FeedItem> m_feedItems;
 		public ObservableCollection<DataModel.FeedItem> FeedItems
@@ -200,29 +180,31 @@ namespace Old_Reader
 					DataModel.Subscription curSub = AppNs.App.Contents.Subscriptions.FirstOrDefault(s => s.id == m_SrcFeedId);
 					if (curSub != null)
 					{
-						CurSubscription = curSub;
+						m_curSub = curSub;
 						PageTitle = curSub.title;
 					}
 					else
 					{
-						PageTitle = DataModel.Tag.AllItems.title;
+						// this is not a subscription but a tag
+						m_CurTag = AppNs.App.Contents.Tags.FirstOrDefault(t => t.id == m_SrcFeedId);
+						PageTitle = m_CurTag.title;
 					}
 				}
 
 				int nUnreadCount = 0;
-				if (CurSubscription != null)
+				if (m_curSub != null)
 				{
-					if (CurSubscription.unreadCount > 0)
+					if (m_curSub.unreadCount > 0)
 					{
-						nUnreadCount = CurSubscription.unreadCount;
+						nUnreadCount = m_curSub.unreadCount;
 					}
 					
 				}
-				else if (m_SrcFeedId == DataModel.Tag.AllItems.id)
+				else if (m_CurTag != null)
 				{
-					if (DataModel.Tag.AllItems.unreadCount > 0)
+					if (m_CurTag.unreadCount > 0)
 					{
-						nUnreadCount = DataModel.Tag.AllItems.unreadCount;
+						nUnreadCount = m_CurTag.unreadCount;
 					}
 				}
 
@@ -275,9 +257,9 @@ namespace Old_Reader
 
 		private void markAllReadComplete(String szResponse)
 		{
-			if (CurSubscription != null)
+			if (m_curSub != null)
 			{
-				DataStore.CachedFeed.markAllReadForSubscription(CurSubscription.id);
+				DataStore.CachedFeed.markAllReadForSubscription(m_curSub.id);
 			}
 			else if (FeedItems != null)
 			{
@@ -297,15 +279,15 @@ namespace Old_Reader
 				handleAppBarButton();
 					
 				// reduce the unread count
-				if (CurSubscription != null)
+				if (m_curSub != null)
 				{
-					int curCount = CurSubscription.unreadCount;
+					int curCount = m_curSub.unreadCount;
 					// mark all items unread
 					// adjust the count
-					CurSubscription.unreadCount = 0;
-					if (CurSubscription.categories != null)
+					m_curSub.unreadCount = 0;
+					if (m_curSub.categories != null)
 					{
-						foreach (DataModel.Tag curTag in CurSubscription.categories)
+						foreach (DataModel.Tag curTag in m_curSub.categories)
 						{
 							curTag.unreadCount -= curCount;
 						}
@@ -316,15 +298,13 @@ namespace Old_Reader
 				else if (FeedItems != null)
 				{
 					// no subscription still we have items.
-					// it must be all items
-					foreach (var curSub in AppNs.App.Contents.Subscriptions)
+					int curCount = m_CurTag.unreadCount;
+					DataModel.Tag.AllItems.unreadCount -= curCount;
+					foreach (var curSub in m_CurTag.Subscriptions)
 					{
 						curSub.unreadCount = 0;
 					}
-					foreach (var curTag in AppNs.App.Contents.Tags)
-					{
-						curTag.unreadCount = 0;
-					}
+					m_CurTag.unreadCount = 0;
 				}
 			});
 		}
@@ -360,14 +340,14 @@ namespace Old_Reader
 			int nMoreDownload = AppNs.App.AdditionalDownloadCount;
 			String continuationId = "";
 
-			if (CurSubscription != null)
+			if (m_curSub != null)
 			{
-				continuationId = DataStore.ContinuationId.getContinuationIdFor(CurSubscription.id);
+				continuationId = DataStore.ContinuationId.getContinuationIdFor(m_curSub.id);
 			}
 			else
 			{
 				// this is all items
-				continuationId = DataStore.ContinuationId.getContinuationIdFor(DataModel.Tag.AllItems.id);
+				continuationId = DataStore.ContinuationId.getContinuationIdFor(m_CurTag.id);
 			}
 
 			WS.Remoting rmGetFeeds = new WS.Remoting(FeedListComplete);
@@ -405,14 +385,14 @@ namespace Old_Reader
 
 		void handleNewItems(List<DataModel.FeedItem> newFeedItems, String continuationId)
 		{
-			if (CurSubscription != null)
+			if (m_curSub != null)
 			{
-				DataStore.ContinuationId.setContinuationId(CurSubscription.id, continuationId);
+				DataStore.ContinuationId.setContinuationId(m_curSub.id, continuationId);
 			}
 			else
 			{
 				// this is all items
-				DataStore.ContinuationId.setContinuationId(DataModel.Tag.AllItems.id, continuationId);
+				DataStore.ContinuationId.setContinuationId(m_CurTag.id, continuationId);
 			}
 
 			AppNs.App.Contents.AddFeeds(newFeedItems.ToList());
