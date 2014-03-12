@@ -61,6 +61,10 @@ namespace DataModel
 		{
 			get
 			{
+				if (m_categories == null)
+				{
+					m_categories = new ObservableCollection<Tag>();
+				}
 				return m_categories;
 			}
 			set
@@ -174,7 +178,7 @@ namespace DataModel
 #else
 				NotifyPropertyChanging();
 #endif
-				m_unreadCount = value;
+				m_unreadCount = value > 0 ? value : 0;
 #if OLD_READER_WP7
 				NotifyPropertyChanged("unreadCount");
 #else
@@ -206,10 +210,6 @@ namespace DataModel
 					JArray subCat = (JArray)curObj[OldReaderConsts.categories];
 					foreach (JObject curCat in subCat)
 					{
-						if (subObj.categories == null)
-						{
-							subObj.categories = new ObservableCollection<Tag>();
-						}
 						Tag curTag = null;
 						try
 						{
@@ -220,15 +220,11 @@ namespace DataModel
 						{
 							subObj.categories.Add(curTag);
 							// add this subscription to the tag
-							if (curTag.Subscriptions == null)
-							{
-								curTag.Subscriptions = new ObservableCollection<Subscription>();
-							}
 							curTag.Subscriptions.Add(subObj);
 							curTag.title = (String)curCat[OldReaderConsts.label];
 						}
 					}
-
+					Tag.AllItems.Subscriptions.Add(subObj);
 					subscriptions.Add(subObj);
 				}
 			}

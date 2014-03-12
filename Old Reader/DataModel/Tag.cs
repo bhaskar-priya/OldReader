@@ -43,6 +43,10 @@ namespace DataModel
 		{
 			get
 			{
+				if (m_Subscriptions == null)
+				{
+					m_Subscriptions = new ObservableCollection<Subscription>();
+				}
 				return m_Subscriptions;
 			}
 			set
@@ -75,7 +79,7 @@ namespace DataModel
 #else
 				NotifyPropertyChanging();
 #endif
-				m_UnreadCount = value;
+				m_UnreadCount = value > 0 ? value : 0;
 #if OLD_READER_WP7
 				NotifyPropertyChanged("unreadCount");
 #else

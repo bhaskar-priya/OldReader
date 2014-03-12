@@ -136,6 +136,10 @@ namespace DataModel
 		{
 			get
 			{
+				if (m_tags == null)
+				{
+					m_tags = new ObservableCollection<Tag>();
+				}
 				return m_tags;
 			}
 			set
@@ -337,10 +341,6 @@ namespace DataModel
 							Tag newTag = App.Contents.Tags.FirstOrDefault(t => t.id == curCatObj);
 							if (newTag != null)
 							{
-								if (newFeedItem.tags == null)
-								{
-									newFeedItem.tags = new ObservableCollection<Tag>();
-								}
 								newFeedItem.tags.Add(newTag);
 							}
 							if (curCatObj == Old_Reader_Utils.OldReaderConsts.readItemTag)
