@@ -146,10 +146,32 @@ namespace DataStore
 			App.ReaderDB.SubmitChanges();
 		}
 
-		public static void markAllReadForSubscription(String szBubId)
+		public static void markAllReadForContainer(Object container)
+		{
+			if (container is DataModel.Subscription)
+			{
+				markAllReadForSubscription((container as DataModel.Subscription).id);
+			}
+			else if (container is DataModel.Tag)
+			{
+				markAllReadForTag((container as DataModel.Tag).id);
+			}
+		}
+
+		private static void markAllReadForSubscription(String szBubId)
 		{
 			foreach (var cachedFeed in App.ReaderDB.CachedFeeds.Where(
 				cf => cf.Unread == true && cf.StreamId == szBubId))
+			{
+				cachedFeed.Unread = false;
+			}
+			App.ReaderDB.SubmitChanges();
+		}
+
+		private static void markAllReadForTag(String szTagId)
+		{
+			foreach (var cachedFeed in App.ReaderDB.CachedFeeds.Where(
+				cf => cf.Unread == true && cf.Categories.Contains(szTagId)))
 			{
 				cachedFeed.Unread = false;
 			}

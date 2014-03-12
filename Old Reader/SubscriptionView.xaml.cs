@@ -259,13 +259,13 @@ namespace Old_Reader
 		{
 			if (m_curSub != null)
 			{
-				DataStore.CachedFeed.markAllReadForSubscription(m_curSub.id);
+				DataStore.CachedFeed.markAllReadForContainer(m_curSub);
 			}
 			else if (FeedItems != null)
 			{
 				// no subscription still we have items.
 				// it must be all items
-				DataStore.CachedFeed.markAllRead();
+				DataStore.CachedFeed.markAllReadForContainer(m_CurTag);
 			}
 
 			Dispatcher.BeginInvoke(() =>
