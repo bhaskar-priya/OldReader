@@ -241,6 +241,7 @@ namespace Old_Reader
 			}
 			else
 			{
+				Utils.ClearTileCount();
 				DataModel.OldReaderContents tmpContent = Contents;
 				Contents = null;
 				Contents = tmpContent;

@@ -305,6 +305,13 @@ namespace Old_Reader
 						curSub.unreadCount = 0;
 					}
 					m_CurTag.unreadCount = 0;
+					if (m_CurTag.id == DataModel.Tag.AllItems.id)
+					{
+						foreach (DataModel.Tag temp in AppNs.App.Contents.Tags)
+						{
+							temp.unreadCount = 0;
+						}
+					}
 				}
 			});
 		}
