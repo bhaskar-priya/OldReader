@@ -9,7 +9,7 @@
     <Language code="qps-ploc" />
     <Language code="sv" />
   </Languages>
-  <App xmlns="" ProductID="{48bea293-1410-4858-9062-5a5b412cad11}" Title="Old Reader" RuntimeType="Silverlight" Version="6.0.0.0" Genre="apps.normal" Author="Bhaskar Priya" Description="Windows Phone client for &quot;The Old Reader&quot;" Publisher="Bhaskar Priya" PublisherID="{c1bd0c30-ace5-47db-9ce0-b870bb52b848}">
+  <App xmlns="" ProductID="{48bea293-1410-4858-9062-5a5b412cad11}" Title="Old Reader" RuntimeType="Silverlight" Version="6.1.0.0" Genre="apps.normal" Author="Bhaskar Priya" Description="Windows Phone client for &quot;The Old Reader&quot;" Publisher="Bhaskar Priya" PublisherID="{c1bd0c30-ace5-47db-9ce0-b870bb52b848}">
     <IconPath IsRelative="true" IsResource="false">oldreader-icon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
