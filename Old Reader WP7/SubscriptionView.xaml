@@ -76,7 +76,8 @@
 						   Visibility="{Binding FeedItems.Count, Converter={StaticResource IntegerInvertingVisibilityConverter}}"
 						   toolkit:TurnstileFeatherEffect.FeatheringIndex="2"/>
 				<ListBox Name="feedList" ItemsSource="{Binding FeedItems}"
-						 Width="auto" SelectionChanged="feedList_SelectionChanged" >
+						 Width="auto"
+						 Tap="feedList_Tap" >
 					<ListBox.ItemContainerStyle>
 						<Style TargetType="ListBoxItem">
 							<Setter Property="HorizontalAlignment" Value="Stretch" />

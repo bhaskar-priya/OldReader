@@ -271,34 +271,6 @@ namespace Old_Reader
 			}
 		}
 
-		private void subscriptionList_SelectionChanged(object sender, SelectionChangedEventArgs e)
-		{
-			if (subscriptionList.SelectedItem is DataModel.Tag)
-			{
-				DataModel.Tag curTag = subscriptionList.SelectedItem as DataModel.Tag;
-				if (curTag.id != DataModel.Tag.AllItems.id)
-				{
-					NavigationService.Navigate(new Uri("/TagView.xaml?tagId=" + (subscriptionList.SelectedItem as DataModel.Tag).id, UriKind.Relative));
-				}
-				else
-				{
-					NavigationService.Navigate(new Uri("/SubscriptionView.xaml?feedId=" + curTag.id, UriKind.Relative));
-				}
-			}
-			else if (subscriptionList.SelectedItem is DataModel.Subscription)
-			{
-				NavigationService.Navigate(new Uri("/SubscriptionView.xaml?feedId=" + (subscriptionList.SelectedItem as DataModel.Subscription).id, UriKind.Relative));
-			}
-		}
-
-		private void starredFeedsList_SelectionChanged(object sender, SelectionChangedEventArgs e)
-		{
-			if (starredFeedsList.SelectedIndex >= 0)
-			{
-				OpenFeedViewForCustomList(StarredFeeds, starredFeedsList.SelectedIndex);
-			}
-		}
-
 		private void OpenFeedViewForCustomList(ObservableCollection<DataModel.FeedItem> customList, int selIndex)
 		{
 			App.FeedItems = new List<DataModel.FeedItem>();
@@ -546,6 +518,34 @@ namespace Old_Reader
 						RefreshContent();
 					}
 				});
+		}
+
+		private void subscriptionList_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+		{
+			if (subscriptionList.SelectedItem is DataModel.Tag)
+			{
+				DataModel.Tag curTag = subscriptionList.SelectedItem as DataModel.Tag;
+				if (curTag.id != DataModel.Tag.AllItems.id)
+				{
+					NavigationService.Navigate(new Uri("/TagView.xaml?tagId=" + (subscriptionList.SelectedItem as DataModel.Tag).id, UriKind.Relative));
+				}
+				else
+				{
+					NavigationService.Navigate(new Uri("/SubscriptionView.xaml?feedId=" + curTag.id, UriKind.Relative));
+				}
+			}
+			else if (subscriptionList.SelectedItem is DataModel.Subscription)
+			{
+				NavigationService.Navigate(new Uri("/SubscriptionView.xaml?feedId=" + (subscriptionList.SelectedItem as DataModel.Subscription).id, UriKind.Relative));
+			}
+		}
+
+		private void starredFeedsList_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+		{
+			if (starredFeedsList.SelectedIndex >= 0)
+			{
+				OpenFeedViewForCustomList(StarredFeeds, starredFeedsList.SelectedIndex);
+			}
 		}
 	}
 }

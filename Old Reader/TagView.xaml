@@ -74,7 +74,7 @@
 					   toolkit:TurnstileFeatherEffect.FeatheringIndex="2"/>
 			<ListBox Name="subscriptionList" ItemsSource="{Binding CurTag.Subscriptions}"
 					 Width="auto" toolkit:TurnstileFeatherEffect.FeatheringIndex="2"
-					 SelectionChanged="subscriptionList_SelectionChanged">
+					 Tap="subscriptionList_Tap">
 				<ListBox.ItemContainerStyle>
 					<Style TargetType="ListBoxItem">
 						<Setter Property="HorizontalAlignment" Value="Stretch" />

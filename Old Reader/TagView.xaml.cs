@@ -164,7 +164,7 @@ namespace Old_Reader
 			}
 		}
 
-		private void subscriptionList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		private void subscriptionList_Tap(object sender, System.Windows.Input.GestureEventArgs e)
 		{
 			if (subscriptionList.SelectedIndex >= 0)
 			{

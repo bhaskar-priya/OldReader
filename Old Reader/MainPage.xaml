@@ -54,7 +54,7 @@
 
 		<controls:Panorama HorizontalAlignment="Left" Name="mainPanorama"
 						   SelectionChanged="mainPanorama_SelectionChanged"
-						Title="{Binding Path=LocalizedResources.AppTitle, Source={StaticResource LocalizedStrings}}">
+						   Title="{Binding Path=LocalizedResources.AppTitle, Source={StaticResource LocalizedStrings}}">
 			<controls:Panorama.TitleTemplate>
 				<DataTemplate>
 					<StackPanel Orientation="Horizontal">
@@ -81,7 +81,7 @@
 					<ListBox Name="subscriptionList"
 							 ItemsSource="{Binding Contents.DisplayObjects}"
 							 Width="auto"
-							 SelectionChanged="subscriptionList_SelectionChanged" >
+							 Tap="subscriptionList_Tap" >
 						<ListBox.ItemContainerStyle>
 							<Style TargetType="ListBoxItem">
 								<Setter Property="HorizontalAlignment" Value="Stretch" />
@@ -130,7 +130,7 @@
 								   Header="{Binding Path=LocalizedResources.strStarredItemsLabel, Source={StaticResource LocalizedStrings}}" >
 				<ListBox Name="starredFeedsList"
 						 ItemsSource="{Binding StarredFeeds}"
-						 SelectionChanged="starredFeedsList_SelectionChanged"
+						 Tap="starredFeedsList_Tap"
 						 Width="auto">
 					<ListBox.ItemContainerStyle>
 						<Style TargetType="ListBoxItem">

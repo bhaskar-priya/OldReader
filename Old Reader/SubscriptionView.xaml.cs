@@ -229,19 +229,6 @@ namespace Old_Reader
 			(ApplicationBar.MenuItems[0] as ApplicationBarMenuItem).Text = AppNs.App.ShowRead ? AppNs.Resources.AppResources.strShowUnreadOnly : AppNs.Resources.AppResources.strShowAllPosts;
 		}
 
-		private void feedList_SelectionChanged(object sender, SelectionChangedEventArgs e)
-		{
-			if (feedList.SelectedIndex >= 0)
-			{
-				AppNs.App.FeedItems = new List<DataModel.FeedItem>();
-				foreach (var t in FeedItems)
-				{
-					AppNs.App.FeedItems.Add(t);
-				}
-				NavigationService.Navigate(new Uri("/FeedView.xaml?selIdx=" + feedList.SelectedIndex, UriKind.Relative));
-			}
-		}
-
 		private void ApplicationBarMarkRead_Click(object sender, EventArgs e)
 		{
 			WS.Remoting rm = new WS.Remoting(markAllReadComplete);
@@ -436,6 +423,19 @@ namespace Old_Reader
 			FeedItems = new ObservableCollection<DataModel.FeedItem>(cachedFeeds);
 
 			handleAppBarButton();
+		}
+
+		private void feedList_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+		{
+			if (feedList.SelectedIndex >= 0)
+			{
+				AppNs.App.FeedItems = new List<DataModel.FeedItem>();
+				foreach (var t in FeedItems)
+				{
+					AppNs.App.FeedItems.Add(t);
+				}
+				NavigationService.Navigate(new Uri("/FeedView.xaml?selIdx=" + feedList.SelectedIndex, UriKind.Relative));
+			}
 		}
 	}
 }
