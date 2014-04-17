@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Old Reader", "Old Reader\Old Reader.csproj", "{1DEF4613-53F9-431B-AE61-C95B456B368C}"
 	ProjectSection(ProjectDependencies) = postProject
 		{F0339BC3-67E8-4484-9905-F932865BC09F} = {F0339BC3-67E8-4484-9905-F932865BC09F}
