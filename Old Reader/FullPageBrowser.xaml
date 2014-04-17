@@ -34,7 +34,11 @@
 			</toolkit:NavigationOutTransition.Forward>
 		</toolkit:NavigationOutTransition>
 	</toolkit:TransitionService.NavigationOutTransition>
-	
+
+	<shell:SystemTray.ProgressIndicator>
+		<shell:ProgressIndicator x:Name="trayProgress" IsIndeterminate="True" IsVisible="False" Text=""/>
+	</shell:SystemTray.ProgressIndicator>
+
 	<!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
@@ -49,7 +53,10 @@
 					<RowDefinition Height="auto" />
 					<RowDefinition Height="*" />
 				</Grid.RowDefinitions>
-				<phone:WebBrowser Name="contentDisplay" Grid.Row="1" IsScriptEnabled="True" IsGeolocationEnabled="True" />
+				<phone:WebBrowser Name="contentDisplay" Grid.Row="1" IsScriptEnabled="True"
+								  IsGeolocationEnabled="True"
+								  Navigating="contentDisplay_Navigating"
+								  Navigated="contentDisplay_Navigated" />
 			</Grid>
 		</Grid>
     </Grid>
