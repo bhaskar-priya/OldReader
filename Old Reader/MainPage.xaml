@@ -183,7 +183,6 @@
 			<shell:ApplicationBarIconButton IconUri="/Toolkit.Content/ApplicationBar.Add.png" Text="|add|" Click="ApplicationBarAddIconButton_Click" />
 			<shell:ApplicationBar.MenuItems>
 				<shell:ApplicationBarMenuItem Text="|settings...|" Click="ApplicationBarSettingsMenuItem_Click" />
-				<shell:ApplicationBarMenuItem Text="|old reader status...|" Click="ApplicationBarOldReaderStatusMenuItem_Click" />
 				<shell:ApplicationBarMenuItem Text="|about...|" Click="ApplicationBarAboutMenuItem_Click" />
 			</shell:ApplicationBar.MenuItems>
 		</shell:ApplicationBar>

@@ -290,5 +290,32 @@ namespace Old_Reader
 		{
 			NavigationService.Navigate(new Uri("/SubscriptionView.xaml?feedId=" + m_CurTag.id, UriKind.Relative));
 		}
+
+		private DataModel.Subscription markItemsReadFeed = null;
+		private void menuMarkAllRead_Click(object sender, RoutedEventArgs e)
+		{
+			if (sender is MenuItem)
+			{
+				markItemsReadFeed = (sender as MenuItem).DataContext as DataModel.Subscription;
+				if (markItemsReadFeed != null)
+				{
+					WS.Remoting rmMarkItemRead = new WS.Remoting(MarkAllItemsComplete);
+					rmMarkItemRead.markAllItemsAsRead(markItemsReadFeed.id);
+				}
+			}
+		}
+
+		private void MarkAllItemsComplete(String szResponse)
+		{
+			if (szResponse == "OK" && markItemsReadFeed != null)
+			{
+				int nCount = markItemsReadFeed.unreadCount;
+				markItemsReadFeed.unreadCount = 0;
+				foreach (DataModel.Tag curTag in markItemsReadFeed.categories)
+				{
+					curTag.unreadCount -= nCount;
+				}
+			}
+		}
 	}
 }

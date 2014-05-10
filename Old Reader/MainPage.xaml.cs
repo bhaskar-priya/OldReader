@@ -129,8 +129,8 @@ namespace Old_Reader
 			(ApplicationBar.Buttons[1] as ApplicationBarIconButton).Text = AppNs.Resources.AppResources.strAddFeed;
 			(ApplicationBar.Buttons[1] as ApplicationBarIconButton).IsEnabled = false;
 			(ApplicationBar.MenuItems[0] as ApplicationBarMenuItem).Text = AppNs.Resources.AppResources.strSettingsMenu;
-			(ApplicationBar.MenuItems[1] as ApplicationBarMenuItem).Text = AppNs.Resources.AppResources.strStatusMenu;
-			(ApplicationBar.MenuItems[2] as ApplicationBarMenuItem).Text = AppNs.Resources.AppResources.strAboutMenu;
+			//(ApplicationBar.MenuItems[1] as ApplicationBarMenuItem).Text = AppNs.Resources.AppResources.strStatusMenu;
+			(ApplicationBar.MenuItems[1] as ApplicationBarMenuItem).Text = AppNs.Resources.AppResources.strAboutMenu;
 		}
 
 		private PeriodicTask unreadCountTask;
@@ -264,7 +264,10 @@ namespace Old_Reader
 		{
 			StarredFeeds = new ObservableCollection<DataModel.FeedItem>();
 			// get the local feeds from database
-			var localFeedItems = from DataStore.CachedFeed curItem in App.ReaderDB.CachedFeeds where curItem.Starred == true select curItem;
+			var localFeedItems = from DataStore.CachedFeed curItem in App.ReaderDB.CachedFeeds
+								 where curItem.Starred == true
+								 orderby curItem.publishedTime descending
+								 select curItem;
 			foreach (var curCachedFeedItem in localFeedItems)
 			{
 				StarredFeeds.Add(curCachedFeedItem.toFeedItem());

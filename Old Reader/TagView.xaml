@@ -88,6 +88,7 @@
 								<toolkit:ContextMenu Name="ctxMenu">
 									<toolkit:MenuItem Name="menuUnsubscribe" Header="{Binding Path=LocalizedResources.strMenuUnsubscribe, Source={StaticResource LocalizedStrings}}" Click="menuUnsubscribe_Click"/>
 									<toolkit:MenuItem Name="menuMove" Header="{Binding Path=LocalizedResources.strMenuMove, Source={StaticResource LocalizedStrings}}" Click="menuMove_Click"/>
+									<toolkit:MenuItem Name="menuMarkAllRead" Header="{Binding Path=LocalizedResources.strMarkAllRead, Source={StaticResource LocalizedStrings}}" Click="menuMarkAllRead_Click" />
 								</toolkit:ContextMenu>
 							</toolkit:ContextMenuService.ContextMenu>
 							<Grid.ColumnDefinitions>
