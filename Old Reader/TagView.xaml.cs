@@ -315,6 +315,7 @@ namespace Old_Reader
 				{
 					curTag.unreadCount -= nCount;
 				}
+				DataModel.Tag.AllItems.unreadCount -= nCount;
 			}
 		}
 	}
