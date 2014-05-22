@@ -4,9 +4,6 @@ using System.Linq;
 using System.Text;
 using Newtonsoft.Json.Linq;
 using System.Collections.ObjectModel;
-#if OLD_READER_WP7
-using Old_Reader_WP7;
-#endif
 using Old_Reader_Utils;
 
 namespace DataModel
@@ -24,17 +21,9 @@ namespace DataModel
 			}
 			set
 			{
-#if OLD_READER_WP7
-				NotifyPropertyChanging("title");
-#else
 				NotifyPropertyChanging();
-#endif
 				m_title = value;
-#if OLD_READER_WP7
-				NotifyPropertyChanged("title");
-#else
 				NotifyPropertyChanged();
-#endif
 			}
 		}
 
@@ -51,17 +40,9 @@ namespace DataModel
 			}
 			set
 			{
-#if OLD_READER_WP7
-				NotifyPropertyChanging("Subscriptions");
-#else
 				NotifyPropertyChanging();
-#endif
 				m_Subscriptions = value;
-#if OLD_READER_WP7
-				NotifyPropertyChanged("Subscriptions");
-#else
 				NotifyPropertyChanged();
-#endif
 			}
 		}
 
@@ -74,17 +55,9 @@ namespace DataModel
 			}
 			set
 			{
-#if OLD_READER_WP7
-				NotifyPropertyChanging("unreadCount");
-#else
 				NotifyPropertyChanging();
-#endif
 				m_UnreadCount = value > 0 ? value : 0;
-#if OLD_READER_WP7
-				NotifyPropertyChanged("unreadCount");
-#else
 				NotifyPropertyChanged();
-#endif
 			}
 		}
 

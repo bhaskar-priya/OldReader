@@ -19,17 +19,9 @@ namespace DataModel
 			}
 			set
 			{
-#if OLD_READER_WP7
-				NotifyPropertyChanging("id");
-#else
 				NotifyPropertyChanging();
-#endif
 				m_id = value;
-#if OLD_READER_WP7
-				NotifyPropertyChanged("id");
-#else
 				NotifyPropertyChanged();
-#endif
 			}
 		}
 
@@ -42,17 +34,9 @@ namespace DataModel
 			}
 			set
 			{
-#if OLD_READER_WP7
-				NotifyPropertyChanging("title");
-#else
 				NotifyPropertyChanging();
-#endif
 				m_title = value;
-#if OLD_READER_WP7
-				NotifyPropertyChanged("title");
-#else
 				NotifyPropertyChanged();
-#endif
 			}
 		}
 
@@ -69,17 +53,9 @@ namespace DataModel
 			}
 			set
 			{
-#if OLD_READER_WP7
-				NotifyPropertyChanging("categories");
-#else
 				NotifyPropertyChanging();
-#endif
 				m_categories = value;
-#if OLD_READER_WP7
-				NotifyPropertyChanged("categories");
-#else
 				NotifyPropertyChanged();
-#endif
 			}
 		}
 
@@ -92,17 +68,9 @@ namespace DataModel
 			}
 			set
 			{
-#if OLD_READER_WP7
-				NotifyPropertyChanging("url");
-#else
 				NotifyPropertyChanging();
-#endif
 				m_url = value;
-#if OLD_READER_WP7
-				NotifyPropertyChanged("url");
-#else
 				NotifyPropertyChanged();
-#endif
 			}
 		}
 
@@ -115,17 +83,9 @@ namespace DataModel
 			}
 			set
 			{
-#if OLD_READER_WP7
-				NotifyPropertyChanging("htmlUrl");
-#else
 				NotifyPropertyChanging();
-#endif
 				m_htmlUrl = value;
-#if OLD_READER_WP7
-				NotifyPropertyChanged("htmlUrl");
-#else
 				NotifyPropertyChanged();
-#endif
 			}
 		}
 
@@ -143,17 +103,9 @@ namespace DataModel
 			}
 			set
 			{
-#if OLD_READER_WP7
-				NotifyPropertyChanging("iconUrl");
-#else
 				NotifyPropertyChanging();
-#endif
 				m_iconUrl = value;
-#if OLD_READER_WP7
-				NotifyPropertyChanged("iconUrl");
-#else
 				NotifyPropertyChanged();
-#endif
 			}
 		}
 
@@ -173,17 +125,9 @@ namespace DataModel
 			}
 			set
 			{
-#if OLD_READER_WP7
-				NotifyPropertyChanging("unreadCount");
-#else
 				NotifyPropertyChanging();
-#endif
 				m_unreadCount = value > 0 ? value : 0;
-#if OLD_READER_WP7
-				NotifyPropertyChanged("unreadCount");
-#else
 				NotifyPropertyChanged();
-#endif
 			}
 		}
 

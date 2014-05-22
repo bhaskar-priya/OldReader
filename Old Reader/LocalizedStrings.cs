@@ -1,14 +1,6 @@
-﻿#if OLD_READER_WP7
-using Old_Reader_WP7.Resources;
-#else
-using Old_Reader.Resources;
-#endif
+﻿using Old_Reader.Resources;
 
-#if OLD_READER_WP7
-namespace Old_Reader_WP7
-#else
 namespace Old_Reader
-#endif
 {
 	/// <summary>
 	/// Provides access to string resources.

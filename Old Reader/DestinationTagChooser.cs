@@ -12,12 +12,7 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using System.ComponentModel;
 
-using AppNs =
-#if OLD_READER_WP7
-Old_Reader_WP7;
-#else
- Old_Reader;
-#endif
+using AppNs = Old_Reader;
 
 namespace Old_Reader_Utils
 {
@@ -73,13 +68,8 @@ namespace Old_Reader_Utils
 			// create a border
 			Grid border = new Grid();
 			border.Background = (Brush)Application.Current.Resources["PhoneBackgroundBrush"];
-#if OLD_READER_WP7
-			border.Width = (AppNs.App.Current as AppNs.App).RootFrame.ActualWidth;
-			border.Height = (AppNs.App.Current as AppNs.App).RootFrame.ActualHeight;
-#else
 			border.Width = AppNs.App.RootFrame.ActualWidth;
 			border.Height = AppNs.App.RootFrame.ActualHeight;
-#endif
 
 			// build the selector
 			ScrollViewer scroller = new ScrollViewer();

@@ -5,12 +5,7 @@ using System.Text;
 using System.Data.Linq;
 using Microsoft.Phone.Data.Linq;
 
-using AppNs =
-#if OLD_READER_WP7
-Old_Reader_WP7;
-#else
- Old_Reader;
-#endif
+using AppNs = Old_Reader;
 
 namespace DataStore
 {

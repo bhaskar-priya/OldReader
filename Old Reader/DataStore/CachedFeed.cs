@@ -5,11 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Data.Linq.Mapping;
 
-#if OLD_READER_WP7
-using Old_Reader_WP7;
-#else
 using Old_Reader;
-#endif
 
 namespace DataStore
 {

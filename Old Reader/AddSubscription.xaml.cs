@@ -13,17 +13,9 @@ using Newtonsoft.Json.Linq;
 using WS;
 using Coding4Fun.Toolkit.Controls;
 
-#if OLD_READER_WP7
-using Old_Reader_WP7;
-#endif
 using Old_Reader_Utils;
 
-using AppNs =
-#if OLD_READER_WP7
- Old_Reader_WP7;
-#else
- Old_Reader;
-#endif
+using AppNs = Old_Reader;
 
 namespace Old_Reader
 {

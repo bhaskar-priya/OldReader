@@ -7,11 +7,7 @@ using System.Runtime.CompilerServices;
 using System.Collections.ObjectModel;
 using System.IO.IsolatedStorage;
 
-#if OLD_READER_WP7
-using Old_Reader_WP7;
-#else
 using Old_Reader;
-#endif
 using Old_Reader_Utils;
 
 namespace DataModel

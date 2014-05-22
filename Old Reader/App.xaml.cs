@@ -6,11 +6,7 @@ using System.Windows.Markup;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-#if !OLD_READER_WP7
 using Old_Reader.Resources;
-#else
-using Old_Reader_WP7.Resources;
-#endif
 using System.Collections.Generic;
 using Utilities;
 

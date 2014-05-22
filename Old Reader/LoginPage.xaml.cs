@@ -10,12 +10,7 @@ using Microsoft.Phone.Shell;
 using System.IO.IsolatedStorage;
 using Old_Reader_Utils;
 
-using AppNs =
-#if OLD_READER_WP7
-Old_Reader_WP7;
-#else
-Old_Reader;
-#endif
+using AppNs = Old_Reader;
 
 namespace Old_Reader
 {

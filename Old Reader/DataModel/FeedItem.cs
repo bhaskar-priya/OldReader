@@ -5,11 +5,7 @@ using System.Text;
 using Newtonsoft.Json.Linq;
 using System.Collections.ObjectModel;
 using System.Text.RegularExpressions;
-#if OLD_READER_WP7
-using Old_Reader_WP7;
-#else
 using Old_Reader;
-#endif
 using Old_Reader_Utils;
 
 namespace DataModel
@@ -25,17 +21,9 @@ namespace DataModel
 			}
 			set
 			{
-#if OLD_READER_WP7
-				NotifyPropertyChanging("id");
-#else
 				NotifyPropertyChanging();
-#endif
 				m_id = value;
-#if OLD_READER_WP7
-				NotifyPropertyChanged("id");
-#else
 				NotifyPropertyChanged();
-#endif
 			}
 		}
 
@@ -48,17 +36,9 @@ namespace DataModel
 			}
 			set
 			{
-#if OLD_READER_WP7
-				NotifyPropertyChanging("title");
-#else
 				NotifyPropertyChanging();
-#endif
 				m_title = value;
-#if OLD_READER_WP7
-				NotifyPropertyChanged("title");
-#else
 				NotifyPropertyChanged();
-#endif
 			}
 		}
 
@@ -71,17 +51,9 @@ namespace DataModel
 			}
 			set
 			{
-#if OLD_READER_WP7
-				NotifyPropertyChanging("summary");
-#else
 				NotifyPropertyChanging();
-#endif
 				m_summary = value;
-#if OLD_READER_WP7
-				NotifyPropertyChanged("summary");
-#else
 				NotifyPropertyChanged();
-#endif
 			}
 		}
 
@@ -94,17 +66,9 @@ namespace DataModel
 			}
 			set
 			{
-#if OLD_READER_WP7
-				NotifyPropertyChanging("author");
-#else
 				NotifyPropertyChanging();
-#endif
 				m_author = value;
-#if OLD_READER_WP7
-				NotifyPropertyChanged("author");
-#else
 				NotifyPropertyChanged();
-#endif
 			}
 		}
 
@@ -117,17 +81,9 @@ namespace DataModel
 			}
 			set
 			{
-#if OLD_READER_WP7
-				NotifyPropertyChanging("href");
-#else
 				NotifyPropertyChanging();
-#endif
 				m_href = value;
-#if OLD_READER_WP7
-				NotifyPropertyChanged("href");
-#else
 				NotifyPropertyChanged();
-#endif
 			}
 		}
 
@@ -144,17 +100,9 @@ namespace DataModel
 			}
 			set
 			{
-#if OLD_READER_WP7
-				NotifyPropertyChanging("tags");
-#else
 				NotifyPropertyChanging();
-#endif
 				m_tags = value;
-#if OLD_READER_WP7
-				NotifyPropertyChanged("tags");
-#else
 				NotifyPropertyChanged();
-#endif
 			}
 		}
 
@@ -169,11 +117,7 @@ namespace DataModel
 			{
 				if (m_isUnread != value)
 				{
-#if OLD_READER_WP7
-					NotifyPropertyChanging("isUnread");
-#else
 					NotifyPropertyChanging();
-#endif
 					m_isUnread = value;
 
 					// update the local db as well
@@ -183,11 +127,7 @@ namespace DataModel
 						cachedFeed.Unread = m_isUnread;
 						App.ReaderDB.SubmitChanges();
 					}
-#if OLD_READER_WP7
-					NotifyPropertyChanged("isUnread");
-#else
 					NotifyPropertyChanged();
-#endif
 				}
 			}
 		}
@@ -207,17 +147,9 @@ namespace DataModel
 			}
 			set
 			{
-#if OLD_READER_WP7
-				NotifyPropertyChanging("origin");
-#else
 				NotifyPropertyChanging();
-#endif
 				m_origin = value;
-#if OLD_READER_WP7
-				NotifyPropertyChanged("origin");
-#else
 				NotifyPropertyChanged();
-#endif
 			}
 		}
 
@@ -230,17 +162,9 @@ namespace DataModel
 			}
 			set
 			{
-#if OLD_READER_WP7
-				NotifyPropertyChanging("keepUnread");
-#else
 				NotifyPropertyChanging();
-#endif
 				m_keepUnread = value;
-#if OLD_READER_WP7
-				NotifyPropertyChanged("keepUnread");
-#else
 				NotifyPropertyChanged();
-#endif
 			}
 		}
 
@@ -274,17 +198,9 @@ namespace DataModel
 			}
 			set
 			{
-#if OLD_READER_WP7
-				NotifyPropertyChanging("publishedTime");
-#else
 				NotifyPropertyChanging();
-#endif
 				m_PublishedTime = value;
-#if OLD_READER_WP7
-				NotifyPropertyChanged("publishedTime");
-#else
 				NotifyPropertyChanged();
-#endif
 			}
 		}
 
@@ -382,11 +298,7 @@ namespace DataModel
 			{
 				try
 				{
-#if OLD_READER_WP7
-					return "" + Convert.ToChar(Convert.ToInt32(m.Groups[1].ToString(),16));
-#else
 					return "" + char.ConvertFromUtf32(Convert.ToInt32(m.Groups[1].ToString(), 16));
-#endif
 				}
 				catch
 				{
