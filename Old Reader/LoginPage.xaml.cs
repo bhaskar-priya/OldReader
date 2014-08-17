@@ -33,7 +33,16 @@ namespace Old_Reader
 			AppNs.App.ShowRead = (bool)chkShowReadItem.IsChecked;
 			AppNs.App.RetentionDays = Old_Reader_Utils.Utils.DaysToString[timeToKeepOldItems.SelectedItem.ToString()];
 			AppNs.App.AllItemsAtTop = (bool)chkAllItemsOntop.IsChecked;
-
+			switch(serviceIdPicker.SelectedIndex)
+			{
+				case 0:
+					App.CurrentService = WS.Remoting.TService.kTheOldReader;
+					break;
+				case 1:
+					App.CurrentService = WS.Remoting.TService.kBazqux;
+					break;
+			}
+			
 			NavigationService.GoBack();
 		}
 
@@ -41,6 +50,22 @@ namespace Old_Reader
 		{
 			base.OnNavigatedTo(e);
 			Analytics.GAnalytics.trackPageView("login");
+
+			if (serviceIdPicker.Items.Count==0)
+			{
+				serviceIdPicker.Items.Add("The Old Reader");
+				serviceIdPicker.Items.Add("bazqux");
+			}
+
+			switch(App.CurrentService)
+			{
+				case WS.Remoting.TService.kTheOldReader:
+					serviceIdPicker.SelectedIndex = 0;
+					break;
+				case WS.Remoting.TService.kBazqux:
+					serviceIdPicker.SelectedIndex = 1;
+					break;
+			}
 
 			if (moreItemCount.Items.Count == 0)
 			{

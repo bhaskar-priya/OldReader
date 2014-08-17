@@ -254,17 +254,17 @@ namespace DataModel
 						JArray catArr = (JArray)curFeedObj[OldReaderConsts.categories];
 						foreach (String curCatObj in catArr)
 						{
-							Tag newTag = App.Contents.Tags.FirstOrDefault(t => t.id == curCatObj);
+							Tag newTag = App.Contents.Tags.FirstOrDefault(t => t.id == curCatObj.Replace("/01234567890123456789/", "/-/"));
 							if (newTag != null)
 							{
 								newFeedItem.tags.Add(newTag);
 							}
-							if (curCatObj == Old_Reader_Utils.OldReaderConsts.readItemTag)
+							if (curCatObj.EndsWith(OldReaderConsts.readItemTagStr))
 							{
 								// this feed is already read
 								newFeedItem.isUnread = false;
 							}
-							if (curCatObj == DataModel.Tag.StarredItems.id)
+							if (curCatObj.EndsWith(OldReaderConsts.starredItemIdStr))
 							{
 								newFeedItem.Starred = true;
 							}
@@ -310,8 +310,17 @@ namespace DataModel
 
 		private static String getFeedID(String Id)
 		{
-			String[] parts = Id.Split('/');
-			return parts.Last();
+			if (App.CurrentService == WS.Remoting.TService.kTheOldReader)
+			{
+				String[] parts = Id.Split('/');
+				return parts.Last();
+			}
+			else if (App.CurrentService == WS.Remoting.TService.kBazqux)
+			{
+				return Id;
+			}
+
+			return Id;
 		}
 
 		public override int GetHashCode()
@@ -352,7 +361,7 @@ namespace DataModel
 
 		public void markRead()
 		{
-			WS.Remoting rm = new WS.Remoting();
+			WS.Remoting rm = new WS.Remoting(App.CurrentService);
 			rm.markFeedItemRead(id, true);
 			
 			if (isUnread && !keepUnread)
@@ -385,7 +394,7 @@ namespace DataModel
 				{
 					origin.unreadCount++;
 				}
-				WS.Remoting rm = new WS.Remoting();
+				WS.Remoting rm = new WS.Remoting(App.CurrentService);
 				rm.markFeedItemRead(id, false);
 			}
 		}

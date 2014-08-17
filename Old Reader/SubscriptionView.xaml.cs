@@ -177,7 +177,7 @@ namespace Old_Reader
 				{
 					// we already have all the unread items we want
 					// need to get the items for this feed
-					WS.Remoting rmGetFeeds = new WS.Remoting(FeedListCompleteForUnreadItems);
+					WS.Remoting rmGetFeeds = new WS.Remoting(App.CurrentService, FeedListCompleteForUnreadItems);
 					rmGetFeeds.getUnreadItemsForSubscription(m_SrcFeedId, nUnreadCount);
 					NoItemString = "";
 					StartJob();
@@ -194,7 +194,7 @@ namespace Old_Reader
 
 		private void ApplicationBarMarkRead_Click(object sender, EventArgs e)
 		{
-			WS.Remoting rm = new WS.Remoting(markAllReadComplete);
+			WS.Remoting rm = new WS.Remoting(App.CurrentService, markAllReadComplete);
 
 			List<String> itemIds = new List<string>();
 			foreach (var curFeedItem in FeedItems)
@@ -307,7 +307,7 @@ namespace Old_Reader
 				continuationId = DataStore.ContinuationId.getContinuationIdFor(m_CurTag.id);
 			}
 
-			WS.Remoting rmGetFeeds = new WS.Remoting(FeedListComplete);
+			WS.Remoting rmGetFeeds = new WS.Remoting(App.CurrentService, FeedListComplete);
 			rmGetFeeds.getMoreItemsForSubscription(m_SrcFeedId, nMoreDownload, continuationId);
 			StartJob();
 		}

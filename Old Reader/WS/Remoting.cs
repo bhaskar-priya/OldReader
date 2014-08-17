@@ -7,9 +7,18 @@ using System.IO;
 
 namespace WS
 {
-	class Remoting
+	public class Remoting
 	{
+		public enum TService
+		{
+			kTheOldReader,
+			kBazqux
+		};
+
 		private static String szAPIEndPoint = "http://theoldreader.com/reader/api/0/";
+
+		private static String szBazLoginEndpoint = "https://www.bazqux.com/";
+		private static String szBazEndPoint = "https://www.bazqux.com/reader/api/0/";
 
 		public delegate void RemotingComplete(String szResponse);
 		private RemotingComplete remotingCompleteHandler = null;
@@ -17,20 +26,23 @@ namespace WS
 		public delegate void RemotingError(String szErrorMsg);
 		private RemotingError remotingErrorHandler = null;
 
-		public Remoting()
-			: this(null, null)
+		private TService m_ServiceId;
+
+		public Remoting(TService serviceId)
+			: this(serviceId, null, null)
 		{
 		}
 
-		public Remoting(RemotingComplete completeHandler)
-			: this(completeHandler, null)
+		public Remoting(TService serviceId, RemotingComplete completeHandler)
+			: this(serviceId, completeHandler, null)
 		{
 		}
 
-		public Remoting(RemotingComplete completeHandler, RemotingError errorHandler)
+		public Remoting(TService serviceId, RemotingComplete completeHandler, RemotingError errorHandler)
 		{
 			remotingCompleteHandler = completeHandler;
 			remotingErrorHandler = errorHandler;
+			m_ServiceId = serviceId;
 		}
 
 		#region HTTP Details
@@ -131,11 +143,30 @@ namespace WS
 		}
 		#endregion
 
+		private String GetApiEndPoint(bool loginApi = false)
+		{
+			if (m_ServiceId == TService.kTheOldReader)
+			{
+				return szAPIEndPoint;
+			}
+			else if (m_ServiceId == TService.kBazqux)
+			{
+				if (loginApi)
+				{
+					return szBazLoginEndpoint;
+				}
+				else
+				{
+					return szBazEndPoint;
+				}
+			}
+			return szAPIEndPoint;
+		}
 
 		public void Login(String szEMail, String szPassword)
 		{
 			String szLoginAPI = "accounts/ClientLogin";
-			String szURI = szAPIEndPoint + szLoginAPI;
+			String szURI = GetApiEndPoint(true) + szLoginAPI;
 			
 			Post(szURI, String.Format("client=WPOldReader&accountType=HOSTED_OR_GOOGLE&service=reader&Email={0}&Passwd={1}", szEMail, szPassword));
 		}
@@ -143,7 +174,7 @@ namespace WS
 		public void getTagList()
 		{
 			String szAPI = "tag/list?output=json";
-			String szURI = szAPIEndPoint + szAPI;
+			String szURI = GetApiEndPoint() + szAPI;
 
 			Get(szURI);
 		}
@@ -151,7 +182,7 @@ namespace WS
 		public void getSubscriptionList()
 		{
 			String szAPI = "subscription/list?output=json";
-			String szURI = szAPIEndPoint + szAPI;
+			String szURI = GetApiEndPoint() + szAPI;
 
 			Get(szURI);
 		}
@@ -159,7 +190,7 @@ namespace WS
 		public void getUnreadCount()
 		{
 			String szAPI = "unread-count?output=json";
-			String szURI = szAPIEndPoint + szAPI;
+			String szURI = GetApiEndPoint() + szAPI;
 
 			Get(szURI);
 		}
@@ -167,32 +198,43 @@ namespace WS
 		public void getUserInfo()
 		{
 			String szAPI = "user-info?output=json";
-			String szURI = szAPIEndPoint + szAPI;
+			String szURI = GetApiEndPoint() + szAPI;
 
 			Get(szURI);
 		}
 
 		public void getMoreItemsForSubscription(String szSubName, int nItemCount, String nContinuation)
 		{
-			String szURI = String.Format("{0}stream/contents?output=json&n={2}&c={3}&s={1}", szAPIEndPoint, szSubName, nItemCount, nContinuation);
+			String szURI = String.Format("{0}stream/contents?output=json&n={2}&c={3}&s={1}", GetApiEndPoint(), szSubName, nItemCount, nContinuation);
 			Get(szURI);
 		}
 
 		public void getItemsForSubscription(String szSubName, int nItemCount)
 		{
-			String szURI = String.Format("{0}stream/contents?output=json&n={2}&s={1}", szAPIEndPoint, szSubName, nItemCount);
+			String szURI = String.Format("{0}stream/contents?output=json&n={2}&s={1}", GetApiEndPoint(), szSubName, nItemCount);
 			Get(szURI);
 		}
 
 		public void getUnreadItemsForSubscription(String szSubName, int nItemCount)
 		{
-			String szURI = String.Format("{0}stream/contents?output=json&xt=user/-/state/com.google/read&n={2}&s={1}", szAPIEndPoint, szSubName, nItemCount);
-			Get(szURI);
+			String szURI = null;
+			if (m_ServiceId == TService.kTheOldReader)
+			{
+				szURI = String.Format("{0}stream/contents?output=json&xt=user/-/state/com.google/read&n={2}&s={1}", GetApiEndPoint(), szSubName, nItemCount);
+			}
+			else if (m_ServiceId == TService.kBazqux)
+			{
+				szURI = String.Format("{0}stream/contents?output=json&n={2}&s={1}", GetApiEndPoint(), szSubName, nItemCount);
+			}
+			if (szURI != null)
+			{
+				Get(szURI);
+			}
 		}
 
 		public void getAllUnreadItems(int nItemCount)
 		{
-			String szURI = String.Format("{0}stream/contents?output=json&xt=user/-/state/com.google/read&n={2}&s={1}", szAPIEndPoint, "user/-/state/com.google/reading-list", nItemCount);
+			String szURI = String.Format("{0}stream/contents?output=json&xt=user/-/state/com.google/read&n={2}&s={1}", GetApiEndPoint(), "user/-/state/com.google/reading-list", nItemCount);
 			Get(szURI);
 		}
 
@@ -200,7 +242,7 @@ namespace WS
 		{
 			String szPostData = String.Format("{0}=user/-/state/com.google/read&i={1}", bRead ? "a" : "r", szItemId);
 
-			Post(szAPIEndPoint + "edit-tag", szPostData);
+			Post(GetApiEndPoint() + "edit-tag", szPostData);
 		}
 
 		public void markFeedItemsRead(List<String> szItemIds, bool bRead)
@@ -212,14 +254,14 @@ namespace WS
 		{
 			String szPostData = String.Format("s={0}", szFeedId);
 
-			Post(szAPIEndPoint + "mark-all-as-read", szPostData);
+			Post(GetApiEndPoint() + "mark-all-as-read", szPostData);
 		}
 
 		public void starItem(String szFeedId, bool bStar)
 		{
 			String szPostData = String.Format("{0}={2}&i={1}", bStar ? "a" : "r", szFeedId, Old_Reader_Utils.OldReaderConsts.starredItemId);
 
-			Post(szAPIEndPoint + "edit-tag", szPostData);
+			Post(GetApiEndPoint() + "edit-tag", szPostData);
 		}
 
 		public void starItems(List<String> szFeedIds, bool bStar)
@@ -241,7 +283,7 @@ namespace WS
 
 				String szPostData = sb.ToString();
 
-				Post(szAPIEndPoint + "edit-tag", szPostData);
+				Post(GetApiEndPoint() + "edit-tag", szPostData);
 			}
 		}
 
@@ -249,7 +291,7 @@ namespace WS
 		{
 			String szPostData = "";
 
-			Post(szAPIEndPoint + "subscription/quickadd?quickadd=" + szFeedUrl, szPostData);
+			Post(GetApiEndPoint() + "subscription/quickadd?quickadd=" + szFeedUrl, szPostData);
 		}
 
 		public void moveSubscriptionToFolder(String feedId, String folderId)
@@ -264,7 +306,7 @@ namespace WS
 				szPostData = String.Format("ac=edit&s={0}&r={1}", feedId, folderId);
 			}
 
-			Post(szAPIEndPoint + "subscription/edit", szPostData);
+			Post(GetApiEndPoint() + "subscription/edit", szPostData);
 		}
 
 		public void unsubscribe(String feedId)
@@ -272,7 +314,7 @@ namespace WS
 			String szPostData = "";
 			szPostData = String.Format("ac=unsubscribe&s={0}", feedId);
 
-			Post(szAPIEndPoint + "subscription/edit", szPostData);
+			Post(GetApiEndPoint() + "subscription/edit", szPostData);
 		}
 	}
 }

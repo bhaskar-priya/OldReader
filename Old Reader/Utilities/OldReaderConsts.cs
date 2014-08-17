@@ -39,5 +39,15 @@
 		public static string readItemTag = "user/-/state/com.google/read";
 		public static string starredItemId = "user/-/state/com.google/starred";
 		public static string allItemsId = "user/-/state/com.google/reading-list";
+
+		public static string readItemTagStr = "state/com.google/read";
+		public static string starredItemIdStr = "state/com.google/starred";
+		public static string allItemsIdStr = "state/com.google/reading-list";
+		public static string broadcastItemStr = "state/com.google/broadcast";
+		public static string bloggerItemStr = "state/com.blogger/blogger-following";
+
+		public static string bazTotalUnreadCount = "bq_total_unreads";
+
+		public static string ServiceId = "ServiceId";
 	}
 }

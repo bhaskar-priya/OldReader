@@ -82,7 +82,7 @@ namespace Old_Reader
 			{
 				Analytics.GAnalytics.trackOldReaderEvent(OldReaderTrackingConsts.addFeed, 0);
 
-				WS.Remoting rm = new WS.Remoting(AddFeedComplete);
+				WS.Remoting rm = new WS.Remoting(App.CurrentService, AddFeedComplete);
 				rm.addSubscription(txtFeedUrl.Text);
 				StartJob();
 			}
@@ -111,7 +111,7 @@ namespace Old_Reader
 						if (ctlTagList.SelectedItem != DataModel.Tag.AllItems)
 						{
 							// move to other folder
-							WS.Remoting rm = new WS.Remoting(MoveFeedComplete);
+							WS.Remoting rm = new WS.Remoting(App.CurrentService, MoveFeedComplete);
 							rm.moveSubscriptionToFolder(szStreamId, (ctlTagList.SelectedItem as DataModel.Tag).id);
 							StartJob();
 						}

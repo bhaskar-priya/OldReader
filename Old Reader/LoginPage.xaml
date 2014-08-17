@@ -58,6 +58,7 @@
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
 			<ScrollViewer>
 				<StackPanel>
+					<toolkit:ListPicker Name="serviceIdPicker"></toolkit:ListPicker>
 					<TextBlock Text="{Binding Path=LocalizedResources.strEMail, Source={StaticResource LocalizedStrings}}" />
 					<TextBox Name="txtUserName" InputScope="EmailUserName" />
 					<TextBlock Text="{Binding Path=LocalizedResources.strPassword, Source={StaticResource LocalizedStrings}}" />

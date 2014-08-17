@@ -133,7 +133,7 @@ namespace Old_Reader_Utils
 				{
 					strStarredItemIds.Add(curCachedFeedItem.ID);
 				}
-				(new WS.Remoting()).starItems(strStarredItemIds, true);
+				(new WS.Remoting(Old_Reader.App.CurrentService)).starItems(strStarredItemIds, true);
 			}
 		}
 
@@ -143,7 +143,14 @@ namespace Old_Reader_Utils
 			try
 			{
 				JObject rootObj = JObject.Parse(szResponse);
-				nMax = int.Parse((String)rootObj[OldReaderConsts.max]);
+				if (rootObj[OldReaderConsts.bazTotalUnreadCount] != null)
+				{
+					nMax = int.Parse((String)rootObj[OldReaderConsts.bazTotalUnreadCount]);
+				}
+				else
+				{
+					nMax = int.Parse((String)rootObj[OldReaderConsts.max]);
+				}
 
 				foreach (JObject unreadCntObj in (JArray)rootObj[OldReaderConsts.unreadcounts])
 				{
