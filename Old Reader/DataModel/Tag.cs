@@ -84,7 +84,7 @@ namespace DataModel
 				foreach (JObject curObj in tagList)
 				{
 					Tag curTag = new Tag() { id = (String)curObj[OldReaderConsts.id], title = "" };
-					if (useableTag(curTag))
+					if (curTag.id != StarredItems.id)
 					{
 						tags.Add(curTag);
 					}
@@ -94,24 +94,6 @@ namespace DataModel
 			{
 			}
 			return tags;
-		}
-
-		private static bool useableTag(Tag curTag)
-		{
-			if(curTag.id.IndexOf(OldReaderConsts.starredItemIdStr)!=-1)
-			{
-				return false;
-			}
-			else if (curTag.id.IndexOf(OldReaderConsts.broadcastItemStr) != -1)
-			{
-				return false;
-			}
-			else if (curTag.id.IndexOf(OldReaderConsts.bloggerItemStr) != -1)
-			{
-				return false;
-			}
-
-			return true;
 		}
 
 		public static Tag AllItems = new Tag()

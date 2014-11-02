@@ -189,7 +189,7 @@ namespace Old_Reader
 					String szPrompt = String.Format(AppNs.Resources.AppResources.strConfirmUnsubscribe, unsubFeed.title);
 					if (MessageBox.Show(szPrompt, "", MessageBoxButton.OKCancel) == MessageBoxResult.OK)
 					{
-						WS.Remoting rm = new WS.Remoting(App.CurrentService, UnsubscribeComplete);
+						WS.Remoting rm = new WS.Remoting(UnsubscribeComplete);
 						rm.unsubscribe(unsubFeed.id);
 						StartJob();
 						Analytics.GAnalytics.trackUnsubscribe();
@@ -262,7 +262,7 @@ namespace Old_Reader
 			{
 				DestinationTagChooser chooser = sender as DestinationTagChooser;
 				StartJob();
-				WS.Remoting rm = new WS.Remoting(App.CurrentService, MoveComplete);
+				WS.Remoting rm = new WS.Remoting(MoveComplete);
 				rm.moveSubscriptionToFolder(chooser.CurItem.id, chooser.SelectedTag.id);
 			}
 		}
@@ -299,7 +299,7 @@ namespace Old_Reader
 				markItemsReadFeed = (sender as MenuItem).DataContext as DataModel.Subscription;
 				if (markItemsReadFeed != null)
 				{
-					WS.Remoting rmMarkItemRead = new WS.Remoting(App.CurrentService, MarkAllItemsComplete);
+					WS.Remoting rmMarkItemRead = new WS.Remoting(MarkAllItemsComplete);
 					rmMarkItemRead.markAllItemsAsRead(markItemsReadFeed.id);
 				}
 			}

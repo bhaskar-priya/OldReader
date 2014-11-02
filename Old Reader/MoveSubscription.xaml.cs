@@ -148,7 +148,7 @@ namespace Old_Reader
 		private void ApplicationBarDoneIconButton_Click(object sender, EventArgs e)
 		{
 			StartJob();
-			WS.Remoting rm = new WS.Remoting(App.CurrentService, MoveComplete);
+			WS.Remoting rm = new WS.Remoting(MoveComplete);
 			rm.moveSubscriptionToFolder(Sub.id, (ctlTagList.SelectedItem as DataModel.Tag).id);
 		}
 

@@ -239,18 +239,6 @@ namespace Old_Reader
 			set;
 		}
 
-		public static WS.Remoting.TService CurrentService
-		{
-			get
-			{
-				return Utilities.AppSettings.Read<WS.Remoting.TService>(Old_Reader_Utils.OldReaderConsts.ServiceId, WS.Remoting.TService.kTheOldReader);
-			}
-			set
-			{
-				Utilities.AppSettings.Write(Old_Reader_Utils.OldReaderConsts.ServiceId, value);
-			}
-		}
-
 		private static DataStore.OldReaderDataContext m_ReaderDB = null;
 		public static DataStore.OldReaderDataContext ReaderDB
 		{

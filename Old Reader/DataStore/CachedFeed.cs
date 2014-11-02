@@ -73,7 +73,6 @@ namespace DataStore
 				cachced.StreamId = "";
 			}
 
-			cachced.Categories = "";
 			if (feedItem.tags != null)
 			{
 				foreach (var curTag in feedItem.tags)
@@ -119,7 +118,7 @@ namespace DataStore
 				cachedFeed.Starred = !cachedFeed.Starred;
 				App.ReaderDB.SubmitChanges();
 
-				WS.Remoting rm = new WS.Remoting(App.CurrentService);
+				WS.Remoting rm = new WS.Remoting();
 				rm.starItem(cachedFeed.ID, cachedFeed.Starred);
 			}
 		}

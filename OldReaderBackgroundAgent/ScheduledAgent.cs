@@ -43,9 +43,8 @@ namespace OldReaderBackgroundAgent
 		/// </remarks>
 		protected override void OnInvoke(ScheduledTask task)
 		{
-			WS.Remoting.TService currentService = Utilities.AppSettings.Read<WS.Remoting.TService>(Old_Reader_Utils.OldReaderConsts.ServiceId, WS.Remoting.TService.kTheOldReader);
 			WS.Remoting.token = Utilities.AppSettings.Read<String>(OldReaderConsts.AuthToken, "");
-			WS.Remoting rm = new WS.Remoting(currentService, unreadCountComplete, remotingError);
+			WS.Remoting rm = new WS.Remoting(unreadCountComplete, remotingError);
 			rm.getUnreadCount();
 		}
 
@@ -55,14 +54,7 @@ namespace OldReaderBackgroundAgent
 			try
 			{
 				JObject rootObj = JObject.Parse(szResponse);
-				if (rootObj[OldReaderConsts.bazTotalUnreadCount] != null)
-				{
-					nUnreadCount = int.Parse((String)rootObj[OldReaderConsts.bazTotalUnreadCount]);
-				}
-				else
-				{
-					nUnreadCount = int.Parse((String)rootObj[OldReaderConsts.max]);
-				}
+				nUnreadCount = int.Parse((String)rootObj[OldReaderConsts.max]);
 			}
 			catch
 			{

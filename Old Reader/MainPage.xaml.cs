@@ -317,7 +317,7 @@ namespace Old_Reader
 		{
 			trayProgress.Text = Utils.getInitializationStateStr(DataModel.OldReaderContents.TInitializationStates.kGettingStarredItems);
 			StartJob();
-			WS.Remoting rm = new WS.Remoting(App.CurrentService, StarredItemsComplete);
+			WS.Remoting rm = new WS.Remoting(StarredItemsComplete);
 			rm.getUnreadItemsForSubscription(DataModel.Tag.StarredItems.id, 100);
 		}
 
@@ -352,7 +352,7 @@ namespace Old_Reader
 			{
 				txtHelpText.Visibility = Visibility.Collapsed;
 				bLoginComplete = false;
-				WS.Remoting rm = new WS.Remoting(App.CurrentService, LoginComplete, InitializationErrorHandler);
+				WS.Remoting rm = new WS.Remoting(LoginComplete, InitializationErrorHandler);
 				rm.Login(App.UserEMail, App.UserPassword);
 				StartJob();
 				return true;
@@ -437,7 +437,7 @@ namespace Old_Reader
 					String szPrompt = String.Format(AppNs.Resources.AppResources.strConfirmUnsubscribe, unsubFeed.title);
 					if (MessageBox.Show(szPrompt, "", MessageBoxButton.OKCancel) == MessageBoxResult.OK)
 					{
-						WS.Remoting rm = new WS.Remoting(App.CurrentService, UnsubscribeComplete);
+						WS.Remoting rm = new WS.Remoting(UnsubscribeComplete);
 						rm.unsubscribe(unsubFeed.id);
 						StartJob();
 						Analytics.GAnalytics.trackUnsubscribe();
@@ -500,7 +500,7 @@ namespace Old_Reader
 			{
 				DestinationTagChooser chooser = sender as DestinationTagChooser;
 				StartJob();
-				WS.Remoting rm = new WS.Remoting(App.CurrentService, MoveComplete);
+				WS.Remoting rm = new WS.Remoting(MoveComplete);
 				rm.moveSubscriptionToFolder(chooser.CurItem.id, chooser.SelectedTag.id);
 			}
 		}

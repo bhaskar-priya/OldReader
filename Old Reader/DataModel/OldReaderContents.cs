@@ -153,7 +153,7 @@ namespace DataModel
 			App.Contents = this;
 			//tagListComplete(DataStore.CacheManager.TagData);
 			initializationStatusReceiver(TInitializationStates.kGettingTagList);
-			WS.Remoting rm = new WS.Remoting(App.CurrentService, tagListComplete, remotingError);
+			WS.Remoting rm = new WS.Remoting(tagListComplete, remotingError);
 			rm.getTagList();
 		}
 
@@ -179,7 +179,7 @@ namespace DataModel
 			//subscriptionComplete(DataStore.CacheManager.SubscriptionData);
 			// get the subscriptions
 			initializationStatusReceiver(TInitializationStates.kGettingSubscription);
-			WS.Remoting rm = new WS.Remoting(App.CurrentService, subscriptionComplete, remotingError);
+			WS.Remoting rm = new WS.Remoting(subscriptionComplete, remotingError);
 			rm.getSubscriptionList();
 		}
 
@@ -192,7 +192,7 @@ namespace DataModel
 			Analytics.GAnalytics.trackOldReaderEvent(OldReaderTrackingConsts.subscriptionComplete, Subscriptions.Count);
 
 			initializationStatusReceiver(TInitializationStates.kGettingUnreadCount);
-			WS.Remoting rm = new WS.Remoting(App.CurrentService, unreadCountComplete, remotingError);
+			WS.Remoting rm = new WS.Remoting(unreadCountComplete, remotingError);
 			rm.getUnreadCount();
 		}
 
