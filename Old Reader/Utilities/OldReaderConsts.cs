@@ -36,6 +36,7 @@
 		public static string starredMigrationDone = "starredMigrationDone";
 		public static string allItemsAtTop = "allItemsAtTop";
 		public static string darkMode = "darkMode";
+		public static string hideEmptyItems = "hideEmptyItems";
 		public static string readItemTag = "user/-/state/com.google/read";
 		public static string starredItemId = "user/-/state/com.google/starred";
 		public static string allItemsId = "user/-/state/com.google/reading-list";

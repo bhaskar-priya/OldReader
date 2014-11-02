@@ -296,6 +296,10 @@ Tur Ger for Hungarian</target>
           <source>light mode</source>
           <target state="translated">Mode éclairage</target>
         </trans-unit>
+        <trans-unit id="Resx/strHideEmptyFeeds" translate="yes" xml:space="preserve">
+          <source>Hide Empty Feeds</source>
+          <target state="translated">Cacher vides RSS</target>
+        </trans-unit>
         <trans-unit translate="yes" id="Resx/strDarkMode" xml:space="preserve">
           <source>dark mode</source>
           <target state="translated">mode sombre</target>

@@ -50,6 +50,7 @@
 			<local:FilePathToImageConverter x:Key="FilePathToImageConverter" />
 			<local:TimeToHumanStrConverter x:Key="TimeToHumanStrConverter" />
 			<local:DispObjCtxMenuConverter x:Key="DispObjCtxMenuConverter" />
+			<local:EmptyItemVisibilityConverter x:Key="EmptyItemVisibilityConverter" />
 		</Grid.Resources>
 
 		<controls:Panorama HorizontalAlignment="Left" Name="mainPanorama"
@@ -90,7 +91,9 @@
 						</ListBox.ItemContainerStyle>
 						<ListBox.ItemTemplate>
 							<DataTemplate>
-								<Grid>
+								<Grid
+									Visibility="{Binding unreadCount, Converter={StaticResource EmptyItemVisibilityConverter}}"
+									>
 									<toolkit:ContextMenuService.ContextMenu>
 										<toolkit:ContextMenu Name="ctxMenu"
 															 IsEnabled="{Binding Content, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource DispObjCtxMenuConverter}}">

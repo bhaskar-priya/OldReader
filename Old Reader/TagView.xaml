@@ -45,6 +45,7 @@
     <Grid x:Name="LayoutRoot" Background="Transparent">
 		<Grid.Resources>
 			<local:VisibilityConverter x:Key="VisibilityConverter" />
+			<local:EmptyItemVisibilityConverter x:Key="EmptyItemVisibilityConverter" />
 			<local:IntegerInvertingVisibilityConverter x:Key="IntegerInvertingVisibilityConverter" />
 			<local:FilePathToImageConverter x:Key="FilePathToImageConverter" />
 		</Grid.Resources>
@@ -83,7 +84,9 @@
 				</ListBox.ItemContainerStyle>
 				<ListBox.ItemTemplate>
 					<DataTemplate>
-						<Grid>
+						<Grid
+							Visibility="{Binding unreadCount, Converter={StaticResource EmptyItemVisibilityConverter}}"
+							>
 							<toolkit:ContextMenuService.ContextMenu>
 								<toolkit:ContextMenu Name="ctxMenu">
 									<toolkit:MenuItem Name="menuUnsubscribe" Header="{Binding Path=LocalizedResources.strMenuUnsubscribe, Source={StaticResource LocalizedStrings}}" Click="menuUnsubscribe_Click"/>

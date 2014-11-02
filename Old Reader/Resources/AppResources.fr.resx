@@ -319,4 +319,4 @@ Pour signaler bugs et commentaires cliquez sur le bouton suivant.</value>
   <data name="strDuration1Month" xml:space="preserve">
     <value>un mois</value>
   </data>
-<data name="strLightMode" xml:space="preserve"><value>Mode éclairage</value></data><data name="strDarkMode" xml:space="preserve"><value>mode sombre</value></data></root>
+<data name="strLightMode" xml:space="preserve"><value>Mode éclairage</value></data><data name="strDarkMode" xml:space="preserve"><value>mode sombre</value></data><data name="strHideEmptyFeeds" xml:space="preserve"><value>Cacher vides RSS</value></data></root>

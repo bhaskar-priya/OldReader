@@ -350,7 +350,7 @@ namespace DataModel
 			}
 		}
 
-		public void markRead()
+		public void markRead(bool adjustCount=true)
 		{
 			WS.Remoting rm = new WS.Remoting();
 			rm.markFeedItemRead(id, true);
@@ -358,13 +358,17 @@ namespace DataModel
 			if (isUnread && !keepUnread)
 			{
 				isUnread = false;
-				foreach (DataModel.Tag curTag in tags)
+
+				if(adjustCount)
 				{
-					curTag.unreadCount--;
-					curTag.unreadCount = curTag.unreadCount < 0 ? 0 : curTag.unreadCount;
+					foreach (DataModel.Tag curTag in tags)
+					{
+						curTag.unreadCount--;
+						curTag.unreadCount = curTag.unreadCount < 0 ? 0 : curTag.unreadCount;
+					}
+					origin.unreadCount--;
+					origin.unreadCount = origin.unreadCount < 0 ? 0 : origin.unreadCount;
 				}
-				origin.unreadCount--;
-				origin.unreadCount = origin.unreadCount < 0 ? 0 : origin.unreadCount;
 			}
 		}
 

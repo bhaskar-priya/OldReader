@@ -33,6 +33,7 @@ namespace Old_Reader
 			AppNs.App.ShowRead = (bool)chkShowReadItem.IsChecked;
 			AppNs.App.RetentionDays = Old_Reader_Utils.Utils.DaysToString[timeToKeepOldItems.SelectedItem.ToString()];
 			AppNs.App.AllItemsAtTop = (bool)chkAllItemsOntop.IsChecked;
+			AppNs.App.HideEmptyItems = (bool)chkHideEmptyFeeds.IsChecked;
 
 			NavigationService.GoBack();
 		}
@@ -55,6 +56,7 @@ namespace Old_Reader
 					txtUserName.Text = AppNs.App.UserEMail;
 					txtPasswordBox.Password = AppNs.App.UserPassword;
 					chkAllItemsOntop.IsChecked = AppNs.App.AllItemsAtTop;
+					chkHideEmptyFeeds.IsChecked = AppNs.App.HideEmptyItems;
 					moreItemCount.SelectedIndex = (AppNs.App.AdditionalDownloadCount - 5) / 5;
 				}
 				catch

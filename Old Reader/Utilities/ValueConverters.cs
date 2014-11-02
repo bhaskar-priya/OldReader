@@ -89,6 +89,31 @@ namespace Utilities
 		}
 	}
 
+	public class EmptyItemVisibilityConverter : IValueConverter
+	{
+		public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+		{
+			if (Old_Reader.App.HideEmptyItems)
+			{
+				// just in case
+				if (value == null)
+				{
+					return Visibility.Visible;
+				}
+
+				return (System.Convert.ToInt32(value) > 0) ? Visibility.Visible : Visibility.Collapsed;
+			}
+
+			return Visibility.Visible;
+		}
+
+		// had to be implemented
+		public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+		{
+			throw new NotImplementedException();
+		}
+	}
+
 	public class IntegerInvertingVisibilityConverter : IValueConverter
 	{
 		public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)

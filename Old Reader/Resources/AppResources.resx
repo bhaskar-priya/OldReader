@@ -353,4 +353,7 @@ Tur Ger for Hungarian</value>
   <data name="strLightMode" xml:space="preserve">
     <value>light mode</value>
   </data>
+  <data name="strHideEmptyFeeds" xml:space="preserve">
+    <value>Hide Empty Feeds</value>
+  </data>
 </root>

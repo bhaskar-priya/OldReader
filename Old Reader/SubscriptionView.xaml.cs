@@ -321,12 +321,20 @@ namespace Old_Reader
 
 			String continuationId = "";
 			List<DataModel.FeedItem> newFeedItems = DataModel.FeedItem.CreateFromResponse(szResponse, out continuationId);
+
+			List<DataModel.FeedItem> itemsToRemove = new List<DataModel.FeedItem>();
 			foreach (var existingItem in FeedItems)
 			{
 				if (existingItem.isUnread && !newFeedItems.Contains(existingItem))
 				{
-					existingItem.markRead();
+					itemsToRemove.Add(existingItem);
+					existingItem.markRead(false);
 				}
+			}
+
+			foreach(var curItem in itemsToRemove)
+			{
+				FeedItems.Remove(curItem);
 			}
 
 			handleNewItems(newFeedItems, continuationId);

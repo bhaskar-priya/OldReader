@@ -246,7 +246,7 @@ namespace Old_Reader
 		private void ApplicationBarDarkModeMenuItem_Click(object sender, EventArgs e)
 		{
 			AppNs.App.DarkMode = !AppNs.App.DarkMode;
-			(ApplicationBar.MenuItems[2] as ApplicationBarMenuItem).Text = AppNs.App.DarkMode ? AppNs.Resources.AppResources.strLightMode : AppNs.Resources.AppResources.strDarkMode;
+			(ApplicationBar.MenuItems[3] as ApplicationBarMenuItem).Text = AppNs.App.DarkMode ? AppNs.Resources.AppResources.strLightMode : AppNs.Resources.AppResources.strDarkMode;
 			contentDisplay.NavigateToString(GetMarkup());
 		}
 	}

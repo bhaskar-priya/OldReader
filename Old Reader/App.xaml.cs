@@ -361,6 +361,18 @@ namespace Old_Reader
 			}
 		}
 
+		public static bool HideEmptyItems
+		{
+			get
+			{
+				return Utilities.AppSettings.Read<bool>(Old_Reader_Utils.OldReaderConsts.hideEmptyItems, false);
+			}
+			set
+			{
+				Utilities.AppSettings.Write(Old_Reader_Utils.OldReaderConsts.hideEmptyItems, value);
+			}
+		}
+
 		public static bool RefreshContents { get; set; }
 	}
 }
