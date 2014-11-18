@@ -8,12 +8,7 @@ using System.Windows;
 using System.IO.IsolatedStorage;
 using System.Windows.Media.Imaging;
 
-using AppNs =
-#if OLD_READER_WP7
-Old_Reader_WP7;
-#else
-Old_Reader;
-#endif
+using AppNs = Old_Reader;
 
 namespace Utilities
 {

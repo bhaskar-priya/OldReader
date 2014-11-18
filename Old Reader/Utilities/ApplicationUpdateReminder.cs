@@ -7,12 +7,7 @@ using Cimbalino.Phone.Toolkit.Services;
 using System.Windows;
 using Microsoft.Phone.Tasks;
 
-using AppNs =
-#if OLD_READER_WP7
-Old_Reader_WP7;
-#else
- Old_Reader;
-#endif
+using AppNs = Old_Reader;
 
 namespace Utilities
 {

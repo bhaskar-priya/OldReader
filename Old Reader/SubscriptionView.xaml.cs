@@ -413,6 +413,7 @@ namespace Old_Reader
 		{
 			if (feedList.SelectedIndex >= 0)
 			{
+				AppNs.App.lastFeedId = m_SrcFeedId;
 				AppNs.App.FeedItems = new List<DataModel.FeedItem>();
 				foreach (var t in FeedItems)
 				{

@@ -227,16 +227,62 @@ namespace Old_Reader
 			}
 		}
 
-		public static DataModel.OldReaderContents Contents
+		private static void ReloadContents()
 		{
-			get;
-			set;
+			if (m_Contents == null)
+			{
+				m_Contents = new DataModel.OldReaderContents();
+
+				int cachedUnreadCount = 0;
+				List<DataModel.FeedItem> tempItems = App.Contents.getExistingFeedItemForFeedID(DataModel.Tag.AllItems.id, out cachedUnreadCount, false);
+				if(cachedUnreadCount>0)
+				{
+					foreach (var curFeed in tempItems)
+					{
+						foreach(var tag in curFeed.tags)
+						{
+							tag.unreadCount++;
+						}
+						if (curFeed.origin != null)
+						{
+							curFeed.origin.unreadCount++;
+						}
+					}
+				}
+				String szLastFeedId = lastFeedId;
+				if (String.IsNullOrEmpty(szLastFeedId) == false)
+				{
+					App.FeedItems = App.Contents.getExistingFeedItemForFeedID(szLastFeedId, out cachedUnreadCount, App.ShowRead);
+				}
+			}
 		}
 
+		private static DataModel.OldReaderContents m_Contents;
+		public static DataModel.OldReaderContents Contents
+		{
+			get
+			{
+				ReloadContents();
+				return m_Contents;
+			}
+			set
+			{
+				m_Contents = value;
+			}
+		}
+
+		private static List<DataModel.FeedItem> m_FeedItems;
 		public static List<DataModel.FeedItem> FeedItems
 		{
-			get;
-			set;
+			get
+			{
+				ReloadContents();
+				return m_FeedItems;
+			}
+			set
+			{
+				m_FeedItems = value;
+			}
 		}
 
 		private static DataStore.OldReaderDataContext m_ReaderDB = null;
@@ -370,6 +416,18 @@ namespace Old_Reader
 			set
 			{
 				Utilities.AppSettings.Write(Old_Reader_Utils.OldReaderConsts.hideEmptyItems, value);
+			}
+		}
+
+		public static String lastFeedId
+		{
+			get
+			{
+				return Utilities.AppSettings.Read<String>("LastFeedItem", "");
+			}
+			set
+			{
+				Utilities.AppSettings.Write("LastFeedItem", value);
 			}
 		}
 

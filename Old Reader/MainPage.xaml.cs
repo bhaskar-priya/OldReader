@@ -7,11 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-#if OLD_READER_WP7
-using Old_Reader_WP7.Resources;
-#else
 using Old_Reader.Resources;
-#endif
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.IO.IsolatedStorage;
@@ -23,19 +19,9 @@ using Coding4Fun.Toolkit.Controls;
 
 using Microsoft.Phone.Scheduler;
 
-using AppNs =
-#if OLD_READER_WP7
- Old_Reader_WP7;
-#else
- Old_Reader;
-#endif
+using AppNs = Old_Reader;
 
-
-#if OLD_READER_WP7
-namespace Old_Reader_WP7
-#else
 namespace Old_Reader
-#endif
 {
 	public partial class MainPage : PhoneApplicationPage, INotifyPropertyChanged, INotifyPropertyChanging
 	{
@@ -44,11 +30,7 @@ namespace Old_Reader
 		public event PropertyChangedEventHandler PropertyChanged;
 
 		// Used to notify Silverlight that a property has changed.
-#if OLD_READER_WP7
-		protected void NotifyPropertyChanged(String propertyName)
-#else
 		protected void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
-#endif
 		{
 			if (PropertyChanged != null)
 			{
@@ -59,11 +41,7 @@ namespace Old_Reader
 		public event PropertyChangingEventHandler PropertyChanging;
 
 		// Used to notify Silverlight that a property has changed.
-#if OLD_READER_WP7
-		protected void NotifyPropertyChanging(String propertyName)
-#else
 		protected void NotifyPropertyChanging([CallerMemberName] String propertyName = "")
-#endif
 		{
 			if (PropertyChanging != null)
 			{
@@ -80,17 +58,9 @@ namespace Old_Reader
 			}
 			set
 			{
-#if OLD_READER_WP7
-				NotifyPropertyChanging("Contents");
-#else
 				NotifyPropertyChanging();
-#endif
 				App.Contents = value;
-#if OLD_READER_WP7
-				NotifyPropertyChanged("Contents");
-#else
 				NotifyPropertyChanged();
-#endif
 			}
 		}
 
@@ -103,17 +73,9 @@ namespace Old_Reader
 			}
 			set
 			{
-#if OLD_READER_WP7
-				NotifyPropertyChanging("StarredFeeds");
-#else
 				NotifyPropertyChanging();
-#endif
 				m_StarredFeeds = value;
-#if OLD_READER_WP7
-				NotifyPropertyChanged("StarredFeeds");
-#else
 				NotifyPropertyChanged();
-#endif
 			}
 		}
 
@@ -242,9 +204,7 @@ namespace Old_Reader
 			else
 			{
 				Utils.ClearTileCount();
-				DataModel.OldReaderContents tmpContent = Contents;
-				Contents = null;
-				Contents = tmpContent;
+				NotifyPropertyChanged("Contents");
 				RefreshLocalStarredFeeds();
 
 				if (AppNs.App.RefreshContents)
