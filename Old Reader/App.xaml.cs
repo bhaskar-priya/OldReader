@@ -74,12 +74,18 @@ namespace Old_Reader
 		// This code will not execute when the application is first launched
 		private void Application_Activated(object sender, ActivatedEventArgs e)
 		{
+			if (Contents == null)
+			{
+				ReloadContents();
+				DataStore.CacheManager.deSerializeMainContentUnreadCounts(Contents);
+			}
 		}
 
 		// Code to execute when the application is deactivated (sent to background)
 		// This code will not execute when the application is closing
 		private void Application_Deactivated(object sender, DeactivatedEventArgs e)
 		{
+			DataStore.CacheManager.serializeMainContentUnreadCounts(Contents);
 		}
 
 		// Code to execute when the application is closing (eg, user hit Back)
@@ -229,9 +235,9 @@ namespace Old_Reader
 
 		private static void ReloadContents()
 		{
-			if (m_Contents == null)
+			if (Contents == null)
 			{
-				m_Contents = new DataModel.OldReaderContents();
+				Contents = new DataModel.OldReaderContents();
 				String szLastFeedId = lastFeedId;
 				if (String.IsNullOrEmpty(szLastFeedId) == false)
 				{
@@ -241,32 +247,16 @@ namespace Old_Reader
 			}
 		}
 
-		private static DataModel.OldReaderContents m_Contents;
 		public static DataModel.OldReaderContents Contents
 		{
-			get
-			{
-				ReloadContents();
-				return m_Contents;
-			}
-			set
-			{
-				m_Contents = value;
-			}
+			get;
+			set;
 		}
 
-		private static List<DataModel.FeedItem> m_FeedItems;
 		public static List<DataModel.FeedItem> FeedItems
 		{
-			get
-			{
-				ReloadContents();
-				return m_FeedItems;
-			}
-			set
-			{
-				m_FeedItems = value;
-			}
+			get;
+			set;
 		}
 
 		private static DataStore.OldReaderDataContext m_ReaderDB = null;
