@@ -50,6 +50,7 @@ namespace DataModel
 			{
 				String szTagData = DataStore.CacheManager.TagData;
 				String szSubData = DataStore.CacheManager.SubscriptionData;
+				
 				if (!String.IsNullOrEmpty(szTagData) && !String.IsNullOrEmpty(szSubData))
 				{
 					Tags = DataModel.Tag.CreateFromResponse(szTagData);
@@ -62,6 +63,13 @@ namespace DataModel
 						Tags.Add(Tag.AllItems);
 					}
 					Subscriptions = Subscription.CreateFromResponse(szSubData, Tags);
+
+					// get the unread counts from the cache
+					String szUnreadData = DataStore.CacheManager.UnreadCountData;
+					if (String.IsNullOrEmpty(szUnreadData) == false)
+					{
+						Tag.AllItems.unreadCount = Utils.handleUnreadCounts(szUnreadData, Subscriptions, Tags);
+					}
 				}
 			}
 			catch
@@ -198,13 +206,10 @@ namespace DataModel
 
 		private void unreadCountComplete(String szResponse)
 		{
+			DataStore.CacheManager.UnreadCountData = szResponse;
 			Tag.AllItems.unreadCount = Utils.handleUnreadCounts(szResponse, Subscriptions, Tags);
 
 			Analytics.GAnalytics.trackOldReaderEvent(OldReaderTrackingConsts.unreadCountComplete, Tag.AllItems.unreadCount);
-
-			//initializationStatusReceiver(TInitializationStates.kGettingUnreadItems);
-			//WS.Remoting rm = new WS.Remoting(AllUnreadItemsComplete, remotingError);
-			//rm.getAllUnreadItems(Tag.AllItems.unreadCount);
 
 			initializationCompleteHandler(this);
 		}

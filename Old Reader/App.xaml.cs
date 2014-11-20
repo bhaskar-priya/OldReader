@@ -232,26 +232,10 @@ namespace Old_Reader
 			if (m_Contents == null)
 			{
 				m_Contents = new DataModel.OldReaderContents();
-
-				int cachedUnreadCount = 0;
-				List<DataModel.FeedItem> tempItems = App.Contents.getExistingFeedItemForFeedID(DataModel.Tag.AllItems.id, out cachedUnreadCount, false);
-				if(cachedUnreadCount>0)
-				{
-					foreach (var curFeed in tempItems)
-					{
-						foreach(var tag in curFeed.tags)
-						{
-							tag.unreadCount++;
-						}
-						if (curFeed.origin != null)
-						{
-							curFeed.origin.unreadCount++;
-						}
-					}
-				}
 				String szLastFeedId = lastFeedId;
 				if (String.IsNullOrEmpty(szLastFeedId) == false)
 				{
+					int cachedUnreadCount = 0;
 					App.FeedItems = App.Contents.getExistingFeedItemForFeedID(szLastFeedId, out cachedUnreadCount, App.ShowRead);
 				}
 			}

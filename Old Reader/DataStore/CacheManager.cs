@@ -10,6 +10,7 @@ namespace DataStore
 	{
 		const String tagFileName = "tagList.json";
 		const String subscriptionFileName = "subscription.json";
+		const String unreadCountFileName = "unreadCount.json";
 
 		private static IsolatedStorageFile ISF = IsolatedStorageFile.GetUserStoreForApplication();
 
@@ -34,6 +35,18 @@ namespace DataStore
 			set
 			{
 				SaveFile(subscriptionFileName, value);
+			}
+		}
+
+		public static String UnreadCountData
+		{
+			get
+			{
+				return ReadFile(unreadCountFileName);
+			}
+			set
+			{
+				SaveFile(unreadCountFileName, value);
 			}
 		}
 
