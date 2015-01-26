@@ -9,7 +9,7 @@ namespace WS
 {
 	class Remoting
 	{
-		private static String szAPIEndPoint = "http://theoldreader.com/reader/api/0/";
+		private static String szAPIEndPoint = "https://theoldreader.com/reader/api/0/";
 
 		public delegate void RemotingComplete(String szResponse);
 		private RemotingComplete remotingCompleteHandler = null;
