@@ -356,4 +356,10 @@ Tur Ger for Hungarian</value>
   <data name="strHideEmptyFeeds" xml:space="preserve">
     <value>Hide Empty Feeds</value>
   </data>
+  <data name="strShowSummary" xml:space="preserve">
+    <value>Show Summary</value>
+  </data>
+  <data name="strWrapTitle" xml:space="preserve">
+    <value>Wrap Title</value>
+  </data>
 </root>

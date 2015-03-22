@@ -40,5 +40,7 @@
 		public static string readItemTag = "user/-/state/com.google/read";
 		public static string starredItemId = "user/-/state/com.google/starred";
 		public static string allItemsId = "user/-/state/com.google/reading-list";
+		public static string wrapTitles = "wrapTitles";
+		public static string showSumary = "showSumary";
 	}
 }

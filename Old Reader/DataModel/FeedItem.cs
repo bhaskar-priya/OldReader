@@ -204,6 +204,22 @@ namespace DataModel
 			}
 		}
 
+		public bool WrapTitle
+		{
+			get
+			{
+				return App.WrapTitles;
+			}
+		}
+
+		public bool ShowSummary
+		{
+			get
+			{
+				return App.ShowSumary;
+			}
+		}
+
 		public bool Starred { get; set; }
 
 		public FeedItem(String p_Id, String p_Content, String p_Author, String p_href, String p_Title,

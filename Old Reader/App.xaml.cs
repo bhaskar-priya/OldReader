@@ -393,6 +393,30 @@ namespace Old_Reader
 			}
 		}
 
+		public static bool WrapTitles
+		{
+			get
+			{
+				return Utilities.AppSettings.Read<bool>(Old_Reader_Utils.OldReaderConsts.wrapTitles, false);
+			}
+			set
+			{
+				Utilities.AppSettings.Write(Old_Reader_Utils.OldReaderConsts.wrapTitles, value);
+			}
+		}
+
+		public static bool ShowSumary
+		{
+			get
+			{
+				return Utilities.AppSettings.Read<bool>(Old_Reader_Utils.OldReaderConsts.showSumary, false);
+			}
+			set
+			{
+				Utilities.AppSettings.Write(Old_Reader_Utils.OldReaderConsts.showSumary, value);
+			}
+		}
+
 		public static String lastFeedId
 		{
 			get

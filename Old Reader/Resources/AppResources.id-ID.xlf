@@ -284,6 +284,14 @@ Tur Ger for Hungarian</target>
           <source>Hide Empty Feeds</source>
           <target state="new">Hide Empty Feeds</target>
         </trans-unit>
+        <trans-unit id="Resx/strShowSummary" translate="yes" xml:space="preserve">
+          <source>Show Summary</source>
+          <target state="new">Show Summary</target>
+        </trans-unit>
+        <trans-unit id="Resx/strWrapTitle" translate="yes" xml:space="preserve">
+          <source>Wrap Title</source>
+          <target state="new">Wrap Title</target>
+        </trans-unit>
         <trans-unit translate="yes" id="Resx/strDarkMode" xml:space="preserve">
           <source>dark mode</source>
           <target state="new">dark mode</target>

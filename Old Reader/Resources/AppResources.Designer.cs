@@ -624,6 +624,15 @@ namespace Old_Reader.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Show Summary.
+        /// </summary>
+        public static string strShowSummary {
+            get {
+                return ResourceManager.GetString("strShowSummary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to show only unread.
         /// </summary>
         public static string strShowUnreadOnly {
@@ -764,6 +773,15 @@ namespace Old_Reader.Resources {
         public static string strViewFull {
             get {
                 return ResourceManager.GetString("strViewFull", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wrap Title.
+        /// </summary>
+        public static string strWrapTitle {
+            get {
+                return ResourceManager.GetString("strWrapTitle", resourceCulture);
             }
         }
     }

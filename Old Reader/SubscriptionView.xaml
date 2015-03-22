@@ -49,6 +49,9 @@
 			<local:FeedListIconConvertor x:Key="FeedListIconConvertor" />
 			<local:FilePathToImageConverter x:Key="FilePathToImageConverter" />
 			<local:TimeToHumanStrConverter x:Key="TimeToHumanStrConverter" />
+			<local:HTMLToPlainTextConverter x:Key="HTMLToPlainTextConverter" />
+			<local:TextWrappingConverter x:Key="TextWrappingConverter" />
+			<local:BoolVisibilityConverter x:Key="BoolVisibilityConverter" />
 		</Grid.Resources>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -101,7 +104,12 @@
 										   Width="20" Height="20" />
 									<StackPanel  Grid.Column="1">
 										<TextBlock Text="{Binding title}" Margin="5,0,0,5"
+												   TextWrapping="{Binding WrapTitle, Converter={StaticResource TextWrappingConverter}}"
 												   Style="{Binding isUnread, Converter={StaticResource FeedTemplateSelector}}"/>
+										<TextBlock Text="{Binding summary, Converter={StaticResource HTMLToPlainTextConverter}}" Margin="5,0,0,5"
+												   Visibility="{Binding ShowSummary, Converter={StaticResource BoolVisibilityConverter}}"
+												   TextWrapping="Wrap" MaxHeight="100"
+												   Style="{StaticResource PhoneTextSubtleStyle}"/>
 										<TextBlock Text="{Binding publishedTime, Converter={StaticResource TimeToHumanStrConverter}}"
 												   TextAlignment="Left" Grid.Column="0" Margin="15,0,0,0"
 												   Style="{StaticResource PhoneTextSubtleStyle}" />

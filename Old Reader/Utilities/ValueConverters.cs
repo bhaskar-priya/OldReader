@@ -337,4 +337,78 @@ namespace Utilities
 			throw new NotImplementedException();
 		}
 	}
+
+	public class HTMLToPlainTextConverter : IValueConverter
+	{
+		public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+		{
+			String strVal = "";
+			if (value is String && String.IsNullOrEmpty(value as String) == false)
+			{
+				strVal = value as String;
+
+				int lessPos = strVal.IndexOf("<");
+				while (lessPos >= 0)
+				{
+					int greatPos=strVal.IndexOf(">", lessPos);
+					if (greatPos > lessPos)
+					{
+						strVal = strVal.Remove(lessPos, greatPos - lessPos + 1);
+					}
+					else
+					{
+						break;
+					}
+
+					lessPos = strVal.IndexOf("<");
+				}
+
+				strVal = strVal.Trim();
+			}
+
+			return strVal;
+		}
+
+		// had to be implemented
+		public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+		{
+			throw new NotImplementedException();
+		}
+	}
+
+	public class TextWrappingConverter : IValueConverter
+	{
+		public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+		{
+			if (((bool)value) == false)
+			{
+				return TextWrapping.NoWrap;
+			}
+			return TextWrapping.Wrap;
+		}
+
+		// had to be implemented
+		public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+		{
+			throw new NotImplementedException();
+		}
+	}
+
+	public class BoolVisibilityConverter : IValueConverter
+	{
+		public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+		{
+			if (((bool)value) == false)
+			{
+				return Visibility.Collapsed;
+			}
+			return Visibility.Visible;
+		}
+
+		// had to be implemented
+		public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+		{
+			throw new NotImplementedException();
+		}
+	}
 }

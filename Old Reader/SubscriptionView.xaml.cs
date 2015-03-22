@@ -127,7 +127,6 @@ namespace Old_Reader
 			}
 		}
 
-
 		private String m_SrcFeedId = "";
 		protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
 		{
