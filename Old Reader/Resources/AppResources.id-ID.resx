@@ -322,4 +322,4 @@ Untuk melaporkan bug dan saran silahkan klik tombol berikut.</value>
   <data name="strShowReadItems" xml:space="preserve">
     <value>Tampilkan item yang telah dibaca</value>
   </data>
-</root>
+<data name="strShowSummary" xml:space="preserve"><value>Tampilkan Ringkasan</value></data><data name="strWrapTitle" xml:space="preserve"><value>judul wrap</value></data></root>
